@@ -1,0 +1,5 @@
+*.sdf
+/.vs/ClubRP/v14/*.suo
+/Debug
+/*.opensdf
+/ClubRP/Debug
