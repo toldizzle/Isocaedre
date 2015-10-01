@@ -1,0 +1,207 @@
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\csc.exe
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\System.Collections.Immutable.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\vbc.exe
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\VBCSCompiler.exe
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\roslyn\VBCSCompiler.exe.config
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\ClubRP.dll.config
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\ClubRP.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\ClubRP.pdb
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Antlr3.Runtime.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\EntityFramework.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\EntityFramework.SqlServer.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Google.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Web.Infrastructure.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Newtonsoft.Json.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Owin.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Helpers.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Mvc.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Optimization.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Razor.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.WebPages.Deployment.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.WebPages.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.WebPages.Razor.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\WebGrease.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Helpers.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Mvc.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Optimization.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.Razor.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.WebPages.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.WebPages.Deployment.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\System.Web.WebPages.Razor.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Antlr3.Runtime.pdb
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Newtonsoft.Json.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\EntityFramework.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\EntityFramework.SqlServer.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Google.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\obj\Debug\ClubRP.csprojResolveAssemblyReference.cache
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\obj\Debug\ClubRP.dll
+C:\Cours\Automne 2015\Application Web\Projets\ClubRP\ClubRP\obj\Debug\ClubRP.pdb
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\csc.exe
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\System.Collections.Immutable.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\System.Reflection.Metadata.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\vbc.exe
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\VBCSCompiler.exe
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\roslyn\VBCSCompiler.exe.config
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\ClubRP.dll.config
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\ClubRP.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\ClubRP.pdb
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Antlr3.Runtime.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\EntityFramework.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\EntityFramework.SqlServer.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Google.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Web.Infrastructure.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Newtonsoft.Json.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Owin.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Helpers.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Mvc.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Optimization.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Razor.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.WebPages.Deployment.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.WebPages.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.WebPages.Razor.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\WebGrease.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Helpers.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Mvc.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Optimization.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.Razor.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.WebPages.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.WebPages.Deployment.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\System.Web.WebPages.Razor.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Antlr3.Runtime.pdb
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Newtonsoft.Json.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\EntityFramework.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\EntityFramework.SqlServer.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Google.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Document\Icosaedre\ClubRP\ClubRP\obj\Debug\ClubRP.csprojResolveAssemblyReference.cache
+F:\Document\Icosaedre\ClubRP\ClubRP\obj\Debug\ClubRP.dll
+F:\Document\Icosaedre\ClubRP\ClubRP\obj\Debug\ClubRP.pdb
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\csc.exe
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\System.Collections.Immutable.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\vbc.exe
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\VBCSCompiler.exe
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\roslyn\VBCSCompiler.exe.config
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\ClubRP.dll.config
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\ClubRP.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\ClubRP.pdb
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Antlr3.Runtime.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\EntityFramework.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\EntityFramework.SqlServer.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Google.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Web.Infrastructure.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Newtonsoft.Json.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Owin.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Helpers.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Mvc.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Optimization.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Razor.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.WebPages.Deployment.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.WebPages.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.WebPages.Razor.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\WebGrease.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Helpers.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Mvc.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Optimization.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.Razor.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.WebPages.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.WebPages.Deployment.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\System.Web.WebPages.Razor.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Antlr3.Runtime.pdb
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Newtonsoft.Json.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\EntityFramework.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\EntityFramework.SqlServer.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Google.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\obj\Debug\ClubRP.csprojResolveAssemblyReference.cache
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\obj\Debug\ClubRP.dll
+C:\Session3\ApplicationWeb\Projet\ClubRP\ClubRP\obj\Debug\ClubRP.pdb
