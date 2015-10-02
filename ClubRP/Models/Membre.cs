@@ -13,6 +13,7 @@ namespace ClubRP.Models
         public DateTime Depuis { get; set; }
         public DateTime Age { get; set; }
         public bool Maitre { get; set; }
+        
 
     }
 }
