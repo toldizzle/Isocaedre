@@ -183,6 +183,30 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font_stylesheet.css" />
+    <Content Include="Content\Images\3a49a1de22dc67c126b6b25fc7a1378f.jpg" />
+    <Content Include="Content\Images\4d2cd6cd02560e0fb7ab48d36e9d2db7.jpg" />
+    <Content Include="Content\Images\5a6651663b37d313294bdbc98bbe8477.jpg" />
+    <Content Include="Content\Images\5bbd8ac31d556e65e9d006a17e782db8.jpg" />
+    <Content Include="Content\Images\62ae43517c6430c744488da2a2d76655.jpg" />
+    <Content Include="Content\Images\718b129ff0f1b65cd1b0587f25e6d7e5.jpg" />
+    <Content Include="Content\Images\72092cfbb5caee32472b2667f318e0bd.jpg" />
+    <Content Include="Content\Images\99c6db4f0be71f20d89e2ebab60f39d7.jpg" />
+    <Content Include="Content\Images\9bcb5e5f2f45d58784054db020b4a660.jpg" />
+    <Content Include="Content\Images\a7d1b5bb47460c5379f0c77de893ac90.jpg" />
+    <Content Include="Content\Images\Champions.jpg" />
+    <Content Include="Content\Images\dinvaya_lanalei_full_body___miguel_regodon_by_miguelregodon-d899k86.jpg" />
+    <Content Include="Content\Images\DndLogo.png" />
+    <Content Include="Content\Images\Equipe.jpg" />
+    <Content Include="Content\Images\Groupe.jpg" />
+    <Content Include="Content\Images\King_Arthur_II_-_The_Role_Playing_Wargame_582011100204PM663.jpg" />
+    <Content Include="Content\Images\LogoArgent.png" />
+    <Content Include="Content\Images\LogoBronze.png" />
+    <Content Include="Content\Images\LogoOr.png" />
+    <Content Include="Content\Images\PathfinderLogo.png" />
+    <Content Include="Content\Images\rpg_characters_by_krukof2-d36gqh0.jpg" />
+    <Content Include="Content\Images\Terah-Character-Reference-Guide-Terah-Steampunk-for-the-Pathfinder-Roleplaying-Game-0-1.jpg" />
+    <Content Include="Content\Images\Tresor.jpg" />
+    <Content Include="Content\Images\World_of_DarknessLogo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\amaranth-regular-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -247,7 +271,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

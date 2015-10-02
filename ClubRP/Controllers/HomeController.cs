@@ -11,7 +11,7 @@ namespace ClubRP.Controllers
         public ActionResult Index()
         {
 
-            ViewBag.Titre = "Acceuil";
+            ViewBag.Titre = "Accueil";
             return View();
         }
 
