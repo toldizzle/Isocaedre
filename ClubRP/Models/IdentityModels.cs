@@ -29,5 +29,7 @@ namespace ClubRP.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ClubRP.Models.Post> Posts { get; set; }
     }
 }
