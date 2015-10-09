@@ -176,22 +176,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ModelRP.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelRP.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelRP.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelRP.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelRP.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelRP.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClubDB.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
@@ -232,29 +218,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="ModelRP.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelRP.edmx</DependentUpon>
-      <LastGenOutput>ModelRP.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelRP.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelRP.edmx</DependentUpon>
-      <LastGenOutput>ModelRP.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\amaranth-regular-webfont.eot" />
     <Content Include="fonts\amaranth-regular-webfont.ttf" />
     <Content Include="fonts\amaranth-regular-webfont.woff" />
     <Content Include="fonts\amaranth-regular-webfont.woff2" />
-    <EntityDeploy Include="ModelRP.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelRP.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ModelRP.edmx.diagram">
-      <DependentUpon>ModelRP.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\GoogleMaps.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
