@@ -178,6 +178,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510132022294_Initialisation.cs" />
+    <Compile Include="Migrations\201510132022294_Initialisation.Designer.cs">
+      <DependentUpon>201510132022294_Initialisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510132027366_Initialisation1.cs" />
+    <Compile Include="Migrations\201510132027366_Initialisation1.Designer.cs">
+      <DependentUpon>201510132027366_Initialisation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510132031582_Initialisation.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510132031582_Initialisation.Designer.cs">
+      <DependentUpon>201510132031582_Initialisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClubDB.cs" />
@@ -296,6 +309,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201510132022294_Initialisation.resx">
+      <DependentUpon>201510132022294_Initialisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510132027366_Initialisation1.resx">
+      <DependentUpon>201510132027366_Initialisation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510132031582_Initialisation.resx">
+      <DependentUpon>201510132031582_Initialisation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

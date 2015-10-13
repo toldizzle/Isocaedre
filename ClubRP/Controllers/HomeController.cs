@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubRP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -40,6 +41,7 @@ namespace ClubRP.Controllers
         public ActionResult Forum()
         {
             ViewBag.Titre = "Forum de l'Isocaèdre";
+            ViewBag.ListePosts = new List<Post>();
             return View();
         }
         [Authorize]

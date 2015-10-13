@@ -273,3 +273,7 @@ D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Sec
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Security.Google.xml
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Security.Twitter.xml
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.Initialisation.resources
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.csproj.GenerateResource.Cache
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.Initialisation1.resources
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.ApplicationDBContext.Initialisation.resources

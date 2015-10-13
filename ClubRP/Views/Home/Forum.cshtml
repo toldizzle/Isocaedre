@@ -4,3 +4,13 @@
 
 <h2>@ViewBag.Titre</h2>
 
+<ol>
+    Bienvenue sur notre forum!
+    @{
+        foreach (string element in ViewBag.ListeTerrains)
+        {
+            <li>@element</li>
+        }
+
+    }
+</ol>
