@@ -16,6 +16,7 @@ namespace ClubRP.Models
         public string Message { get; set; }
         public DateTime Creation { get; set; }
         public int NbReponse { get; set; }
+        public virtual ICollection<Message> Messages { get; set; }
 
     }
 }
