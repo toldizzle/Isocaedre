@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<ClubRP.Models.Post>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -6,11 +7,55 @@
 
 <ol>
     Bienvenue sur notre forum!
-    @{
-        foreach (string element in ViewBag.ListeTerrains)
-        {
-            <li>@element</li>
-        }
 
-    }
 </ol>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Auteur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dernier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbReponse)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Titre)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Message)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Auteur)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Dernier)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.NbReponse)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+
+
+        </tr>
+    }
+
+</table>
