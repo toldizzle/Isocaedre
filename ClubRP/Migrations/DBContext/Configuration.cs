@@ -1,19 +1,19 @@
-namespace ClubRP.Migrations.ApplicationDBContext
+namespace ClubRP.Migrations.DBContext
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ClubRP.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ClubRP.Models.ClubDB>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            MigrationsDirectory = @"Migrations\ApplicationDBContext";
+            MigrationsDirectory = @"Migrations\DBContext";
         }
 
-        protected override void Seed(ClubRP.Models.ApplicationDbContext context)
+        protected override void Seed(ClubRP.Models.ClubDB context)
         {
             //  This method will be called after migrating to the latest version.
 
