@@ -191,6 +191,10 @@
     <Compile Include="Migrations\DBContext\201510141213124_Initialisation.Designer.cs">
       <DependentUpon>201510141213124_Initialisation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\DBContext\201510141219165_Initialisation2.cs" />
+    <Compile Include="Migrations\DBContext\201510141219165_Initialisation2.Designer.cs">
+      <DependentUpon>201510141219165_Initialisation2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DBContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClubDB.cs" />
@@ -319,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\DBContext\201510141213124_Initialisation.resx">
       <DependentUpon>201510141213124_Initialisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBContext\201510141219165_Initialisation2.resx">
+      <DependentUpon>201510141219165_Initialisation2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

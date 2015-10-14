@@ -1,10 +1,11 @@
-using ClubRP.Models;
+
 namespace ClubRP.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using ClubRP.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ClubRP.Models.ClubDB>
     {

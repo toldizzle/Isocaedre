@@ -1,11 +1,13 @@
 namespace ClubRP.Migrations.DBContext
 {
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using ClubRP.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ClubRP.Models.ClubDB>
+    internal sealed class Configuration : DbMigrationsConfiguration<ClubRP.Models.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -13,7 +15,7 @@ namespace ClubRP.Migrations.DBContext
             MigrationsDirectory = @"Migrations\DBContext";
         }
 
-        protected override void Seed(ClubRP.Models.ClubDB context)
+        protected override void Seed(ClubRP.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -27,6 +29,9 @@ namespace ClubRP.Migrations.DBContext
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.Roles.AddOrUpdate(r => r.Name, new IdentityRole { Id = "1", Name = "Administrateurs" });
+            context.Roles.AddOrUpdate(r => r.Name, new IdentityRole { Id = "2", Name = "Modérateurs" });
+            context.Roles.AddOrUpdate(r => r.Name, new IdentityRole { Id = "3", Name = "Maîtres" });
         }
     }
 }
