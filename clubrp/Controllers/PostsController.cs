@@ -13,7 +13,7 @@ namespace ClubRP.Controllers
     public class PostsController : Controller
     {
         private ClubDB db = new ClubDB();
-        
+
         // GET: Posts
         public ActionResult Index()
         {

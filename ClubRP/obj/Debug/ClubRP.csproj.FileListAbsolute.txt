@@ -278,3 +278,4 @@ D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.cspro
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.Initialisation1.resources
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.DBContext.Initialisation.resources
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.DBContext.Initialisation2.resources
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.csprojResolveAssemblyReference.cache
