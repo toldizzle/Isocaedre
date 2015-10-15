@@ -12,9 +12,8 @@ namespace ClubRP.Models
         public int ID { get; set; }
         [Required]
         public string Titre { get; set; }
-        [Required]
-        public string Message { get; set; }
-        public DateTime Creation { get; set; }
+        public string Description { get; set; }
+        public DateTime Creation = DateTime.Now;
         public int NbReponse { get; set; }
         
         public virtual ICollection<Message> Messages { get; set; }

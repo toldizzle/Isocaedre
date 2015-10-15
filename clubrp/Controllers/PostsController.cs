@@ -46,7 +46,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Titre,Message,Creation,NbReponse")] Post post)
+        public ActionResult Create([Bind(Include = "ID,Titre,Description,Creation,NbReponse")] Post post)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Titre,Message,Creation,NbReponse")] Post post)
+        public ActionResult Edit([Bind(Include = "ID,Titre,Description,Creation,NbReponse")] Post post)
         {
             if (ModelState.IsValid)
             {
