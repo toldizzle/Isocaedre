@@ -1,12 +1,36 @@
-namespace ClubRP.Migrations.DBContext
+namespace ClubRP.Migrations.ApplicationDBContext
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initialisation2 : DbMigration
+    public partial class Initialisation : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Posts",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Titre = c.String(nullable: false),
+                        Creation = c.DateTime(nullable: false),
+                        NbReponse = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.Messages",
+                c => new
+                    {
+                        MessageID = c.Int(nullable: false, identity: true),
+                        Titre = c.String(),
+                        Texte = c.String(),
+                        PostID = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.MessageID)
+                .ForeignKey("dbo.Posts", t => t.PostID, cascadeDelete: true)
+                .Index(t => t.PostID);
+            
             CreateTable(
                 "dbo.AspNetRoles",
                 c => new
@@ -83,17 +107,21 @@ namespace ClubRP.Migrations.DBContext
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.Messages", "PostID", "dbo.Posts");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Messages", new[] { "PostID" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Messages");
+            DropTable("dbo.Posts");
         }
     }
 }

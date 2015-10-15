@@ -273,8 +273,10 @@ D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Sec
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Security.Google.xml
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Security.Twitter.xml
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.csprojResolveAssemblyReference.cache
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.Initialisation.resources
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.Initialisation1.resources
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.DBContext.Initialisation.resources
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.DBContext.Initialisation2.resources
@@ -353,3 +355,8 @@ F:\Cegep\Icosaèdre\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.DBContext.Initi
 F:\Cegep\Icosaèdre\Isocaedre\ClubRP\obj\Debug\ClubRP.csproj.GenerateResource.Cache
 F:\Cegep\Icosaèdre\Isocaedre\ClubRP\obj\Debug\ClubRP.dll
 F:\Cegep\Icosaèdre\Isocaedre\ClubRP\obj\Debug\ClubRP.pdb
+=======
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.ApplicationDBContext.Initialisation.resources
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.ApplicationDBContext.ChangementPost.resources
+D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.ApplicationDBContext.ChangementPostDate.resources
+>>>>>>> 6b834d29065df3344fc1507bd5ccefd6824b345a

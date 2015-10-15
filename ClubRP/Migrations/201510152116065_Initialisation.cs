@@ -26,7 +26,6 @@ namespace ClubRP.Migrations
                     {
                         ID = c.Int(nullable: false, identity: true),
                         Titre = c.String(nullable: false),
-                        Message = c.String(nullable: false),
                         Creation = c.DateTime(nullable: false),
                         NbReponse = c.Int(nullable: false),
                     })
