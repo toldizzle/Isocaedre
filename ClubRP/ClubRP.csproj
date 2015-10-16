@@ -198,6 +198,10 @@
     <Compile Include="Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.Designer.cs">
       <DependentUpon>201510160138089_MEssageUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510161554216_InterfaceMOdification.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510161554216_InterfaceMOdification.Designer.cs">
+      <DependentUpon>201510161554216_InterfaceMOdification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -333,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.resx">
       <DependentUpon>201510160138089_MEssageUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510161554216_InterfaceMOdification.resx">
+      <DependentUpon>201510161554216_InterfaceMOdification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

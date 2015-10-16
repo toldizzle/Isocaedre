@@ -1,13 +1,12 @@
 ﻿@model ClubRP.Models.Post
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.Titre.ToString();
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>Post</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -35,12 +34,12 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NbReponse)
+            Nombre de réponse:
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.NbReponse)
+            @(Model.Messages.Count)
         </dd>
+        
         <dt>
             @Html.DisplayNameFor(model => model.Messages)
         </dt>
