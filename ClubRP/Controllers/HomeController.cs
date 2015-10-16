@@ -27,7 +27,6 @@ namespace ClubRP.Controllers
         public ActionResult Contact()
         {
             ViewBag.Titre = "Nous contacter";
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }

@@ -280,7 +280,6 @@ D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.cspro
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.Initialisation1.resources
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.DBContext.Initialisation.resources
 D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.Migrations.DBContext.Initialisation2.resources
-D:\École\Session3\ApplicationWeb\Projet\Isocaedre\ClubRP\obj\Debug\ClubRP.csprojResolveAssemblyReference.cache
 F:\Cegep\Icosaèdre\Isocaedre\ClubRP\bin\roslyn\csc.exe
 F:\Cegep\Icosaèdre\Isocaedre\ClubRP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 F:\Cegep\Icosaèdre\Isocaedre\ClubRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll

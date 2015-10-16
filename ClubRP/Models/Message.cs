@@ -10,7 +10,6 @@ namespace ClubRP.Models
     {
         [Key]
         public int MessageID { get; set; }
-        public string Titre { get; set; }
         public string Texte { get; set; }
         //Foreign key (Lazy Load)
         public int PostID { get; set; }

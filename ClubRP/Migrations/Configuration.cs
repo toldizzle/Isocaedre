@@ -27,7 +27,7 @@ namespace ClubRP.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            context.Messages.AddOrUpdate(new Message { Titre = "Bienvenue sur l'Isocaèdre", Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1 });
+            context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1 });
             context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, NbReponse = 0, ID = 1 });
             
         }
