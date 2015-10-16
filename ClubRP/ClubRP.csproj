@@ -194,6 +194,10 @@
     <Compile Include="Migrations\ApplicationDBContext\201510152321118_ChangementPostDate.Designer.cs">
       <DependentUpon>201510152321118_ChangementPostDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.Designer.cs">
+      <DependentUpon>201510160138089_MEssageUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -326,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510152321118_ChangementPostDate.resx">
       <DependentUpon>201510152321118_ChangementPostDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.resx">
+      <DependentUpon>201510160138089_MEssageUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
