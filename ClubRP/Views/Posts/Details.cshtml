@@ -1,57 +1,37 @@
 ﻿@model ClubRP.Models.Post
 
 @{
-    ViewBag.Title = Model.Titre.ToString();
+    ViewBag.Title = "Details";
 }
 
-<h2>@ViewBag.Title</h2>
 
 <div>
+    <h2>@Model.Titre</h2>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Titre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Titre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Creation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Creation)
-        </dd>
-
-        <dt>
-            Nombre de réponse:
-        </dt>
-        <dd>
-            @(Model.Messages.Count)
-        </dd>
+        @foreach (ClubRP.Models.Message p in Model.Messages)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Auteur)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Auteur)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Messages)
+            </dt>
+            <dd>
+                @p.Texte
+                <br />
+            </dd>
+            
+        }
         
-        <dt>
-            @Html.DisplayNameFor(model => model.Messages)
-        </dt>
-        <dd>
-            @foreach (ClubRP.Models.Message p in Model.Messages)
-            {
-                @(p.Texte)
-            }
-        </dd>
+
+        
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Modifier", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Retour au forum", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

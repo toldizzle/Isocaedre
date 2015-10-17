@@ -1,4 +1,4 @@
-﻿@model ClubRP.Models.Post
+﻿@model ClubRP.Models.Message
 
 @{
     ViewBag.Title = "Delete";
@@ -8,31 +8,23 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Post</h4>
+    <h4>Message</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Titre)
+            @Html.DisplayNameFor(model => model.Texte)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Titre)
+            @Html.DisplayFor(model => model.Texte)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.PostID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Auteur)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Auteur)
+            @Html.DisplayFor(model => model.PostID)
         </dd>
 
     </dl>
