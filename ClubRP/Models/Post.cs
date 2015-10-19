@@ -13,7 +13,7 @@ namespace ClubRP.Models
         [Required]
         public string Titre { get; set; }
         public string Description { get; set; }
-        public DateTime Creation = DateTime.Now;
+        public DateTime Creation { get; set; }
         public string Auteur = HttpContext.Current.User.Identity.Name;
         public virtual ICollection<Message> Messages { get; set; }
 

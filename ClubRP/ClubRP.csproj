@@ -211,6 +211,14 @@
     <Compile Include="Migrations\ApplicationDBContext\201510171951312_Auteur_Post2.Designer.cs">
       <DependentUpon>201510171951312_Auteur_Post2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510192106347_DateDuMessage.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510192106347_DateDuMessage.Designer.cs">
+      <DependentUpon>201510192106347_DateDuMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510192122522_DateDuMessageEtPost.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510192122522_DateDuMessageEtPost.Designer.cs">
+      <DependentUpon>201510192122522_DateDuMessageEtPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -360,6 +368,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510171951312_Auteur_Post2.resx">
       <DependentUpon>201510171951312_Auteur_Post2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510192106347_DateDuMessage.resx">
+      <DependentUpon>201510192106347_DateDuMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510192122522_DateDuMessageEtPost.resx">
+      <DependentUpon>201510192122522_DateDuMessageEtPost.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

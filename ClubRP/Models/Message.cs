@@ -12,6 +12,7 @@ namespace ClubRP.Models
         public int MessageID { get; set; }
         public string AuteurMessage = HttpContext.Current.User.Identity.Name;
         public string Texte { get; set; }
+        public DateTime DateMessage { get; set; }
         //Foreign key (Lazy Load)
         public int PostID { get; set; }
     }

@@ -10,25 +10,30 @@
     <hr />
     <p>@Html.ActionLink(linkText: "Répondre", actionName: "Create", controllerName: "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
     <table class="table">
+        @{
+            Model.Messages.OrderBy(a => a.DateMessage);
+        }
         @foreach (ClubRP.Models.Message p in Model.Messages)
-        {
+            {
             <tr>
                 <td>@Html.DisplayNameFor(model => model.Auteur)</td>
                 <td colspan="2">@Html.DisplayNameFor(model => model.Messages)</td>
             </tr>
-            <tr>
-                <td>@Html.DisplayFor(model => model.Auteur)</td>
-                <td>@p.Texte</td>
-                <td>@Html.ActionLink(linkText: "Modifier", actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null) @Html.ActionLink(linkText: "Effacer", actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-            </tr>
-            
+                <tr>
+                    <td>@Html.DisplayFor(model => model.Auteur) <br /> Images<br />@(p.DateMessage)</td>
+                    <td>
+                        @p.Texte
+                    </td>
+                    <td>@Html.ActionLink(linkText: "Modifier", actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null) @Html.ActionLink(linkText: "Effacer", actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
+
         }
     </table>
 </div>
 <p>
     @Html.ActionLink("Modifier", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink(linkText:"Retour au forum",actionName: "Index", controllerName: "Posts")
+    @Html.ActionLink(linkText: "Retour au forum", actionName: "Index", controllerName: "Posts")
 </p>

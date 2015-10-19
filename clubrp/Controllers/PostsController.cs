@@ -50,6 +50,7 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.Creation = DateTime.Now;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
