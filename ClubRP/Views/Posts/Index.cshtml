@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>L'isocaèdre</h2>
 
 <p>
     @Html.ActionLink("Créer un nouveau post", "Create")
@@ -21,12 +21,15 @@
             @Html.DisplayNameFor(model => model.Auteur)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Messages.Count)
+            Réponse
         </th>
-        <th></th>
+        <th>
+            Dernier
+        </th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.ActionLink(item.Titre, "Details", new { id = item.ID })
@@ -39,6 +42,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Messages.Count)
+        </td>
+        <td>
+            @*À faire le dernier répondant*@
         </td>
         <td>
             @Html.ActionLink("Modifier", "Edit", new { id=item.ID }) |
