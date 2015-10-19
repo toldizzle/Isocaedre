@@ -86,6 +86,7 @@ namespace ClubRP.Controllers
             {
                 message.AuteurMessage = System.Web.HttpContext.Current.User.Identity.Name;
                 message.DateMessage = DateTime.Now;
+                message.PostID = message.PostID;
                 db.Entry(message).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction(actionName: "Index", controllerName: "Posts");

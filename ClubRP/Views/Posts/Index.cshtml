@@ -28,30 +28,35 @@
         </th>
     </tr>
 
-@foreach (var item in Model)
-{
-    <tr>
-        <td>
-            @Html.ActionLink(item.Titre, "Details", new { id = item.ID })
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Auteur)
-        </td>
-        <td>
-            @item.Messages.Last().AuteurMessage
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Messages.Count)
-        </td>
-        <td>
-            @Html.ActionLink("Modifier", "Edit", new { id=item.ID }) |
-            
-            @Html.ActionLink("Effacer", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Titre, "Details", new { id = item.ID })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auteur)
+            </td>
+            <td>
+                @{
+                    if (item.Messages.Count > 0)
+                    {
+                        @Html.DisplayFor(modelItem => item.Messages.Last().AuteurMessage);
+                    }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Messages.Count)
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.ID }) |
+
+                @Html.ActionLink("Effacer", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+                    }
 
 </table>

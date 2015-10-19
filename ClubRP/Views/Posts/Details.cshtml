@@ -11,9 +11,9 @@
     <p>@Html.ActionLink(linkText: "Répondre", actionName: "Create", controllerName: "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
     <table class="table">
         @{
-            Model.Messages.OrderBy(a => a.DateMessage);
+            var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
         }
-        @foreach (ClubRP.Models.Message p in Model.Messages)
+        @foreach (ClubRP.Models.Message p in sortedMessage)
             {
             <tr>
                 <td>@Html.DisplayNameFor(model => model.Auteur)</td>
