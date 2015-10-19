@@ -52,7 +52,7 @@ namespace ClubRP.Controllers
             {
                 db.Messages.Add(message);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(actionName: "Index", controllerName: "Posts");
             }
 
             return View(message);
@@ -84,7 +84,7 @@ namespace ClubRP.Controllers
             {
                 db.Entry(message).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(actionName: "Index", controllerName: "Posts");
             }
             return View(message);
         }
@@ -112,7 +112,7 @@ namespace ClubRP.Controllers
             Message message = db.Messages.Find(id);
             db.Messages.Remove(message);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction(actionName: "Index", controllerName: "Posts");
         }
 
         protected override void Dispose(bool disposing)

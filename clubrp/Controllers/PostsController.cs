@@ -84,7 +84,7 @@ namespace ClubRP.Controllers
             {
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(actionName:"Index");
             }
             return View(post);
         }

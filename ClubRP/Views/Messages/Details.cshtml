@@ -29,6 +29,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MessageID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @*@Html.ActionLink("Modifier", "Edit", new { id = Model.MessageID }) |*@
+    @Html.ActionLink(linkText: "Retour au forum", actionName: "Index", controllerName: "Posts")
 </p>
