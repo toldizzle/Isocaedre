@@ -51,6 +51,7 @@ namespace ClubRP.Controllers
             if (ModelState.IsValid)
             {
                 post.Creation = DateTime.Now;
+                post.Auteur = System.Web.HttpContext.Current.User.Identity.Name;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -83,6 +84,8 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.Creation = DateTime.Now;
+                post.Auteur = System.Web.HttpContext.Current.User.Identity.Name;
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction(actionName:"Index");

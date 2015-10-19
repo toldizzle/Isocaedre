@@ -10,7 +10,7 @@ namespace ClubRP.Models
     {
         [Key]
         public int MessageID { get; set; }
-        public string AuteurMessage = HttpContext.Current.User.Identity.Name;
+        public string AuteurMessage { get; set; }
         public string Texte { get; set; }
         public DateTime DateMessage { get; set; }
         //Foreign key (Lazy Load)

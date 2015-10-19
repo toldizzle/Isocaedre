@@ -41,10 +41,10 @@
             @Html.DisplayFor(modelItem => item.Auteur)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Messages.Count)
+            @item.Messages.Last().AuteurMessage
         </td>
         <td>
-            @*À faire le dernier répondant*@
+            @Html.DisplayFor(modelItem => item.Messages.Count)
         </td>
         <td>
             @Html.ActionLink("Modifier", "Edit", new { id=item.ID }) |

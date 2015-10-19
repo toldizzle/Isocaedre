@@ -50,6 +50,7 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                message.AuteurMessage = System.Web.HttpContext.Current.User.Identity.Name;
                 message.DateMessage = DateTime.Now;
                 db.Messages.Add(message);
                 db.SaveChanges();
@@ -83,6 +84,8 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                message.AuteurMessage = System.Web.HttpContext.Current.User.Identity.Name;
+                message.DateMessage = DateTime.Now;
                 db.Entry(message).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction(actionName: "Index", controllerName: "Posts");
