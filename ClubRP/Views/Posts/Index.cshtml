@@ -5,10 +5,11 @@
 }
 
 <h2>L'isocaèdre</h2>
+@if (User.IsInRole("Modérateurs"))
+{
+    <p>@Html.ActionLink("Créer un nouveau post", "Create")</p>
+}
 
-<p>
-    @Html.ActionLink("Créer un nouveau post", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -52,11 +53,14 @@
                 @Html.DisplayFor(modelItem => item.Messages.Count)
             </td>
             <td>
-                @Html.ActionLink("Modifier", "Edit", new { id = item.ID }) |
+                @if (User.IsInRole("Modérateurs"))
+                {
+                    @Html.ActionLink("Modifier", "Edit", new { id = item.ID }) 
+                    Html.ActionLink("Effacer", "Delete", new { id = item.ID });
+                }
 
-                @Html.ActionLink("Effacer", "Delete", new { id = item.ID })
             </td>
         </tr>
-                    }
+                }
 
 </table>

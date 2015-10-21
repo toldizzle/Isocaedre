@@ -29,7 +29,7 @@ namespace ClubRP.Migrations
             //
             context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1 });
             context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1 });
-            
+            context.SaveChanges();
         }
     }
 }

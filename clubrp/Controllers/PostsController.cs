@@ -15,11 +15,12 @@ namespace ClubRP.Controllers
         private ClubDB db = new ClubDB();
 
         // GET: Posts
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Posts.ToList());
         }
-
+        [Authorize]
         // GET: Posts/Details/5
         public ActionResult Details(int? id)
         {
@@ -36,6 +37,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Posts/Create
+        [Authorize(Roles = "Modérateurs")]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +48,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs")]
         public ActionResult Create([Bind(Include = "ID,Titre,Description,Auteur")] Post post)
         {
             if (ModelState.IsValid)
@@ -61,6 +64,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Posts/Edit/5
+        [Authorize(Roles = "Modérateurs")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -80,6 +84,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs")]
         public ActionResult Edit([Bind(Include = "ID,Titre,Description,Auteur")] Post post)
         {
             if (ModelState.IsValid)
@@ -94,6 +99,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Posts/Delete/5
+        [Authorize(Roles = "Modérateurs")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,6 +117,7 @@ namespace ClubRP.Controllers
         // POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs")]
         public ActionResult DeleteConfirmed(int id)
         {
             Post post = db.Posts.Find(id);
