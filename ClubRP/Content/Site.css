@@ -22,4 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+/*Pour le forum*/
+table{
+    background-color: #000080;
+    border:solid black 1px;
+    color:#F0FFFF;
+}
 
