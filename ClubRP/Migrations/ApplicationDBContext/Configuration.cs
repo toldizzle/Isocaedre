@@ -7,6 +7,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
     using System.Data.Entity.Migrations;
     using System.Linq;
     using Microsoft.AspNet.Identity;
+    using System.Collections.Generic;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ClubRP.Models.ApplicationDbContext>
     {
@@ -28,6 +29,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
 
         private static void AjouterUtilisateur(PasswordHasher pass, ApplicationDbContext context)
         {
+            
             ApplicationUser[] users =
                         {
                 new ApplicationUser
@@ -35,16 +37,77 @@ namespace ClubRP.Migrations.ApplicationDBContext
                     Email = "admin@isocaedre.ca",
                     UserName = "admin@isocaedre.ca",
                     PasswordHash = pass.HashPassword("Admin123!"),
-                    SecurityStamp = Guid.NewGuid().ToString()
-                    //details = new AspNetUserInfoSupp
-                    //{
-                    //    DateInscription = DateTime.Now,
-                    //    Prénom = "Francis",
-                    //    Nom = "Henry",
-                    //    IdentifiantSTH = "SuPeRaDmIn"
-                    //}
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    details = new AspNetUsersInfoSup
+                    {
+                        Nom="Henry",
+                        Prenom="Francis",
+                        ImageData= new byte[0],
+                        ImageNom = "",
+                        ImageTaille = 0,
+                        ImageType = "",
+                        Role = "Administrateurs",
+                        Fichier = null
+                    }
+                },
+                new ApplicationUser
+                {
+                    Email = "maitre@isocaedre.ca",
+                    UserName = "maitre@isocaedre.ca",
+                    PasswordHash = pass.HashPassword("Maitre123!"),
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    details = new AspNetUsersInfoSup
+                    {
+                        Nom="Henry",
+                        Prenom="Francis",
+                        ImageData= new byte[0],
+                        ImageNom = "",
+                        ImageTaille = 0,
+                        ImageType = "",
+                        Role = "Maître",
+                        Fichier = null
+                    }
+                },
+                new ApplicationUser
+                {
+                    Email = "joueur@isocaedre.ca",
+                    UserName = "joueur@isocaedre.ca",
+                    PasswordHash = pass.HashPassword("Maitre123!"),
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    details = new AspNetUsersInfoSup
+                    {
+                        Nom="Défaut",
+                        Prenom="Joueur",
+                        ImageData= new byte[0],
+                        ImageNom = "",
+                        ImageTaille = 0,
+                        ImageType = "",
+                        Role = "Joueurs",
+                        Fichier = null
+                    }
+                },
+                new ApplicationUser
+                {
+                    Email = "moderateur@isocaedre.ca",
+                    UserName = "moderateur@isocaedre.ca",
+                    PasswordHash = pass.HashPassword("Moderateur123!"),
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    details = new AspNetUsersInfoSup
+                    {
+                        Nom="Henry",
+                        Prenom="Francis",
+                        ImageData= new byte[0],
+                        ImageNom = "",
+                        ImageTaille = 0,
+                        ImageType = "",
+                        Role = "Modérateurs",
+                        Fichier = null
+                    }
                 }
             };
+            //Ajouter un id dans chacune des tables / details et user
+            foreach (ApplicationUser u in users)
+                u.details.ID = u.Id;
             context.Users.AddOrUpdate(u => u.UserName, users);
             context.SaveChanges();
         }
@@ -56,8 +119,24 @@ namespace ClubRP.Migrations.ApplicationDBContext
                 new IdentityUserRole
                 {
                     UserId = context.Users.Where(u => u.UserName == "admin@isocaedre.ca").First().Id,
+                    RoleId = context.Roles.Where(r => r.Name == "Administrateurs").First().Id
+                },
+                new IdentityUserRole
+                {
+                    UserId = context.Users.Where(u => u.UserName == "moderateur@isocaedre.ca").First().Id,
                     RoleId = context.Roles.Where(r => r.Name == "Modérateurs").First().Id
+                },
+                new IdentityUserRole
+                {
+                    UserId = context.Users.Where(u => u.UserName == "joueur@isocaedre.ca").First().Id,
+                    RoleId = context.Roles.Where(r => r.Name == "Joueurs").First().Id
+                },
+                new IdentityUserRole
+                {
+                    UserId = context.Users.Where(u => u.UserName == "maitre@isocaedre.ca").First().Id,
+                    RoleId = context.Roles.Where(r => r.Name == "Maîtres").First().Id
                 }
+
             };
             context.Set<IdentityUserRole>().AddOrUpdate(ur => new { ur.UserId, ur.RoleId }, userroles);
             context.SaveChanges();
@@ -71,8 +150,8 @@ namespace ClubRP.Migrations.ApplicationDBContext
                     new IdentityRole() { Name = "Utilisateurs" },
                     new IdentityRole() { Name = "Modérateurs" },
                     new IdentityRole() { Name = "ExclusionForum" },
-                    new IdentityRole() { Name = "Maître" },
-                    new IdentityRole() { Name = "Joueur" }
+                    new IdentityRole() { Name = "Maîtres" },
+                    new IdentityRole() { Name = "Joueurs" }
             };
             context.Roles.AddOrUpdate(r => r.Name, roles);
             context.SaveChanges();
