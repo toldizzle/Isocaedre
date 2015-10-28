@@ -20,18 +20,16 @@ namespace ClubRP.Migrations.ApplicationDBContext
         {
             //  This method will be called after migrating to the latest version.
             PasswordHasher pass = new PasswordHasher();
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+
+            AjouterUtilisateur(pass, context);
+            AjouterRoles(context);
+            AjouterUserRoles(context);
+        }
+
+        private static void AjouterUtilisateur(PasswordHasher pass, ApplicationDbContext context)
+        {
             ApplicationUser[] users =
-            {
+                        {
                 new ApplicationUser
                 {
                     Email = "admin@isocaedre.ca",
@@ -47,18 +45,14 @@ namespace ClubRP.Migrations.ApplicationDBContext
                     //}
                 }
             };
-            IdentityRole[] roles =
-            {
-                    new IdentityRole() {Name = "Administrateurs" },
-                    new IdentityRole() { Name = "Utilisateurs" },
-                    new IdentityRole() { Name = "Modérateurs" }
-            };
             context.Users.AddOrUpdate(u => u.UserName, users);
-            context.Roles.AddOrUpdate(r => r.Name, roles);
             context.SaveChanges();
+        }
 
+        private static void AjouterUserRoles(ApplicationDbContext context)
+        {
             IdentityUserRole[] userroles =
-            {
+                        {
                 new IdentityUserRole
                 {
                     UserId = context.Users.Where(u => u.UserName == "admin@isocaedre.ca").First().Id,
@@ -66,6 +60,21 @@ namespace ClubRP.Migrations.ApplicationDBContext
                 }
             };
             context.Set<IdentityUserRole>().AddOrUpdate(ur => new { ur.UserId, ur.RoleId }, userroles);
+            context.SaveChanges();
+        }
+
+        private static void AjouterRoles(ApplicationDbContext context)
+        {
+            IdentityRole[] roles =
+                        {
+                    new IdentityRole() {Name = "Administrateurs" },
+                    new IdentityRole() { Name = "Utilisateurs" },
+                    new IdentityRole() { Name = "Modérateurs" },
+                    new IdentityRole() { Name = "ExclusionForum" },
+                    new IdentityRole() { Name = "Maître" },
+                    new IdentityRole() { Name = "Joueur" }
+            };
+            context.Roles.AddOrUpdate(r => r.Name, roles);
             context.SaveChanges();
         }
     }
