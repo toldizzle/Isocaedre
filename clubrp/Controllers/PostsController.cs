@@ -12,7 +12,7 @@ namespace ClubRP.Controllers
 {
     public class PostsController : Controller
     {
-        private ClubDB db = new ClubDB();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Posts
         [Authorize]

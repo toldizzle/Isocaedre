@@ -9,7 +9,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
     using Microsoft.AspNet.Identity;
     using System.Collections.Generic;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ClubRP.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
@@ -17,19 +17,23 @@ namespace ClubRP.Migrations.ApplicationDBContext
             MigrationsDirectory = @"Migrations\ApplicationDBContext";
         }
 
-        protected override void Seed(ClubRP.Models.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
             PasswordHasher pass = new PasswordHasher();
+           
 
+            context.SaveChanges();
             AjouterUtilisateur(pass, context);
             AjouterRoles(context);
             AjouterUserRoles(context);
+            context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1, DateMessage = DateTime.Now, AuteurMessage="admin@isocaedre.ca" });
+            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description="Présentez-vous ici!", Auteur="Admin@isocaedre.ca"});
         }
 
         private static void AjouterUtilisateur(PasswordHasher pass, ApplicationDbContext context)
         {
-            
+
             ApplicationUser[] users =
                         {
                 new ApplicationUser

@@ -1,9 +1,9 @@
-namespace ClubRP.Migrations
+namespace ClubRP.Migrations.ApplicationDBContext
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initialisation : DbMigration
+    public partial class RedirectionDesPotsMessages : DbMigration
     {
         public override void Up()
         {
@@ -12,8 +12,9 @@ namespace ClubRP.Migrations
                 c => new
                     {
                         MessageID = c.Int(nullable: false, identity: true),
-                        Titre = c.String(),
+                        AuteurMessage = c.String(),
                         Texte = c.String(),
+                        DateMessage = c.DateTime(nullable: false),
                         PostID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.MessageID)
@@ -26,8 +27,9 @@ namespace ClubRP.Migrations
                     {
                         ID = c.Int(nullable: false, identity: true),
                         Titre = c.String(nullable: false),
+                        Description = c.String(),
                         Creation = c.DateTime(nullable: false),
-                        NbReponse = c.Int(nullable: false),
+                        Auteur = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
             

@@ -12,6 +12,7 @@ namespace ClubRP.Models
     {
         [ForeignKey("Id")]
         public virtual AspNetUsersInfoSup details { get; set; }
+        
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -24,8 +25,10 @@ namespace ClubRP.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<AspNetUsersInfoSup> userProp { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Message> Messages { get; set; }
         public ApplicationDbContext()
-            : base("ClubDB", throwIfV1Schema: false)
+            : base("ApplicationDbContext", throwIfV1Schema: false)
         {
         }
 
@@ -33,6 +36,7 @@ namespace ClubRP.Models
         {
             return new ApplicationDbContext();
         }
+
 
     }
 }

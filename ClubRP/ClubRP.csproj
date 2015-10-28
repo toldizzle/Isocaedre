@@ -174,15 +174,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MembreController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510152116065_Initialisation.cs" />
-    <Compile Include="Migrations\201510152116065_Initialisation.Designer.cs">
-      <DependentUpon>201510152116065_Initialisation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationDBContext\201510152116594_Initialisation.cs" />
     <Compile Include="Migrations\ApplicationDBContext\201510152116594_Initialisation.Designer.cs">
@@ -228,11 +223,13 @@
     <Compile Include="Migrations\ApplicationDBContext\201510280115358_AjoutASPUSERROLE.Designer.cs">
       <DependentUpon>201510280115358_AjoutASPUSERROLE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.Designer.cs">
+      <DependentUpon>201510281757445_RedirectionDesPotsMessages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
-    <Compile Include="Models\ClubDB.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Message.cs" />
@@ -339,11 +336,6 @@
     <Content Include="Views\Messages\Details.cshtml" />
     <Content Include="Views\Messages\Edit.cshtml" />
     <Content Include="Views\Messages\Index.cshtml" />
-    <Content Include="Views\Membre\Create.cshtml" />
-    <Content Include="Views\Membre\Delete.cshtml" />
-    <Content Include="Views\Membre\Details.cshtml" />
-    <Content Include="Views\Membre\Edit.cshtml" />
-    <Content Include="Views\Membre\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -360,9 +352,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510152116065_Initialisation.resx">
-      <DependentUpon>201510152116065_Initialisation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510152116594_Initialisation.resx">
       <DependentUpon>201510152116594_Initialisation.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510280115358_AjoutASPUSERROLE.resx">
       <DependentUpon>201510280115358_AjoutASPUSERROLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.resx">
+      <DependentUpon>201510281757445_RedirectionDesPotsMessages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
