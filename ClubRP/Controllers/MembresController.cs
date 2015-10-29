@@ -11,6 +11,7 @@ using System.IO;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity;
 using System.Web.Security;
+using System.Data.Entity.Migrations;
 
 namespace ClubRP.Controllers
 {
@@ -42,7 +43,7 @@ namespace ClubRP.Controllers
         // GET: Members/Create
         public ActionResult Create()
         {
-            ViewBag.Categories = new SelectList(db.Roles, "Name", "Name"); // à modifier
+            ViewBag.Categories = new SelectList(db.Roles, "Name", "Name");
             return View();
         }
 
@@ -66,19 +67,11 @@ namespace ClubRP.Controllers
                 appUser.details.ImageType = appUser.details.Fichier.ContentType;
                 appUser.details.ImageData = new byte[appUser.details.ImageTaille];
                 appUser.details.Fichier.InputStream.Read(appUser.details.ImageData, 0, appUser.details.ImageTaille);
-                
-               
                 db.Users.Add(appUser);
-                //db.SaveChanges();
+                db.SaveChanges();
+                //Role
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-                
-                foreach (var item in db.Roles)
-                {
-                    if (item.Name == appUser.details.Role)
-                        UserManager.AddToRole(appUser.Id, appUser.details.Role);
-                }
-                //UserManager.AddToRole(appUser.Id, role);
-                //appUser.details.Role = "Utilisateurs";
+                UserManager.AddToRole(appUser.Id, appUser.details.Role);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -89,6 +82,7 @@ namespace ClubRP.Controllers
         // GET: Members/Edit/5
         public ActionResult Edit(string id)
         {
+            ViewBag.Categories = new SelectList(db.Roles, "Name", "Name");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -106,11 +100,27 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Role,Nom,Prenom,Fichier")] ApplicationUser appUser)
+        public ActionResult Edit([Bind(Include = "Id,details,Email,PasswordHash,Role")] ApplicationUser appUser)
         {
+            PasswordHasher pass = new PasswordHasher();
             if (ModelState.IsValid)
             {
-                db.Entry(appUser).State = EntityState.Modified;
+                appUser.details.ID = appUser.Id;
+                appUser.PasswordHash = pass.HashPassword(appUser.PasswordHash);
+                appUser.SecurityStamp = Guid.NewGuid().ToString();
+                appUser.UserName = appUser.Email;
+                appUser.details.ImageNom = Path.GetFileName(appUser.details.Fichier.FileName);
+                appUser.details.ImageTaille = appUser.details.Fichier.ContentLength;
+                appUser.details.ImageType = appUser.details.Fichier.ContentType;
+                appUser.details.ImageData = new byte[appUser.details.ImageTaille];
+                appUser.details.Fichier.InputStream.Read(appUser.details.ImageData, 0, appUser.details.ImageTaille);
+                //Si le AspNetUserInfoSupp existe déjà il faut le retirer pour le modifier?
+                db.userProp.AddOrUpdate(appUser.details);
+                //Role
+                var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                UserManager.AddToRole(appUser.Id, appUser.details.Role);
+                
+                //db.Entry(appUser).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -48,6 +48,14 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.details.Role, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("details.Role", (SelectList)ViewBag.Categories)
+                @Html.ValidationMessageFor(model => model.details.Role, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.details.Fichier, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.details.Fichier, new { type = "file" })
