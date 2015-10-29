@@ -51,7 +51,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserName,Id,details,Email,PasswordHash")] ApplicationUser appUser)
+        public ActionResult Create([Bind(Include = "UserName,Id,details,Email,PasswordHash,Role")] ApplicationUser appUser)
         {
             PasswordHasher pass = new PasswordHasher();
             if (ModelState.IsValid)
@@ -69,9 +69,9 @@ namespace ClubRP.Controllers
                 
                
                 db.Users.Add(appUser);
-                db.SaveChanges();
+                //db.SaveChanges();
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-                UserManager.AddToRole(appUser.Id, "Utilisateurs");
+                UserManager.AddToRole(appUser.Id, appUser.details.Role);
                 appUser.details.Role = "Utilisateurs";
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -100,15 +100,15 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Role,Nom,Prenom,Fichier")] AspNetUsersInfoSup aspNetUsersInfoSup)
+        public ActionResult Edit([Bind(Include = "ID,Role,Nom,Prenom,Fichier")] ApplicationUser appUser)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(aspNetUsersInfoSup).State = EntityState.Modified;
+                db.Entry(appUser).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(aspNetUsersInfoSup);
+            return View(appUser);
         }
 
         // GET: Members/Delete/5
