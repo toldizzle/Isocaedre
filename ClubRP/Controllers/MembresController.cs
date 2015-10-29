@@ -32,12 +32,12 @@ namespace ClubRP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AspNetUsersInfoSup aspNetUsersInfoSup = db.userProp.Find(id);
-            if (aspNetUsersInfoSup == null)
+            ApplicationUser appUser = db.Users.Find(id);
+            if (appUser == null)
             {
                 return HttpNotFound();
             }
-            return View(aspNetUsersInfoSup);
+            return View(appUser);
         }
 
         // GET: Members/Create
@@ -105,6 +105,7 @@ namespace ClubRP.Controllers
             PasswordHasher pass = new PasswordHasher();
             if (ModelState.IsValid)
             {
+                //Modifie les entrées nécessaires.
                 appUser.details.ID = appUser.Id;
                 appUser.PasswordHash = pass.HashPassword(appUser.PasswordHash);
                 appUser.SecurityStamp = Guid.NewGuid().ToString();
@@ -114,7 +115,7 @@ namespace ClubRP.Controllers
                 appUser.details.ImageType = appUser.details.Fichier.ContentType;
                 appUser.details.ImageData = new byte[appUser.details.ImageTaille];
                 appUser.details.Fichier.InputStream.Read(appUser.details.ImageData, 0, appUser.details.ImageTaille);
-                //Si le AspNetUserInfoSupp existe déjà il faut le retirer pour le modifier?
+                //Update le aspuserinfosupp
                 db.userProp.AddOrUpdate(appUser.details);
                 //Role
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
@@ -134,12 +135,12 @@ namespace ClubRP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AspNetUsersInfoSup aspNetUsersInfoSup = db.userProp.Find(id);
-            if (aspNetUsersInfoSup == null)
+            ApplicationUser appUser = db.Users.Find(id);
+            if (appUser == null)
             {
                 return HttpNotFound();
             }
-            return View(aspNetUsersInfoSup);
+            return View(appUser);
         }
 
         // POST: Members/Delete/5
@@ -149,6 +150,8 @@ namespace ClubRP.Controllers
         {
             AspNetUsersInfoSup aspNetUsersInfoSup = db.userProp.Find(id);
             db.userProp.Remove(aspNetUsersInfoSup);
+            ApplicationUser appUser = db.Users.Find(id);
+            db.Users.Remove(appUser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

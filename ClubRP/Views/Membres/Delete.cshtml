@@ -1,4 +1,4 @@
-﻿@model ClubRP.Models.AspNetUsersInfoSup
+﻿@model ClubRP.Models.ApplicationUser
 
 @{
     ViewBag.Title = "Delete";
@@ -12,60 +12,36 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Role)
+            @Html.DisplayNameFor(model => model.details.Role)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Role)
+            @Html.DisplayFor(model => model.details.Role)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nom)
+            @Html.DisplayNameFor(model => model.details.Nom)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nom)
+            @Html.DisplayFor(model => model.details.Nom)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Prenom)
+            @Html.DisplayNameFor(model => model.details.Prenom)
         </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Prenom)
-        </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ImageNom)
+            Image:
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.ImageNom)
+            @{
+                string src = "";
+                src = "data:" + Model.details.ImageType + ";base64," + Convert.ToBase64String(Model.details.ImageData);
+                <img src="@src" height="140" width="100" alt=@Model.details.ImageNom />
+            }
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ImageType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ImageType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ImageTaille)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ImageTaille)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ImageData)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ImageData)
-        </dd>
+        
 
     </dl>
 
