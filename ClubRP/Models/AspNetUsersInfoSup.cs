@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace ClubRP.Models
     [Bind(Include = "ID,Role,Nom,Prenom,ImageNom,ImageType,ImageTaille,ImageData,Fichier")]
     public class AspNetUsersInfoSup
     {
-        //[Key]
+        [Key]
         public string ID { get; set; }
         public string Role { get; set; }
         public string Nom { get; set; }

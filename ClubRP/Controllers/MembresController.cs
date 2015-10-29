@@ -56,6 +56,8 @@ namespace ClubRP.Controllers
             PasswordHasher pass = new PasswordHasher();
             if (ModelState.IsValid)
             {
+                appUser.details.ID = appUser.Id;
+                db.userProp.Add(appUser.details);
                 appUser.PasswordHash = pass.HashPassword(appUser.PasswordHash);
                 appUser.SecurityStamp = Guid.NewGuid().ToString();
                 appUser.UserName = appUser.Email;
@@ -64,9 +66,13 @@ namespace ClubRP.Controllers
                 appUser.details.ImageType = appUser.details.Fichier.ContentType;
                 appUser.details.ImageData = new byte[appUser.details.ImageTaille];
                 appUser.details.Fichier.InputStream.Read(appUser.details.ImageData, 0, appUser.details.ImageTaille);
-                Roles.AddUserToRole(appUser.UserName, "Utilisateurs");
-                appUser.details.Role = "Utilisateurs";
+                
+               
                 db.Users.Add(appUser);
+                db.SaveChanges();
+                var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                UserManager.AddToRole(appUser.Id, "Utilisateurs");
+                appUser.details.Role = "Utilisateurs";
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

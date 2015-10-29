@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ClubRP.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace ClubRP.Controllers
 {
@@ -152,6 +153,9 @@ namespace ClubRP.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var _context = new ApplicationDbContext();
+                var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(_context));
+                UserManager.AddToRole(user.Id, "Utilisateurs");
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

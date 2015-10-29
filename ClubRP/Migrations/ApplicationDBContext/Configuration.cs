@@ -117,7 +117,10 @@ namespace ClubRP.Migrations.ApplicationDBContext
             };
             //Ajouter un id dans chacune des tables / details et user
             foreach (ApplicationUser u in users)
+            {
                 u.details.ID = u.Id;
+            }
+               
             context.Users.AddOrUpdate(u => u.UserName, users);
             context.SaveChanges();
         }
