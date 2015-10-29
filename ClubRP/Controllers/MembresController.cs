@@ -42,7 +42,7 @@ namespace ClubRP.Controllers
         // GET: Members/Create
         public ActionResult Create()
         {
-            ViewBag.Categories = new SelectList(db.Roles, "Id", "Name");
+            ViewBag.Categories = new SelectList(db.Roles, "Name", "Name"); // à modifier
             return View();
         }
 
@@ -51,7 +51,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserName,Id,details,Email,PasswordHash,Role")] ApplicationUser appUser)
+        public ActionResult Create([Bind(Include = "Id,details,Email,PasswordHash,Role")] ApplicationUser appUser)
         {
             PasswordHasher pass = new PasswordHasher();
             if (ModelState.IsValid)
@@ -71,16 +71,14 @@ namespace ClubRP.Controllers
                 db.Users.Add(appUser);
                 //db.SaveChanges();
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-                var role = from item in db.Roles
-                           where item.Name == appUser.details.Role
-                           select item.Name;
+                
                 foreach (var item in db.Roles)
                 {
                     if (item.Name == appUser.details.Role)
-                        UserManager.AddToRole(appUser.Id, item.Name);
+                        UserManager.AddToRole(appUser.Id, appUser.details.Role);
                 }
                 //UserManager.AddToRole(appUser.Id, role);
-                appUser.details.Role = "Utilisateurs";
+                //appUser.details.Role = "Utilisateurs";
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
