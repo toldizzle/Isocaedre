@@ -21,14 +21,20 @@ namespace ClubRP.Migrations.ApplicationDBContext
         {
             //  This method will be called after migrating to the latest version.
             PasswordHasher pass = new PasswordHasher();
-           
 
-            context.SaveChanges();
+
+
             AjouterUtilisateur(pass, context);
             AjouterRoles(context);
             AjouterUserRoles(context);
-            context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1, DateMessage = DateTime.Now, AuteurMessage="admin@isocaedre.ca" });
-            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description="Présentez-vous ici!", Auteur="Admin@isocaedre.ca"});
+            AjoutPostEtMessage(context);
+        }
+
+        private static void AjoutPostEtMessage(ApplicationDbContext context)
+        {
+            context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1, DateMessage = DateTime.Now, AuteurMessage = "admin@isocaedre.ca" });
+            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!", Auteur = "Admin@isocaedre.ca" });
+            context.SaveChanges();
         }
 
         private static void AjouterUtilisateur(PasswordHasher pass, ApplicationDbContext context)
