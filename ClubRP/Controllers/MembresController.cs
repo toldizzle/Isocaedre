@@ -71,7 +71,15 @@ namespace ClubRP.Controllers
                 db.Users.Add(appUser);
                 //db.SaveChanges();
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-                UserManager.AddToRole(appUser.Id, appUser.details.Role);
+                var role = from item in db.Roles
+                           where item.Name == appUser.details.Role
+                           select item.Name;
+                foreach (var item in db.Roles)
+                {
+                    if (item.Name == appUser.details.Role)
+                        UserManager.AddToRole(appUser.Id, item.Name);
+                }
+                //UserManager.AddToRole(appUser.Id, role);
                 appUser.details.Role = "Utilisateurs";
                 db.SaveChanges();
                 return RedirectToAction("Index");
