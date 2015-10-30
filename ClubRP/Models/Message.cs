@@ -10,7 +10,7 @@ namespace ClubRP.Models
     {
         [Key]
         public int MessageID { get; set; }
-        public ApplicationUser utilisateur { get; set; }
+        public string utilisateurName { get; set; }
         [DataType(DataType.MultilineText)]
         public string Texte { get; set; }
         public DateTime DateMessage { get; set; }
