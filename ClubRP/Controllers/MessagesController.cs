@@ -65,7 +65,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Messages/Edit/5
-        [Authorize(Roles = "Modérateurs")]
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,7 +85,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Modérateurs")]
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID")] Message message)
         {
             if (ModelState.IsValid)
@@ -101,7 +101,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Messages/Delete/5
-        [Authorize(Roles = "Modérateurs")]
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -119,7 +119,7 @@ namespace ClubRP.Controllers
         // POST: Messages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Modérateurs")]
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult DeleteConfirmed(int id)
         {
             Message message = db.Messages.Find(id);

@@ -43,7 +43,7 @@ namespace ClubRP.Controllers
             ViewBag.ListePosts = new List<Post>();
             return View();
         }
-        [Authorize]
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Membre()
         {
             ViewBag.Titre = "Espace membre";

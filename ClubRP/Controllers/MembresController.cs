@@ -20,12 +20,14 @@ namespace ClubRP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Members
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
 
         // GET: Members/Details/5
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -41,6 +43,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Members/Create
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Create()
         {
             ViewBag.Categories = new SelectList(db.Roles, "Name", "Name");
@@ -52,6 +55,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Create([Bind(Include = "Id,details,Email,PasswordHash,Role")] ApplicationUser appUser)
         {
             PasswordHasher pass = new PasswordHasher();
@@ -80,6 +84,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Members/Edit/5
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Edit(string id)
         {
             ViewBag.Categories = new SelectList(db.Roles, "Name", "Name");
@@ -100,6 +105,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Edit([Bind(Include = "Id,details,Email,PasswordHash,Role")] ApplicationUser appUser)
         {
             PasswordHasher pass = new PasswordHasher();
@@ -129,6 +135,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Members/Delete/5
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -146,6 +153,7 @@ namespace ClubRP.Controllers
         // POST: Members/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrateurs")]
         public ActionResult DeleteConfirmed(string id)
         {
             AspNetUsersInfoSup aspNetUsersInfoSup = db.userProp.Find(id);

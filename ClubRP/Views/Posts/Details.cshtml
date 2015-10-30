@@ -22,13 +22,13 @@
                 <td colspan="2" class="col-lg-9">@Html.DisplayNameFor(model => model.Messages)</td>
             </tr>
             <tr>
-                <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br /> Images<br />@(p.DateMessage)</td>
+                <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br />Image <br />@(p.DateMessage)</td>
                 <td class="col-lg-9">
                     @p.Texte
                 </td>
             </tr>
             <tr>
-                @if (User.IsInRole("Modérateurs"))
+                @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
                 {
                    <td>@Html.ActionLink(linkText: "Modifier", actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null) @Html.ActionLink(linkText: "Effacer", actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
                 }

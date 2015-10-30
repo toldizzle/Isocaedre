@@ -1,6 +1,6 @@
 ﻿@model ClubRP.Models.IndexViewModel
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "Gestion";
 }
 
 <h2>@ViewBag.Title.</h2>
@@ -15,11 +15,11 @@
             [
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Changer son mot de passe", "ChangePassword")
             }
             else
             {
-                @Html.ActionLink("Create", "SetPassword")
+                @Html.ActionLink("Créer un password", "SetPassword")
             }
             ]
         </dd>
