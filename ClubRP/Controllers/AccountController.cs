@@ -165,11 +165,6 @@ namespace ClubRP.Controllers
                 user.details.ImageData = new byte[model.details.ImageTaille];
                 user.details.Fichier.InputStream.Read(model.details.ImageData, 0, model.details.ImageTaille);
                 
-                var _context = new ApplicationDbContext();
-                _context.Users.Add(user);
-                _context.userProp.Add(user.details);
-             
-                
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

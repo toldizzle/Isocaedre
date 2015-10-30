@@ -9,7 +9,6 @@ using System.Web.Mvc;
 
 namespace ClubRP.Models
 {
-    [Bind(Include = "ID,Role,Nom,Prenom,ImageNom,ImageType,ImageTaille,ImageData,Fichier")]
     public class AspNetUsersInfoSup
     {
         [Key]
