@@ -24,6 +24,7 @@ namespace ClubRP.Controllers
         // GET: Posts/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.Users = db.Users.ToList();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
