@@ -32,12 +32,12 @@ namespace ClubRP.Migrations.ApplicationDBContext
 
         private static void AjoutPostEtMessage(ApplicationDbContext context)
         {
-            //ApplicationUser userInit = (from user in context.Users
-            //                where user.Email == "admin@isocaedre.ca"
-            //                select user).First();
+            var userInit = (from user in context.Users
+                            where user.UserName == "admin@isocaedre.ca"
+                            select user.Id).First();
             context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur."
-                , PostID = 1, MessageID = 1, DateMessage = DateTime.Now, utilisateurName = "admin@isoaedre.ca" });
-            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!", utilisateurName = "admin@isocaedre.ca"});
+                , PostID = 1, MessageID = 1, DateMessage = DateTime.Now, AspNetUserID = userInit });
+            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!", AspNetUserID = userInit});
             context.SaveChanges();
         }
 

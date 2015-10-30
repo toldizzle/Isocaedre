@@ -54,7 +54,7 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
-                message.utilisateurName = System.Web.HttpContext.Current.User.Identity.Name;
+                message.AspNetUserID = System.Web.HttpContext.Current.User.Identity.Name;
                 message.DateMessage = DateTime.Now;
                 db.Messages.Add(message);
                 db.SaveChanges();
@@ -91,7 +91,7 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
-                message.utilisateurName = System.Web.HttpContext.Current.User.Identity.Name;
+                message.AspNetUserID = System.Web.HttpContext.Current.User.Identity.Name;
                 message.DateMessage = DateTime.Now;
                 message.PostID = message.PostID;
                 db.Entry(message).State = EntityState.Modified;
