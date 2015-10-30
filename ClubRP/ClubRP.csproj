@@ -228,6 +228,10 @@
     <Compile Include="Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.Designer.cs">
       <DependentUpon>201510281757445_RedirectionDesPotsMessages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510301632497_ChangementMessageEtPostsUSER.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510301632497_ChangementMessageEtPostsUSER.Designer.cs">
+      <DependentUpon>201510301632497_ChangementMessageEtPostsUSER.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
@@ -394,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.resx">
       <DependentUpon>201510281757445_RedirectionDesPotsMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510301632497_ChangementMessageEtPostsUSER.resx">
+      <DependentUpon>201510301632497_ChangementMessageEtPostsUSER.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

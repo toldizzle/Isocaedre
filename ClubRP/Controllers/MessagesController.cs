@@ -34,7 +34,6 @@ namespace ClubRP.Controllers
             {
                 return HttpNotFound();
             }
-
             return View(message);
         }
 
@@ -51,11 +50,14 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Create([Bind(Include = "MessageID,Texte,PostID")] Message message)
+        public ActionResult Create([Bind(Include = "MessageID,Texte,PostID,utilisateur")] Message message)
         {
             if (ModelState.IsValid)
             {
-                message.AuteurMessage = System.Web.HttpContext.Current.User.Identity.Name;
+                message.utilisateur = (from user in db.Users
+                                      where user.Email == System.Web.HttpContext.Current.User.Identity.Name
+                                       select user).First();
+                
                 message.DateMessage = DateTime.Now;
                 db.Messages.Add(message);
                 db.SaveChanges();
@@ -88,11 +90,11 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs")]
-        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID,")] Message message)
+        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID,utilisateur")] Message message)
         {
             if (ModelState.IsValid)
             {
-                message.AuteurMessage = System.Web.HttpContext.Current.User.Identity.Name;
+                message.utilisateur.UserName = System.Web.HttpContext.Current.User.Identity.Name;
                 message.DateMessage = DateTime.Now;
                 message.PostID = message.PostID;
                 db.Entry(message).State = EntityState.Modified;

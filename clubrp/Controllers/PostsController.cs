@@ -50,12 +50,11 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs")]
-        public ActionResult Create([Bind(Include = "ID,Titre,Description,Auteur")] Post post)
+        public ActionResult Create([Bind(Include = "ID,Titre,Description,utilisateur")] Post post)
         {
             if (ModelState.IsValid)
             {
                 post.Creation = DateTime.Now;
-                post.Auteur = System.Web.HttpContext.Current.User.Identity.Name;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -86,12 +85,11 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs")]
-        public ActionResult Edit([Bind(Include = "ID,Titre,Description,Auteur")] Post post)
+        public ActionResult Edit([Bind(Include = "ID,Titre,Description,utilisateur")] Post post)
         {
             if (ModelState.IsValid)
             {
                 post.Creation = DateTime.Now;
-                post.Auteur = System.Web.HttpContext.Current.User.Identity.Name;
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction(actionName:"Index");
