@@ -14,11 +14,11 @@
         @foreach (ClubRP.Models.Message p in sortedMessage)
         {
             <tr>
-                <td class="col-lg-3">@Html.DisplayNameFor(model => model.utilisateurName)</td>
+                <td class="col-lg-3">@Html.DisplayNameFor(model => model.Auteur)</td>
                 <td colspan="2" class="col-lg-9">@Html.DisplayNameFor(model => model.Messages)</td>
             </tr>
             <tr>
-                <td class="col-lg-3">@Html.DisplayFor(model => model.utilisateurName) <br /> Image<br />@(p.DateMessage)</td>
+                <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br /> Image<br />@(p.DateMessage)</td>
                 <td class="col-lg-9">
                     @p.Texte
                 </td>
