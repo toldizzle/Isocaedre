@@ -66,3 +66,8 @@
                 }
 
 </table>
+
+@if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
+{
+    <p>@Html.ActionLink("Créer un nouveau post", "Create")</p>
+}
