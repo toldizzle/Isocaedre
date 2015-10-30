@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ClubRP.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.IO;
 
 namespace ClubRP.Controllers
 {
@@ -148,25 +149,40 @@ namespace ClubRP.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register([Bind(Include = "Id,details,Email,Password,ConfirmPassword")]RegisterViewModel model)
         {
+            PasswordHasher pass = new PasswordHasher();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, details = model.details, PasswordHash = pass.HashPassword(model.Password) };
+                //Userprop champs manquants
+                model.details.ID = user.Id;
+                model.details.Role = "Utilisateurs";
+                user.SecurityStamp = Guid.NewGuid().ToString();
+                user.details.ImageNom = Path.GetFileName(model.details.Fichier.FileName);
+                user.details.ImageTaille = model.details.Fichier.ContentLength;
+                user.details.ImageType = model.details.Fichier.ContentType;
+                user.details.ImageData = new byte[model.details.ImageTaille];
+                user.details.Fichier.InputStream.Read(model.details.ImageData, 0, model.details.ImageTaille);
+                
                 var _context = new ApplicationDbContext();
+                _context.Users.Add(user);
+                _context.userProp.Add(user.details);
+                //_context.SaveChanges();
+                
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(_context));
                 UserManager.AddToRole(user.Id, "Utilisateurs");
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
+                    _context.SaveChanges();
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
