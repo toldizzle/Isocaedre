@@ -1,5 +1,4 @@
 ﻿@model ClubRP.Models.Post
-
 @{
     ViewBag.Title = "Détails";
 }
@@ -16,13 +15,13 @@
             var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
         }
         @foreach (ClubRP.Models.Message p in sortedMessage)
-            {
+        {
             <tr>
-                <td class="col-lg-3">@Html.DisplayNameFor(model => model.Auteur)</td>
+                <td class="col-lg-3">@Html.DisplayNameFor(model => model.utilisateur.UserName)</td>
                 <td colspan="2" class="col-lg-9">@Html.DisplayNameFor(model => model.Messages)</td>
             </tr>
             <tr>
-                <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br />Image <br />@(p.DateMessage)</td>
+                <td class="col-lg-3">@Html.DisplayFor(model => model.utilisateur.UserName) <br /> Image<br />@(p.DateMessage)</td>
                 <td class="col-lg-9">
                     @p.Texte
                 </td>

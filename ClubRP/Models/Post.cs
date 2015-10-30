@@ -14,7 +14,7 @@ namespace ClubRP.Models
         public string Titre { get; set; }
         public string Description { get; set; }
         public DateTime Creation { get; set; }
-        public string Auteur { get; set; }
+        public ApplicationUser utilisateur { get; set; }
         public virtual ICollection<Message> Messages { get; set; }
 
     }

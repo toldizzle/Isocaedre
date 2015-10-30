@@ -32,8 +32,11 @@ namespace ClubRP.Migrations.ApplicationDBContext
 
         private static void AjoutPostEtMessage(ApplicationDbContext context)
         {
-            context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1, DateMessage = DateTime.Now, AuteurMessage = "admin@isocaedre.ca" });
-            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!", Auteur = "Admin@isocaedre.ca" });
+            var userInit = (from user in context.Users
+                            where user.Email == "admin@isocaedre.ca"
+                            select user).First();
+            context.Messages.AddOrUpdate(new Message { Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur.", PostID = 1, MessageID = 1, DateMessage = DateTime.Now, utilisateur = userInit });
+            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!", utilisateur = userInit });
             context.SaveChanges();
         }
 
@@ -120,7 +123,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             {
                 u.details.ID = u.Id;
             }
-               
+
             context.Users.AddOrUpdate(u => u.UserName, users);
             context.SaveChanges();
         }
