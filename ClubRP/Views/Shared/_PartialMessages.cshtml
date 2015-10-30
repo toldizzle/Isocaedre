@@ -1,11 +1,11 @@
 ﻿@model ClubRP.Models.Message
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Détails";
+    ViewBag.Title = "_PartialMessages";
 }
 
 <h2>Répondre</h2>
-
 
 @using (Html.BeginForm())
 {
@@ -16,7 +16,6 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Texte, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextAreaFor(model => model.Texte, 10, 120, htmlAttributes: new { style = "width: 100%; max-width: 100%;" })
                 @Html.ValidationMessageFor(model => model.Texte, "", new { @class = "text-danger" })
@@ -28,7 +27,7 @@
             </div>
         </div>
     </div>
- }
+}
 
 <div>
     @Html.ActionLink("Retour au forum", "Index", "Posts")
