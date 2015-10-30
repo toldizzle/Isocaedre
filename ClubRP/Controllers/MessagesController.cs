@@ -88,7 +88,7 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs")]
-        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID")] Message message)
+        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID,")] Message message)
         {
             if (ModelState.IsValid)
             {

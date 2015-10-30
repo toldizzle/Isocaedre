@@ -7,10 +7,7 @@
 
 <div>
     <h2>@Model.Titre</h2>
-    <hr />
-
-    <p>@Html.ActionLink(linkText: "Répondre", actionName: "Create", controllerName: "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
-    
+    <hr />    
     <table class="table">
         @{
             var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
@@ -35,7 +32,9 @@
             </tr>
         }
     </table>
+    @Html.Partial("~/Views/Shared/_PartialMessages.cshtml")
 </div>
 <p>
+<p>@Html.ActionLink(linkText: "Répondre", actionName: "Create", controllerName: "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
     @Html.ActionLink(linkText: "Retour au forum", actionName: "Index", controllerName: "Posts")
 </p>
