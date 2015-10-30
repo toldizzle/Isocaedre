@@ -18,7 +18,12 @@
                 <td colspan="2" class="col-lg-9">@Html.DisplayNameFor(model => model.Messages)</td>
             </tr>
             <tr>
-                <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br /> Image<br />@(p.DateMessage)</td>
+                @{
+                    List<ClubRP.Models.ApplicationUser> steve = (List<ClubRP.Models.ApplicationUser>)ViewBag.Users;
+                    ClubRP.Models.ApplicationUser stewie = steve.Where(x => x.UserName == Model.Auteur).First();
+                }
+                
+                <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br />Image<br />@(p.DateMessage)</td>
                 <td class="col-lg-9">
                     @p.Texte
                 </td>

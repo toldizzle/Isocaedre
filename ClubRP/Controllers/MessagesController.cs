@@ -26,6 +26,7 @@ namespace ClubRP.Controllers
         [Authorize]
         public ActionResult Details(int? id)
         {
+            ViewBag.Users = db.Users.ToList();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
