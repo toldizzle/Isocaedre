@@ -236,6 +236,14 @@
     <Compile Include="Migrations\ApplicationDBContext\201510301714506_ChangementMessageEtPostsUSER2.Designer.cs">
       <DependentUpon>201510301714506_ChangementMessageEtPostsUSER2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510301733332_ChangementMessageEtPostsUSER3.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510301733332_ChangementMessageEtPostsUSER3.Designer.cs">
+      <DependentUpon>201510301733332_ChangementMessageEtPostsUSER3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201510301748386_NullException.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201510301748386_NullException.Designer.cs">
+      <DependentUpon>201510301748386_NullException.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
@@ -408,6 +416,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510301714506_ChangementMessageEtPostsUSER2.resx">
       <DependentUpon>201510301714506_ChangementMessageEtPostsUSER2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510301733332_ChangementMessageEtPostsUSER3.resx">
+      <DependentUpon>201510301733332_ChangementMessageEtPostsUSER3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201510301748386_NullException.resx">
+      <DependentUpon>201510301748386_NullException.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

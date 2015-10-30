@@ -19,7 +19,7 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.utilisateurName)
+            Auteur
         </th>
         <th>
             Dernier
@@ -39,13 +39,14 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.utilisateurName)
+                @Html.DisplayFor(modelItem => item.Auteur)
+
             </td>
             <td>
                 @{
                     if (item.Messages.Count > 0)
                     {
-                        @Html.DisplayFor(modelItem => item.Messages.Last().utilisateurName);
+                        @Html.DisplayFor(modelItem => item.Messages.Last().Auteur);
                     }
                 }
             </td>
