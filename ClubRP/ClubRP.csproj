@@ -358,7 +358,7 @@
     <Content Include="Views\Membres\Details.cshtml" />
     <Content Include="Views\Membres\Edit.cshtml" />
     <Content Include="Views\Membres\Index.cshtml" />
-    <Content Include="Views\Shared\_PartialMessages.cshtml" />
+    <Content Include="Views\Shared\_PartialMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
