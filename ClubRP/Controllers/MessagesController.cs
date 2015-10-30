@@ -34,6 +34,7 @@ namespace ClubRP.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(message);
         }
 
@@ -68,6 +69,7 @@ namespace ClubRP.Controllers
         [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Edit(int? id)
         {
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

@@ -168,10 +168,8 @@ namespace ClubRP.Controllers
                 var _context = new ApplicationDbContext();
                 _context.Users.Add(user);
                 _context.userProp.Add(user.details);
-                //_context.SaveChanges();
+             
                 
-                var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(_context));
-                UserManager.AddToRole(user.Id, "Utilisateurs");
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -182,7 +180,7 @@ namespace ClubRP.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                    _context.SaveChanges();
+                    UserManager.AddToRole(user.Id, "Utilisateurs");
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
