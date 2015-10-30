@@ -44,7 +44,8 @@ namespace ClubRP.Migrations.ApplicationDBContext
                 AspNetUserID = userInit.Id,
                 Auteur = userInit.UserName
             });
-            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!", AspNetUserID = userInit.Id, Auteur = userInit.UserName });
+            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!",
+                AspNetUserID = userInit.Id, Auteur = userInit.UserName });
             context.SaveChanges();
         }
 

@@ -16,14 +16,14 @@ namespace ClubRP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Messages
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Index()
         {
             return View(db.Messages.ToList());
         }
 
         // GET: Messages/Details/5
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Details(int? id)
         {
             ViewBag.Users = db.Users.ToList();
@@ -40,7 +40,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Messages/Create
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create()
         {
             return View();
@@ -51,7 +51,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create([Bind(Include = "MessageID,Texte,PostID,utilisateur")] Message message)
         {
             if (ModelState.IsValid)
