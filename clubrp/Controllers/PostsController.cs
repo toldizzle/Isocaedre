@@ -15,21 +15,22 @@ namespace ClubRP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Posts
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Index()
         {
             return View(db.Posts.ToList());
         }
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         // GET: Posts/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.Users = db.Users.ToList();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Post post = db.Posts.Find(id);
-            
+
             if (post == null)
             {
                 return HttpNotFound();
@@ -93,7 +94,7 @@ namespace ClubRP.Controllers
                 post.Creation = DateTime.Now;
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction(actionName:"Index");
+                return RedirectToAction(actionName: "Index");
             }
             return View(post);
         }
