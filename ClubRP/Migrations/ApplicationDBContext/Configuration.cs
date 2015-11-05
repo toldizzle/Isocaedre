@@ -1,13 +1,11 @@
 namespace ClubRP.Migrations.ApplicationDBContext
 {
-    using Models;
+    using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
     using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using Microsoft.AspNet.Identity;
-    using System.Collections.Generic;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
@@ -21,8 +19,6 @@ namespace ClubRP.Migrations.ApplicationDBContext
         {
             //  This method will be called after migrating to the latest version.
             PasswordHasher pass = new PasswordHasher();
-
-
 
             AjouterUtilisateur(pass, context);
             AjouterRoles(context);
@@ -38,20 +34,46 @@ namespace ClubRP.Migrations.ApplicationDBContext
             context.Messages.AddOrUpdate(new Message
             {
                 Texte = "Bienvenue sur notre forum, vous y retrouverez les mises à jour, ainsi que la liste des groupes de joueurs. Vous pouvez faire une petite présentation de vous ici et de vos attentes en temps que joueur."
-                ,PostID = 1,
+                ,
+                PostID = 1,
                 MessageID = 1,
                 DateMessage = DateTime.Now,
                 AspNetUserID = userInit.Id,
                 Auteur = userInit.UserName
             });
-            context.Posts.AddOrUpdate(new Post { Titre = "Introduction", Creation = DateTime.Now, ID = 1, Description = "Présentez-vous ici!",
-                AspNetUserID = userInit.Id, Auteur = userInit.UserName });
+            context.Messages.AddOrUpdate(new Message
+            {
+                Texte = "Vous pouvez présenter votre scénario de groupe et recruter des joueurs ici!"
+                ,
+                PostID = 2,
+                MessageID = 4,
+                DateMessage = DateTime.Now,
+                AspNetUserID = userInit.Id,
+                Auteur = userInit.UserName
+            });
+            context.Posts.AddOrUpdate(new Post
+            {
+                Titre = "Introduction",
+                Creation = DateTime.Now,
+                ID = 1,
+                Description = "Présentez-vous ici!",
+                AspNetUserID = userInit.Id,
+                Auteur = userInit.UserName
+            });
+            context.Posts.AddOrUpdate(new Post
+            {
+                Titre = "Création de groupe",
+                Creation = DateTime.Now,
+                ID = 2,
+                Description = "Présentez votre scénario et recrutez des joueurs.",
+                AspNetUserID = userInit.Id,
+                Auteur = userInit.UserName
+            });
             context.SaveChanges();
         }
 
         private static void AjouterUtilisateur(PasswordHasher pass, ApplicationDbContext context)
         {
-
             ApplicationUser[] users =
                         {
                 new ApplicationUser
@@ -94,7 +116,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
                 {
                     Email = "joueur@isocaedre.ca",
                     UserName = "joueur@isocaedre.ca",
-                    PasswordHash = pass.HashPassword("Maitre123!"),
+                    PasswordHash = pass.HashPassword("Joueur123!"),
                     SecurityStamp = Guid.NewGuid().ToString(),
                     details = new AspNetUsersInfoSup
                     {
@@ -123,6 +145,24 @@ namespace ClubRP.Migrations.ApplicationDBContext
                         ImageTaille = 0,
                         ImageType = "",
                         Role = "Modérateurs",
+                        Fichier = null
+                    }
+                },
+                new ApplicationUser
+                {
+                    Email = "exclus@isocaedre.ca",
+                    UserName = "exclus@isocaedre.ca",
+                    PasswordHash = pass.HashPassword("Exclus123!"),
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    details = new AspNetUsersInfoSup
+                    {
+                        Nom="Rejet",
+                        Prenom="Forum",
+                        ImageData= new byte[0],
+                        ImageNom = "",
+                        ImageTaille = 0,
+                        ImageType = "",
+                        Role = "ExclusionForum",
                         Fichier = null
                     }
                 }
@@ -160,8 +200,12 @@ namespace ClubRP.Migrations.ApplicationDBContext
                 {
                     UserId = context.Users.Where(u => u.UserName == "maitre@isocaedre.ca").First().Id,
                     RoleId = context.Roles.Where(r => r.Name == "Maîtres").First().Id
+                },
+                new IdentityUserRole
+                {
+                    UserId = context.Users.Where(u => u.UserName == "exclus@isocaedre.ca").First().Id,
+                    RoleId = context.Roles.Where(r => r.Name == "ExclusionForum").First().Id
                 }
-
             };
             context.Set<IdentityUserRole>().AddOrUpdate(ur => new { ur.UserId, ur.RoleId }, userroles);
             context.SaveChanges();

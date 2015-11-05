@@ -1,8 +1,5 @@
 ﻿using ClubRP.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ClubRP.Controllers
@@ -12,10 +9,10 @@ namespace ClubRP.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-
             ViewBag.Titre = "Accueil";
             return View();
         }
+
         [AllowAnonymous]
         public ActionResult About()
         {
@@ -23,6 +20,7 @@ namespace ClubRP.Controllers
 
             return View();
         }
+
         [AllowAnonymous]
         public ActionResult Contact()
         {
@@ -30,12 +28,14 @@ namespace ClubRP.Controllers
 
             return View();
         }
+
         [AllowAnonymous]
         public ActionResult Materiel()
         {
             ViewBag.Titre = "Notre matériel";
             return View();
         }
+
         [Authorize]
         public ActionResult Forum()
         {
@@ -43,6 +43,7 @@ namespace ClubRP.Controllers
             ViewBag.ListePosts = new List<Post>();
             return View();
         }
+
         [Authorize(Roles = "Administrateurs")]
         public ActionResult Membre()
         {

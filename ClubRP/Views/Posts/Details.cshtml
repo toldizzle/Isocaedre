@@ -3,10 +3,9 @@
     ViewBag.Title = "Détails";
 }
 
-
 <div>
     <h2>@Model.Titre</h2>
-    <hr />    
+    <hr />
     <table class="table">
         @{
             var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
@@ -22,7 +21,7 @@
                     List<ClubRP.Models.ApplicationUser> lstUsers = (List<ClubRP.Models.ApplicationUser>)ViewBag.Users;
                     ClubRP.Models.ApplicationUser utilisateur = lstUsers.Where(x => x.UserName == Model.Auteur).First();
                 }
-                
+
                 <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br />@{string src = "";
                 src = "data:" + utilisateur.details.ImageType + ";base64," + Convert.ToBase64String(utilisateur.details.ImageData);
                 <img src="@src" height="70" width="50" alt=@utilisateur.details.ImageNom />}<br />@(p.DateMessage)</td>
