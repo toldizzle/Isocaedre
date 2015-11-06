@@ -9,6 +9,7 @@
     <h2>@Model.Titre</h2>
     <hr />
     <table class="table">
+        <p>@Html.ActionLink(linkText: "Répondre", actionName: "Create", controllerName: "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
         @{
             var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
         }
@@ -51,5 +52,6 @@
                     }
     </table>
     @*@Html.Partial("_PartialMessage", new ClubRP.Models.Message())*@
+    @Html.ActionLink(linkText: "Retour au forum", actionName: "Index", controllerName: "Posts")
 </div>
 
