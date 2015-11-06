@@ -93,8 +93,9 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
-                message.DateMessage = DateTime.Now;
+                message.AspNetUserID = User.Identity.GetUserId();
                 message.Auteur = User.Identity.Name;
+                message.DateMessage = DateTime.Now;
                 db.Entry(message).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction(actionName: "Index", controllerName: "Posts");

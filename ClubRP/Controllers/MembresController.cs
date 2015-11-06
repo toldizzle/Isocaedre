@@ -51,7 +51,7 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Administrateurs")]
-        public ActionResult Create([Bind(Include = "Id,details,Email,PasswordHash,Role")] ApplicationUser appUser)
+        public ActionResult Create([Bind(Include = "Id,details,Email,PasswordHash")] ApplicationUser appUser)
         {
             PasswordHasher pass = new PasswordHasher();
             if (ModelState.IsValid)
