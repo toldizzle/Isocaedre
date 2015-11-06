@@ -9,8 +9,8 @@
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
 */
 .dl-horizontal dt {
     white-space: normal;
@@ -23,9 +23,11 @@ textarea {
     max-width: 280px;
 }
 /*Pour le forum*/
-table{
+table {
     background-color: #000033;
-
-    color:#F0FFFF;
+    color: #F0FFFF;
 }
 
+td {
+    border: solid 1px white;
+}

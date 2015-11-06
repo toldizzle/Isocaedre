@@ -1,8 +1,7 @@
 namespace ClubRP.Migrations.ApplicationDBContext
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class ChangementMessageEtPostsUSER : DbMigration
     {
         public override void Up()
@@ -16,7 +15,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             DropColumn("dbo.Messages", "AuteurMessage");
             DropColumn("dbo.Posts", "Auteur");
         }
-        
+
         public override void Down()
         {
             AddColumn("dbo.Posts", "Auteur", c => c.String());

@@ -2,6 +2,7 @@
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(ClubRP.Startup))]
+
 namespace ClubRP
 {
     public partial class Startup

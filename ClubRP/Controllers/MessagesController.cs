@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using ClubRP.Models;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using ClubRP.Models;
-using Microsoft.AspNet.Identity;
 
 namespace ClubRP.Controllers
 {
@@ -16,16 +13,17 @@ namespace ClubRP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Messages
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Index()
         {
             return View(db.Messages.ToList());
         }
 
         // GET: Messages/Details/5
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Details(int? id)
         {
+            ViewBag.Users = db.Users.ToList();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -39,18 +37,18 @@ namespace ClubRP.Controllers
         }
 
         // GET: Messages/Create
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: Messages/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create([Bind(Include = "MessageID,Texte,PostID,utilisateur")] Message message)
         {
             if (ModelState.IsValid)
@@ -70,7 +68,6 @@ namespace ClubRP.Controllers
         [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Edit(int? id)
         {
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -80,21 +77,24 @@ namespace ClubRP.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.Message = message;
+
             return View(message);
         }
 
         // POST: Messages/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs")]
-        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID,utilisateur")] Message message)
+        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID")] Message message)
+        //public ActionResult Edit(Message message, Message original)
         {
             if (ModelState.IsValid)
             {
                 message.DateMessage = DateTime.Now;
-                message.PostID = message.PostID;
+                message.Auteur = User.Identity.Name;
                 db.Entry(message).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction(actionName: "Index", controllerName: "Posts");

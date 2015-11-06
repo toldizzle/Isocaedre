@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using ClubRP.Models;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using ClubRP.Models;
 
 namespace ClubRP.Controllers
 {
@@ -15,21 +12,23 @@ namespace ClubRP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Posts
-        [Authorize]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Index()
         {
             return View(db.Posts.ToList());
         }
-        [Authorize]
+
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         // GET: Posts/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.Users = db.Users.ToList();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Post post = db.Posts.Find(id);
-            
+
             if (post == null)
             {
                 return HttpNotFound();
@@ -45,7 +44,7 @@ namespace ClubRP.Controllers
         }
 
         // POST: Posts/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -81,7 +80,7 @@ namespace ClubRP.Controllers
         }
 
         // POST: Posts/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -90,10 +89,11 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.Auteur = User.Identity.Name;
                 post.Creation = DateTime.Now;
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction(actionName:"Index");
+                return RedirectToAction(actionName: "Index");
             }
             return View(post);
         }

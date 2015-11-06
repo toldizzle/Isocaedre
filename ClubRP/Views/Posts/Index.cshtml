@@ -40,7 +40,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Auteur)
-
             </td>
             <td>
                 @{
@@ -56,11 +55,10 @@
             <td>
                 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
                 {
-                    @Html.ActionLink("Modifier", "Edit", new { id = item.ID }) 
+                    @Html.ActionLink("Modifier", "Edit", new { id = item.ID })
                     <p> </p>
                     @Html.ActionLink("Effacer", "Delete", new { id = item.ID })
                 }
-
             </td>
         </tr>
     }

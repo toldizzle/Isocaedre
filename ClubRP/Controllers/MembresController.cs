@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using ClubRP.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
+using System.Data.Entity.Migrations;
+using System.IO;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using ClubRP.Models;
-using System.IO;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity;
-using System.Web.Security;
-using System.Data.Entity.Migrations;
 
 namespace ClubRP.Controllers
 {
@@ -51,7 +46,7 @@ namespace ClubRP.Controllers
         }
 
         // POST: Members/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -101,7 +96,7 @@ namespace ClubRP.Controllers
         }
 
         // POST: Members/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -126,7 +121,7 @@ namespace ClubRP.Controllers
                 //Role
                 var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
                 UserManager.AddToRole(appUser.Id, appUser.details.Role);
-                
+
                 //db.Entry(appUser).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

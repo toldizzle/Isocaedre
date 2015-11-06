@@ -1,15 +1,9 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 
 namespace ClubRP.Models
 {
-    [Bind(Include = "ID,Role,Nom,Prenom,ImageNom,ImageType,ImageTaille,ImageData,Fichier")]
     public class AspNetUsersInfoSup
     {
         [Key]
@@ -23,6 +17,5 @@ namespace ClubRP.Models
         public byte[] ImageData { get; set; }
         [NotMapped]
         public HttpPostedFileBase Fichier { get; set; }
-
     }
 }

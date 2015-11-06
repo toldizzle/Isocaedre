@@ -6,11 +6,10 @@
 
 <h2>Edit</h2>
 
-
 @using (Html.BeginForm("Edit", "Membres", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>AspNetUsersInfoSup</h4>
         <hr />

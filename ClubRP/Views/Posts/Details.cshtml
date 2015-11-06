@@ -5,10 +5,9 @@
     ViewBag.Title = "Détails";
 }
 
-
 <div>
     <h2>@Model.Titre</h2>
-    <hr />    
+    <hr />
     <table class="table">
         @{
             var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
@@ -20,7 +19,25 @@
                 <td colspan="2" class="col-lg-9">@Html.DisplayNameFor(model => model.Messages)</td>
             </tr>
             <tr>
-                <td class="col-lg-3">@Html.DisplayFor(model => model.Auteur) <br /> Image<br />@(p.DateMessage)</td>
+                @{
+                    List<ClubRP.Models.ApplicationUser> lstUsers = (List<ClubRP.Models.ApplicationUser>)ViewBag.Users;
+                    ClubRP.Models.ApplicationUser utilisateur = lstUsers.Where(x => x.UserName == Model.Auteur).First();
+                }
+
+                <td class="col-lg-3">
+                    @Html.DisplayFor(model => model.Auteur) <br />
+                    @if (utilisateur.details.Fichier != null)
+                    {
+                        string src = "";
+                        src = "data:" + utilisateur.details.ImageType + ";base64," + Convert.ToBase64String(utilisateur.details.ImageData);
+                        <img src="@src" height="70" width="100" alt=@utilisateur.details.ImageNom />
+                    }
+                    else
+                    {
+                        <img src="~/Content/Images/Equipe.jpg" height="70" width="100" alt="null" />
+                    }
+                    <br />@(p.DateMessage)
+                </td>
                 <td class="col-lg-9">
                     @p.Texte
                 </td>
@@ -28,10 +45,10 @@
             <tr>
                 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
                 {
-                   <td>@Html.ActionLink(linkText: "Modifier", actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null) @Html.ActionLink(linkText: "Effacer", actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
+                    <td>@Html.ActionLink(linkText: "Modifier", actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null) @Html.ActionLink(linkText: "Effacer", actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
                 }
             </tr>
-        }
+                    }
     </table>
     @Html.Partial("_PartialMessage", new ClubRP.Models.Message())
 </div>

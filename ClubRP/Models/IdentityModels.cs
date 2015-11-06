@@ -1,9 +1,9 @@
-﻿using System.Data.Entity;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace ClubRP.Models
 {
@@ -12,7 +12,7 @@ namespace ClubRP.Models
     {
         [ForeignKey("Id")]
         public virtual AspNetUsersInfoSup details { get; set; }
-        
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -27,6 +27,7 @@ namespace ClubRP.Models
         public DbSet<AspNetUsersInfoSup> userProp { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Message> Messages { get; set; }
+
         public ApplicationDbContext()
             : base("ApplicationDbContext", throwIfV1Schema: false)
         {
@@ -36,7 +37,5 @@ namespace ClubRP.Models
         {
             return new ApplicationDbContext();
         }
-
-
     }
 }
