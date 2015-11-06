@@ -89,6 +89,7 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.Auteur = User.Identity.Name;
                 post.Creation = DateTime.Now;
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();

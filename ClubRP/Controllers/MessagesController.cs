@@ -77,6 +77,8 @@ namespace ClubRP.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.Message = message;
+
             return View(message);
         }
 
@@ -86,12 +88,13 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs")]
-        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID,utilisateur")] Message message)
+        public ActionResult Edit([Bind(Include = "MessageID,Texte,PostID")] Message message)
+        //public ActionResult Edit(Message message, Message original)
         {
             if (ModelState.IsValid)
             {
                 message.DateMessage = DateTime.Now;
-                message.PostID = message.PostID;
+                message.Auteur = User.Identity.Name;
                 db.Entry(message).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction(actionName: "Index", controllerName: "Posts");
