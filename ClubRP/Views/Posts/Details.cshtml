@@ -1,4 +1,6 @@
 ﻿@model ClubRP.Models.Post
+
+
 @{
     ViewBag.Title = "Détails";
 }
@@ -48,8 +50,6 @@
             </tr>
                     }
     </table>
-    @*@Html.Partial("~/Views/Shared/_PartialMessage.cshtml")*@
+    @*@Html.Partial("_PartialMessage", new ClubRP.Models.Message())*@
 </div>
-<p>
-<p>@Html.ActionLink(linkText: "Répondre", actionName: "Create", controllerName: "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
-<p>@Html.ActionLink(linkText: "Retour au forum", actionName: "Index", controllerName: "Posts")</p>
+
