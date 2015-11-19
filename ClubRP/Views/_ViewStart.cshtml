@@ -1,3 +1,20 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    if (!Request["lang"].IsEmpty())
+    {
+        Session["Culture"] = Culture = UICulture = Request["lang"];
+    }
+    else
+    {
+        if (Session["Culture"] != null)
+        {
+            Culture = UICulture = Session["Culture"].ToString();
+        }
+        else
+        {
+            Session["Culture"] = Culture;
+        }
+    }
+
 }
+

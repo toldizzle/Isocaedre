@@ -8,8 +8,11 @@ namespace ClubRP.Models
     {
         [Key]
         public string ID { get; set; }
+        [Display(ResourceType = typeof(ClubRP.Views.Membres.MembreRessources), Name = "Role")]
         public string Role { get; set; }
+        [Display(ResourceType = typeof(ClubRP.Views.Membres.MembreRessources), Name = "LName")]
         public string Nom { get; set; }
+        [Display(ResourceType = typeof(ClubRP.Views.Membres.MembreRessources), Name = "FName")]
         public string Prenom { get; set; }
         public string ImageNom { get; set; }
         public string ImageType { get; set; }

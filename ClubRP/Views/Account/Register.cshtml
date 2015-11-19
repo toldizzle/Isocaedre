@@ -1,50 +1,47 @@
 ﻿@model ClubRP.Models.RegisterViewModel
-@{
-    ViewBag.Title = "Register";
-}
 
-<h2>@ViewBag.Title.</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Register)</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
+    <h4>@Html.DisplayName(ClubRP.Views.Account.AccountRessources.CreateAccount)</h4>
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        @Html.Label(ClubRP.Views.Membres.MembreRessources.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        @Html.Label(ClubRP.Views.Membres.MembreRessources.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        @Html.Label(ClubRP.Views.Account.AccountRessources.PasswordConfirm, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.details.Nom, new { @class = "col-md-2 control-label" })
+        @Html.Label(ClubRP.Views.Membres.MembreRessources.LName, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.details.Nom, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.details.Prenom, new { @class = "col-md-2 control-label" })
+        @Html.Label(ClubRP.Views.Membres.MembreRessources.FName, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.details.Prenom, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.details.Fichier, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.Label(ClubRP.Views.Membres.MembreRessources.Picture, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.details.Fichier, new { type = "file" })
             @Html.ValidationMessageFor(m => m.details.Fichier, "", new { @class = "text-danger" })

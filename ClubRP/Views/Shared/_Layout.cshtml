@@ -21,15 +21,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("A propos", "About", "Home")</li>
-                    <li>@Html.ActionLink("Nous rejoindre", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Matériel", "Materiel", "Home")</li>
-                    <li>@Html.ActionLink("Forum", "Index", "Posts")</li>
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.MainPage, "Index", "Home")</li>
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.About, "About", "Home")</li>
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.MeetUs, "Contact", "Home")</li>
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Equipment, "Materiel", "Home")</li>
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Forum, "Index", "Posts")</li>
                     @{
                         if (User.IsInRole("Administrateurs"))
                         {
-                            <li>@Html.ActionLink("Membre", "Index", "Membres")</li>
+                            <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Members, "Index", "Membres")</li>
                         }
                     }
                 </ul>
@@ -49,7 +49,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-
+    @Scripts.Render("~/bundles/application")
     @RenderSection("scripts", required: false)
 </body>
 </html>
