@@ -50,5 +50,12 @@ namespace ClubRP.Controllers
             ViewBag.Titre = "Espace membre";
             return View();
         }
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
+        public ActionResult Groupe()
+        {
+            ViewBag.Titre = "Espace de groupe";
+            ViewBag.ListeGroupes = new List<Groupe>();
+            return View();
+        }
     }
 }

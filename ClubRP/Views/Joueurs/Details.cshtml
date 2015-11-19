@@ -1,0 +1,66 @@
+﻿@model ClubRP.Models.Joueur
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Joueur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Classe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maitre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maitre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specialisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specialisation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupeID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.JoueurID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
