@@ -1,5 +1,7 @@
 ﻿using ClubRP.Models;
 using System;
+using System.Collections.Generic;
+using System.Collections;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -13,9 +15,29 @@ namespace ClubRP.Controllers
 
         // GET: Posts
         [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
-        public ActionResult Index()
+        public ActionResult Index(string SearchTerm = null, string SearchField = null)
         {
-            return View(db.Posts.ToList());
+            ViewBag.Champs = new SelectList(new string[] { "Auteur", "Titre" }, "Titre");
+            IEnumerable<Post> postListe;
+            postListe = db.Posts;
+
+            if (SearchTerm != null)
+            {
+                switch (SearchField)
+                {
+                    case "Auteur":
+                        postListe = db.Posts.Where(j => j.Auteur.Contains(SearchTerm));
+                        break;
+                    case "Titre":
+                        postListe = db.Posts.Where(j => j.Titre.Contains(SearchTerm));
+                        break;
+                }
+            }
+
+            // Ajax
+            if (Request.IsAjaxRequest()) return PartialView("_PartialPost", postListe.ToList());
+
+            return View(postListe.ToList());
         }
 
         [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]

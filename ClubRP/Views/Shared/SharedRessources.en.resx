@@ -124,7 +124,10 @@
     <value>Back</value>
   </data>
   <data name="BtnSave" xml:space="preserve">
-    <value>Sauvegarder</value>
+    <value>Save</value>
+  </data>
+  <data name="BtnSearch" xml:space="preserve">
+    <value>Search</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
@@ -163,7 +166,7 @@
     <value>Members</value>
   </data>
   <data name="Modify" xml:space="preserve">
-    <value>Modify</value>
+    <value>Edit</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>

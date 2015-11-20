@@ -88,6 +88,15 @@ namespace ClubRP.Views.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rechercher.
+        /// </summary>
+        public static string BtnSearch {
+            get {
+                return ResourceManager.GetString("BtnSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Effacer.
         /// </summary>
         public static string Delete {

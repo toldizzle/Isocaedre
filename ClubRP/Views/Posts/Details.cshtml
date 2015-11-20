@@ -41,7 +41,8 @@
             <tr>
                 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
                 {
-                    <td>@Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.BtnSave , actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null) @Html.ActionLink(linkText: "Effacer", actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
+                    <td>@Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.BtnSave , actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)
+                        @Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.Delete , actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
                 }
             </tr>
                     }

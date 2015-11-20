@@ -126,6 +126,9 @@
   <data name="BtnSave" xml:space="preserve">
     <value>Sauvegarder</value>
   </data>
+  <data name="BtnSearch" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Effacer</value>
   </data>
