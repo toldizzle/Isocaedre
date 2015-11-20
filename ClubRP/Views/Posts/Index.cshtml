@@ -1,13 +1,10 @@
 ﻿@model IEnumerable<ClubRP.Models.Post>
 
-@{
-    ViewBag.Title = "Index";
-}
+<h2>L'icosaèdre</h2>
 
-<h2>L'isocaèdre</h2>
 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
 {
-    <p>@Html.ActionLink("Créer un nouveau post", "Create")</p>
+    <p>@Html.ActionLink(ClubRP.Views.Posts.PostRessources.CreatePost, "Create")</p>
 }
 
 <table class="table">
@@ -19,13 +16,13 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            Auteur
+            @Html.DisplayNameFor(model => model.Auteur)
         </th>
         <th>
-            Dernier
+            @Html.ActionLink(ClubRP.Views.Posts.PostRessources.Last, "Last")
         </th>
         <th>
-            Nb réponses
+            @Html.ActionLink(ClubRP.Views.Posts.PostRessources.NbReply, "Replies")
         </th>
     </tr>
 
@@ -49,7 +46,7 @@
                     }
                     else
                     {
-                        <p>Aucun</p>
+                        <p>@Html.DisplayName(ClubRP.Views.Posts.PostRessources.None)</p>
                     }
                 }
             </td>
@@ -59,9 +56,9 @@
             <td>
                 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
                 {
-                    @Html.ActionLink("Modifier", "Edit", new { id = item.ID })
+                    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.ID })
                     <p> </p>
-                    @Html.ActionLink("Effacer", "Delete", new { id = item.ID })
+                    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.ID })
                 }
             </td>
         </tr>
@@ -70,5 +67,5 @@
 
 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
 {
-    <p>@Html.ActionLink("Créer un nouveau post", "Create")</p>
+    <p>@Html.ActionLink(ClubRP.Views.Posts.PostRessources.CreatePost, "Create")</p>
 }

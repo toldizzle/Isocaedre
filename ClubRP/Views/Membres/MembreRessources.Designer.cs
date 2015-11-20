@@ -79,6 +79,15 @@ namespace ClubRP.Views.Membres {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Êtes vous sur de vouloir effacer?.
+        /// </summary>
+        public static string DeleteConfirm {
+            get {
+                return ResourceManager.GetString("DeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adresse E-mail.
         /// </summary>
         public static string Email {
@@ -174,6 +183,15 @@ namespace ClubRP.Views.Membres {
         public static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilisateur.
+        /// </summary>
+        public static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
             }
         }
         

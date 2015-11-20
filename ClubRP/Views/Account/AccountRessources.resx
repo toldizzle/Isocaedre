@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
   <data name="ConfirmEmail" xml:space="preserve">
     <value>Confirmez votre adresse e-mail</value>
   </data>
   <data name="ConfirmEmailMessage" xml:space="preserve">
-    <value>Merci d'acoir confirmé votre adresse e-mail </value>
+    <value>Merci d'avoir confirmé votre adresse e-mail </value>
   </data>
   <data name="CreateAccount" xml:space="preserve">
     <value>Créer un nouveau compte</value>
@@ -139,7 +142,7 @@
     <value>Confirmation de mot de passe oublié</value>
   </data>
   <data name="LogInMessage" xml:space="preserve">
-    <value>Se connecter avec un compte local</value>
+    <value>Se connecter </value>
   </data>
   <data name="PasswordConfirm" xml:space="preserve">
     <value>Confirmez le mot de passe</value>
@@ -149,5 +152,23 @@
   </data>
   <data name="Remember" xml:space="preserve">
     <value>Se souvenir de moi</value>
+  </data>
+  <data name="ResetBtn" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="ResetPasswordMessage" xml:space="preserve">
+    <value>Votre mot de passe a été reinitialisé</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Réinitialisation du mot de passe</value>
+  </data>
+  <data name="SendCodeMessage" xml:space="preserve">
+    <value>Envoi du code de vérification</value>
+  </data>
+  <data name="SendCodeTitle" xml:space="preserve">
+    <value>Code de vérification</value>
+  </data>
+  <data name="VerifyCodeMessage" xml:space="preserve">
+    <value>Réception du code de vérification</value>
   </data>
 </root>

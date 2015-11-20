@@ -1,13 +1,9 @@
 ﻿@model IEnumerable<ClubRP.Models.Groupe>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Groups)</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.CreateNew, "Create")
 </p>
 <table class="table">
     <tr>
@@ -47,9 +43,9 @@
             @Html.DisplayFor(modelItem => item.Auteur)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id=item.ID }) |
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Details", new { id=item.ID }) |
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id=item.ID })
         </td>
     </tr>
 }

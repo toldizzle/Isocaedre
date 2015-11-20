@@ -1,10 +1,6 @@
 ﻿@model ClubRP.Models.Message
 
-@{
-    ViewBag.Title = "Create";
-}
-
-<h3>Répondre</h3>
+<h3>@Html.DisplayName(ClubRP.Views.Messages.MessageRessources.Reply)</h3>
 
 
 @using (Html.BeginForm("Create", "Messages"))
@@ -12,7 +8,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4></h4>
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -30,7 +26,7 @@
 }
 
 <div>
-    @Html.ActionLink("Retour au forum", "Index", "Posts")
+    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack, "Index", "Posts")
 </div>
 
 @section Scripts {

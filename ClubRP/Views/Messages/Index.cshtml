@@ -1,10 +1,6 @@
 ﻿@model IEnumerable<ClubRP.Models.Message>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Membres.MembreRessources.Index)</h2>
 
 <p>
     @*@Html.ActionLink("Create New", "Create")*@
@@ -29,9 +25,9 @@
             @Html.DisplayFor(modelItem => item.PostID)
         </td>
         <td>
-            @Html.ActionLink("Modifier", "Edit", new { id=item.MessageID }) |
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id=item.MessageID }) |
             @*@Html.ActionLink("Détails", "Details", new { id=item.MessageID }) |*@
-            @Html.ActionLink("Effacer", "Delete", new { id=item.MessageID })
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id=item.MessageID })
         </td>
     </tr>
 }

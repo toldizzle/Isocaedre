@@ -164,4 +164,10 @@
   <data name="Members" xml:space="preserve">
     <value>Members</value>
   </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User </value>
+  </data>
 </root>

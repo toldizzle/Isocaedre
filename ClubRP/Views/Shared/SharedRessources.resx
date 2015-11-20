@@ -120,8 +120,17 @@
   <data name="About" xml:space="preserve">
     <value>A propos</value>
   </data>
+  <data name="BtnBack" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Effacer</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>Êtes vous certain de vouloir effacer?</value>
   </data>
   <data name="Detail" xml:space="preserve">
     <value>Détails</value>
@@ -131,6 +140,9 @@
   </data>
   <data name="Forum" xml:space="preserve">
     <value>Forum</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Groupes</value>
   </data>
   <data name="Hello" xml:space="preserve">
     <value>Bienvenue </value>
@@ -155,5 +167,8 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>S'inscrire</value>
+  </data>
+  <data name="SubmitBtn" xml:space="preserve">
+    <value>Envoyer</value>
   </data>
 </root>

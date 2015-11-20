@@ -246,6 +246,10 @@
     <Compile Include="Migrations\ApplicationDBContext\201510301748386_NullException.Designer.cs">
       <DependentUpon>201510301748386_NullException.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511191756597_Update.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511191756597_Update.Designer.cs">
+      <DependentUpon>201511191756597_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
@@ -267,6 +271,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountRessources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Groupes\GroupeRessources.en.Designer.cs">
+      <DependentUpon>GroupeRessources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Groupes\GroupeRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupeRessources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomeRessources.en.Designer.cs">
+      <DependentUpon>HomeRessources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Home\HomeRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeRessources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manage\ManageRessources.en.Designer.cs">
+      <DependentUpon>ManageRessources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Manage\ManageRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageRessources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Membres\MembreRessources.en.Designer.cs">
       <DependentUpon>MembreRessources.en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -276,6 +310,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MembreRessources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Messages\MessageRessources.en.Designer.cs">
+      <DependentUpon>MessageRessources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Messages\MessageRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageRessources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Posts\PostRessources.en.Designer.cs">
+      <DependentUpon>PostRessources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Posts\PostRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostRessources.resx</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\SharedRessources.en.Designer.cs">
       <DependentUpon>SharedRessources.en.resx</DependentUpon>
@@ -468,6 +522,9 @@
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510301748386_NullException.resx">
       <DependentUpon>201510301748386_NullException.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511191756597_Update.resx">
+      <DependentUpon>201511191756597_Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Account\AccountRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AccountRessources.en.Designer.cs</LastGenOutput>
@@ -476,6 +533,30 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AccountRessources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Groupes\GroupeRessources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GroupeRessources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Groupes\GroupeRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GroupeRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home\HomeRessources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeRessources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home\HomeRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\ManageRessources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageRessources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage\ManageRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Membres\MembreRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MembreRessources.en.Designer.cs</LastGenOutput>
@@ -483,6 +564,22 @@
     <EmbeddedResource Include="Views\Membres\MembreRessources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MembreRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Messages\MessageRessources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageRessources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Messages\MessageRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Posts\PostRessources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PostRessources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Posts\PostRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PostRessources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\SharedRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

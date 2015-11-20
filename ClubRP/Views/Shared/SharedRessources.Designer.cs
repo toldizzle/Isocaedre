@@ -70,11 +70,38 @@ namespace ClubRP.Views.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retour.
+        /// </summary>
+        public static string BtnBack {
+            get {
+                return ResourceManager.GetString("BtnBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sauvegarder.
+        /// </summary>
+        public static string BtnSave {
+            get {
+                return ResourceManager.GetString("BtnSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Effacer.
         /// </summary>
         public static string Delete {
             get {
                 return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Êtes vous certain de vouloir effacer?.
+        /// </summary>
+        public static string DeleteMessage {
+            get {
+                return ResourceManager.GetString("DeleteMessage", resourceCulture);
             }
         }
         
@@ -102,6 +129,15 @@ namespace ClubRP.Views.Shared {
         public static string Forum {
             get {
                 return ResourceManager.GetString("Forum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Groupes.
+        /// </summary>
+        public static string Groups {
+            get {
+                return ResourceManager.GetString("Groups", resourceCulture);
             }
         }
         
@@ -174,6 +210,15 @@ namespace ClubRP.Views.Shared {
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Envoyer.
+        /// </summary>
+        public static string SubmitBtn {
+            get {
+                return ResourceManager.GetString("SubmitBtn", resourceCulture);
             }
         }
     }

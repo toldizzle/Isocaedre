@@ -1,17 +1,13 @@
 ﻿@model ClubRP.Models.Groupe
 
-@{
-    ViewBag.Title = "Details";
-}
-
-<h2>Details</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Detail</h2>
 
 <div>
-    <h4>Groupe</h4>
+    <h4>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Groups)</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Titre)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Title)
         </dt>
 
         <dd>
@@ -19,7 +15,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Description)
         </dt>
 
         <dd>
@@ -27,7 +23,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Creation)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Creation)
         </dt>
 
         <dd>
@@ -35,7 +31,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AspNetUserID)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.UserID)
         </dt>
 
         <dd>
@@ -43,7 +39,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Auteur)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Author)
         </dt>
 
         <dd>
@@ -53,6 +49,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = Model.ID }) |
+    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack, "Index")
 </p>

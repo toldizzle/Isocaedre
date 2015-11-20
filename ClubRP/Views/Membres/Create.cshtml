@@ -1,10 +1,6 @@
 ﻿@model ClubRP.Models.ApplicationUser
 
-@{
-    ViewBag.Title = "Création d'utilisateur";
-}
-
-<h2>Create</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Membres.MembreRessources.Create)</h2>
 
 @using (Html.BeginForm("Create", "Membres", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -12,7 +8,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>AspNetUsersInfoSup</h4>
+        <h4>@Html.DisplayName(ClubRP.Views.Membres.MembreRessources.User)</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -55,7 +51,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.details.Fichier, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label(ClubRP.Views.Membres.MembreRessources.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.details.Fichier, new { type = "file" })
                 @Html.ValidationMessageFor(model => model.details.Fichier, "", new { @class = "text-danger" })
@@ -64,7 +60,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value=@ClubRP.Views.Membres.MembreRessources.Create class="btn btn-default" />
             </div>
         </div>
     </div>

@@ -61,6 +61,15 @@ namespace ClubRP.Views.Account {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Code.
+        /// </summary>
+        public static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirmez votre adresse e-mail.
         /// </summary>
         public static string ConfirmEmail {
@@ -70,7 +79,7 @@ namespace ClubRP.Views.Account {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Merci d&apos;acoir confirmé votre adresse e-mail .
+        ///   Looks up a localized string similar to Merci d&apos;avoir confirmé votre adresse e-mail .
         /// </summary>
         public static string ConfirmEmailMessage {
             get {
@@ -124,7 +133,7 @@ namespace ClubRP.Views.Account {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se connecter avec un compte local.
+        ///   Looks up a localized string similar to Se connecter .
         /// </summary>
         public static string LogInMessage {
             get {
@@ -156,6 +165,60 @@ namespace ClubRP.Views.Account {
         public static string Remember {
             get {
                 return ResourceManager.GetString("Remember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réinitialiser.
+        /// </summary>
+        public static string ResetBtn {
+            get {
+                return ResourceManager.GetString("ResetBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Votre mot de passe a été reinitialisé.
+        /// </summary>
+        public static string ResetPasswordMessage {
+            get {
+                return ResourceManager.GetString("ResetPasswordMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réinitialisation du mot de passe.
+        /// </summary>
+        public static string ResetPasswordTitle {
+            get {
+                return ResourceManager.GetString("ResetPasswordTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Envoi du code de vérification.
+        /// </summary>
+        public static string SendCodeMessage {
+            get {
+                return ResourceManager.GetString("SendCodeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code de vérification.
+        /// </summary>
+        public static string SendCodeTitle {
+            get {
+                return ResourceManager.GetString("SendCodeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réception du code de vérification.
+        /// </summary>
+        public static string VerifyCodeMessage {
+            get {
+                return ResourceManager.GetString("VerifyCodeMessage", resourceCulture);
             }
         }
     }

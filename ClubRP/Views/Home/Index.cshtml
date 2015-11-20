@@ -1,11 +1,6 @@
-﻿@{
-    ViewBag.Title = "Accueil";
-}
-
-<div class="row">
-
+﻿<div class="row">
     <div class="col-md-12">
-        <h2>Bienvenue sur L'icosaèdre!</h2>
+        <h2>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.IndexTitle)</h2>
         <div class="row">
             <div id="informations" class="carousel slide" data-ride="carousel">
                 <!-- Indicateurs -->
@@ -19,22 +14,22 @@
                     <div class="item active">
                         <img style="width:100%; height: 500px" src="~/Content/Images/Equipe.jpg" alt="Equipe">
                         <div class="carousel-caption" style="color:black">
-                            <h1>Équipe Dynamique!</h1>
-                            <p>Notre équipe dévouée se fera un plaisir de vous aider!</p>
+                            <h1>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Carousel1)</h1>
+                            <p>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Caption1)</p>
                         </div>
                     </div>
                     <div class="item">
                         <img style="width:100%; height: 500px" src="~/Content/Images/Tresor.jpg" alt="Aventure">
                         <div class="carousel-caption">
-                            <h1>Scénarios personnalisés!</h1>
-                            <p>Histoire, trésors, sortilèges vous attendent!</p>
+                            <h1>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Carousel2)</h1>
+                            <p>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Caption3)</p>
                         </div>
                     </div>
                     <div class="item">
                         <img style="width:100%; height: 500px" src="~/Content/Images/Groupe.jpg" alt="Fiche">
                         <div class="carousel-caption">
-                            <h1>Fiches interactive!</h1>
-                            <p>Notre système de fiches interactive vous facilitera la gestion de votre personnage!</p>
+                            <h1>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Carousel3)</h1>
+                            <p>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Caption3)</p>
                         </div>
                     </div>
                 </div>
