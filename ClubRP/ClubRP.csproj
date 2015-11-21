@@ -246,6 +246,14 @@
     <Compile Include="Migrations\ApplicationDBContext\201510301748386_NullException.Designer.cs">
       <DependentUpon>201510301748386_NullException.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511181633440_groupeEtJoueur.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511181633440_groupeEtJoueur.Designer.cs">
+      <DependentUpon>201511181633440_groupeEtJoueur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511181829219_joueurAspinfo.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511181829219_joueurAspinfo.Designer.cs">
+      <DependentUpon>201511181829219_joueurAspinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
@@ -436,6 +444,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201510301748386_NullException.resx">
       <DependentUpon>201510301748386_NullException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511181633440_groupeEtJoueur.resx">
+      <DependentUpon>201511181633440_groupeEtJoueur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511181829219_joueurAspinfo.resx">
+      <DependentUpon>201511181829219_joueurAspinfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

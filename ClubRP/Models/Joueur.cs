@@ -18,5 +18,7 @@ namespace ClubRP.Models
         public string Specialisation { get; set; }
         //Foreign key (Lazy Load)
         public int GroupeID { get; set; }
+        public int? AspNetUsersInfoSupID { get; set; }
     }
+
 }

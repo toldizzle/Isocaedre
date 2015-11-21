@@ -24,6 +24,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             AjouterRoles(context);
             AjouterUserRoles(context);
             AjoutPostEtMessage(context);
+            AjouterGroupes(context);
         }
 
         private static void AjoutPostEtMessage(ApplicationDbContext context)
@@ -223,6 +224,15 @@ namespace ClubRP.Migrations.ApplicationDBContext
                     new IdentityRole() { Name = "Joueurs" }
             };
             context.Roles.AddOrUpdate(r => r.Name, roles);
+            context.SaveChanges();
+        }
+        private static void AjouterGroupes(ApplicationDbContext context)
+        {
+            var userInit = (from user in context.Users
+                            where user.UserName == "admin@isocaedre.ca"
+                            select user).First();
+            Groupe[] groupe = { new Groupe() { AspNetUserID = userInit.Id, Auteur="admin@isocaedre.ca", Creation=DateTime.Now, Description= "Voici une idée de cération de groupe", Titre="Toldoth" }};
+            context.Groupes.AddOrUpdate(r => r.Titre, groupe);
             context.SaveChanges();
         }
     }
