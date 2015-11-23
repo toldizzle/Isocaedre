@@ -1,9 +1,30 @@
 ﻿@using Microsoft.AspNet.Identity
-@if (Request.IsAuthenticated)
-{
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+
+    @if (Request.IsAuthenticated)
     {
-        @Html.AntiForgeryToken()
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form id="formLang" method="post" role="form" class="form-inline" style="line-height: 50px;">
+                        <select id="selectLang" class="form-control" name="lang">
+                            <option value="fr-CA" @(Culture == "fr-CA" ? "selected=\"selected\"" : "")>fr</option>
+                            <option value="en-US" @(Culture == "en-US" ? "selected=\"selected\"" : "")>en</option>
+                        </select>
+                    </form>
+                </li>
+                <li>
+                    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Hello + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()"> @Html.DisplayName(ClubRP.Views.Shared.SharedRessources.LogOff)</a></li>
+
+            </ul>
+        }
+    }
+    else
+    {
         <ul class="nav navbar-nav navbar-right">
             <li>
                 <form id="formLang" method="post" role="form" class="form-inline" style="line-height: 50px;">
@@ -13,27 +34,7 @@
                     </select>
                 </form>
             </li>
-            <li>
-                @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Hello + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-            </li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()"> @Html.DisplayName(ClubRP.Views.Shared.SharedRessources.LogOff)</a></li>
-
+            <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.LogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
         </ul>
     }
-}
-else
-{
-    <li>
-        <form id="formLang" method="post" role="form" class="form-inline" style="line-height: 50px;">
-            <select id="selectLang" class="form-control" name="lang">
-                <option value="fr-CA" @(Culture == "fr-CA" ? "selected=\"selected\"" : "")>fr</option>
-                <option value="en-US" @(Culture == "en-US" ? "selected=\"selected\"" : "")>en</option>
-            </select>
-        </form>
-    </li>
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.LogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-
-    </ul>
-}

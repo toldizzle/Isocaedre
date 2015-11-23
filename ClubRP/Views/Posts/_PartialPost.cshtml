@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ClubRP.Models.Post>
+﻿@model IPagedList<ClubRP.Models.Post>
 
 @{
     // Paramètres Ajax
@@ -10,65 +10,67 @@
     };
 
 }
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Titre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Auteur)
-        </th>
-        <th>
-            @Html.DisplayName(ClubRP.Views.Posts.PostRessources.Last)
-        </th>
-        <th>
-            @Html.DisplayName(ClubRP.Views.Posts.PostRessources.NbReply)
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<div id="Liste">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(ajaxParam))
+    <table class="table">
         <tr>
-            <td>
-                @Html.ActionLink(item.Titre, "Details", new { id = item.ID })
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Auteur)
-            </td>
-            <td>
-                @{
-                    if (item.Messages.Count > 0)
-                    {
-                        @Html.DisplayFor(modelItem => item.Messages.Last().Auteur);
-                    }
-                    else
-                    {
-                        <p>@Html.DisplayName(ClubRP.Views.Posts.PostRessources.None)</p>
-                    }
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Messages.Count)
-            </td>
-            <td>
-                @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
-                {
-                    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.ID })
-                    <p> </p>
-                    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.ID })
-                }
-            </td>
+            <th>
+                @Ajax.ActionLink(ClubRP.Views.Groupes.GroupeRessources.Title, "Index", ajaxParam)
+            </th>
+            <th>
+                @Ajax.ActionLink(ClubRP.Views.Groupes.GroupeRessources.Description, "Index", ajaxParam)
+            </th>
+            <th>
+                @Ajax.ActionLink(ClubRP.Views.Groupes.GroupeRessources.Author, "Index", ajaxParam)
+            </th>
+            <th>
+                @Html.DisplayName(ClubRP.Views.Posts.PostRessources.Last)
+            </th>
+            <th>
+                @Html.DisplayName(ClubRP.Views.Posts.PostRessources.NbReply)
+            </th>
         </tr>
-                    }
-</table>
 
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Titre, "Details", new { id = item.ID })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Auteur)
+                </td>
+                <td>
+                    @{
+                        if (item.Messages.Count > 0)
+                        {
+                            @Html.DisplayFor(modelItem => item.Messages.Last().Auteur);
+                        }
+                        else
+                        {
+                            <p>@Html.DisplayName(ClubRP.Views.Posts.PostRessources.None)</p>
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Messages.Count)
+                </td>
+                <td>
+                    @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
+                    {
+                        @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.ID })
+                        <p> </p>
+                        @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.ID })
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(ajaxParam))
+</div>
 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
 {
     <p>@Html.ActionLink(ClubRP.Views.Posts.PostRessources.CreatePost, "Create")</p>

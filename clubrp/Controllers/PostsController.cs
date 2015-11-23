@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using PagedList;
 
 namespace ClubRP.Controllers
 {
@@ -15,7 +16,7 @@ namespace ClubRP.Controllers
 
         // GET: Posts
         [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
-        public ActionResult Index(string SearchTerm = null, string SearchField = null)
+        public ActionResult Index(string SearchTerm = null, string SearchField = null, int page = 1)
         {
             ViewBag.Champs = new SelectList(new string[] { "Auteur", "Titre" }, "Titre");
             IEnumerable<Post> postListe;
@@ -34,10 +35,11 @@ namespace ClubRP.Controllers
                 }
             }
 
-            // Ajax
-            if (Request.IsAjaxRequest()) return PartialView("_PartialPost", postListe.ToList());
+            var model = postListe.ToList().ToPagedList(page, 2);
 
-            return View(postListe.ToList());
+            if (Request.IsAjaxRequest()) return PartialView("_PartialPost", model);
+
+            return View(model);
         }
 
         [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
