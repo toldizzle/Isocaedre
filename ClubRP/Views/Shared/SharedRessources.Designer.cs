@@ -160,7 +160,7 @@ namespace ClubRP.Views.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se Connecter.
+        ///   Looks up a localized string similar to Connecter.
         /// </summary>
         public static string LogIn {
             get {
@@ -169,7 +169,7 @@ namespace ClubRP.Views.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se Déconnecter.
+        ///   Looks up a localized string similar to Déconnecter.
         /// </summary>
         public static string LogOff {
             get {
