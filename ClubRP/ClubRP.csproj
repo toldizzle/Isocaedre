@@ -190,71 +190,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510152116594_Initialisation.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510152116594_Initialisation.Designer.cs">
-      <DependentUpon>201510152116594_Initialisation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510152315564_ChangementPost.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510152315564_ChangementPost.Designer.cs">
-      <DependentUpon>201510152315564_ChangementPost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510152321118_ChangementPostDate.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510152321118_ChangementPostDate.Designer.cs">
-      <DependentUpon>201510152321118_ChangementPostDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.Designer.cs">
-      <DependentUpon>201510160138089_MEssageUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510161554216_InterfaceMOdification.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510161554216_InterfaceMOdification.Designer.cs">
-      <DependentUpon>201510161554216_InterfaceMOdification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510171912146_Auteur_Post.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510171912146_Auteur_Post.Designer.cs">
-      <DependentUpon>201510171912146_Auteur_Post.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510171951312_Auteur_Post2.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510171951312_Auteur_Post2.Designer.cs">
-      <DependentUpon>201510171951312_Auteur_Post2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510192106347_DateDuMessage.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510192106347_DateDuMessage.Designer.cs">
-      <DependentUpon>201510192106347_DateDuMessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510192122522_DateDuMessageEtPost.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510192122522_DateDuMessageEtPost.Designer.cs">
-      <DependentUpon>201510192122522_DateDuMessageEtPost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510192210479_AuteurMessageEtPost.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510192210479_AuteurMessageEtPost.Designer.cs">
-      <DependentUpon>201510192210479_AuteurMessageEtPost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510280115358_AjoutASPUSERROLE.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510280115358_AjoutASPUSERROLE.Designer.cs">
-      <DependentUpon>201510280115358_AjoutASPUSERROLE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.Designer.cs">
-      <DependentUpon>201510281757445_RedirectionDesPotsMessages.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301632497_ChangementMessageEtPostsUSER.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301632497_ChangementMessageEtPostsUSER.Designer.cs">
-      <DependentUpon>201510301632497_ChangementMessageEtPostsUSER.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301714506_ChangementMessageEtPostsUSER2.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301714506_ChangementMessageEtPostsUSER2.Designer.cs">
-      <DependentUpon>201510301714506_ChangementMessageEtPostsUSER2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301733332_ChangementMessageEtPostsUSER3.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301733332_ChangementMessageEtPostsUSER3.Designer.cs">
-      <DependentUpon>201510301733332_ChangementMessageEtPostsUSER3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301748386_NullException.cs" />
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\201510301748386_NullException.Designer.cs">
-      <DependentUpon>201510301748386_NullException.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
     <Compile Include="Models\Groupe.cs" />
@@ -262,6 +197,7 @@
     <Compile Include="Models\Joueur.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Personnage.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -476,6 +412,7 @@
     <Content Include="Views\Joueurs\Edit.cshtml" />
     <Content Include="Views\Joueurs\Index.cshtml" />
     <Content Include="Views\Posts\_PartialPost.cshtml" />
+    <Content Include="Views\Shared\_langPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -492,54 +429,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510152116594_Initialisation.resx">
-      <DependentUpon>201510152116594_Initialisation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510152315564_ChangementPost.resx">
-      <DependentUpon>201510152315564_ChangementPost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510152321118_ChangementPostDate.resx">
-      <DependentUpon>201510152321118_ChangementPostDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510160138089_MEssageUpdate.resx">
-      <DependentUpon>201510160138089_MEssageUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510161554216_InterfaceMOdification.resx">
-      <DependentUpon>201510161554216_InterfaceMOdification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510171912146_Auteur_Post.resx">
-      <DependentUpon>201510171912146_Auteur_Post.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510171951312_Auteur_Post2.resx">
-      <DependentUpon>201510171951312_Auteur_Post2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510192106347_DateDuMessage.resx">
-      <DependentUpon>201510192106347_DateDuMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510192122522_DateDuMessageEtPost.resx">
-      <DependentUpon>201510192122522_DateDuMessageEtPost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510192210479_AuteurMessageEtPost.resx">
-      <DependentUpon>201510192210479_AuteurMessageEtPost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510280115358_AjoutASPUSERROLE.resx">
-      <DependentUpon>201510280115358_AjoutASPUSERROLE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510281757445_RedirectionDesPotsMessages.resx">
-      <DependentUpon>201510281757445_RedirectionDesPotsMessages.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510301632497_ChangementMessageEtPostsUSER.resx">
-      <DependentUpon>201510301632497_ChangementMessageEtPostsUSER.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510301714506_ChangementMessageEtPostsUSER2.resx">
-      <DependentUpon>201510301714506_ChangementMessageEtPostsUSER2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510301733332_ChangementMessageEtPostsUSER3.resx">
-      <DependentUpon>201510301733332_ChangementMessageEtPostsUSER3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\Migrations\ApplicationDBContext\201510301748386_NullException.resx">
-      <DependentUpon>201510301748386_NullException.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Account\AccountRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AccountRessources.en.Designer.cs</LastGenOutput>

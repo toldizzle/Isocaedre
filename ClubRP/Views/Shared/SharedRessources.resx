@@ -151,10 +151,10 @@
     <value>Bienvenue </value>
   </data>
   <data name="LogIn" xml:space="preserve">
-    <value>Se Connecter</value>
+    <value>Connecter</value>
   </data>
   <data name="LogOff" xml:space="preserve">
-    <value>Se Déconnecter</value>
+    <value>Déconnecter</value>
   </data>
   <data name="MainPage" xml:space="preserve">
     <value>Acceuil</value>
