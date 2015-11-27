@@ -1,4 +1,3 @@
-Joueurs localization
-Fiche
-AJAX forum
-Correction Post-Delete
+Fiches
+Code Martin
+Fin traduction

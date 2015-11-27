@@ -1,10 +1,11 @@
 ﻿<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.About)</h2>
 
 <p style="text-align:justify">
-    Nommé par la forme de l'iconique dé à 20 faces des jeux de rôles, l'Icosaèdre a été fondé en 2007 par les cofondateurs Nathan Bélanger, Patrick Delorme et Cédric Castelneau, trois amis de longue date passionnés de jeux de rôles cherchant à régler un problème désolant dans la communauté des rôlistes, le manque d'un réseau permettant à des joueurs de se trouver des compagnons de jeu. Ils décidèrent donc de créer un endroit agréable pour les rôlistes de tous niveaux, d'initiation aux débutants, mais surtout un endroit de rencontre pour tisser des liens avec de nouveaux joueurs.
+    @Html.Raw(ClubRP.Views.Shared.ContentRessources.AboutFounderTitle)
+    @*Nommé par la forme de l'iconique dé à 20 faces des jeux de rôles, l'Icosaèdre a été fondé en 2007 par les cofondateurs Nathan Bélanger, Patrick Delorme et Cédric Castelneau, trois amis de longue date passionnés de jeux de rôles cherchant à régler un problème désolant dans la communauté des rôlistes, le manque d'un réseau permettant à des joueurs de se trouver des compagnons de jeu. Ils décidèrent donc de créer un endroit agréable pour les rôlistes de tous niveaux, d'initiation aux débutants, mais surtout un endroit de rencontre pour tisser des liens avec de nouveaux joueurs.*@
 </p>
 <p>
-    Voici un message des fondateurs:
+    @Html.Raw(ClubRP.Views.Shared.ContentRessources.AboutIntro)
 </p>
 
 <div class="row">
@@ -12,8 +13,7 @@
     <div class="col-md-10">
         <p style="color:#666666">
             <i>
-                À l'origine nous voulions simplement nous promener d'un endroit à un autre, écoles, magasins, etc. dans le but de promouvoir les jeux de rôles, inciter les jeunes à embarquer dans des aventures. Par contre, on est rapidement arrivé à une conclusion, il y a déjà beaucoup de joueurs, mais ils sont tous séparés, isolés dans de petites cellules sans                même avoir conscience de la quantité de joueurs qui les entourent. Cela pose problème pour plusieurs, qui ont soit perdu leurs groupes ou cherchent tout simplement de nouveaux joueurs pour améliorer leur partie. C'est de la que l'idée de l'Icosaèdre est venue; au lieu de nous promener, nous voulons créer un regroupement autour de nous, de devenir un
-                noyau pour les joueurs, qui puissent s'échanger idées et joindre de nouvelles parties. Nous espérons sincèrement que notre projet va revitaliser le monde du jeu de rôles et invitons tous les intéressés, nouveaux ou vétérans à venir nous voir
+                @Html.Raw(ClubRP.Views.Shared.ContentRessources.AboutFounderMessage)
             </i>
         </p>
     </div>
