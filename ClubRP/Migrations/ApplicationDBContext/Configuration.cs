@@ -11,7 +11,8 @@ namespace ClubRP.Migrations.ApplicationDBContext
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
             MigrationsDirectory = @"Migrations\ApplicationDBContext";
         }
 

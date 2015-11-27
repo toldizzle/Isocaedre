@@ -266,6 +266,30 @@
     <Compile Include="Migrations\ApplicationDBContext\201511191756597_Update.Designer.cs">
       <DependentUpon>201511191756597_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511271820309_AjoutTest.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511271820309_AjoutTest.Designer.cs">
+      <DependentUpon>201511271820309_AjoutTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511271825267_dEtEST.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511271825267_dEtEST.Designer.cs">
+      <DependentUpon>201511271825267_dEtEST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511271834176_JoueurMoinsCLasse.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511271834176_JoueurMoinsCLasse.Designer.cs">
+      <DependentUpon>201511271834176_JoueurMoinsCLasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511271836415_JoueurEtPErsonnage.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511271836415_JoueurEtPErsonnage.Designer.cs">
+      <DependentUpon>201511271836415_JoueurEtPErsonnage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511271912012_JoueurRequireModif.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511271912012_JoueurRequireModif.Designer.cs">
+      <DependentUpon>201511271912012_JoueurRequireModif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511271917355_Joueur-Null.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511271917355_Joueur-Null.Designer.cs">
+      <DependentUpon>201511271917355_Joueur-Null.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
@@ -409,6 +433,7 @@
     <Content Include="fonts\amaranth-regular-webfont.ttf" />
     <Content Include="fonts\amaranth-regular-webfont.woff" />
     <Content Include="fonts\amaranth-regular-webfont.woff2" />
+    <None Include="Properties\PublishProfiles\Isocaedre.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\GoogleMaps.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -560,6 +585,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201511191756597_Update.resx">
       <DependentUpon>201511191756597_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271820309_AjoutTest.resx">
+      <DependentUpon>201511271820309_AjoutTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271825267_dEtEST.resx">
+      <DependentUpon>201511271825267_dEtEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271834176_JoueurMoinsCLasse.resx">
+      <DependentUpon>201511271834176_JoueurMoinsCLasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271836415_JoueurEtPErsonnage.resx">
+      <DependentUpon>201511271836415_JoueurEtPErsonnage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271912012_JoueurRequireModif.resx">
+      <DependentUpon>201511271912012_JoueurRequireModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271917355_Joueur-Null.resx">
+      <DependentUpon>201511271917355_Joueur-Null.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Account\AccountRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

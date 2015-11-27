@@ -117,25 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Author" xml:space="preserve">
-    <value>Author</value>
+  <data name="AboutFounderMessage" xml:space="preserve">
+    <value>At first we wanted to move from one place to another, schools, shops, etc to promote roleplaying to the population, however we soon realised that there are alot of players already, yet they are mostly isolated in "cells" made of old buddies or schoolmates, without even knowing how many players are in their surroundings. This is a problem for many who has lost their group or lost seek new persons to fill their party. This is how the Icosaèdre was born, instead of moving, we'd become a nexus for the players, a place to exchange ideas and play games. We sincerely hope that our project will bring new life in the roleplaying scene and invite everybody, from new to experienced players to meet us.</value>
   </data>
-  <data name="CreateNew" xml:space="preserve">
-    <value>Create a new group</value>
+  <data name="AboutFounderTitle" xml:space="preserve">
+    <value>Named after the iconic shape of a 20 faced dice, the Icosaèdre was founded in 2007 by co-founder Nathan Bélanger, Patrick Delormes and Cédric Castelneau, three roleplaying verterans willing to solve a crippling problem in the roleplay community; the lack of a structure allowing players to find new adventuring companions. They decided to create a welcoming place for roleplayers, teach new players and more importanly to make a place to meet people.</value>
   </data>
-  <data name="CreateNewUser" xml:space="preserve">
-    <value>Create a player</value>
+  <data name="AboutIntro" xml:space="preserve">
+    <value>Note from the founders: </value>
   </data>
-  <data name="Creation" xml:space="preserve">
-    <value>Creation date</value>
+  <data name="ContactAddress1" xml:space="preserve">
+    <value>4428 Wellington street</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>Description</value>
+  <data name="ContactAddress2" xml:space="preserve">
+    <value>Montreal, QC Y7D 9M8</value>
   </data>
-  <data name="Title" xml:space="preserve">
-    <value>Title</value>
+  <data name="ContactAssistance" xml:space="preserve">
+    <value>Help:</value>
   </data>
-  <data name="UserID" xml:space="preserve">
-    <value>User</value>
+  <data name="ContactMessage" xml:space="preserve">
+    <value>You can contact us during weekdays from 9:00 to 21:00 and weekends from 12:00 to 23:00 or you can contact us by e-mail or mail at the address above.</value>
+  </data>
+  <data name="ContactTelephone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="EquipProjector" xml:space="preserve">
+    <value>For our richer customers, there is a video tutorial on how to play games with a projector!
+    &lt;br /&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/5bmOu3XcJuU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;br /&gt;   And where to find them: &lt;a hhref="http://www.amazon.ca/FastFox-Projector-Multimedia-Protable-Proyector/dp/B00ZI978XK/ref=sr_1_1?ie=UTF8&amp;qid=1442168797&amp;sr=8-1&amp;keywords=projector"&gt;Simple projector&lt;/a&gt;
+    &lt;a hhref="http://www.amazon.ca/BenQ-MS524-Lumens-Ready-Projector/dp/B00MBE21FU/ref=sr_1_2?ie=UTF8&amp;qid=1442168797&amp;sr=8-2&amp;keywords=projector"&gt;High-end projector&lt;/a&gt;</value>
+  </data>
+  <data name="EquipRequirement" xml:space="preserve">
+    <value>Each player must have &lt;a target="_blank" href="http://www.imaginaire.com/indexv2.jsp?url=/recherchev2/avance2.jsp&amp;cat1=GA&amp;cat2=DE"&gt;dices&lt;/a&gt; with his/her favorite color. Without them, playing will be a difficult task.</value>
+  </data>
+  <data name="EquipText" xml:space="preserve">
+    <value>Here's a peek at our clients' zone. You will find tools that help improve your game experience. Exemple &lt;a target="_blank" href="http://www.amazon.ca/Chessex-Role-Playing-Play-Mat/dp/B0015IQO2O/ref=pd_sim_t_2?tag=8013013-20"&gt; this playing mat&lt;/a&gt; Makes moving characters and calculating distances much easier and is used to draw dungeons with non marking pens and deleted with a wet towel.</value>
+  </data>
+  <data name="ForumWelcome" xml:space="preserve">
+    <value>Welcome to our forum! </value>
+  </data>
+  <data name="IndexList1" xml:space="preserve">
+    <value>Assisted character sheet for your characters.</value>
+  </data>
+  <data name="IndexList2" xml:space="preserve">
+    <value>Notes to remember your game's most exciting moments.</value>
+  </data>
+  <data name="IndexList3" xml:space="preserve">
+    <value>Access to our database.</value>
+  </data>
+  <data name="IndexList4" xml:space="preserve">
+    <value>Access to our forum.</value>
+  </data>
+  <data name="IndexList5" xml:space="preserve">
+    <value>Active users gets invitations to private events and deals.</value>
+  </data>
+  <data name="IndexMembers" xml:space="preserve">
+    <value>Members gets the following benefits: </value>
+  </data>
+  <data name="IndexTitle" xml:space="preserve">
+    <value>Welcome to the new Icosaèdre interactive platform!</value>
+  </data>
+  <data name="IndexWebsite" xml:space="preserve">
+    <value>This tool has been built to make your games more exciting and limit the use of paper thanks to our toolset. Creating an account on our platform will let you choose which role you want to have (Game master or player), speeds the flow of the game while reducing the overall management of a roplaying game. You will also be able to save your characters in our database and export it to our future locations. Last but not least, we offer an homebrewed scenario exclusive to our app with a built-in storyline, new and customized and simplified spells to help newcomers or spice up the adventures of roleplaying veterans.</value>
   </data>
 </root>

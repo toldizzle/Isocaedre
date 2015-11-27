@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ClubRP.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ClubRP.Controllers
 {
@@ -23,6 +24,7 @@ namespace ClubRP.Controllers
         // GET: Joueurs/Details/5
         public ActionResult Details(int? id)
         {
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -46,13 +48,18 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "JoueurID,AspNetUserID,Nom,Classe,Maitre,Specialisation,GroupeID")] Joueur joueur)
+        public ActionResult Create([Bind(Include = "JoueurID,AspNetUserID,Nom,Maitre,Specialisation")] Joueur joueur)
         {
             if (ModelState.IsValid)
             {
+                joueur.AspNetUserID = User.Identity.GetUserId();
+                joueur.Nom = User.Identity.Name;
+                //joueur.PersonnageID = 1;
+                //joueur.GroupeID = 1;
+                //joueur.JoueurID = 1;
                 db.Joueurs.Add(joueur);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Groupes");
             }
 
             return View(joueur);
@@ -78,7 +85,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "JoueurID,AspNetUserID,Nom,Classe,Maitre,Specialisation,GroupeID")] Joueur joueur)
+        public ActionResult Edit([Bind(Include = "JoueurID,AspNetUserID,Nom,Maitre,Specialisation,GroupeID,PersonnageID")] Joueur joueur)
         {
             if (ModelState.IsValid)
             {

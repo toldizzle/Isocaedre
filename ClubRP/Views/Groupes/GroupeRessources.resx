@@ -123,6 +123,9 @@
   <data name="CreateNew" xml:space="preserve">
     <value>Créer un nouveau groupe</value>
   </data>
+  <data name="CreateNewUser" xml:space="preserve">
+    <value>Créer un nouveau joueur</value>
+  </data>
   <data name="Creation" xml:space="preserve">
     <value>Date de création</value>
   </data>
