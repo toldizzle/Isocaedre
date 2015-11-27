@@ -10,13 +10,17 @@ namespace ClubRP.Models
         [Key]
         public int MessageID { get; set; }
 
+        [Display(ResourceType = typeof(ClubRP.Views.Membres.MembreRessources), Name = "User")]
         public string AspNetUserID { get; set; }
+
+        [Display(ResourceType = typeof(ClubRP.Views.Groupes.GroupeRessources), Name = "Author")]
         public string Auteur { get; set; }
 
         [NotMapped]
         public HttpPostedFileBase Fichier { get; set; }
 
         [DataType(DataType.MultilineText)]
+        [Display(ResourceType = typeof(ClubRP.Views.Messages.MessageRessources), Name = "Content")]
         public string Texte { get; set; }
 
         public DateTime DateMessage { get; set; }

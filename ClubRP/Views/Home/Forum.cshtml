@@ -3,8 +3,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewBag.Titre</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Forum)</h2>
 
 <ol>
-    Bienvenue sur notre forum!
+    @Html.Raw(ClubRP.Views.Shared.ContentRessources.ForumWelcome)
 </ol>

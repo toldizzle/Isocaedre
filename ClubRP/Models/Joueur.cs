@@ -13,12 +13,12 @@ namespace ClubRP.Models
         public int JoueurID { get; set; }
         public string AspNetUserID { get; set; }
         public string Nom { get; set; }
-        public string Classe { get; set; } //Faire une selectList
+        [Required]
         public bool Maitre { get; set; }
         public string Specialisation { get; set; }
         //Foreign key (Lazy Load)
-        public int GroupeID { get; set; }
-        public int? AspNetUsersInfoSupID { get; set; }
+        public int? GroupeID { get; set; }
+        //Foreign key (Lazy Load)
+        public int? PersonnageID { get; set; }
     }
-
 }

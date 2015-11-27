@@ -1,9 +1,12 @@
 ﻿using ClubRP.Models;
 using System;
+using System.Collections.Generic;
+using System.Collections;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using PagedList;
 
 namespace ClubRP.Controllers
 {
@@ -13,9 +16,30 @@ namespace ClubRP.Controllers
 
         // GET: Posts
         [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
-        public ActionResult Index()
+        public ActionResult Index(string SearchTerm = null, string SearchField = null, int page = 1)
         {
-            return View(db.Posts.ToList());
+            ViewBag.Champs = new SelectList(new string[] { "Auteur", "Titre" }, "Titre");
+            IEnumerable<Post> postListe;
+            postListe = db.Posts;
+
+            if (SearchTerm != null)
+            {
+                switch (SearchField)
+                {
+                    case "Auteur":
+                        postListe = db.Posts.Where(j => j.Auteur.Contains(SearchTerm));
+                        break;
+                    case "Titre":
+                        postListe = db.Posts.Where(j => j.Titre.Contains(SearchTerm));
+                        break;
+                }
+            }
+
+            var model = postListe.ToList().ToPagedList(page, 2);
+
+            if (Request.IsAjaxRequest()) return PartialView("_PartialPost", model);
+
+            return View(model);
         }
 
         [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]

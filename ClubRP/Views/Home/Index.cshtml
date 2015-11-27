@@ -1,11 +1,7 @@
-﻿@{
-    ViewBag.Title = "Accueil";
-}
-
-<div class="row">
-
+﻿<div class="row">
     <div class="col-md-12">
-        <h2>Bienvenue sur L'icosaèdre!</h2>
+        <h2>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.IndexTitle)</h2>
+        <p>Martin!</p>
         <div class="row">
             <div id="informations" class="carousel slide" data-ride="carousel">
                 <!-- Indicateurs -->
@@ -19,22 +15,22 @@
                     <div class="item active">
                         <img style="width:100%; height: 500px" src="~/Content/Images/Equipe.jpg" alt="Equipe">
                         <div class="carousel-caption" style="color:black">
-                            <h1>Équipe Dynamique!</h1>
-                            <p>Notre équipe dévouée se fera un plaisir de vous aider!</p>
+                            <h1>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Carousel1)</h1>
+                            <p>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Caption1)</p>
                         </div>
                     </div>
                     <div class="item">
                         <img style="width:100%; height: 500px" src="~/Content/Images/Tresor.jpg" alt="Aventure">
                         <div class="carousel-caption">
-                            <h1>Scénarios personnalisés!</h1>
-                            <p>Histoire, trésors, sortilèges vous attendent!</p>
+                            <h1>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Carousel2)</h1>
+                            <p>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Caption3)</p>
                         </div>
                     </div>
                     <div class="item">
                         <img style="width:100%; height: 500px" src="~/Content/Images/Groupe.jpg" alt="Fiche">
                         <div class="carousel-caption">
-                            <h1>Fiches interactive!</h1>
-                            <p>Notre système de fiches interactive vous facilitera la gestion de votre personnage!</p>
+                            <h1>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Carousel3)</h1>
+                            <p>@Html.DisplayName(ClubRP.Views.Home.HomeRessources.Caption3)</p>
                         </div>
                     </div>
                 </div>
@@ -49,24 +45,19 @@
                     </a>
             </div>
             <p></p>
-            <h3>Bienvenue sur la nouvelle plateforme interactive de l'Icosaèdre! </h3>
+            <h3>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexTitle) </h3>
             <p style="text-align:justify">
-                Cet outil a été conceptualisé dans le but de rendre vos parties plus intéressantes et limiter l'utilisation de papier grâce à nos outils extraordinaires!
-                En créant un compte sur notre application, vous pourrez choisir quel rôle vous voulez avoir durant la partie (joueur ou maître de jeu), augmenter le rythme
-                de jeu avec nos outils d'assistance tout en réduisant la complexité d'une partie. Vous pourrez aussi sauvegarder votre personnage dans notre base de données
-                et pourrez l'exporter dans tous nos (futurs) sites. Finalement, nous offrons une aventure maison exclusive à notre application web, avec un scénario de base
-                préconçu et facilement modifiable, une fiche de sortilèges modifiée conviviale et plusieurs atouts pour soit initier les nouveaux aux jeux de rôles ou pour
-                tout simplement offrir une nouvelle expérience aux vétérans.
+                @Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexWebsite)
             <p />
             <p>
-                Chaque membre aura le droit à:
+                @Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexMembers)
             </p>
             <ul>
-                <li> Une fiche assistée pour la création de leurs personnages</li>
-                <li> Un espace de notes, pour se souvenir des moments cruciaux de leur partie</li>
-                <li> Accès a notre base de données</li>
-                <li> Accès a un forum</li>
-                <li> Selon le niveau d'implication, la possibilité d'être invité à des événements exclusifs et des rabais sur certains produits</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList1)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList2)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList3)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList4)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList5)</li>
             </ul>
         </div>
     </div>

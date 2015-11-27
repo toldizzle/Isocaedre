@@ -1,0 +1,6 @@
+﻿<form id="formLang" method="get" role="form" class="form-inline" style="line-height: 50px;">
+    <select id="selectLang" class="form-control" name="lang" style="width:70px">
+        <option value="fr-CA" @(Culture == "fr-CA" ? "selected=\"selected\"" : "")>fr</option>
+        <option value="en-US" @(Culture == "en-US" ? "selected=\"selected\"" : "")>en</option>
+    </select>
+</form>

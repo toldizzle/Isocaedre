@@ -1,22 +1,17 @@
 ﻿@model ClubRP.Models.Post
 
-
-@{
-    ViewBag.Title = "Détails";
-}
-
 <div>
-    <h2>@Model.Titre</h2>
+    <h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Detail)</h2>
     <hr />
     <table class="table">
-        <p>@Html.ActionLink(linkText: "Répondre", actionName: "Create", controllerName: "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
+        <p>@Html.ActionLink((ClubRP.Views.Messages.MessageRessources.Reply), "Create",  "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
         @{
             var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
         }
         @foreach (ClubRP.Models.Message p in sortedMessage)
         {
             <tr>
-                <td class="col-lg-3">@Html.DisplayNameFor(model => model.Auteur)</td>
+                <td class="col-lg-3">@Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Author)</td>
                 <td colspan="2" class="col-lg-9">@Html.DisplayNameFor(model => model.Messages)</td>
             </tr>
             <tr>
@@ -26,7 +21,7 @@
                 }
 
                 <td class="col-lg-3">
-                    @Html.DisplayFor(model => model.Auteur) <br />
+                    @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Author) <br />
                     @if (utilisateur.details.Fichier != null)
                     {
                         string src = "";
@@ -46,12 +41,13 @@
             <tr>
                 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
                 {
-                    <td>@Html.ActionLink(linkText: "Modifier", actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null) @Html.ActionLink(linkText: "Effacer", actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
+                    <td>@Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.BtnSave , actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)
+                        @Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.Delete , actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
                 }
             </tr>
                     }
     </table>
     @*@Html.Partial("_PartialMessage", new ClubRP.Models.Message())*@
-    @Html.ActionLink(linkText: "Retour au forum", actionName: "Index", controllerName: "Posts")
+    @Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.BtnBack , actionName: "Index", controllerName: "Posts")
 </div>
 

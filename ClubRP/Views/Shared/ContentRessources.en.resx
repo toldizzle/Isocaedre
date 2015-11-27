@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutFounderMessage" xml:space="preserve">
+    <value>At first we wanted to move from one place to another, schools, shops, etc to promote roleplaying to the population, however we soon realised that there are alot of players already, yet they are mostly isolated in "cells" made of old buddies or schoolmates, without even knowing how many players are in their surroundings. This is a problem for many who has lost their group or lost seek new persons to fill their party. This is how the Icosaèdre was born, instead of moving, we'd become a nexus for the players, a place to exchange ideas and play games. We sincerely hope that our project will bring new life in the roleplaying scene and invite everybody, from new to experienced players to meet us.</value>
+  </data>
+  <data name="AboutFounderTitle" xml:space="preserve">
+    <value>Named after the iconic shape of a 20 faced dice, the Icosaèdre was founded in 2007 by co-founder Nathan Bélanger, Patrick Delormes and Cédric Castelneau, three roleplaying verterans willing to solve a crippling problem in the roleplay community; the lack of a structure allowing players to find new adventuring companions. They decided to create a welcoming place for roleplayers, teach new players and more importanly to make a place to meet people.</value>
+  </data>
+  <data name="AboutIntro" xml:space="preserve">
+    <value>Note from the founders: </value>
+  </data>
+  <data name="ContactAddress1" xml:space="preserve">
+    <value>4428 Wellington street</value>
+  </data>
+  <data name="ContactAddress2" xml:space="preserve">
+    <value>Montreal, QC Y7D 9M8</value>
+  </data>
+  <data name="ContactAssistance" xml:space="preserve">
+    <value>Help:</value>
+  </data>
+  <data name="ContactMessage" xml:space="preserve">
+    <value>You can contact us during weekdays from 9:00 to 21:00 and weekends from 12:00 to 23:00 or you can contact us by e-mail or mail at the address above.</value>
+  </data>
+  <data name="ContactTelephone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="EquipProjector" xml:space="preserve">
+    <value>For our richer customers, there is a video tutorial on how to play games with a projector!
+    &lt;br /&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/5bmOu3XcJuU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;br /&gt;   And where to find them: &lt;a hhref="http://www.amazon.ca/FastFox-Projector-Multimedia-Protable-Proyector/dp/B00ZI978XK/ref=sr_1_1?ie=UTF8&amp;qid=1442168797&amp;sr=8-1&amp;keywords=projector"&gt;Simple projector&lt;/a&gt;
+    &lt;a hhref="http://www.amazon.ca/BenQ-MS524-Lumens-Ready-Projector/dp/B00MBE21FU/ref=sr_1_2?ie=UTF8&amp;qid=1442168797&amp;sr=8-2&amp;keywords=projector"&gt;High-end projector&lt;/a&gt;</value>
+  </data>
+  <data name="EquipRequirement" xml:space="preserve">
+    <value>Each player must have &lt;a target="_blank" href="http://www.imaginaire.com/indexv2.jsp?url=/recherchev2/avance2.jsp&amp;cat1=GA&amp;cat2=DE"&gt;dices&lt;/a&gt; with his/her favorite color. Without them, playing will be a difficult task.</value>
+  </data>
+  <data name="EquipText" xml:space="preserve">
+    <value>Here's a peek at our clients' zone. You will find tools that help improve your game experience. Exemple &lt;a target="_blank" href="http://www.amazon.ca/Chessex-Role-Playing-Play-Mat/dp/B0015IQO2O/ref=pd_sim_t_2?tag=8013013-20"&gt; this playing mat&lt;/a&gt; Makes moving characters and calculating distances much easier and is used to draw dungeons with non marking pens and deleted with a wet towel.</value>
+  </data>
+  <data name="ForumWelcome" xml:space="preserve">
+    <value>Welcome to our forum! </value>
+  </data>
+  <data name="IndexList1" xml:space="preserve">
+    <value>Assisted character sheet for your characters.</value>
+  </data>
+  <data name="IndexList2" xml:space="preserve">
+    <value>Notes to remember your game's most exciting moments.</value>
+  </data>
+  <data name="IndexList3" xml:space="preserve">
+    <value>Access to our database.</value>
+  </data>
+  <data name="IndexList4" xml:space="preserve">
+    <value>Access to our forum.</value>
+  </data>
+  <data name="IndexList5" xml:space="preserve">
+    <value>Active users gets invitations to private events and deals.</value>
+  </data>
+  <data name="IndexMembers" xml:space="preserve">
+    <value>Members gets the following benefits: </value>
+  </data>
+  <data name="IndexTitle" xml:space="preserve">
+    <value>Welcome to the new Icosaèdre interactive platform!</value>
+  </data>
+  <data name="IndexWebsite" xml:space="preserve">
+    <value>This tool has been built to make your games more exciting and limit the use of paper thanks to our toolset. Creating an account on our platform will let you choose which role you want to have (Game master or player), speeds the flow of the game while reducing the overall management of a roplaying game. You will also be able to save your characters in our database and export it to our future locations. Last but not least, we offer an homebrewed scenario exclusive to our app with a built-in storyline, new and customized and simplified spells to help newcomers or spice up the adventures of roleplaying veterans.</value>
+  </data>
+</root>

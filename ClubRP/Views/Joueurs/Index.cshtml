@@ -18,9 +18,6 @@
             @Html.DisplayNameFor(model => model.Nom)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Classe)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Maitre)
         </th>
         <th>
@@ -28,6 +25,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.GroupeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonnageID)
         </th>
         <th></th>
     </tr>
@@ -41,9 +41,6 @@
             @Html.DisplayFor(modelItem => item.Nom)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Classe)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Maitre)
         </td>
         <td>
@@ -51,6 +48,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.GroupeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonnageID)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.JoueurID }) |

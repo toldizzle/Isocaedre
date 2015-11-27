@@ -1,7 +1,7 @@
 ﻿@{
 
 }
-<h2>@ViewBag.Titre.</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.MeetUs)</h2>
 
 <style>
     #map {
@@ -16,18 +16,17 @@
 
 <address style="font-weight:bold">
     <br>
-    4428 rue Wellington<br />
-    Montréal, QC Y7D 9M8<br />
-    <abbr title="téléphone">T:</abbr>
+    @Html.DisplayName(ClubRP.Views.Shared.ContentRessources.ContactAddress1)<br />
+    @Html.DisplayName(ClubRP.Views.Shared.ContentRessources.ContactAddress2)<br />
+    <abbr> @Html.Raw(ClubRP.Views.Shared.ContentRessources.ContactTelephone) </abbr>
     514-555-6767
 </address>
 
+<address>
+    <strong>@Html.Raw(ClubRP.Views.Shared.ContentRessources.ContactAssistance)</strong>   <a href="icosaedre@roleplay.com">icosaedre@roleplay.com</a><br />
+</address>
 <p>
-
-    Vous pouvez nous contacter par téléphone du lundi au vendredi de 9:00 à 21:00 et la fin de semaine  de 12:00 a 23:00<br />
-    ou par courriel en tout temps <i>(délai de 24 heures maximum possible) </i>, ainsi que par la poste à l'adresse ci-dessus.
+    @Html.Raw(ClubRP.Views.Shared.ContentRessources.ContactMessage)
+    @*Vous pouvez nous contacter par téléphone du lundi au vendredi de 9:00 à 21:00 et la fin de semaine  de 12:00 a 23:00 ou par courriel en tout temps (délai de 24 heures maximum possible), ainsi que par la poste à l'adresse ci-dessus.*@
 </p>
 
-<address>
-    <strong>Assistance:</strong>   <a href="icosaedre@roleplay.com">icosaedre@roleplay.com</a><br />
-</address>

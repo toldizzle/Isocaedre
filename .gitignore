@@ -7,3 +7,6 @@
 /ClubRP/obj
 /ClubRP/bin/ClubRP.pdb
 /ClubRP/bin/ClubRP.dll
+bin
+packages
+/ClubRP/ClubRP.csproj

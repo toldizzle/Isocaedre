@@ -2,19 +2,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewBag.Titre</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Equipment)</h2>
 <p>
-    Vous pouvez trouver ici un exemple à quoi ressemble notre espace client. Nous vous proposons plusieurs outils
-    qui vous aideront à apprécier encore plus votre partie de jeu.
-    Par exemple, <a target="_blank" href="http://www.amazon.ca/Chessex-Role-Playing-Play-Mat/dp/B0015IQO2O/ref=pd_sim_t_2?tag=8013013-20">ce tapis quadrillé</a> pour faciliter le calcul des déplacements de vos figurines. Il est aussi utilisé pour dessiner ses plans de dungeon
-    avec des crayons non permanents et tout simplement effacer par la suite avec un linge humide.
+    @Html.Raw(ClubRP.Views.Shared.ContentRessources.EquipText)
 </p>
 <p>
-    Chaque joueur doit aussi avoir <a target="_blank" href="http://www.imaginaire.com/indexv2.jsp?url=/recherchev2/avance2.jsp&cat1=GA&cat2=DE">ses dés</a> de sa couleur préférée! Sans eux, il n'y a pas beaucoup de jeu de rôle possible...
+   @Html.Raw(ClubRP.Views.Shared.ContentRessources.EquipRequirement)
 </p>
 <p>
-    Pour les joueurs à plus grand budget, voici un montage vidéo des jeux de rôle du future avec projecteur!
-    <br /><iframe width="560" height="315" src="https://www.youtube.com/embed/5bmOu3XcJuU" frameborder="0" allowfullscreen></iframe><br />   Et voici ou l'on peut les retrouver:
-    <a hhref="http://www.amazon.ca/FastFox-Projector-Multimedia-Protable-Proyector/dp/B00ZI978XK/ref=sr_1_1?ie=UTF8&qid=1442168797&sr=8-1&keywords=projector">Projecteur simple</a>
-    <a hhref="http://www.amazon.ca/BenQ-MS524-Lumens-Ready-Projector/dp/B00MBE21FU/ref=sr_1_2?ie=UTF8&qid=1442168797&sr=8-2&keywords=projector">Projecteur avec grand budget</a>
+    @Html.Raw(ClubRP.Views.Shared.ContentRessources.EquipProjector)
 </p>
