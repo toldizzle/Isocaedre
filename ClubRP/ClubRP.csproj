@@ -335,6 +335,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PostRessources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\ContentRessources.en.Designer.cs">
+      <DependentUpon>ContentRessources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Shared\ContentRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentRessources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\SharedRessources.en.Designer.cs">
       <DependentUpon>SharedRessources.en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -585,6 +595,14 @@
     <EmbeddedResource Include="Views\Posts\PostRessources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PostRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Shared\ContentRessources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentRessources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Shared\ContentRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentRessources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\SharedRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

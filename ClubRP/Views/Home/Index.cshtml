@@ -44,24 +44,19 @@
                     </a>
             </div>
             <p></p>
-            <h3>Bienvenue sur la nouvelle plateforme interactive de l'Icosaèdre! </h3>
+            <h3>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexTitle) </h3>
             <p style="text-align:justify">
-                Cet outil a été conceptualisé dans le but de rendre vos parties plus intéressantes et limiter l'utilisation de papier grâce à nos outils extraordinaires! 
-                En créant un compte sur notre application, vous pourrez choisir quel rôle vous voulez avoir durant la partie (joueur ou maître de jeu), augmenter le rythme
-                de jeu avec nos outils d'assistance tout en réduisant la complexité d'une partie. Vous pourrez aussi sauvegarder votre personnage dans notre base de données
-                et pourrez l'exporter dans tous nos (futurs) sites. Finalement, nous offrons une aventure maison exclusive à notre application web, avec un scénario de base
-                préconçu et facilement modifiable, une fiche de sortilèges modifiée conviviale et plusieurs atouts pour soit initier les nouveaux aux jeux de rôles ou pour
-                tout simplement offrir une nouvelle expérience aux vétérans.
+                @Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexWebsite)
             <p />
             <p>
-                Chaque membre aura le droit à:
+                @Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexMembers)
             </p>
             <ul>
-                <li> Une fiche assistée pour la création de leurs personnages</li>
-                <li> Un espace de notes, pour se souvenir des moments cruciaux de leur partie</li>
-                <li> Accès a notre base de données</li>
-                <li> Accès a un forum</li>
-                <li> Selon le niveau d'implication, la possibilité d'être invité à des événements exclusifs et des rabais sur certains produits</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList1)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList2)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList3)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList4)</li>
+                <li>@Html.Raw(ClubRP.Views.Shared.ContentRessources.IndexList5)</li>
             </ul>
         </div>
     </div>
