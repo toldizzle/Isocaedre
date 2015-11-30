@@ -1,8 +1,5 @@
 ﻿@model ClubRP.Models.Message
 
-<h3>@Html.DisplayName(ClubRP.Views.Messages.MessageRessources.Reply)</h3>
-
-
 @using (Html.BeginForm("Create", "Messages"))
 {
     @Html.AntiForgeryToken()
@@ -24,10 +21,6 @@
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack, "Index", "Posts")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
