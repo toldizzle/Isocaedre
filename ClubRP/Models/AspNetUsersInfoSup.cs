@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Web;
 
@@ -20,5 +21,6 @@ namespace ClubRP.Models
         public byte[] ImageData { get; set; }
         [NotMapped]
         public HttpPostedFileBase Fichier { get; set; }
+        public virtual Joueur Joueur { get; set; }
     }
 }

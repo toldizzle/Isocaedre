@@ -45,7 +45,16 @@
         <dd>
             @Html.DisplayFor(model => model.Auteur)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Joueurs)
+        </dt>
 
+        <dd>
+           @foreach (ClubRP.Models.Joueur p in Model.Joueurs)
+           {
+               <p>@p.Nom</p>
+           }
+        </dd>
     </dl>
 </div>
 <p>

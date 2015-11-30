@@ -79,6 +79,15 @@ namespace ClubRP.Views.Groupes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Créer un nouveau joueur.
+        /// </summary>
+        public static string CreateNewUser {
+            get {
+                return ResourceManager.GetString("CreateNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date de création.
         /// </summary>
         public static string Creation {
