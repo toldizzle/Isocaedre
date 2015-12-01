@@ -42,5 +42,6 @@ namespace ClubRP.Models
 
         public System.Data.Entity.DbSet<ClubRP.Models.Joueur> Joueurs { get; set; }
 
+        public System.Data.Entity.DbSet<ClubRP.Models.Personnage> Personnages { get; set; }
     }
 }

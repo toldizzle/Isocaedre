@@ -26,11 +26,17 @@
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.Partial("_langPartialView")
-        </li>
-        <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.LogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+    <table class="navbar-right">
+        <tr>
+            <td>
+                @Html.Partial("_langPartialView")
+            </td>
+            <td>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.LogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 }

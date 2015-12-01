@@ -10,7 +10,7 @@ namespace ClubRP.Models
     {
         // Infos Personnages
         [Key]
-        public int PersoID { get; set; }
+        public int PersonnageID { get; set; }
         [Required]
         public string NomPerso { get; set; }
         [Required]

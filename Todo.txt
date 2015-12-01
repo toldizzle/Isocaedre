@@ -1,3 +1,5 @@
 Fiches
-Code Martin
-Fin traduction
+Cadre login
+Réparer bouton reply
+Mettre AJAX dans post/detail
+groupes
