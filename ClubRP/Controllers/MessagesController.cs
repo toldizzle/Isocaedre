@@ -53,6 +53,7 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                //message.MessageID = db.Messages.Count();
                 message.AspNetUserID = User.Identity.GetUserId();
                 message.Auteur = User.Identity.Name;
                 message.DateMessage = DateTime.Now;

@@ -4,7 +4,7 @@
     <h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Detail)</h2>
     <hr />
     <table class="table">
-        <p>@Html.ActionLink((ClubRP.Views.Messages.MessageRessources.Reply), "Create",  "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)</p>
+        @Html.ActionLink((ClubRP.Views.Messages.MessageRessources.Reply), "Create",  "Messages", routeValues: new { postId = Model.ID }, htmlAttributes: null)
         @{
             var sortedMessage = from entry in Model.Messages orderby entry.DateMessage ascending select entry;
         }
