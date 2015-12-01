@@ -20,7 +20,7 @@
             @Html.DisplayNameFor(model => model.Creation)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AspNetUserID)
+            @Html.DisplayNameFor(model => model.Joueurs)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Auteur)
@@ -39,9 +39,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Creation)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUserID)
-        </td>
+        <th>
+            @item.Joueurs.Count
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.Auteur)
         </td>

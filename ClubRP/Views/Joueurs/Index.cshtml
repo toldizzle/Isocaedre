@@ -11,9 +11,7 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AspNetUserID)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Nom)
         </th>
@@ -24,19 +22,17 @@
             @Html.DisplayNameFor(model => model.Specialisation)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GroupeID)
+            Groupé
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersonnageID)
+            Personnage
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUserID)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Nom)
         </td>
@@ -47,10 +43,24 @@
             @Html.DisplayFor(modelItem => item.Specialisation)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.GroupeID)
+            @if(item.GroupeID != null)
+            {
+                <p>Oui</p>
+            }
+            else
+            {
+                <p>Non</p>
+            }
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PersonnageID)
+            @if(item.PersonnageID != null)
+            {
+                <p>Oui</p>
+            }
+            else
+            {
+                <p>Aucun</p>
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.JoueurID }) |

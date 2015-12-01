@@ -54,6 +54,8 @@ namespace ClubRP.Controllers
             {
                 joueur.AspNetUserID = User.Identity.GetUserId();
                 joueur.Nom = User.Identity.Name;
+                ApplicationUser user = db.Users.Where(d => d.Id == joueur.AspNetUserID).First();
+                user.details.Joueur = joueur;
                 //joueur.PersonnageID = 1;
                 //joueur.GroupeID = 1;
                 //joueur.JoueurID = 1;
@@ -89,6 +91,8 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                joueur.AspNetUserID = User.Identity.GetUserId();
+                joueur.Nom = User.Identity.Name;
                 db.Entry(joueur).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ClubRP.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ClubRP.Controllers
 {
@@ -50,6 +51,8 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                groupe.AspNetUserID = User.Identity.GetUserId();
+                groupe.Auteur = User.Identity.Name;
                 db.Groupes.Add(groupe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
