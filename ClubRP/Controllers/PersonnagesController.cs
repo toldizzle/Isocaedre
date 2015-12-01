@@ -43,6 +43,7 @@ namespace ClubRP.Models
         // GET: Personnages/Create
         public ActionResult Create()
         {
+
             return View();
         }
 
@@ -56,6 +57,11 @@ namespace ClubRP.Models
             if (ModelState.IsValid)
             {
                 db.Personnages.Add(personnage);
+
+                string Usager = User.Identity.GetUserId();
+                var query = db.Joueurs.Select(j => j.AspNetUserID == Usager).First();
+                query.
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
