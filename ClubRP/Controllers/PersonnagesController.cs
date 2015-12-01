@@ -59,8 +59,8 @@ namespace ClubRP.Models
                 db.Personnages.Add(personnage);
 
                 string Usager = User.Identity.GetUserId();
-                var query = db.Joueurs.Select(j => j.AspNetUserID == Usager).First();
-                query.
+                Joueur query = db.Joueurs.Where(j => j.AspNetUserID == Usager).First();
+                query.PersonnageID = db.Personnages.Select(p => p.PersonnageID).First();
 
                 db.SaveChanges();
                 return RedirectToAction("Index");
