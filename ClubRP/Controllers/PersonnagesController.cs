@@ -60,7 +60,9 @@ namespace ClubRP.Models
 
                 string Usager = User.Identity.GetUserId();
                 Joueur query = db.Joueurs.Where(j => j.AspNetUserID == Usager).First();
-                query.PersonnageID = db.Personnages.Select(p => p.PersonnageID).First();
+                Personnage query2 = db.Personnages.Where(j => j.JoueurID == query.JoueurID).First();
+
+                query.PersonnageID = query2.PersonnageID;
 
                 db.SaveChanges();
                 return RedirectToAction("Index");
