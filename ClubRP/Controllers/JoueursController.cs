@@ -123,6 +123,13 @@ namespace ClubRP.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Joueur joueur = db.Joueurs.Find(id);
+            if (joueur.GroupeID != null)
+            {
+                Groupe groupe = db.Groupes.Where(g => g.ID == joueur.GroupeID).First();
+                groupe.Joueurs.Remove(joueur);
+            }
+            ApplicationUser user = db.Users.Where(d => d.Id == joueur.AspNetUserID).First();
+            user.details.Joueur = null;
             db.Joueurs.Remove(joueur);
             db.SaveChanges();
             return RedirectToAction("Index");

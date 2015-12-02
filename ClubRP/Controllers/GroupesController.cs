@@ -127,7 +127,14 @@ namespace ClubRP.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        public ActionResult Rejoindre(int id)
+        {
+            string AspNetUserID = User.Identity.GetUserId();
+            var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
+            query.GroupeID = id;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
