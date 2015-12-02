@@ -18,7 +18,9 @@ namespace ClubRP.Controllers
         // GET: Joueurs
         public ActionResult Index()
         {
-            return View(db.Joueurs.ToList());
+            string AspNetUserID = User.Identity.GetUserId();
+            var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID);
+            return View(query);
         }
 
         // GET: Joueurs/Details/5

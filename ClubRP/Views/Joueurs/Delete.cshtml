@@ -4,9 +4,9 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Delete)</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.DeleteMessage)</h3>
 <div>
     <h4>Joueur</h4>
     <hr />
@@ -61,12 +61,13 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack, "Index", "Groupes")
         </div>
     }
 </div>

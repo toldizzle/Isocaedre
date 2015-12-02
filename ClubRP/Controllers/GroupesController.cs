@@ -18,6 +18,9 @@ namespace ClubRP.Controllers
         // GET: Groupes
         public ActionResult Index()
         {
+            string AspNetUserID = User.Identity.GetUserId();
+            var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
+            ViewBag.Joueur = query;
             return View(db.Groupes.ToList());
         }
 
@@ -39,6 +42,9 @@ namespace ClubRP.Controllers
         // GET: Groupes/Create
         public ActionResult Create()
         {
+            //string AspNetUserID = User.Identity.GetUserId();
+            //var query = db.Joueurs.Select(j => j.AspNetUserID == AspNetUserID).First();
+            //ViewBag.Joueur = query;
             return View();
         }
 
@@ -53,6 +59,7 @@ namespace ClubRP.Controllers
             {
                 groupe.AspNetUserID = User.Identity.GetUserId();
                 groupe.Auteur = User.Identity.Name;
+                groupe.Creation = DateTime.Now;
                 db.Groupes.Add(groupe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -85,6 +92,9 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                groupe.AspNetUserID = User.Identity.GetUserId();
+                groupe.Creation = DateTime.Now;
+                groupe.Auteur = User.Identity.Name;
                 db.Entry(groupe).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

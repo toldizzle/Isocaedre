@@ -97,6 +97,15 @@ namespace ClubRP.Views.Groupes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Effacer son joueur.
+        /// </summary>
+        public static string DeleteJoueur {
+            get {
+                return ResourceManager.GetString("DeleteJoueur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {

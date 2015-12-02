@@ -6,9 +6,7 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         
@@ -63,9 +61,9 @@
             }
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.JoueurID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.JoueurID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.JoueurID })
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.JoueurID }) |
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Details", new { id = item.JoueurID }) |
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.JoueurID })
         </td>
     </tr>
 }

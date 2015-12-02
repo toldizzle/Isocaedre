@@ -6,7 +6,15 @@
     @Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.CreateNew, "Create")
 </p>
 <p>
-    @Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.CreateNewUser, "Create","Joueurs")
+    @if (ViewBag.Joueur == null)
+    {
+        <p>@Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.CreateNewUser, "Create", "Joueurs")</p>
+    }
+    else
+    {
+        <p>@Html.ActionLink("Effacer son joueur", "Delete", "Joueurs", routeValues: new { ID = ViewBag.Joueur.JoueurID}, htmlAttributes: null)</p>
+    }
+    
 </p>
 <table class="table">
     <tr>
@@ -28,29 +36,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Titre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Creation)
-        </td>
-        <th>
-            @item.Joueurs.Count
-        </th>
-        <td>
-            @Html.DisplayFor(modelItem => item.Auteur)
-        </td>
-        <td>
-            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id=item.ID }) |
-            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Details", new { id=item.ID }) |
-            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Creation)
+            </td>
+            <th>
+                @item.Joueurs.Count
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auteur)
+            </td>
+            <td>
+                @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.ID }) |
+                @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Details", new { id = item.ID }) |
+                @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>
