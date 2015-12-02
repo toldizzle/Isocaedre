@@ -12,7 +12,7 @@
     }
     else
     {
-        <p>@Html.ActionLink("Effacer son joueur", "Delete", "Joueurs", routeValues: new { ID = ViewBag.Joueur.JoueurID }, htmlAttributes: null)</p>
+        <p>@Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.DeleteJoueur, "Delete", "Joueurs", routeValues: new { ID = ViewBag.Joueur.JoueurID }, htmlAttributes: null)</p>
     }
 
     </p>
@@ -58,7 +58,7 @@
                     @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.ID }) |
                     @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Details", new { id = item.ID }) |
                     @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.ID }) |
-                    @if (ViewBag.Joueur != null && ViewBag.Joueur.GroupeID == null)
+                    @if (ViewBag.Joueur != null && ViewBag.Joueur.GroupeID != item.ID)
                     {
                         @Html.ActionLink("Rejoindre", "Rejoindre", routeValues: new { id = item.ID })
                     }

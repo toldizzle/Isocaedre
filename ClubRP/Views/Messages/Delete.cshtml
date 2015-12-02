@@ -3,10 +3,7 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Delete)</h2>
-
-<h3>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.DeleteMessage)</h3>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.DeleteMessage)</h2>
 <div>
     <h4>@Html.DisplayName(ClubRP.Views.Messages.MessageRessources.Message)</h4>
     <hr />
@@ -32,7 +29,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Effacer" class="btn btn-default" /> |
+            <input type="submit" value=@ClubRP.Views.Shared.SharedRessources.Delete class="btn btn-default" /> |
             @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack,"Index", "Posts")
         </div>
     }

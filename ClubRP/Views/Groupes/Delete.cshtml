@@ -54,8 +54,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value=@ClubRP.Views.Shared.SharedRessources.Delete class="btn btn-default" /> |
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack,"Index")
         </div>
     }
 </div>

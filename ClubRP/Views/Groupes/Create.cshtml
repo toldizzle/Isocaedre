@@ -1,6 +1,6 @@
 ﻿@model ClubRP.Models.Groupe
 
-<h2>@Html.DisplayName(ClubRP.Views.Membres.MembreRessources.Create)</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Create)</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -35,5 +35,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack, "Index")
 </div>

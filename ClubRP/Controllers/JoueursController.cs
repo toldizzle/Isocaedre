@@ -56,11 +56,8 @@ namespace ClubRP.Controllers
             {
                 joueur.AspNetUserID = User.Identity.GetUserId();
                 joueur.Nom = User.Identity.Name;
-                ApplicationUser user = db.Users.Where(d => d.Id == joueur.AspNetUserID).First();
+                ApplicationUser user = db.Users.Where(u => u.Id == joueur.AspNetUserID).First();
                 user.details.Joueur = joueur;
-                //joueur.PersonnageID = 1;
-                //joueur.GroupeID = 1;
-                //joueur.JoueurID = 1;
                 db.Joueurs.Add(joueur);
                 db.SaveChanges();
                 return RedirectToAction("Index","Groupes");
