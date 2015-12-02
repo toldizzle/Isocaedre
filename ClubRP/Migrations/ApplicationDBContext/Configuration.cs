@@ -26,7 +26,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             AjouterUserRoles(context);
             AjoutPostEtMessage(context);
             AjouterGroupes(context);
-            //AjouterJoueurs(context);
+            AjouterJoueurs(context);
         }
 
        

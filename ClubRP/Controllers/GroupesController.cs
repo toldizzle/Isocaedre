@@ -19,8 +19,12 @@ namespace ClubRP.Controllers
         public ActionResult Index()
         {
             string AspNetUserID = User.Identity.GetUserId();
+            ApplicationUser user = db.Users.Where(d => d.Id == AspNetUserID).First();
+            if(user.details.Joueur != null)
+            {
             var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
             ViewBag.Joueur = query;
+            }
             return View(db.Groupes.ToList());
         }
 
