@@ -38,15 +38,15 @@
             @Html.DisplayFor(model => model.Auteur)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Joueurs)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Player)
         </dt>
 
         <dd>
             <table>
                 <tr>
-                    <td>Nom</td>
-                    <td>Spécialisation</td>
-                    <td>Joueur ou Maître</td>
+                    <td>@ClubRP.Views.Groupes.GroupeRessources.Name</td>
+                    <td>@ClubRP.Views.Groupes.GroupeRessources.Specialisation</td>
+                    <td>@ClubRP.Views.Groupes.GroupeRessources.Status</td>
                 </tr>
                 @foreach (ClubRP.Models.Joueur p in Model.Joueurs)
                 {

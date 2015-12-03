@@ -11,19 +11,19 @@
     <tr>
         
         <th>
-            @Html.DisplayNameFor(model => model.Nom)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Maitre)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.GameMaster)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Specialisation)
+            @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Specialisation)
         </th>
         <th>
-            Groupé
+            @ClubRP.Views.Groupes.GroupeRessources.Grouped
         </th>
         <th>
-            Personnage
+            @ClubRP.Views.Groupes.GroupeRessources.HasCharacter
         </th>
         <th></th>
     </tr>
@@ -43,21 +43,21 @@
         <td>
             @if(item.GroupeID != null)
             {
-                <p>Oui</p>
+                <p>@ClubRP.Views.Groupes.GroupeRessources.Yes</p>
             }
             else
             {
-                <p>Non</p>
+                <p>@ClubRP.Views.Groupes.GroupeRessources.No</p>
             }
         </td>
         <td>
-            @if(item.PersonnageID != null)
+            @if (item.PersonnageID != null)
             {
-                <p>Oui</p>
+                <p>@ClubRP.Views.Groupes.GroupeRessources.Yes</p>
             }
             else
             {
-                <p>Aucun</p>
+                <p>@ClubRP.Views.Groupes.GroupeRessources.No</p>
             }
         </td>
         <td>

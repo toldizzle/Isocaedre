@@ -70,6 +70,15 @@ namespace ClubRP.Views.Groupes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ID du personnage.
+        /// </summary>
+        public static string CharacterID {
+            get {
+                return ResourceManager.GetString("CharacterID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Créer un nouveau groupe.
         /// </summary>
         public static string CreateNew {
@@ -115,6 +124,105 @@ namespace ClubRP.Views.Groupes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maître de jeu.
+        /// </summary>
+        public static string GameMaster {
+            get {
+                return ResourceManager.GetString("GameMaster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dans un groupe.
+        /// </summary>
+        public static string Grouped {
+            get {
+                return ResourceManager.GetString("Grouped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Numéro du groupe.
+        /// </summary>
+        public static string GroupID {
+            get {
+                return ResourceManager.GetString("GroupID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Possède personnage.
+        /// </summary>
+        public static string HasCharacter {
+            get {
+                return ResourceManager.GetString("HasCharacter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rejoindre.
+        /// </summary>
+        public static string Join {
+            get {
+                return ResourceManager.GetString("Join", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nom.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non.
+        /// </summary>
+        public static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Joueurs.
+        /// </summary>
+        public static string Player {
+            get {
+                return ResourceManager.GetString("Player", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sauvegarder.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spécialisation.
+        /// </summary>
+        public static string Specialisation {
+            get {
+                return ResourceManager.GetString("Specialisation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Joueur ou maître.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Titre.
         /// </summary>
         public static string Title {
@@ -129,6 +237,15 @@ namespace ClubRP.Views.Groupes {
         public static string UserID {
             get {
                 return ResourceManager.GetString("UserID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oui.
+        /// </summary>
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }
