@@ -1,6 +1,6 @@
 ﻿@model ClubRP.Models.Groupe
 
-<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Detail</h2>
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Detail)</h2>
 
 <div>
     <h4>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Groups)</h4>
@@ -42,10 +42,21 @@
         </dt>
 
         <dd>
-           @foreach (ClubRP.Models.Joueur p in Model.Joueurs)
-           {
-               <p>@p.Nom</p>
-           }
+            <table>
+                <tr>
+                    <td>Nom</td>
+                    <td>Spécialisation</td>
+                    <td>Joueur ou Maître</td>
+                </tr>
+                @foreach (ClubRP.Models.Joueur p in Model.Joueurs)
+                {
+                    <tr>
+                        <td>@p.Nom</td>
+                        <td>@p.Specialisation</td>
+                        <td>@(p.Maitre ? "Maître" : "Joueur")</td>
+                    </tr>
+                }
+            </table>
         </dd>
     </dl>
 </div>

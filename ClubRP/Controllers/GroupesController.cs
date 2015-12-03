@@ -18,6 +18,13 @@ namespace ClubRP.Controllers
         // GET: Groupes
         public ActionResult Index()
         {
+            string AspNetUserID = User.Identity.GetUserId();
+            ApplicationUser user = db.Users.Where(d => d.Id == AspNetUserID).First();
+            if(user.details.Joueur != null)
+            {
+            var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
+            ViewBag.Joueur = query;
+            }
             return View(db.Groupes.ToList());
         }
 
@@ -39,6 +46,9 @@ namespace ClubRP.Controllers
         // GET: Groupes/Create
         public ActionResult Create()
         {
+            //string AspNetUserID = User.Identity.GetUserId();
+            //var query = db.Joueurs.Select(j => j.AspNetUserID == AspNetUserID).First();
+            //ViewBag.Joueur = query;
             return View();
         }
 
@@ -53,6 +63,7 @@ namespace ClubRP.Controllers
             {
                 groupe.AspNetUserID = User.Identity.GetUserId();
                 groupe.Auteur = User.Identity.Name;
+                groupe.Creation = DateTime.Now;
                 db.Groupes.Add(groupe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -85,6 +96,9 @@ namespace ClubRP.Controllers
         {
             if (ModelState.IsValid)
             {
+                groupe.AspNetUserID = User.Identity.GetUserId();
+                groupe.Creation = DateTime.Now;
+                groupe.Auteur = User.Identity.Name;
                 db.Entry(groupe).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -117,7 +131,14 @@ namespace ClubRP.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        public ActionResult Rejoindre(int id)
+        {
+            string AspNetUserID = User.Identity.GetUserId();
+            var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
+            query.GroupeID = id;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

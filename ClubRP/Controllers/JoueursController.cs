@@ -18,7 +18,9 @@ namespace ClubRP.Controllers
         // GET: Joueurs
         public ActionResult Index()
         {
-            return View(db.Joueurs.ToList());
+            string AspNetUserID = User.Identity.GetUserId();
+            var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID);
+            return View(query);
         }
 
         // GET: Joueurs/Details/5
@@ -54,11 +56,8 @@ namespace ClubRP.Controllers
             {
                 joueur.AspNetUserID = User.Identity.GetUserId();
                 joueur.Nom = User.Identity.Name;
-                ApplicationUser user = db.Users.Where(d => d.Id == joueur.AspNetUserID).First();
+                ApplicationUser user = db.Users.Where(u => u.Id == joueur.AspNetUserID).First();
                 user.details.Joueur = joueur;
-                //joueur.PersonnageID = 1;
-                //joueur.GroupeID = 1;
-                //joueur.JoueurID = 1;
                 db.Joueurs.Add(joueur);
                 db.SaveChanges();
                 return RedirectToAction("Index","Groupes");
@@ -121,6 +120,13 @@ namespace ClubRP.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Joueur joueur = db.Joueurs.Find(id);
+            if (joueur.GroupeID != null)
+            {
+                Groupe groupe = db.Groupes.Where(g => g.ID == joueur.GroupeID).First();
+                groupe.Joueurs.Remove(joueur);
+            }
+            ApplicationUser user = db.Users.Where(d => d.Id == joueur.AspNetUserID).First();
+            user.details.Joueur = null;
             db.Joueurs.Remove(joueur);
             db.SaveChanges();
             return RedirectToAction("Index");

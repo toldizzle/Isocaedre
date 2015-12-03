@@ -129,6 +129,9 @@
   <data name="Creation" xml:space="preserve">
     <value>Date de création</value>
   </data>
+  <data name="DeleteJoueur" xml:space="preserve">
+    <value>Effacer son joueur</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
   </data>
