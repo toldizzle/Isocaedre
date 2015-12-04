@@ -3,7 +3,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Reinit : DbMigration
+    public partial class Reinitialisation2 : DbMigration
     {
         public override void Up()
         {
@@ -30,26 +30,13 @@ namespace ClubRP.Migrations.ApplicationDBContext
                         Maitre = c.Boolean(nullable: false),
                         Specialisation = c.String(),
                         GroupeID = c.Int(),
-                        PersonnageID = c.Int(),
+                        Personnage_PersonnageID = c.Int(),
                     })
                 .PrimaryKey(t => t.JoueurID)
+                .ForeignKey("dbo.Personnages", t => t.Personnage_PersonnageID)
                 .ForeignKey("dbo.Groupes", t => t.GroupeID)
-                .Index(t => t.GroupeID);
-            
-            CreateTable(
-                "dbo.Messages",
-                c => new
-                    {
-                        MessageID = c.Int(nullable: false, identity: true),
-                        AspNetUserID = c.String(),
-                        Auteur = c.String(),
-                        Texte = c.String(),
-                        DateMessage = c.DateTime(nullable: false),
-                        PostID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.MessageID)
-                .ForeignKey("dbo.Posts", t => t.PostID, cascadeDelete: true)
-                .Index(t => t.PostID);
+                .Index(t => t.GroupeID)
+                .Index(t => t.Personnage_PersonnageID);
             
             CreateTable(
                 "dbo.Personnages",
@@ -158,6 +145,21 @@ namespace ClubRP.Migrations.ApplicationDBContext
                         JoueurID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.PersonnageID);
+            
+            CreateTable(
+                "dbo.Messages",
+                c => new
+                    {
+                        MessageID = c.Int(nullable: false, identity: true),
+                        AspNetUserID = c.String(),
+                        Auteur = c.String(),
+                        Texte = c.String(),
+                        DateMessage = c.DateTime(nullable: false),
+                        PostID = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.MessageID)
+                .ForeignKey("dbo.Posts", t => t.PostID, cascadeDelete: true)
+                .Index(t => t.PostID);
             
             CreateTable(
                 "dbo.Posts",
@@ -272,6 +274,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Messages", "PostID", "dbo.Posts");
             DropForeignKey("dbo.Joueurs", "GroupeID", "dbo.Groupes");
+            DropForeignKey("dbo.Joueurs", "Personnage_PersonnageID", "dbo.Personnages");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
@@ -281,6 +284,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.Messages", new[] { "PostID" });
+            DropIndex("dbo.Joueurs", new[] { "Personnage_PersonnageID" });
             DropIndex("dbo.Joueurs", new[] { "GroupeID" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
@@ -289,8 +293,8 @@ namespace ClubRP.Migrations.ApplicationDBContext
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Posts");
-            DropTable("dbo.Personnages");
             DropTable("dbo.Messages");
+            DropTable("dbo.Personnages");
             DropTable("dbo.Joueurs");
             DropTable("dbo.Groupes");
         }

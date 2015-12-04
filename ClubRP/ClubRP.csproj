@@ -179,6 +179,21 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsersInfoSups.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GroupesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -187,14 +202,41 @@
     <Compile Include="Controllers\MembresController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512041310035_Reinit.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512041310035_Reinit.Designer.cs">
-      <DependentUpon>201512041310035_Reinit.cs</DependentUpon>
+    <Compile Include="Groupes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Joueurs.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201512041752583_Reinitialisation2.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201512041752583_Reinitialisation2.Designer.cs">
+      <DependentUpon>201512041752583_Reinitialisation2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
     <Compile Include="Models\Groupe.cs" />
@@ -205,6 +247,12 @@
     <Compile Include="Models\Personnage.cs" />
     <Compile Include="Controllers\PersonnagesController.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Personnages.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Posts.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Views\Account\AccountRessources.en.Designer.cs">
@@ -332,6 +380,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.edmx.sql" />
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\application.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -339,6 +398,13 @@
     <Content Include="fonts\amaranth-regular-webfont.ttf" />
     <Content Include="fonts\amaranth-regular-webfont.woff" />
     <Content Include="fonts\amaranth-regular-webfont.woff2" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\GoogleMaps.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -440,8 +506,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512041310035_Reinit.resx">
-      <DependentUpon>201512041310035_Reinit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512041752583_Reinitialisation2.resx">
+      <DependentUpon>201512041752583_Reinitialisation2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Account\AccountRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

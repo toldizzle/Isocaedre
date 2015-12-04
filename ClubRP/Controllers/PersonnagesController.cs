@@ -18,11 +18,9 @@ namespace ClubRP.Models
         public ActionResult Index()
         {
             string Usager = User.Identity.GetUserId();
-            var query = db.Joueurs.Where(j => j.AspNetUserID == Usager)
-                                        .Select(p => p.PersonnageID)
-                                        .First();
+            var query = db.Joueurs.Where(j => j.AspNetUserID == Usager).Select(p=>p.Personnage);
 
-            return View(db.Personnages.Where(p => p.PersonnageID == query));
+            return View(query.ToList());
         }
 
         // GET: Personnages/Details/5
@@ -59,11 +57,9 @@ namespace ClubRP.Models
                 db.Personnages.Add(personnage);
 
                 string Usager = User.Identity.GetUserId();
-                Joueur query = db.Joueurs.Where(j => j.AspNetUserID == Usager).First();
-                Personnage query2 = db.Personnages.Where(j => j.JoueurID == query.JoueurID).First();
-
-                query.PersonnageID = query2.PersonnageID;
-
+                Joueur joueur = db.Joueurs.Where(j => j.AspNetUserID == Usager).First();
+                joueur.Personnage = personnage;
+                db.Personnages.Add(personnage);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

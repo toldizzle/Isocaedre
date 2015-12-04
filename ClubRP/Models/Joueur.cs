@@ -17,6 +17,6 @@ namespace ClubRP.Models
         public bool Maitre { get; set; }
         public string Specialisation { get; set; }
         public int? GroupeID { get; set; }
-        public int? PersonnageID { get; set; }
+        public virtual Personnage Personnage { get; set; }
     }
 }

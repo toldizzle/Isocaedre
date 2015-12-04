@@ -7,13 +7,13 @@ namespace ClubRP.Migrations.ApplicationDBContext
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Reinit : IMigrationMetadata
+    public sealed partial class Reinitialisation2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Reinit));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Reinitialisation2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512041310035_Reinit"; }
+            get { return "201512041752583_Reinitialisation2"; }
         }
         
         string IMigrationMetadata.Source
