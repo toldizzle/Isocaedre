@@ -286,6 +286,10 @@
     <Compile Include="Migrations\ApplicationDBContext\201511271912012_JoueurRequireModif.Designer.cs">
       <DependentUpon>201511271912012_JoueurRequireModif.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201511271917355_Joueur-Null.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201511271917355_Joueur-Null.Designer.cs">
+      <DependentUpon>201511271917355_Joueur-Null.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationDBContext\201512011354399_CreatePersonnages.cs" />
     <Compile Include="Migrations\ApplicationDBContext\201512011354399_CreatePersonnages.Designer.cs">
       <DependentUpon>201512011354399_CreatePersonnages.cs</DependentUpon>
@@ -607,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271912012_JoueurRequireModif.resx">
       <DependentUpon>201511271912012_JoueurRequireModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201511271917355_Joueur-Null.resx">
+      <DependentUpon>201511271917355_Joueur-Null.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201512011354399_CreatePersonnages.resx">
       <DependentUpon>201512011354399_CreatePersonnages.cs</DependentUpon>

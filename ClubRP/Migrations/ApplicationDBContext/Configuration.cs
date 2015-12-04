@@ -245,10 +245,11 @@ namespace ClubRP.Migrations.ApplicationDBContext
             var userInit = (from user in context.Users
                             where user.UserName == "admin@isocaedre.ca"
                             select user).First();
-            Joueur[] joueurs = { new Joueur() { AspNetUserID = userInit.Id, GroupeID = context.Groupes.First().ID, Maitre = true, Nom = userInit.UserName, Specialisation = "DPS"} };
-            userInit.details.Joueur.JoueurID = joueurs[0].JoueurID;
+            Joueur[] joueurs = { new Joueur() { AspNetUserID = userInit.Id, GroupeID = context.Groupes.First().ID, Maitre = true, Nom = userInit.UserName, Specialisation = "DPS", JoueurID=2} };
+            userInit.details.Joueur = joueurs[0];
 
             context.Joueurs.AddOrUpdate(r => r.Nom, joueurs);
+            
             context.SaveChanges();
         }
     }
