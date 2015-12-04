@@ -235,9 +235,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             var userInit = (from user in context.Users
                             where user.UserName == "admin@isocaedre.ca"
                             select user).First();
-            //var joueur = (from j in context.Joueurs
-            //              where j.AspNetUserID == userInit.Id
-            //              select j).First();
+
             Groupe[] groupe = { new Groupe() { AspNetUserID = userInit.Id, Auteur = "admin@isocaedre.ca", Creation = DateTime.Now, Description = "Voici une idée de création de groupe", Titre = "Toldoth" } };
             context.Groupes.AddOrUpdate(r => r.Titre, groupe);
             context.SaveChanges();
@@ -248,6 +246,8 @@ namespace ClubRP.Migrations.ApplicationDBContext
                             where user.UserName == "admin@isocaedre.ca"
                             select user).First();
             Joueur[] joueurs = { new Joueur() { AspNetUserID = userInit.Id, GroupeID = context.Groupes.First().ID, Maitre = true, Nom = userInit.UserName, Specialisation = "DPS"} };
+            userInit.details.Joueur.JoueurID = joueurs[0].JoueurID;
+
             context.Joueurs.AddOrUpdate(r => r.Nom, joueurs);
             context.SaveChanges();
         }

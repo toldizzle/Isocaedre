@@ -22,8 +22,8 @@ namespace ClubRP.Controllers
             ApplicationUser user = db.Users.Where(d => d.Id == AspNetUserID).First();
             if(user.details.Joueur != null)
             {
-            var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
-            ViewBag.Joueur = query;
+                var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
+                ViewBag.Joueur = query;
             }
             return View(db.Groupes.ToList());
         }
