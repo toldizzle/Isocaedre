@@ -52,7 +52,7 @@ namespace ClubRP.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PersoID,NomPerso,Race,Classe,Niveau,Alignement,Force,Dexterite,Constitution,Charisme,Intelligence,Sagesse,Vigueur,Volonte,Reflexe,VigueurBonus,VolonteBonus,ReflexeBonus,BaB,BaBBonus,Initiative,InitiativeBonus,Lutte,LutteBonus,HP,Deplacement,AC,NaturalAC,ACBonus,ResistanceSort,ReductionDegat,NomArme,Degats,Hit,Crit,Munition,DetailsArme,NomArmure,ArmureAC,TypeArmure,Malus,DetailsArmure,Appraise,Balance,Bluff,Climb,Concentration,Craft1,Craft1Nom,Craft2,Craft2Nom,Craft3,Craft3Nom,Decipher,Diplomacy,DisableDevice,Disguise,EscapeArtist,Forgery,GatherInfo,HandleAnimal,Heal,Hide,Intimidate,Jump,Knowledge1,Knowledge1Name,Knowledge2,Knowledge2Name,Knowledge3,Knowledge3Name,Knowledge4,Knowledge4Name,Knowledge5,Knowledge5Name,Listen,MoveSilently,OpenLock,Perform1,Perform1Nom,Perform2,Perform2Nom,Profession1,Profession1Nom,Profession2,Profession2Nom,Ride,Search,SenseMotive,SleightOfHand,Spellcraft,Spot,Survival,Swim,Tumble,UMD,UseRope,Notes,Gold,Experience,JoueurID")] Personnage personnage)
+        public ActionResult Create([Bind(Include = "PersonnageID,NomPerso,Race,Classe,Niveau,Alignement,Force,Dexterite,Constitution,Charisme,Intelligence,Sagesse,Vigueur,Volonte,Reflexe,VigueurBonus,VolonteBonus,ReflexeBonus,BaB,BaBBonus,Initiative,InitiativeBonus,Lutte,LutteBonus,HP,Deplacement,AC,NaturalAC,ACBonus,ResistanceSort,ReductionDegat,NomArme,Degats,Hit,Crit,Munition,DetailsArme,NomArmure,ArmureAC,TypeArmure,Malus,DetailsArmure,Appraise,Balance,Bluff,Climb,Concentration,Craft1,Craft1Nom,Craft2,Craft2Nom,Craft3,Craft3Nom,Decipher,Diplomacy,DisableDevice,Disguise,EscapeArtist,Forgery,GatherInfo,HandleAnimal,Heal,Hide,Intimidate,Jump,Knowledge1,Knowledge1Name,Knowledge2,Knowledge2Name,Knowledge3,Knowledge3Name,Knowledge4,Knowledge4Name,Knowledge5,Knowledge5Name,Listen,MoveSilently,OpenLock,Perform1,Perform1Nom,Perform2,Perform2Nom,Profession1,Profession1Nom,Profession2,Profession2Nom,Ride,Search,SenseMotive,SleightOfHand,Spellcraft,Spot,Survival,Swim,Tumble,UMD,UseRope,Notes,Gold,Experience,JoueurID")] Personnage personnage)
         {
             if (ModelState.IsValid)
             {
@@ -60,9 +60,8 @@ namespace ClubRP.Models
 
                 string Usager = User.Identity.GetUserId();
                 Joueur query = db.Joueurs.Where(j => j.AspNetUserID == Usager).First();
-                Personnage query2 = db.Personnages.Where(j => j.JoueurID == query.JoueurID).First();
 
-                query.PersonnageID = query2.PersonnageID;
+                query.PersonnageID = personnage.PersonnageID;
 
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -91,7 +90,7 @@ namespace ClubRP.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PersoID,NomPerso,Race,Classe,Niveau,Alignement,Force,Dexterite,Constitution,Charisme,Intelligence,Sagesse,Vigueur,Volonte,Reflexe,VigueurBonus,VolonteBonus,ReflexeBonus,BaB,BaBBonus,Initiative,InitiativeBonus,Lutte,LutteBonus,HP,Deplacement,AC,NaturalAC,ACBonus,ResistanceSort,ReductionDegat,NomArme,Degats,Hit,Crit,Munition,DetailsArme,NomArmure,ArmureAC,TypeArmure,Malus,DetailsArmure,Appraise,Balance,Bluff,Climb,Concentration,Craft1,Craft1Nom,Craft2,Craft2Nom,Craft3,Craft3Nom,Decipher,Diplomacy,DisableDevice,Disguise,EscapeArtist,Forgery,GatherInfo,HandleAnimal,Heal,Hide,Intimidate,Jump,Knowledge1,Knowledge1Name,Knowledge2,Knowledge2Name,Knowledge3,Knowledge3Name,Knowledge4,Knowledge4Name,Knowledge5,Knowledge5Name,Listen,MoveSilently,OpenLock,Perform1,Perform1Nom,Perform2,Perform2Nom,Profession1,Profession1Nom,Profession2,Profession2Nom,Ride,Search,SenseMotive,SleightOfHand,Spellcraft,Spot,Survival,Swim,Tumble,UMD,UseRope,Notes,Gold,Experience,JoueurID")] Personnage personnage)
+        public ActionResult Edit([Bind(Include = "PersonnageID,NomPerso,Race,Classe,Niveau,Alignement,Force,Dexterite,Constitution,Charisme,Intelligence,Sagesse,Vigueur,Volonte,Reflexe,VigueurBonus,VolonteBonus,ReflexeBonus,BaB,BaBBonus,Initiative,InitiativeBonus,Lutte,LutteBonus,HP,Deplacement,AC,NaturalAC,ACBonus,ResistanceSort,ReductionDegat,NomArme,Degats,Hit,Crit,Munition,DetailsArme,NomArmure,ArmureAC,TypeArmure,Malus,DetailsArmure,Appraise,Balance,Bluff,Climb,Concentration,Craft1,Craft1Nom,Craft2,Craft2Nom,Craft3,Craft3Nom,Decipher,Diplomacy,DisableDevice,Disguise,EscapeArtist,Forgery,GatherInfo,HandleAnimal,Heal,Hide,Intimidate,Jump,Knowledge1,Knowledge1Name,Knowledge2,Knowledge2Name,Knowledge3,Knowledge3Name,Knowledge4,Knowledge4Name,Knowledge5,Knowledge5Name,Listen,MoveSilently,OpenLock,Perform1,Perform1Nom,Perform2,Perform2Nom,Profession1,Profession1Nom,Profession2,Profession2Nom,Ride,Search,SenseMotive,SleightOfHand,Spellcraft,Spot,Survival,Swim,Tumble,UMD,UseRope,Notes,Gold,Experience,JoueurID")] Personnage personnage)
         {
             if (ModelState.IsValid)
             {
