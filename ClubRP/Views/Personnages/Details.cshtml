@@ -269,7 +269,7 @@
                 </dt>
 
                 <dd>
-                    FF value
+                    @(Model.AC + Model.ACBonus + Model.ArmureAC + Model.NaturalAC)
                 </dd>
 
                 <dt>
@@ -277,7 +277,7 @@
                 </dt>
 
                 <dd>
-                    T value
+                    @(Model.AC + ModDex)
                 </dd>
             </dl>
         </div>
@@ -374,9 +374,6 @@
             </div>
         </div>
 
-
-
-
         @*Section armure-------------------------------------------------*@
         <h4>Armure</h4>
         <hr />
@@ -448,7 +445,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Appraise)
+                        @(Model.Appraise + ModInt)
                     </dd>
 
                     <dt>
@@ -456,7 +453,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Balance)
+                        @(Model.Balance + ModDex - Model.Malus)
                     </dd>
 
                     <dt>
@@ -464,7 +461,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Bluff)
+                        @(Model.Bluff + ModCha)
                     </dd>
 
                     <dt>
@@ -472,7 +469,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Climb)
+                        @(Model.Climb + ModFor - Model.Malus)
                     </dd>
 
                     <dt>
@@ -480,7 +477,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Concentration)
+                        @(Model.Concentration + ModCon)
                     </dd>
 
                     <dt>
@@ -488,7 +485,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Craft1)
+                        @(Model.Craft1 + ModInt)
                     </dd>
 
                     <dt>
@@ -496,7 +493,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Craft2)
+                        @(Model.Craft2 + ModInt)
                     </dd>
 
                     <dt>
@@ -504,7 +501,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Craft3)
+                        @(Model.Craft3 + ModInt)
                     </dd>
 
                     <dt>
@@ -512,7 +509,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Decipher)
+                        @(Model.Decipher + ModInt)
                     </dd>
 
                     <dt>
@@ -520,7 +517,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Diplomacy)
+                        @(Model.Diplomacy + ModCha)
                     </dd>
 
                     <dt>
@@ -528,7 +525,8 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.DisableDevice)
+                        @(Model.DisableDevice + ModInt)
+
                     </dd>
 
                     <dt>
@@ -536,7 +534,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Disguise)
+                        @(Model.Disguise + ModCha)
                     </dd>
 
                     <dt>

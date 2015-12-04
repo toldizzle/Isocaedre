@@ -146,6 +146,6 @@ namespace ClubRP.Models
         public int? Gold { get; set; }
         public int? Experience { get; set; }
         // Liens
-        public virtual Joueur JoueurID { get; set; }
+        public int JoueurID { get; set; }
     }
 }
