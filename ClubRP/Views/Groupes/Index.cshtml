@@ -19,19 +19,19 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Titre)
+                @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Creation)
+                @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Creation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Joueurs)
+                @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Player)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Auteur)
+                @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Author)
             </th>
             <th></th>
         </tr>
@@ -60,7 +60,7 @@
                     @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.ID }) |
                     @if (ViewBag.Joueur != null && ViewBag.Joueur.GroupeID != item.ID)
                     {
-                        @Html.ActionLink("Rejoindre", "Rejoindre", routeValues: new { id = item.ID })
+                        @Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.Join, "Rejoindre", routeValues: new { id = item.ID })
                     }
                 </td>
             </tr>

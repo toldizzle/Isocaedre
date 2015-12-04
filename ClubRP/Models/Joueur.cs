@@ -16,9 +16,7 @@ namespace ClubRP.Models
         [Required]
         public bool Maitre { get; set; }
         public string Specialisation { get; set; }
-        //Foreign key (Lazy Load)
         public int? GroupeID { get; set; }
-        //Foreign key (Lazy Load)
-        public virtual Personnage PersonnageID { get; set; }
+        public virtual Personnage Personnage { get; set; }
     }
 }

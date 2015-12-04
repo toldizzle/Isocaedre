@@ -1,0 +1,1038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ApplicationDbContextModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ApplicationDbContextModelStoreContainer">
+    <EntitySet Name="C__MigrationHistory" EntityType="ApplicationDbContextModel.Store.C__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetRoles" EntityType="ApplicationDbContextModel.Store.AspNetRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserClaims" EntityType="ApplicationDbContextModel.Store.AspNetUserClaims" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserLogins" EntityType="ApplicationDbContextModel.Store.AspNetUserLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUsers" EntityType="ApplicationDbContextModel.Store.AspNetUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUsersInfoSups" EntityType="ApplicationDbContextModel.Store.AspNetUsersInfoSups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Groupes" EntityType="ApplicationDbContextModel.Store.Groupes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Joueurs" EntityType="ApplicationDbContextModel.Store.Joueurs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Messages" EntityType="ApplicationDbContextModel.Store.Messages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personnages" EntityType="ApplicationDbContextModel.Store.Personnages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Posts" EntityType="ApplicationDbContextModel.Store.Posts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserRoles" EntityType="ApplicationDbContextModel.Store.AspNetUserRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="ApplicationDbContextModel.Store.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="ApplicationDbContextModel.Store.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id" Association="ApplicationDbContextModel.Store.FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id">
+      <End Role="AspNetUsersInfoSups" EntitySet="AspNetUsersInfoSups" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID" Association="ApplicationDbContextModel.Store.FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID">
+      <End Role="Joueurs" EntitySet="Joueurs" />
+      <End Role="AspNetUsersInfoSups" EntitySet="AspNetUsersInfoSups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Joueurs_dbo_Groupes_GroupeID" Association="ApplicationDbContextModel.Store.FK_dbo_Joueurs_dbo_Groupes_GroupeID">
+      <End Role="Groupes" EntitySet="Groupes" />
+      <End Role="Joueurs" EntitySet="Joueurs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Messages_dbo_Posts_PostID" Association="ApplicationDbContextModel.Store.FK_dbo_Messages_dbo_Posts_PostID">
+      <End Role="Posts" EntitySet="Posts" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetRoles" Association="ApplicationDbContextModel.Store.FK_AspNetUserRoles_AspNetRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="ApplicationDbContextModel.Store.FK_AspNetUserRoles_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="PersonnagesJoueurs" Association="ApplicationDbContextModel.Store.PersonnagesJoueurs">
+      <End Role="Personnages" EntitySet="Personnages" />
+      <End Role="Joueurs" EntitySet="Joueurs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ClaimType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ProviderKey" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" Nullable="true" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="AspNetUsersInfoSups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Role" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Prenom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ImageNom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ImageType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ImageTaille" Type="int" Nullable="false" />
+    <Property Name="ImageData" Type="varbinary(max)" Nullable="true" />
+    <Property Name="Joueur_JoueurID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Groupes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Creation" Type="datetime" Nullable="false" />
+    <Property Name="AspNetUserID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Auteur" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Joueurs">
+    <Key>
+      <PropertyRef Name="JoueurID" />
+    </Key>
+    <Property Name="JoueurID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AspNetUserID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Maitre" Type="bit" Nullable="false" />
+    <Property Name="Specialisation" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GroupeID" Type="int" Nullable="true" />
+    <Property Name="PersonnageID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AspNetUserID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Auteur" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Texte" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DateMessage" Type="datetime" Nullable="false" />
+    <Property Name="PostID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personnages">
+    <Key>
+      <PropertyRef Name="PersonnageID" />
+    </Key>
+    <Property Name="PersonnageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomPerso" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Race" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Classe" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Niveau" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Alignement" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Force" Type="int" Nullable="false" />
+    <Property Name="Dexterite" Type="int" Nullable="false" />
+    <Property Name="Constitution" Type="int" Nullable="false" />
+    <Property Name="Charisme" Type="int" Nullable="false" />
+    <Property Name="Intelligence" Type="int" Nullable="false" />
+    <Property Name="Sagesse" Type="int" Nullable="false" />
+    <Property Name="Vigueur" Type="int" Nullable="false" />
+    <Property Name="Volonte" Type="int" Nullable="false" />
+    <Property Name="Reflexe" Type="int" Nullable="false" />
+    <Property Name="VigueurBonus" Type="int" Nullable="false" />
+    <Property Name="VolonteBonus" Type="int" Nullable="false" />
+    <Property Name="ReflexeBonus" Type="int" Nullable="false" />
+    <Property Name="BaB" Type="int" Nullable="false" />
+    <Property Name="BaBBonus" Type="int" Nullable="false" />
+    <Property Name="Initiative" Type="int" Nullable="false" />
+    <Property Name="InitiativeBonus" Type="int" Nullable="false" />
+    <Property Name="Lutte" Type="int" Nullable="false" />
+    <Property Name="LutteBonus" Type="int" Nullable="false" />
+    <Property Name="HP" Type="int" Nullable="false" />
+    <Property Name="Deplacement" Type="int" Nullable="false" />
+    <Property Name="AC" Type="int" Nullable="false" />
+    <Property Name="NaturalAC" Type="int" Nullable="true" />
+    <Property Name="ACBonus" Type="int" Nullable="true" />
+    <Property Name="ResistanceSort" Type="int" Nullable="true" />
+    <Property Name="ReductionDegat" Type="int" Nullable="true" />
+    <Property Name="NomArme" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Degats" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Crit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Munition" Type="int" Nullable="true" />
+    <Property Name="DetailsArme" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="NomArmure" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ArmureAC" Type="int" Nullable="true" />
+    <Property Name="TypeArmure" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Malus" Type="int" Nullable="true" />
+    <Property Name="DetailsArmure" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Appraise" Type="int" Nullable="true" />
+    <Property Name="Balance" Type="int" Nullable="true" />
+    <Property Name="Bluff" Type="int" Nullable="true" />
+    <Property Name="Climb" Type="int" Nullable="true" />
+    <Property Name="Concentration" Type="int" Nullable="true" />
+    <Property Name="Craft1" Type="int" Nullable="true" />
+    <Property Name="Craft1Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Craft2" Type="int" Nullable="true" />
+    <Property Name="Craft2Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Craft3" Type="int" Nullable="true" />
+    <Property Name="Craft3Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Decipher" Type="int" Nullable="true" />
+    <Property Name="Diplomacy" Type="int" Nullable="true" />
+    <Property Name="DisableDevice" Type="int" Nullable="true" />
+    <Property Name="Disguise" Type="int" Nullable="true" />
+    <Property Name="EscapeArtist" Type="int" Nullable="true" />
+    <Property Name="Forgery" Type="int" Nullable="true" />
+    <Property Name="GatherInfo" Type="int" Nullable="true" />
+    <Property Name="HandleAnimal" Type="int" Nullable="true" />
+    <Property Name="Heal" Type="int" Nullable="true" />
+    <Property Name="Hide" Type="int" Nullable="true" />
+    <Property Name="Intimidate" Type="int" Nullable="true" />
+    <Property Name="Jump" Type="int" Nullable="true" />
+    <Property Name="Knowledge1" Type="int" Nullable="true" />
+    <Property Name="Knowledge1Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Knowledge2" Type="int" Nullable="true" />
+    <Property Name="Knowledge2Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Knowledge3" Type="int" Nullable="true" />
+    <Property Name="Knowledge3Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Knowledge4" Type="int" Nullable="true" />
+    <Property Name="Knowledge4Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Knowledge5" Type="int" Nullable="true" />
+    <Property Name="Knowledge5Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Listen" Type="int" Nullable="true" />
+    <Property Name="MoveSilently" Type="int" Nullable="true" />
+    <Property Name="OpenLock" Type="int" Nullable="true" />
+    <Property Name="Perform1" Type="int" Nullable="true" />
+    <Property Name="Perform1Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Perform2" Type="int" Nullable="true" />
+    <Property Name="Perform2Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Profession1" Type="int" Nullable="true" />
+    <Property Name="Profession1Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Profession2" Type="int" Nullable="true" />
+    <Property Name="Profession2Nom" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Ride" Type="int" Nullable="true" />
+    <Property Name="Search" Type="int" Nullable="true" />
+    <Property Name="SenseMotive" Type="int" Nullable="true" />
+    <Property Name="SleightOfHand" Type="int" Nullable="true" />
+    <Property Name="Spellcraft" Type="int" Nullable="true" />
+    <Property Name="Spot" Type="int" Nullable="true" />
+    <Property Name="Survival" Type="int" Nullable="true" />
+    <Property Name="Swim" Type="int" Nullable="true" />
+    <Property Name="Tumble" Type="int" Nullable="true" />
+    <Property Name="UMD" Type="int" Nullable="true" />
+    <Property Name="UseRope" Type="int" Nullable="true" />
+    <Property Name="Notes" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Gold" Type="int" Nullable="true" />
+    <Property Name="Experience" Type="int" Nullable="true" />
+    <Property Name="JoueurID" Type="int" Nullable="false" />
+    <Property Name="Joueurs_JoueurID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Posts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Creation" Type="datetime" Nullable="false" />
+    <Property Name="AspNetUserID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Auteur" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="AspNetRoles_Id" />
+      <PropertyRef Name="AspNetUsers_Id" />
+    </Key>
+    <Property Name="AspNetRoles_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="AspNetUsers_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="ApplicationDbContextModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="ApplicationDbContextModel.Store.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="ApplicationDbContextModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="ApplicationDbContextModel.Store.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id">
+    <End Role="AspNetUsersInfoSups" Type="ApplicationDbContextModel.Store.AspNetUsersInfoSups" Multiplicity="1" />
+    <End Role="AspNetUsers" Type="ApplicationDbContextModel.Store.AspNetUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsersInfoSups">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID">
+    <End Role="Joueurs" Type="ApplicationDbContextModel.Store.Joueurs" Multiplicity="0..1" />
+    <End Role="AspNetUsersInfoSups" Type="ApplicationDbContextModel.Store.AspNetUsersInfoSups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Joueurs">
+        <PropertyRef Name="JoueurID" />
+      </Principal>
+      <Dependent Role="AspNetUsersInfoSups">
+        <PropertyRef Name="Joueur_JoueurID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Joueurs_dbo_Groupes_GroupeID">
+    <End Role="Groupes" Type="ApplicationDbContextModel.Store.Groupes" Multiplicity="0..1" />
+    <End Role="Joueurs" Type="ApplicationDbContextModel.Store.Joueurs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groupes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Joueurs">
+        <PropertyRef Name="GroupeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Messages_dbo_Posts_PostID">
+    <End Role="Posts" Type="ApplicationDbContextModel.Store.Posts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Messages" Type="ApplicationDbContextModel.Store.Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Posts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonnagesJoueurs">
+    <End Role="Personnages" Type="ApplicationDbContextModel.Store.Personnages" Multiplicity="*" />
+    <End Role="Joueurs" Type="ApplicationDbContextModel.Store.Joueurs" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Joueurs">
+        <PropertyRef Name="JoueurID" />
+      </Principal>
+      <Dependent Role="Personnages">
+        <PropertyRef Name="Joueurs_JoueurID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetRoles">
+    <End Role="AspNetRoles" Type="ApplicationDbContextModel.Store.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="ApplicationDbContextModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetRoles_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetUsers">
+    <End Role="AspNetUserRoles" Type="ApplicationDbContextModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="ApplicationDbContextModel.Store.AspNetUsers" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetUsers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ApplicationDbContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="AspNetUsersInfoSups" Relationship="Self.FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id" FromRole="AspNetUsers" ToRole="AspNetUsersInfoSups" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="AspNetUsersInfoSups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Prenom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImageNom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImageType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImageTaille" Type="Int32" Nullable="false" />
+          <Property Name="ImageData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Joueur_JoueurID" Type="Int32" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id" FromRole="AspNetUsersInfoSups" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Joueurs" Relationship="Self.FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID" FromRole="AspNetUsersInfoSups" ToRole="Joueurs" />
+        </EntityType>
+        <EntityType Name="Groupes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Titre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Creation" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AspNetUserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Auteur" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Joueurs" Relationship="Self.FK_dbo_Joueurs_dbo_Groupes_GroupeID" FromRole="Groupes" ToRole="Joueurs" />
+        </EntityType>
+        <EntityType Name="Joueurs">
+          <Key>
+            <PropertyRef Name="JoueurID" />
+          </Key>
+          <Property Name="JoueurID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AspNetUserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Maitre" Type="Boolean" Nullable="false" />
+          <Property Name="Specialisation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GroupeID" Type="Int32" />
+          <Property Name="PersonnageID" Type="Int32" />
+          <NavigationProperty Name="AspNetUsersInfoSups" Relationship="Self.FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID" FromRole="Joueurs" ToRole="AspNetUsersInfoSups" />
+          <NavigationProperty Name="Groupes" Relationship="Self.FK_dbo_Joueurs_dbo_Groupes_GroupeID" FromRole="Joueurs" ToRole="Groupes" />
+          <NavigationProperty Name="Personnages" Relationship="ApplicationDbContextModel.PersonnagesJoueurs" FromRole="Joueurs" ToRole="Personnages" />
+        </EntityType>
+        <EntityType Name="Messages">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AspNetUserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Auteur" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Texte" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateMessage" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PostID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Posts" Relationship="Self.FK_dbo_Messages_dbo_Posts_PostID" FromRole="Messages" ToRole="Posts" />
+        </EntityType>
+        <EntityType Name="Personnages">
+          <Key>
+            <PropertyRef Name="PersonnageID" />
+          </Key>
+          <Property Name="PersonnageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomPerso" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Race" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Classe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Niveau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Alignement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Force" Type="Int32" Nullable="false" />
+          <Property Name="Dexterite" Type="Int32" Nullable="false" />
+          <Property Name="Constitution" Type="Int32" Nullable="false" />
+          <Property Name="Charisme" Type="Int32" Nullable="false" />
+          <Property Name="Intelligence" Type="Int32" Nullable="false" />
+          <Property Name="Sagesse" Type="Int32" Nullable="false" />
+          <Property Name="Vigueur" Type="Int32" Nullable="false" />
+          <Property Name="Volonte" Type="Int32" Nullable="false" />
+          <Property Name="Reflexe" Type="Int32" Nullable="false" />
+          <Property Name="VigueurBonus" Type="Int32" Nullable="false" />
+          <Property Name="VolonteBonus" Type="Int32" Nullable="false" />
+          <Property Name="ReflexeBonus" Type="Int32" Nullable="false" />
+          <Property Name="BaB" Type="Int32" Nullable="false" />
+          <Property Name="BaBBonus" Type="Int32" Nullable="false" />
+          <Property Name="Initiative" Type="Int32" Nullable="false" />
+          <Property Name="InitiativeBonus" Type="Int32" Nullable="false" />
+          <Property Name="Lutte" Type="Int32" Nullable="false" />
+          <Property Name="LutteBonus" Type="Int32" Nullable="false" />
+          <Property Name="HP" Type="Int32" Nullable="false" />
+          <Property Name="Deplacement" Type="Int32" Nullable="false" />
+          <Property Name="AC" Type="Int32" Nullable="false" />
+          <Property Name="NaturalAC" Type="Int32" />
+          <Property Name="ACBonus" Type="Int32" />
+          <Property Name="ResistanceSort" Type="Int32" />
+          <Property Name="ReductionDegat" Type="Int32" />
+          <Property Name="NomArme" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Degats" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Crit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Munition" Type="Int32" />
+          <Property Name="DetailsArme" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NomArmure" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ArmureAC" Type="Int32" />
+          <Property Name="TypeArmure" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Malus" Type="Int32" />
+          <Property Name="DetailsArmure" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Appraise" Type="Int32" />
+          <Property Name="Balance" Type="Int32" />
+          <Property Name="Bluff" Type="Int32" />
+          <Property Name="Climb" Type="Int32" />
+          <Property Name="Concentration" Type="Int32" />
+          <Property Name="Craft1" Type="Int32" />
+          <Property Name="Craft1Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Craft2" Type="Int32" />
+          <Property Name="Craft2Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Craft3" Type="Int32" />
+          <Property Name="Craft3Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Decipher" Type="Int32" />
+          <Property Name="Diplomacy" Type="Int32" />
+          <Property Name="DisableDevice" Type="Int32" />
+          <Property Name="Disguise" Type="Int32" />
+          <Property Name="EscapeArtist" Type="Int32" />
+          <Property Name="Forgery" Type="Int32" />
+          <Property Name="GatherInfo" Type="Int32" />
+          <Property Name="HandleAnimal" Type="Int32" />
+          <Property Name="Heal" Type="Int32" />
+          <Property Name="Hide" Type="Int32" />
+          <Property Name="Intimidate" Type="Int32" />
+          <Property Name="Jump" Type="Int32" />
+          <Property Name="Knowledge1" Type="Int32" />
+          <Property Name="Knowledge1Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Knowledge2" Type="Int32" />
+          <Property Name="Knowledge2Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Knowledge3" Type="Int32" />
+          <Property Name="Knowledge3Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Knowledge4" Type="Int32" />
+          <Property Name="Knowledge4Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Knowledge5" Type="Int32" />
+          <Property Name="Knowledge5Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Listen" Type="Int32" />
+          <Property Name="MoveSilently" Type="Int32" />
+          <Property Name="OpenLock" Type="Int32" />
+          <Property Name="Perform1" Type="Int32" />
+          <Property Name="Perform1Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Perform2" Type="Int32" />
+          <Property Name="Perform2Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Profession1" Type="Int32" />
+          <Property Name="Profession1Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Profession2" Type="Int32" />
+          <Property Name="Profession2Nom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ride" Type="Int32" />
+          <Property Name="Search" Type="Int32" />
+          <Property Name="SenseMotive" Type="Int32" />
+          <Property Name="SleightOfHand" Type="Int32" />
+          <Property Name="Spellcraft" Type="Int32" />
+          <Property Name="Spot" Type="Int32" />
+          <Property Name="Survival" Type="Int32" />
+          <Property Name="Swim" Type="Int32" />
+          <Property Name="Tumble" Type="Int32" />
+          <Property Name="UMD" Type="Int32" />
+          <Property Name="UseRope" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gold" Type="Int32" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="JoueurID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Joueurs" Relationship="ApplicationDbContextModel.PersonnagesJoueurs" FromRole="Personnages" ToRole="Joueurs" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Titre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Creation" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AspNetUserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Auteur" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Messages" Relationship="Self.FK_dbo_Messages_dbo_Posts_PostID" FromRole="Posts" ToRole="Messages" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id">
+          <End Role="AspNetUsersInfoSups" Type="Self.AspNetUsersInfoSups" Multiplicity="1" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsersInfoSups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID">
+          <End Role="Joueurs" Type="Self.Joueurs" Multiplicity="0..1" />
+          <End Role="AspNetUsersInfoSups" Type="Self.AspNetUsersInfoSups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Joueurs">
+              <PropertyRef Name="JoueurID" />
+            </Principal>
+            <Dependent Role="AspNetUsersInfoSups">
+              <PropertyRef Name="Joueur_JoueurID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Joueurs_dbo_Groupes_GroupeID">
+          <End Role="Groupes" Type="Self.Groupes" Multiplicity="0..1" />
+          <End Role="Joueurs" Type="Self.Joueurs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groupes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Joueurs">
+              <PropertyRef Name="GroupeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Messages_dbo_Posts_PostID">
+          <End Role="Posts" Type="Self.Posts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Messages" Type="Self.Messages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Messages">
+              <PropertyRef Name="PostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="ApplicationDbContextEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" />
+          <EntitySet Name="AspNetUsersInfoSups" EntityType="Self.AspNetUsersInfoSups" />
+          <EntitySet Name="Groupes" EntityType="Self.Groupes" />
+          <EntitySet Name="Joueurs" EntityType="Self.Joueurs" />
+          <EntitySet Name="Messages" EntityType="Self.Messages" />
+          <EntitySet Name="Personnages" EntityType="Self.Personnages" />
+          <EntitySet Name="Posts" EntityType="Self.Posts" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id" Association="Self.FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id">
+            <End Role="AspNetUsersInfoSups" EntitySet="AspNetUsersInfoSups" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID" Association="Self.FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID">
+            <End Role="Joueurs" EntitySet="Joueurs" />
+            <End Role="AspNetUsersInfoSups" EntitySet="AspNetUsersInfoSups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Joueurs_dbo_Groupes_GroupeID" Association="Self.FK_dbo_Joueurs_dbo_Groupes_GroupeID">
+            <End Role="Groupes" EntitySet="Groupes" />
+            <End Role="Joueurs" EntitySet="Joueurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Messages_dbo_Posts_PostID" Association="Self.FK_dbo_Messages_dbo_Posts_PostID">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="Messages" EntitySet="Messages" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="PersonnagesJoueurs" Association="ApplicationDbContextModel.PersonnagesJoueurs">
+            <End Role="Personnages" EntitySet="Personnages" />
+            <End Role="Joueurs" EntitySet="Joueurs" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="PersonnagesJoueurs">
+          <End Type="ApplicationDbContextModel.Personnages" Role="Personnages" Multiplicity="*" />
+          <End Type="ApplicationDbContextModel.Joueurs" Role="Joueurs" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ApplicationDbContextModelStoreContainer" CdmEntityContainer="ApplicationDbContextEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.C__MigrationHistory)">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.AspNetRoles)">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.AspNetUserClaims)">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.AspNetUserLogins)">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.AspNetUsers)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsersInfoSups">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.AspNetUsersInfoSups)">
+        <MappingFragment StoreEntitySet="AspNetUsersInfoSups">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="ImageNom" ColumnName="ImageNom" />
+          <ScalarProperty Name="ImageType" ColumnName="ImageType" />
+          <ScalarProperty Name="ImageTaille" ColumnName="ImageTaille" />
+          <ScalarProperty Name="ImageData" ColumnName="ImageData" />
+          <ScalarProperty Name="Joueur_JoueurID" ColumnName="Joueur_JoueurID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groupes">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.Groupes)">
+        <MappingFragment StoreEntitySet="Groupes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titre" ColumnName="Titre" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Creation" ColumnName="Creation" />
+          <ScalarProperty Name="AspNetUserID" ColumnName="AspNetUserID" />
+          <ScalarProperty Name="Auteur" ColumnName="Auteur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Joueurs">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.Joueurs)">
+        <MappingFragment StoreEntitySet="Joueurs">
+          <ScalarProperty Name="JoueurID" ColumnName="JoueurID" />
+          <ScalarProperty Name="AspNetUserID" ColumnName="AspNetUserID" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Maitre" ColumnName="Maitre" />
+          <ScalarProperty Name="Specialisation" ColumnName="Specialisation" />
+          <ScalarProperty Name="GroupeID" ColumnName="GroupeID" />
+          <ScalarProperty Name="PersonnageID" ColumnName="PersonnageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.Messages)">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+          <ScalarProperty Name="AspNetUserID" ColumnName="AspNetUserID" />
+          <ScalarProperty Name="Auteur" ColumnName="Auteur" />
+          <ScalarProperty Name="Texte" ColumnName="Texte" />
+          <ScalarProperty Name="DateMessage" ColumnName="DateMessage" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personnages">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.Personnages)">
+        <MappingFragment StoreEntitySet="Personnages">
+          <ScalarProperty Name="PersonnageID" ColumnName="PersonnageID" />
+          <ScalarProperty Name="NomPerso" ColumnName="NomPerso" />
+          <ScalarProperty Name="Race" ColumnName="Race" />
+          <ScalarProperty Name="Classe" ColumnName="Classe" />
+          <ScalarProperty Name="Niveau" ColumnName="Niveau" />
+          <ScalarProperty Name="Alignement" ColumnName="Alignement" />
+          <ScalarProperty Name="Force" ColumnName="Force" />
+          <ScalarProperty Name="Dexterite" ColumnName="Dexterite" />
+          <ScalarProperty Name="Constitution" ColumnName="Constitution" />
+          <ScalarProperty Name="Charisme" ColumnName="Charisme" />
+          <ScalarProperty Name="Intelligence" ColumnName="Intelligence" />
+          <ScalarProperty Name="Sagesse" ColumnName="Sagesse" />
+          <ScalarProperty Name="Vigueur" ColumnName="Vigueur" />
+          <ScalarProperty Name="Volonte" ColumnName="Volonte" />
+          <ScalarProperty Name="Reflexe" ColumnName="Reflexe" />
+          <ScalarProperty Name="VigueurBonus" ColumnName="VigueurBonus" />
+          <ScalarProperty Name="VolonteBonus" ColumnName="VolonteBonus" />
+          <ScalarProperty Name="ReflexeBonus" ColumnName="ReflexeBonus" />
+          <ScalarProperty Name="BaB" ColumnName="BaB" />
+          <ScalarProperty Name="BaBBonus" ColumnName="BaBBonus" />
+          <ScalarProperty Name="Initiative" ColumnName="Initiative" />
+          <ScalarProperty Name="InitiativeBonus" ColumnName="InitiativeBonus" />
+          <ScalarProperty Name="Lutte" ColumnName="Lutte" />
+          <ScalarProperty Name="LutteBonus" ColumnName="LutteBonus" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="Deplacement" ColumnName="Deplacement" />
+          <ScalarProperty Name="AC" ColumnName="AC" />
+          <ScalarProperty Name="NaturalAC" ColumnName="NaturalAC" />
+          <ScalarProperty Name="ACBonus" ColumnName="ACBonus" />
+          <ScalarProperty Name="ResistanceSort" ColumnName="ResistanceSort" />
+          <ScalarProperty Name="ReductionDegat" ColumnName="ReductionDegat" />
+          <ScalarProperty Name="NomArme" ColumnName="NomArme" />
+          <ScalarProperty Name="Degats" ColumnName="Degats" />
+          <ScalarProperty Name="Hit" ColumnName="Hit" />
+          <ScalarProperty Name="Crit" ColumnName="Crit" />
+          <ScalarProperty Name="Munition" ColumnName="Munition" />
+          <ScalarProperty Name="DetailsArme" ColumnName="DetailsArme" />
+          <ScalarProperty Name="NomArmure" ColumnName="NomArmure" />
+          <ScalarProperty Name="ArmureAC" ColumnName="ArmureAC" />
+          <ScalarProperty Name="TypeArmure" ColumnName="TypeArmure" />
+          <ScalarProperty Name="Malus" ColumnName="Malus" />
+          <ScalarProperty Name="DetailsArmure" ColumnName="DetailsArmure" />
+          <ScalarProperty Name="Appraise" ColumnName="Appraise" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Bluff" ColumnName="Bluff" />
+          <ScalarProperty Name="Climb" ColumnName="Climb" />
+          <ScalarProperty Name="Concentration" ColumnName="Concentration" />
+          <ScalarProperty Name="Craft1" ColumnName="Craft1" />
+          <ScalarProperty Name="Craft1Nom" ColumnName="Craft1Nom" />
+          <ScalarProperty Name="Craft2" ColumnName="Craft2" />
+          <ScalarProperty Name="Craft2Nom" ColumnName="Craft2Nom" />
+          <ScalarProperty Name="Craft3" ColumnName="Craft3" />
+          <ScalarProperty Name="Craft3Nom" ColumnName="Craft3Nom" />
+          <ScalarProperty Name="Decipher" ColumnName="Decipher" />
+          <ScalarProperty Name="Diplomacy" ColumnName="Diplomacy" />
+          <ScalarProperty Name="DisableDevice" ColumnName="DisableDevice" />
+          <ScalarProperty Name="Disguise" ColumnName="Disguise" />
+          <ScalarProperty Name="EscapeArtist" ColumnName="EscapeArtist" />
+          <ScalarProperty Name="Forgery" ColumnName="Forgery" />
+          <ScalarProperty Name="GatherInfo" ColumnName="GatherInfo" />
+          <ScalarProperty Name="HandleAnimal" ColumnName="HandleAnimal" />
+          <ScalarProperty Name="Heal" ColumnName="Heal" />
+          <ScalarProperty Name="Hide" ColumnName="Hide" />
+          <ScalarProperty Name="Intimidate" ColumnName="Intimidate" />
+          <ScalarProperty Name="Jump" ColumnName="Jump" />
+          <ScalarProperty Name="Knowledge1" ColumnName="Knowledge1" />
+          <ScalarProperty Name="Knowledge1Name" ColumnName="Knowledge1Name" />
+          <ScalarProperty Name="Knowledge2" ColumnName="Knowledge2" />
+          <ScalarProperty Name="Knowledge2Name" ColumnName="Knowledge2Name" />
+          <ScalarProperty Name="Knowledge3" ColumnName="Knowledge3" />
+          <ScalarProperty Name="Knowledge3Name" ColumnName="Knowledge3Name" />
+          <ScalarProperty Name="Knowledge4" ColumnName="Knowledge4" />
+          <ScalarProperty Name="Knowledge4Name" ColumnName="Knowledge4Name" />
+          <ScalarProperty Name="Knowledge5" ColumnName="Knowledge5" />
+          <ScalarProperty Name="Knowledge5Name" ColumnName="Knowledge5Name" />
+          <ScalarProperty Name="Listen" ColumnName="Listen" />
+          <ScalarProperty Name="MoveSilently" ColumnName="MoveSilently" />
+          <ScalarProperty Name="OpenLock" ColumnName="OpenLock" />
+          <ScalarProperty Name="Perform1" ColumnName="Perform1" />
+          <ScalarProperty Name="Perform1Nom" ColumnName="Perform1Nom" />
+          <ScalarProperty Name="Perform2" ColumnName="Perform2" />
+          <ScalarProperty Name="Perform2Nom" ColumnName="Perform2Nom" />
+          <ScalarProperty Name="Profession1" ColumnName="Profession1" />
+          <ScalarProperty Name="Profession1Nom" ColumnName="Profession1Nom" />
+          <ScalarProperty Name="Profession2" ColumnName="Profession2" />
+          <ScalarProperty Name="Profession2Nom" ColumnName="Profession2Nom" />
+          <ScalarProperty Name="Ride" ColumnName="Ride" />
+          <ScalarProperty Name="Search" ColumnName="Search" />
+          <ScalarProperty Name="SenseMotive" ColumnName="SenseMotive" />
+          <ScalarProperty Name="SleightOfHand" ColumnName="SleightOfHand" />
+          <ScalarProperty Name="Spellcraft" ColumnName="Spellcraft" />
+          <ScalarProperty Name="Spot" ColumnName="Spot" />
+          <ScalarProperty Name="Survival" ColumnName="Survival" />
+          <ScalarProperty Name="Swim" ColumnName="Swim" />
+          <ScalarProperty Name="Tumble" ColumnName="Tumble" />
+          <ScalarProperty Name="UMD" ColumnName="UMD" />
+          <ScalarProperty Name="UseRope" ColumnName="UseRope" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="JoueurID" ColumnName="JoueurID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="IsTypeOf(ApplicationDbContextModel.Posts)">
+        <MappingFragment StoreEntitySet="Posts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titre" ColumnName="Titre" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Creation" ColumnName="Creation" />
+          <ScalarProperty Name="AspNetUserID" ColumnName="AspNetUserID" />
+          <ScalarProperty Name="Auteur" ColumnName="Auteur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="ApplicationDbContextModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="AspNetRoles_Id" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="AspNetUsers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonnagesJoueurs" TypeName="ApplicationDbContextModel.PersonnagesJoueurs" StoreEntitySet="Personnages">
+      <EndProperty Name="Joueurs">
+        <ScalarProperty Name="JoueurID" ColumnName="Joueurs_JoueurID" />
+      </EndProperty>
+      <EndProperty Name="Personnages">
+        <ScalarProperty Name="PersonnageID" ColumnName="PersonnageID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
