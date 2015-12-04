@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
     // Modificateur de stat
-    var ModFor = (Model.Dexterite - 10) / 2;
+    var ModFor = (Model.Force - 10) / 2;
     var ModDex = (Model.Dexterite - 10) / 2;
-    var ModCon = (Model.Dexterite - 10) / 2;
-    var ModSag = (Model.Dexterite - 10) / 2;
-    var ModInt = (Model.Dexterite - 10) / 2;
-    var ModCha = (Model.Dexterite - 10) / 2;
+    var ModCon = (Model.Constitution - 10) / 2;
+    var ModSag = (Model.Sagesse - 10) / 2;
+    var ModInt = (Model.Intelligence - 10) / 2;
+    var ModCha = (Model.Charisme - 10) / 2;
 }
 
 <h2>@Html.DisplayFor(model => model.NomPerso)</h2>

@@ -19,6 +19,6 @@ namespace ClubRP.Models
         //Foreign key (Lazy Load)
         public int? GroupeID { get; set; }
         //Foreign key (Lazy Load)
-        public int? PersonnageID { get; set; }
+        public virtual Personnage PersonnageID { get; set; }
     }
 }
