@@ -11,3 +11,5 @@ bin
 packages
 /ClubRP/ClubRP.csproj
 /ClubRP/App_Data
+/ClubRP/App_Data/ApplicationDbContext.mdf
+/ClubRP/App_Data/ApplicationDbContext_log.ldf
