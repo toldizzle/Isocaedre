@@ -11,54 +11,36 @@ namespace ClubRP.Models
         // Infos Personnages
         [Key]
         public int PersonnageID { get; set; }
-        [Required]
         public string NomPerso { get; set; }
-        [Required]
         public string Race { get; set; }
-        [Required]
         public string Classe { get; set; }
-        [Required]
         public string Niveau { get; set; }
         public string Alignement { get; set; }
 
         // Stats
-        [Required]
         public int Force { get; set; }
-        [Required]
         public int Dexterite { get; set; }
-        [Required]
         public int Constitution { get; set; }
-        [Required]
         public int Charisme { get; set; }
-        [Required]
         public int Intelligence { get; set; }
-        [Required]
         public int Sagesse { get; set; }
 
         // Saves
-        [Required]
         public int Vigueur { get; set; }
-        [Required]
         public int Volonte { get; set; }
-        [Required]
         public int Reflexe { get; set; }
-        public int VigueurBonus { get; set; }
-        public int VolonteBonus { get; set; }
-        public int ReflexeBonus { get; set; }
+        public int? VigueurBonus { get; set; }
+        public int? VolonteBonus { get; set; }
+        public int? ReflexeBonus { get; set; }
 
         // Stats combats
-        [Required]
         public int BaB { get; set; }
-        public int BaBBonus { get; set; }
-        [Required]
+        public int? BaBBonus { get; set; }
         public int Initiative { get; set; }
-        public int InitiativeBonus { get; set; }
-        [Required]
+        public int? InitiativeBonus { get; set; }
         public int Lutte { get; set; }
-        public int LutteBonus { get; set; }
-        [Required]
+        public int? LutteBonus { get; set; }
         public int HP { get; set; }
-        [Required]
         public int Deplacement { get; set; }
 
         // Défense
@@ -72,10 +54,18 @@ namespace ClubRP.Models
         // Arme
         public string NomArme { get; set; }
         public string Degats { get; set; }
-        public string Hit { get; set; }
+        public int? Hit { get; set; }
         public string Crit { get; set; }
         public int? Munition { get; set; }
         public string DetailsArme { get; set; }
+
+        // Arme2
+        public string NomArme2 { get; set; }
+        public string Degats2 { get; set; }
+        public int? Hit2 { get; set; }
+        public string Crit2 { get; set; }
+        public int? Munition2 { get; set; }
+        public string DetailsArme2 { get; set; }
 
         // Armure
         public string NomArmure { get; set; }
@@ -83,6 +73,12 @@ namespace ClubRP.Models
         public string TypeArmure { get; set; }
         public int? Malus { get; set; }
         public string DetailsArmure { get; set; }
+
+        // Armure
+        public string NomBouclier { get; set; }
+        public int? BouclierAC { get; set; }
+        public int? MalusBouclier { get; set; }
+        public string DetailsBouclier { get; set; }
 
         // Skills
         public int? Appraise { get; set; }

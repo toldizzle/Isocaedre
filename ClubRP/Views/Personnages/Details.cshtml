@@ -187,11 +187,18 @@
                 </dd>
                 <p></p>
                 <dt>
-                    @Html.DisplayNameFor(model => model.BaB)
+                    Attaque arme principale
                 </dt>
 
                 <dd>
-                    @Html.DisplayFor(model => model.BaB)
+                    @(Model.BaB + Model.BaBBonus + Model.Hit)
+                </dd>
+                <dt>
+                    Attaque arme secondaire
+                </dt>
+
+                <dd>
+                    @(Model.BaB + Model.BaBBonus + Model.Hit2)
                 </dd>
             </dl>
         </div>
@@ -303,9 +310,21 @@
         </div>
     </div>
     @*Section arme-------------------------------------------------*@
-    <h4> Arme</h4>
-    <hr />
     <div class="row">
+        <div class="col-md-4">
+            <button class="button" onclick="$('#equipement').toggle();">Equipement</button>
+        </div>
+        <div class="col-md-4">
+            <button class="button" onclick="$('#skills').toggle();">Skills</button>
+        </div>
+        <div class="col-md-4">
+            <button class="button" onclick="$('#notes').toggle();">Notes</button>
+        </div>
+    </div>
+    <div id="equipement" style="display: none">
+        <h4> Armes</h4>
+        <hr />
+        <div class="row">
             <div class="col-md-2">
                 <dl class="dl-horizontal">
                     <dt>
@@ -361,7 +380,7 @@
                     </dd>
                 </dl>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <dl class="dl-horizontal">
                     <dt>
                         @Html.DisplayNameFor(model => model.DetailsArme)
@@ -369,6 +388,75 @@
 
                     <dd>
                         @Html.DisplayFor(model => model.DetailsArme)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NomArme2)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.NomArme2)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-1">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Hit2)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Hit2)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-1">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Degats2)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Degats2)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-1">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Crit2)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Crit2)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-2">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Munition2)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Munition2)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DetailsArme2)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DetailsArme2)
                     </dd>
                 </dl>
             </div>
@@ -434,7 +522,55 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-2">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NomBouclier)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.NomBouclier)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-2">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.BouclierAC)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.BouclierAC)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-2">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MalusBouclier)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MalusBouclier)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DetailsBouclier)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DetailsBouclier)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
         @*Section skills-------------------------------------------------*@
+
+    <div id="skills" style="display: none">
         <h4>Skills</h4>
         <hr />
         <div class="row">
@@ -526,7 +662,6 @@
 
                     <dd>
                         @(Model.DisableDevice + ModInt)
-
                     </dd>
 
                     <dt>
@@ -542,7 +677,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.EscapeArtist)
+                        @(Model.EscapeArtist + ModDex - Model.Malus)
                     </dd>
 
                     <dt>
@@ -550,7 +685,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Forgery)
+                        @(Model.Forgery + ModInt)
                     </dd>
 
                     <dt>
@@ -558,7 +693,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.GatherInfo)
+                        @(Model.GatherInfo + ModDex)
                     </dd>
                 </dl>
             </div>
@@ -569,7 +704,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.HandleAnimal)
+                        @(Model.HandleAnimal + ModCha)
                     </dd>
 
                     <dt>
@@ -577,7 +712,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Heal)
+                        @(Model.Heal + ModSag)
                     </dd>
 
                     <dt>
@@ -585,14 +720,14 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Hide)
+                        @(Model.Hide + ModDex - Model.Malus)
                     </dd>
 
                     <dt>
                         @Html.DisplayNameFor(model => model.Intimidate)
                     </dt>
                     <dd>
-                        @Html.DisplayFor(model => model.Intimidate)
+                        @(Model.Intimidate + ModCha)
                     </dd>
 
                     <dt>
@@ -600,7 +735,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Jump)
+                        @(Model.Jump + ModFor - Model.Malus)
                     </dd>
 
                     <dt>
@@ -608,7 +743,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Knowledge1)
+                        @(Model.Knowledge1 + ModInt)
                     </dd>
 
                     <dt>
@@ -616,7 +751,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Knowledge2)
+                        @(Model.Knowledge2 + ModInt)
                     </dd>
 
                     <dt>
@@ -624,7 +759,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Knowledge3)
+                        @(Model.Knowledge3 + ModInt)
                     </dd>
 
                     <dt>
@@ -632,7 +767,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Knowledge4)
+                        @(Model.Knowledge4 + ModInt)
                     </dd>
 
                     <dt>
@@ -640,7 +775,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Knowledge5)
+                        @(Model.Knowledge5 + ModInt)
                     </dd>
 
                     <dt>
@@ -648,7 +783,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Listen)
+                        @(Model.Listen + ModSag)
                     </dd>
 
                     <dt>
@@ -656,7 +791,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.MoveSilently)
+                        @(Model.MoveSilently + ModDex - Model.Malus)
                     </dd>
 
                     <dt>
@@ -664,14 +799,14 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.OpenLock)
+                        @(Model.OpenLock + ModDex)
                     </dd>
                     <dt>
                         @Html.DisplayFor(model => model.Perform1Nom)
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Perform1)
+                        @(Model.Perform1 + ModCha)
                     </dd>
 
                     <dt>
@@ -679,7 +814,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Perform2)
+                        @(Model.Perform2 + ModCha)
                     </dd>
                 </dl>
             </div>
@@ -692,7 +827,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Profession1)
+                        @(Model.Profession1 + ModSag)
                     </dd>
 
                     <dt>
@@ -700,7 +835,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Profession2)
+                        @(Model.Profession2 + ModSag)
                     </dd>
 
                     <dt>
@@ -708,7 +843,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Ride)
+                        @(Model.Ride + ModDex)
                     </dd>
 
                     <dt>
@@ -716,7 +851,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Search)
+                        @(Model.Search + ModInt)
                     </dd>
 
                     <dt>
@@ -724,7 +859,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.SenseMotive)
+                        @(Model.SenseMotive + ModSag)
                     </dd>
 
                     <dt>
@@ -732,7 +867,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.SleightOfHand)
+                        @(Model.SleightOfHand + ModDex - Model.Malus)
                     </dd>
 
                     <dt>
@@ -740,7 +875,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Spellcraft)
+                        @(Model.Spellcraft + ModInt)
                     </dd>
 
                     <dt>
@@ -748,7 +883,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Spot)
+                        @(Model.Spot + ModSag)
                     </dd>
 
                     <dt>
@@ -756,7 +891,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Survival)
+                        @(Model.Survival + ModSag)
                     </dd>
 
                     <dt>
@@ -764,7 +899,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Swim)
+                        @(Model.Swim + ModFor - (Model.Malus * 2))
                     </dd>
 
                     <dt>
@@ -772,7 +907,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Tumble)
+                        @(Model.Tumble + ModDex - Model.Malus)
                     </dd>
 
                     <dt>
@@ -780,7 +915,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.UMD)
+                        @(Model.UMD + ModCha)
                     </dd>
 
                     <dt>
@@ -788,12 +923,14 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.UseRope)
+                        @(Model.Profession1 + ModDex)
                     </dd>
                 </dl>
             </div>
         </div>
+        </div>
         @*Section notes-------------------------------------------------*@
+    <div id="notes" style="display: none">
         <h4> Notes</h4>
         <hr />
         <dl class="dl-horizontal">
@@ -801,8 +938,7 @@
                 @Html.DisplayFor(model => model.Notes)
             </dd>
         </dl>
-
-
+        </div>
     </div>
         <p>
             @Html.ActionLink("Edit", "Edit", new { id = Model.PersonnageID }) |
