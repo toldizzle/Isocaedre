@@ -180,4 +180,13 @@
   <data name="Yes" xml:space="preserve">
     <value>Oui</value>
   </data>
+  <data name="AdminJoueur" xml:space="preserve">
+    <value>Gérer les joueurs</value>
+  </data>
+  <data name="CreatePlayer" xml:space="preserve">
+    <value>Créer un personnage</value>
+  </data>
+  <data name="ManageCharacter" xml:space="preserve">
+    <value>Gestion de vos personnages</value>
+  </data>
 </root>

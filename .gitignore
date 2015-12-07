@@ -13,3 +13,11 @@ packages
 /ClubRP/App_Data
 /ClubRP/App_Data/ApplicationDbContext.mdf
 /ClubRP/App_Data/ApplicationDbContext_log.ldf
+/ClubRP/Model1.edmx.sql
+/ClubRP/Model1.tt
+/ClubRP/Model11.cs
+/ClubRP/Model11.Designer.cs
+/ClubRP/Model1.Context.cs
+/ClubRP/Model1.Context.tt
+/ClubRP/Model1.Context1.cs
+/ClubRP/Model1.cs

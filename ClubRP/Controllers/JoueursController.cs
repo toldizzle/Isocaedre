@@ -20,7 +20,11 @@ namespace ClubRP.Controllers
         {
             string AspNetUserID = User.Identity.GetUserId();
             var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID);
-            return View(query);
+            if (User.IsInRole("Administrateurs")) return View(db.Joueurs.ToList());
+            if (query != null)
+                return View(query);
+            else
+                return HttpNotFound();
         }
 
         // GET: Joueurs/Details/5
@@ -129,7 +133,7 @@ namespace ClubRP.Controllers
             user.details.Joueur = null;
             db.Joueurs.Remove(joueur);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Groupes");
         }
 
         protected override void Dispose(bool disposing)

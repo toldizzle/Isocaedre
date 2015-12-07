@@ -42,21 +42,25 @@
         </dt>
 
         <dd>
-            <table>
-                <tr>
-                    <td>@ClubRP.Views.Groupes.GroupeRessources.Name</td>
-                    <td>@ClubRP.Views.Groupes.GroupeRessources.Specialisation</td>
-                    <td>@ClubRP.Views.Groupes.GroupeRessources.Status</td>
-                </tr>
-                @foreach (ClubRP.Models.Joueur p in Model.Joueurs)
-                {
+            @if (Model.Joueurs != null)
+            {
+                <table>
                     <tr>
-                        <td>@p.Nom</td>
-                        <td>@p.Specialisation</td>
-                        <td>@(p.Maitre ? "Maître" : "Joueur")</td>
+                        <td>@ClubRP.Views.Groupes.GroupeRessources.Name</td>
+                        <td>@ClubRP.Views.Groupes.GroupeRessources.Specialisation</td>
+                        <td>@ClubRP.Views.Groupes.GroupeRessources.Status</td>
                     </tr>
-                }
-            </table>
+                    @foreach (ClubRP.Models.Joueur p in Model.Joueurs)
+                    {
+                        <tr>
+                            <td>@p.Nom</td>
+                            <td>@p.Specialisation</td>
+                            <td>@(p.Maitre ? "Maître" : "Joueur")</td>
+                        </tr>
+                    }
+                </table>
+            }
+            
         </dd>
     </dl>
 </div>

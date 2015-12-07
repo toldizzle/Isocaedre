@@ -20,10 +20,17 @@ namespace ClubRP.Controllers
         {
             string AspNetUserID = User.Identity.GetUserId();
             ApplicationUser user = db.Users.Where(d => d.Id == AspNetUserID).First();
-            if(user.details.Joueur != null)
+            ViewBag.Joueur = null;
+            ViewBag.Admin = false;
+
+            if (user.details.Joueur != null)
             {
                 var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID).First();
                 ViewBag.Joueur = query;
+            }
+            if (User.IsInRole("Administrateurs"))
+            {
+                ViewBag.Admin = true;
             }
             return View(db.Groupes.ToList());
         }

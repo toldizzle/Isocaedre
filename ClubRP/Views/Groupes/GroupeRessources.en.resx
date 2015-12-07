@@ -180,4 +180,13 @@
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="AdminJoueur" xml:space="preserve">
+    <value>Manage players</value>
+  </data>
+  <data name="CreatePlayer" xml:space="preserve">
+    <value>Create your character</value>
+  </data>
+  <data name="ManagePlayer" xml:space="preserve">
+    <value>Manage your characters</value>
+  </data>
 </root>
