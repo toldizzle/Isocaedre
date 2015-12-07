@@ -207,11 +207,6 @@
       <DependentUpon>201512050243316_DbSetPersonnages.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
-    <Compile Include="Model11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
     <Compile Include="Models\Groupe.cs" />

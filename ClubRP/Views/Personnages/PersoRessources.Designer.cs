@@ -97,11 +97,29 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Armes.
+        /// </summary>
+        public static string Armes {
+            get {
+                return ResourceManager.GetString("Armes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CA de l&apos;armure.
         /// </summary>
         public static string ArmureAC {
             get {
                 return ResourceManager.GetString("ArmureAC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armures.
+        /// </summary>
+        public static string Armures {
+            get {
+                return ResourceManager.GetString("Armures", resourceCulture);
             }
         }
         
@@ -174,6 +192,15 @@ namespace ClubRP.Views.Personnages {
         public static string Climb {
             get {
                 return ResourceManager.GetString("Climb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combat.
+        /// </summary>
+        public static string Combat {
+            get {
+                return ResourceManager.GetString("Combat", resourceCulture);
             }
         }
         
@@ -273,6 +300,15 @@ namespace ClubRP.Views.Personnages {
         public static string Decipher {
             get {
                 return ResourceManager.GetString("Decipher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Défense.
+        /// </summary>
+        public static string Defence {
+            get {
+                return ResourceManager.GetString("Defence", resourceCulture);
             }
         }
         
@@ -493,11 +529,11 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bonus d&apos;initative.
+        ///   Looks up a localized string similar to Informations.
         /// </summary>
-        public static string InitativeBonus {
+        public static string Informations {
             get {
-                return ResourceManager.GetString("InitativeBonus", resourceCulture);
+                return ResourceManager.GetString("Informations", resourceCulture);
             }
         }
         
@@ -507,6 +543,15 @@ namespace ClubRP.Views.Personnages {
         public static string Initiative {
             get {
                 return ResourceManager.GetString("Initiative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bonus d&apos;initative.
+        /// </summary>
+        public static string InitiativeBonus {
+            get {
+                return ResourceManager.GetString("InitiativeBonus", resourceCulture);
             }
         }
         
@@ -925,6 +970,15 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sauvegardes.
+        /// </summary>
+        public static string Saves {
+            get {
+                return ResourceManager.GetString("Saves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fouille.
         /// </summary>
         public static string Search {
@@ -939,6 +993,15 @@ namespace ClubRP.Views.Personnages {
         public static string SenseMotive {
             get {
                 return ResourceManager.GetString("SenseMotive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abiletés.
+        /// </summary>
+        public static string Skills {
+            get {
+                return ResourceManager.GetString("Skills", resourceCulture);
             }
         }
         
@@ -966,6 +1029,15 @@ namespace ClubRP.Views.Personnages {
         public static string Spot {
             get {
                 return ResourceManager.GetString("Spot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Statistiques.
+        /// </summary>
+        public static string Stats {
+            get {
+                return ResourceManager.GetString("Stats", resourceCulture);
             }
         }
         
