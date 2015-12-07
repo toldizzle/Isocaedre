@@ -9,7 +9,7 @@ namespace ClubRP.Models
     public class Personnage
     {
         // Infos Personnages
-        [Key]
+        [Required]
         public int PersonnageID { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "NomPerso")]
         public string NomPerso { get; set; }

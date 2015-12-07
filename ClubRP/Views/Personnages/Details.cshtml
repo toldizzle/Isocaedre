@@ -167,7 +167,7 @@
                 </dt>
 
                 <dd>
-                    @(Model.Vigueur + Model.VigueurBonus)
+                    @(Model.Vigueur + Model.VigueurBonus + ModCon)
                 </dd>
 
                 <dt>
@@ -175,7 +175,7 @@
                 </dt>
 
                 <dd>
-                    @(Model.Volonte + Model.VolonteBonus)
+                    @(Model.Volonte + Model.VolonteBonus + ModSag)
                 </dd>
 
                 <dt>
@@ -183,22 +183,22 @@
                 </dt>
 
                 <dd>
-                    @(Model.Reflexe + Model.ReflexeBonus)
+                    @(Model.Reflexe + Model.ReflexeBonus + ModDex)
                 </dd>
                 <p></p>
                 <dt>
-                    @Html.DisplayName(ClubRP.Views.Personnages.PersoRessources.NomArme)
+                    @Html.DisplayName(ClubRP.Views.Personnages.PersoRessources.Hit)
                 </dt>
 
                 <dd>
-                    @(Model.BaB + Model.BaBBonus + Model.Hit)
+                    @(Model.BaB + Model.BaBBonus + Model.Hit + ModFor)
                 </dd>
                 <dt>
-                    @Html.DisplayName(ClubRP.Views.Personnages.PersoRessources.NomArme2)
+                    @Html.DisplayName(ClubRP.Views.Personnages.PersoRessources.Hit2)
                 </dt>
 
                 <dd>
-                    @(Model.BaB + Model.BaBBonus + Model.Hit2)
+                    @(Model.BaB + Model.BaBBonus + Model.Hit2 + ModFor)
                 </dd>
             </dl>
         </div>
