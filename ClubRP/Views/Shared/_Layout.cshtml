@@ -26,6 +26,8 @@
                     <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.MeetUs, "Contact", "Home")</li>
                     <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Equipment, "Materiel", "Home")</li>
                     <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Forum, "Index", "Posts")</li>
+                    <li>@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Personnage, "Index", "Personnages")</li>
+
                     @{
                         if (User.IsInRole("Administrateurs"))
                         {

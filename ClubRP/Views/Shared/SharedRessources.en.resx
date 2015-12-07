@@ -171,6 +171,9 @@
   <data name="Modify" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="Personnage" xml:space="preserve">
+    <value>Characters</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
   </data>

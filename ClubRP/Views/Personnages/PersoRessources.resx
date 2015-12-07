@@ -118,342 +118,342 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AC" xml:space="preserve">
-    <value />
+    <value>CA</value>
   </data>
   <data name="ACBonus" xml:space="preserve">
-    <value />
+    <value>Bonus de CA</value>
   </data>
   <data name="Alignement" xml:space="preserve">
-    <value />
+    <value>Alignement</value>
   </data>
   <data name="Appraise" xml:space="preserve">
-    <value />
+    <value>Estimation</value>
   </data>
   <data name="ArmureAC" xml:space="preserve">
-    <value />
+    <value>CA de l'armure</value>
   </data>
   <data name="BaB" xml:space="preserve">
-    <value />
+    <value>BaB</value>
   </data>
   <data name="BaBBonus" xml:space="preserve">
-    <value />
+    <value>Bonus d'attaque</value>
   </data>
   <data name="Balance" xml:space="preserve">
-    <value />
+    <value>Équilibre</value>
   </data>
   <data name="Bluff" xml:space="preserve">
-    <value />
+    <value>Bluff</value>
   </data>
   <data name="BouclierAC" xml:space="preserve">
-    <value />
+    <value>CA du bouclier</value>
   </data>
   <data name="Charisme" xml:space="preserve">
-    <value />
+    <value>Charisme</value>
   </data>
   <data name="Classe" xml:space="preserve">
-    <value />
+    <value>Classes</value>
   </data>
   <data name="Climb" xml:space="preserve">
-    <value />
+    <value>Escalade</value>
   </data>
   <data name="Concentration" xml:space="preserve">
-    <value />
+    <value>Concentration</value>
   </data>
   <data name="Constitution" xml:space="preserve">
-    <value />
+    <value>Constitution</value>
   </data>
   <data name="Craft1" xml:space="preserve">
-    <value />
+    <value>Artisanat</value>
   </data>
   <data name="Craft1Nom" xml:space="preserve">
-    <value />
+    <value>Nom de l'art</value>
   </data>
   <data name="Craft2" xml:space="preserve">
-    <value />
+    <value>Artisanat</value>
   </data>
   <data name="Craft2Nom" xml:space="preserve">
-    <value />
+    <value>Nom de l'art</value>
   </data>
   <data name="Craft3" xml:space="preserve">
-    <value />
+    <value>Artisanat</value>
   </data>
   <data name="Craft3Nom" xml:space="preserve">
-    <value />
+    <value>Nom de l'art</value>
   </data>
   <data name="Crit" xml:space="preserve">
-    <value />
+    <value>Critique</value>
   </data>
   <data name="Crit2" xml:space="preserve">
-    <value />
+    <value>Critique</value>
   </data>
   <data name="Decipher" xml:space="preserve">
-    <value />
+    <value>Decryptage</value>
   </data>
   <data name="Degats" xml:space="preserve">
-    <value />
+    <value>Dégats</value>
   </data>
   <data name="Degats2" xml:space="preserve">
-    <value />
+    <value>Dégats</value>
   </data>
   <data name="Deplacement" xml:space="preserve">
-    <value />
+    <value>Vitesse de déplacement</value>
   </data>
   <data name="DetailsArme" xml:space="preserve">
-    <value />
+    <value>Détails</value>
   </data>
   <data name="DetailsArme2" xml:space="preserve">
-    <value />
+    <value>Détails</value>
   </data>
   <data name="DetailsArmure" xml:space="preserve">
-    <value />
+    <value>Détails</value>
   </data>
   <data name="DetailsBouclier" xml:space="preserve">
-    <value />
+    <value>Détails</value>
   </data>
   <data name="Dexterite" xml:space="preserve">
-    <value />
+    <value>Dextérité</value>
   </data>
   <data name="Diplomacy" xml:space="preserve">
-    <value />
+    <value>Diplomatie</value>
   </data>
   <data name="DisableDevice" xml:space="preserve">
-    <value />
+    <value>Désamorcage</value>
   </data>
   <data name="Disguise" xml:space="preserve">
-    <value />
+    <value>Déguisement</value>
   </data>
   <data name="EscapeArtist" xml:space="preserve">
-    <value />
+    <value>Évasion</value>
   </data>
   <data name="Experience" xml:space="preserve">
-    <value />
+    <value>Expérience</value>
   </data>
   <data name="FlatFooted" xml:space="preserve">
-    <value />
+    <value>A dépourvus</value>
   </data>
   <data name="Force" xml:space="preserve">
-    <value />
+    <value>Force</value>
   </data>
   <data name="Forgery" xml:space="preserve">
-    <value />
+    <value>Contrefacon</value>
   </data>
   <data name="GatherInfo" xml:space="preserve">
-    <value />
+    <value>Renseignement</value>
   </data>
   <data name="Gold" xml:space="preserve">
-    <value />
+    <value>Pièces d'or</value>
   </data>
   <data name="HandleAnimal" xml:space="preserve">
-    <value />
+    <value>Empathie avec les animaux</value>
   </data>
   <data name="Heal" xml:space="preserve">
-    <value />
+    <value>Premier soins</value>
   </data>
   <data name="Hide" xml:space="preserve">
-    <value />
+    <value>Discrétion</value>
   </data>
   <data name="Hit" xml:space="preserve">
-    <value />
+    <value>Toucher</value>
   </data>
   <data name="Hit2" xml:space="preserve">
-    <value />
+    <value>Toucher</value>
   </data>
   <data name="HP" xml:space="preserve">
-    <value />
+    <value>PV</value>
   </data>
   <data name="InitativeBonus" xml:space="preserve">
-    <value />
+    <value>Bonus d'initative</value>
   </data>
   <data name="Initiative" xml:space="preserve">
-    <value />
+    <value>Initiative</value>
   </data>
   <data name="Intelligence" xml:space="preserve">
-    <value />
+    <value>Intelligence</value>
   </data>
   <data name="Intimidate" xml:space="preserve">
-    <value />
+    <value>Intimidation</value>
   </data>
   <data name="Jump" xml:space="preserve">
-    <value />
+    <value>Saut</value>
   </data>
   <data name="Knowledge1" xml:space="preserve">
-    <value />
+    <value>Connaissance</value>
   </data>
   <data name="Knowledge1Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la connaissance</value>
   </data>
   <data name="Knowledge2" xml:space="preserve">
-    <value />
+    <value>Connaissance</value>
   </data>
   <data name="Knowledge2Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la connaissance</value>
   </data>
   <data name="Knowledge3" xml:space="preserve">
-    <value />
+    <value>Connaissance</value>
   </data>
   <data name="Knowledge3Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la connaissance</value>
   </data>
   <data name="Knowledge4" xml:space="preserve">
-    <value />
+    <value>Connaissance</value>
   </data>
   <data name="Knowledge4Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la connaissance</value>
   </data>
   <data name="Knowledge5" xml:space="preserve">
-    <value />
+    <value>Connaissance</value>
   </data>
   <data name="Knowledge5Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la connaissance</value>
   </data>
   <data name="Listen" xml:space="preserve">
-    <value />
+    <value>Perception auditive</value>
   </data>
   <data name="Lutte" xml:space="preserve">
-    <value />
+    <value>Lutte</value>
   </data>
   <data name="LutteBonus" xml:space="preserve">
-    <value />
+    <value>Bonus de lutte</value>
   </data>
   <data name="Malus" xml:space="preserve">
-    <value />
+    <value>Malus aux jets</value>
   </data>
   <data name="MalusBouclier" xml:space="preserve">
-    <value />
+    <value>Malu aux jets</value>
   </data>
   <data name="MonterNiveau" xml:space="preserve">
-    <value />
+    <value>Monter de niveau</value>
   </data>
   <data name="MoveSilently" xml:space="preserve">
-    <value />
+    <value>Déplacement silencieux</value>
   </data>
   <data name="Munition" xml:space="preserve">
-    <value />
+    <value>Munition</value>
   </data>
   <data name="Munition2" xml:space="preserve">
-    <value />
+    <value>Munition</value>
   </data>
   <data name="NaturalAC" xml:space="preserve">
-    <value />
+    <value>Armure naturelle</value>
   </data>
   <data name="Niveau" xml:space="preserve">
-    <value />
+    <value>Niveau</value>
   </data>
   <data name="NomArme" xml:space="preserve">
-    <value />
+    <value>Arme principale</value>
   </data>
   <data name="NomArme2" xml:space="preserve">
-    <value />
+    <value>Arme secondaire</value>
   </data>
   <data name="NomArmure" xml:space="preserve">
-    <value />
+    <value>Armure</value>
   </data>
   <data name="NomBouclier" xml:space="preserve">
-    <value />
+    <value>Bouclier</value>
   </data>
   <data name="NomPerso" xml:space="preserve">
-    <value />
+    <value>Nom du personnage</value>
   </data>
   <data name="Note" xml:space="preserve">
-    <value />
+    <value>Notes</value>
   </data>
   <data name="OpenLock" xml:space="preserve">
-    <value />
+    <value>Crochetage</value>
   </data>
   <data name="Perform1" xml:space="preserve">
-    <value />
+    <value>Représentation</value>
   </data>
   <data name="Perform1Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la représentation</value>
   </data>
   <data name="Perform2" xml:space="preserve">
-    <value />
+    <value>Représentation</value>
   </data>
   <data name="Perform2Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la représentation</value>
   </data>
   <data name="Profession1" xml:space="preserve">
-    <value />
+    <value>Profession</value>
   </data>
   <data name="Profession1Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la profession</value>
   </data>
   <data name="Profession2" xml:space="preserve">
-    <value />
+    <value>Profession</value>
   </data>
   <data name="Profession2Nom" xml:space="preserve">
-    <value />
+    <value>Nom de la profession</value>
   </data>
   <data name="Race" xml:space="preserve">
-    <value />
+    <value>Race</value>
   </data>
   <data name="ReductionDegat" xml:space="preserve">
-    <value />
+    <value>Réduction de dégats</value>
   </data>
   <data name="Reflexe" xml:space="preserve">
-    <value />
+    <value>Réflexes</value>
   </data>
   <data name="ReflexeBonus" xml:space="preserve">
-    <value />
+    <value>Bonus de réflexes</value>
   </data>
   <data name="ResistanceSort" xml:space="preserve">
-    <value />
+    <value>Résistance aux sorts</value>
   </data>
   <data name="Ride" xml:space="preserve">
-    <value />
+    <value>Équitation</value>
   </data>
   <data name="Sagesse" xml:space="preserve">
-    <value />
+    <value>Sagesse</value>
   </data>
   <data name="Search" xml:space="preserve">
-    <value />
+    <value>Fouille</value>
   </data>
   <data name="SenseMotive" xml:space="preserve">
-    <value />
+    <value>Psychologie</value>
   </data>
   <data name="SleightOfHand" xml:space="preserve">
-    <value />
+    <value>Vol a la tire</value>
   </data>
   <data name="Spellcraft" xml:space="preserve">
-    <value />
+    <value>Art de la magie</value>
   </data>
   <data name="Spot" xml:space="preserve">
-    <value />
+    <value>Détection</value>
   </data>
   <data name="Survival" xml:space="preserve">
-    <value />
+    <value>Survie</value>
   </data>
   <data name="Swim" xml:space="preserve">
-    <value />
+    <value>Natation</value>
   </data>
   <data name="TouchAC" xml:space="preserve">
-    <value />
+    <value>AC au contact</value>
   </data>
   <data name="Tumble" xml:space="preserve">
-    <value />
+    <value>Acrobaties</value>
   </data>
   <data name="TypeArmure" xml:space="preserve">
-    <value />
+    <value>Type d'armure</value>
   </data>
   <data name="UMD" xml:space="preserve">
-    <value />
+    <value>Utilisation d'objets magiques</value>
   </data>
   <data name="UseRope" xml:space="preserve">
-    <value />
+    <value>Maîtrise des cordes</value>
   </data>
   <data name="Vigueur" xml:space="preserve">
-    <value />
+    <value>Vigueur</value>
   </data>
   <data name="VigueurBonus" xml:space="preserve">
-    <value />
+    <value>Bonus de vigueur</value>
   </data>
   <data name="VoirFiche" xml:space="preserve">
-    <value />
+    <value>Voir la fiche </value>
   </data>
   <data name="Volonte" xml:space="preserve">
-    <value />
+    <value>Volonté</value>
   </data>
   <data name="VolonteBonus" xml:space="preserve">
-    <value />
+    <value>Bonus de volonté</value>
   </data>
 </root>

@@ -223,6 +223,15 @@ namespace ClubRP.Views.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Personnages.
+        /// </summary>
+        public static string Personnage {
+            get {
+                return ResourceManager.GetString("Personnage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to S&apos;inscrire.
         /// </summary>
         public static string Register {

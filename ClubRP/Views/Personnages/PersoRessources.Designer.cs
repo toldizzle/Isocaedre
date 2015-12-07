@@ -61,7 +61,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to CA.
         /// </summary>
         public static string AC {
             get {
@@ -70,7 +70,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bonus de CA.
         /// </summary>
         public static string ACBonus {
             get {
@@ -79,7 +79,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Alignement.
         /// </summary>
         public static string Alignement {
             get {
@@ -88,7 +88,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Estimation.
         /// </summary>
         public static string Appraise {
             get {
@@ -97,7 +97,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to CA de l&apos;armure.
         /// </summary>
         public static string ArmureAC {
             get {
@@ -106,7 +106,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to BaB.
         /// </summary>
         public static string BaB {
             get {
@@ -115,7 +115,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bonus d&apos;attaque.
         /// </summary>
         public static string BaBBonus {
             get {
@@ -124,7 +124,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Équilibre.
         /// </summary>
         public static string Balance {
             get {
@@ -133,7 +133,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bluff.
         /// </summary>
         public static string Bluff {
             get {
@@ -142,7 +142,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to CA du bouclier.
         /// </summary>
         public static string BouclierAC {
             get {
@@ -151,7 +151,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Charisme.
         /// </summary>
         public static string Charisme {
             get {
@@ -160,7 +160,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Classes.
         /// </summary>
         public static string Classe {
             get {
@@ -169,7 +169,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Escalade.
         /// </summary>
         public static string Climb {
             get {
@@ -178,7 +178,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Concentration.
         /// </summary>
         public static string Concentration {
             get {
@@ -187,7 +187,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Constitution.
         /// </summary>
         public static string Constitution {
             get {
@@ -196,7 +196,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Artisanat.
         /// </summary>
         public static string Craft1 {
             get {
@@ -205,7 +205,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de l&apos;art.
         /// </summary>
         public static string Craft1Nom {
             get {
@@ -214,7 +214,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Artisanat.
         /// </summary>
         public static string Craft2 {
             get {
@@ -223,7 +223,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de l&apos;art.
         /// </summary>
         public static string Craft2Nom {
             get {
@@ -232,7 +232,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Artisanat.
         /// </summary>
         public static string Craft3 {
             get {
@@ -241,7 +241,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de l&apos;art.
         /// </summary>
         public static string Craft3Nom {
             get {
@@ -250,7 +250,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Critique.
         /// </summary>
         public static string Crit {
             get {
@@ -259,7 +259,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Critique.
         /// </summary>
         public static string Crit2 {
             get {
@@ -268,7 +268,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Decryptage.
         /// </summary>
         public static string Decipher {
             get {
@@ -277,7 +277,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Dégats.
         /// </summary>
         public static string Degats {
             get {
@@ -286,7 +286,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Dégats.
         /// </summary>
         public static string Degats2 {
             get {
@@ -295,7 +295,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Vitesse de déplacement.
         /// </summary>
         public static string Deplacement {
             get {
@@ -304,7 +304,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Détails.
         /// </summary>
         public static string DetailsArme {
             get {
@@ -313,7 +313,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Détails.
         /// </summary>
         public static string DetailsArme2 {
             get {
@@ -322,7 +322,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Détails.
         /// </summary>
         public static string DetailsArmure {
             get {
@@ -331,7 +331,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Détails.
         /// </summary>
         public static string DetailsBouclier {
             get {
@@ -340,7 +340,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Dextérité.
         /// </summary>
         public static string Dexterite {
             get {
@@ -349,7 +349,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Diplomatie.
         /// </summary>
         public static string Diplomacy {
             get {
@@ -358,7 +358,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Désamorcage.
         /// </summary>
         public static string DisableDevice {
             get {
@@ -367,7 +367,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Déguisement.
         /// </summary>
         public static string Disguise {
             get {
@@ -376,7 +376,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Évasion.
         /// </summary>
         public static string EscapeArtist {
             get {
@@ -385,7 +385,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Expérience.
         /// </summary>
         public static string Experience {
             get {
@@ -394,7 +394,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to A dépourvus.
         /// </summary>
         public static string FlatFooted {
             get {
@@ -403,7 +403,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Force.
         /// </summary>
         public static string Force {
             get {
@@ -412,7 +412,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Contrefacon.
         /// </summary>
         public static string Forgery {
             get {
@@ -421,7 +421,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Renseignement.
         /// </summary>
         public static string GatherInfo {
             get {
@@ -430,7 +430,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Pièces d&apos;or.
         /// </summary>
         public static string Gold {
             get {
@@ -439,7 +439,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Empathie avec les animaux.
         /// </summary>
         public static string HandleAnimal {
             get {
@@ -448,7 +448,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Premier soins.
         /// </summary>
         public static string Heal {
             get {
@@ -457,7 +457,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Discrétion.
         /// </summary>
         public static string Hide {
             get {
@@ -466,7 +466,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Toucher.
         /// </summary>
         public static string Hit {
             get {
@@ -475,7 +475,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Toucher.
         /// </summary>
         public static string Hit2 {
             get {
@@ -484,7 +484,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to PV.
         /// </summary>
         public static string HP {
             get {
@@ -493,7 +493,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bonus d&apos;initative.
         /// </summary>
         public static string InitativeBonus {
             get {
@@ -502,7 +502,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Initiative.
         /// </summary>
         public static string Initiative {
             get {
@@ -511,7 +511,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Intelligence.
         /// </summary>
         public static string Intelligence {
             get {
@@ -520,7 +520,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Intimidation.
         /// </summary>
         public static string Intimidate {
             get {
@@ -529,7 +529,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Saut.
         /// </summary>
         public static string Jump {
             get {
@@ -538,7 +538,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Connaissance.
         /// </summary>
         public static string Knowledge1 {
             get {
@@ -547,7 +547,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la connaissance.
         /// </summary>
         public static string Knowledge1Nom {
             get {
@@ -556,7 +556,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Connaissance.
         /// </summary>
         public static string Knowledge2 {
             get {
@@ -565,7 +565,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la connaissance.
         /// </summary>
         public static string Knowledge2Nom {
             get {
@@ -574,7 +574,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Connaissance.
         /// </summary>
         public static string Knowledge3 {
             get {
@@ -583,7 +583,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la connaissance.
         /// </summary>
         public static string Knowledge3Nom {
             get {
@@ -592,7 +592,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Connaissance.
         /// </summary>
         public static string Knowledge4 {
             get {
@@ -601,7 +601,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la connaissance.
         /// </summary>
         public static string Knowledge4Nom {
             get {
@@ -610,7 +610,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Connaissance.
         /// </summary>
         public static string Knowledge5 {
             get {
@@ -619,7 +619,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la connaissance.
         /// </summary>
         public static string Knowledge5Nom {
             get {
@@ -628,7 +628,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Perception auditive.
         /// </summary>
         public static string Listen {
             get {
@@ -637,7 +637,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Lutte.
         /// </summary>
         public static string Lutte {
             get {
@@ -646,7 +646,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bonus de lutte.
         /// </summary>
         public static string LutteBonus {
             get {
@@ -655,7 +655,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Malus aux jets.
         /// </summary>
         public static string Malus {
             get {
@@ -664,7 +664,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Malu aux jets.
         /// </summary>
         public static string MalusBouclier {
             get {
@@ -673,7 +673,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Monter de niveau.
         /// </summary>
         public static string MonterNiveau {
             get {
@@ -682,7 +682,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Déplacement silencieux.
         /// </summary>
         public static string MoveSilently {
             get {
@@ -691,7 +691,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Munition.
         /// </summary>
         public static string Munition {
             get {
@@ -700,7 +700,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Munition.
         /// </summary>
         public static string Munition2 {
             get {
@@ -709,7 +709,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Armure naturelle.
         /// </summary>
         public static string NaturalAC {
             get {
@@ -718,7 +718,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Niveau.
         /// </summary>
         public static string Niveau {
             get {
@@ -727,7 +727,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Arme principale.
         /// </summary>
         public static string NomArme {
             get {
@@ -736,7 +736,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Arme secondaire.
         /// </summary>
         public static string NomArme2 {
             get {
@@ -745,7 +745,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Armure.
         /// </summary>
         public static string NomArmure {
             get {
@@ -754,7 +754,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bouclier.
         /// </summary>
         public static string NomBouclier {
             get {
@@ -763,7 +763,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom du personnage.
         /// </summary>
         public static string NomPerso {
             get {
@@ -772,7 +772,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Notes.
         /// </summary>
         public static string Note {
             get {
@@ -781,7 +781,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Crochetage.
         /// </summary>
         public static string OpenLock {
             get {
@@ -790,7 +790,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Représentation.
         /// </summary>
         public static string Perform1 {
             get {
@@ -799,7 +799,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la représentation.
         /// </summary>
         public static string Perform1Nom {
             get {
@@ -808,7 +808,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Représentation.
         /// </summary>
         public static string Perform2 {
             get {
@@ -817,7 +817,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la représentation.
         /// </summary>
         public static string Perform2Nom {
             get {
@@ -826,7 +826,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Profession.
         /// </summary>
         public static string Profession1 {
             get {
@@ -835,7 +835,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la profession.
         /// </summary>
         public static string Profession1Nom {
             get {
@@ -844,7 +844,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Profession.
         /// </summary>
         public static string Profession2 {
             get {
@@ -853,7 +853,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de la profession.
         /// </summary>
         public static string Profession2Nom {
             get {
@@ -862,7 +862,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Race.
         /// </summary>
         public static string Race {
             get {
@@ -871,7 +871,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Réduction de dégats.
         /// </summary>
         public static string ReductionDegat {
             get {
@@ -880,7 +880,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Réflexes.
         /// </summary>
         public static string Reflexe {
             get {
@@ -889,7 +889,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bonus de réflexes.
         /// </summary>
         public static string ReflexeBonus {
             get {
@@ -898,7 +898,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Résistance aux sorts.
         /// </summary>
         public static string ResistanceSort {
             get {
@@ -907,7 +907,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Équitation.
         /// </summary>
         public static string Ride {
             get {
@@ -916,7 +916,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Sagesse.
         /// </summary>
         public static string Sagesse {
             get {
@@ -925,7 +925,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Fouille.
         /// </summary>
         public static string Search {
             get {
@@ -934,7 +934,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Psychologie.
         /// </summary>
         public static string SenseMotive {
             get {
@@ -943,7 +943,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Vol a la tire.
         /// </summary>
         public static string SleightOfHand {
             get {
@@ -952,7 +952,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Art de la magie.
         /// </summary>
         public static string Spellcraft {
             get {
@@ -961,7 +961,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Détection.
         /// </summary>
         public static string Spot {
             get {
@@ -970,7 +970,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Survie.
         /// </summary>
         public static string Survival {
             get {
@@ -979,7 +979,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Natation.
         /// </summary>
         public static string Swim {
             get {
@@ -988,7 +988,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to AC au contact.
         /// </summary>
         public static string TouchAC {
             get {
@@ -997,7 +997,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Acrobaties.
         /// </summary>
         public static string Tumble {
             get {
@@ -1006,7 +1006,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Type d&apos;armure.
         /// </summary>
         public static string TypeArmure {
             get {
@@ -1015,7 +1015,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Utilisation d&apos;objets magiques.
         /// </summary>
         public static string UMD {
             get {
@@ -1024,7 +1024,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Maîtrise des cordes.
         /// </summary>
         public static string UseRope {
             get {
@@ -1033,7 +1033,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Vigueur.
         /// </summary>
         public static string Vigueur {
             get {
@@ -1042,7 +1042,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bonus de vigueur.
         /// </summary>
         public static string VigueurBonus {
             get {
@@ -1051,7 +1051,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Voir la fiche .
         /// </summary>
         public static string VoirFiche {
             get {
@@ -1060,7 +1060,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Volonté.
         /// </summary>
         public static string Volonte {
             get {
@@ -1069,7 +1069,7 @@ namespace ClubRP.Views.Personnages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Bonus de volonté.
         /// </summary>
         public static string VolonteBonus {
             get {

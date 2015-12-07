@@ -249,7 +249,7 @@
                 </dt>
 
                 <dd>
-                    @Html.DisplayFor(model => model.AC)
+                    @(Model.AC + 10 + Model.NaturalAC + Model.ACBonus + Model.ArmureAC + Model.BouclierAC + ModDex)
                 </dd>
 
                 <dt>
