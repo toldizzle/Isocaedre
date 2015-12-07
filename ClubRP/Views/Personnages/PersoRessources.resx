@@ -261,7 +261,7 @@
   <data name="HP" xml:space="preserve">
     <value>PV</value>
   </data>
-  <data name="InitativeBonus" xml:space="preserve">
+  <data name="InitiativeBonus" xml:space="preserve">
     <value>Bonus d'initative</value>
   </data>
   <data name="Initiative" xml:space="preserve">
@@ -455,5 +455,29 @@
   </data>
   <data name="VolonteBonus" xml:space="preserve">
     <value>Bonus de volonté</value>
+  </data>
+  <data name="Armes" xml:space="preserve">
+    <value>Armes</value>
+  </data>
+  <data name="Armures" xml:space="preserve">
+    <value>Armures</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Combat</value>
+  </data>
+  <data name="Defence" xml:space="preserve">
+    <value>Défense</value>
+  </data>
+  <data name="Informations" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="Saves" xml:space="preserve">
+    <value>Sauvegardes</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Abiletés</value>
+  </data>
+  <data name="Stats" xml:space="preserve">
+    <value>Statistiques</value>
   </data>
 </root>

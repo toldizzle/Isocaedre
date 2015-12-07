@@ -179,23 +179,23 @@ namespace ClubRP.Models
         public int? Jump { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge1")]
         public int? Knowledge1 { get; set; }
-        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge1Name")]
+        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge1Nom")]
         public string Knowledge1Name { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge2")]
         public int? Knowledge2 { get; set; }
-        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge2Name")]
+        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge2Nom")]
         public string Knowledge2Name { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge3")]
         public int? Knowledge3 { get; set; }
-        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge3Name")]
+        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge3Nom")]
         public string Knowledge3Name { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge4")]
         public int? Knowledge4 { get; set; }
-        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge4Name")]
+        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge4Nom")]
         public string Knowledge4Name { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge5")]
         public int? Knowledge5 { get; set; }
-        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge5Name")]
+        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Knowledge5Nom")]
         public string Knowledge5Name { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Listen")]
         public int? Listen { get; set; }
@@ -243,7 +243,7 @@ namespace ClubRP.Models
         public int? UseRope { get; set; }
 
         // Autre
-        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Notes")]
+        [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Note")]
         public string Notes { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Gold")]
         public int? Gold { get; set; }
