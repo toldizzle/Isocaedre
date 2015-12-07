@@ -5,19 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="2f061a502bca4dff8cf08964f3a3b8ee" Name="Diagram1">
-        <EntityTypeShape EntityType="ApplicationDbContextModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApplicationDbContextModel.AspNetRoles" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApplicationDbContextModel.AspNetUserClaims" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApplicationDbContextModel.AspNetUserLogins" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplicationDbContextModel.AspNetRoles" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ApplicationDbContextModel.AspNetUsers" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ApplicationDbContextModel.AspNetUsersInfoSups" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ApplicationDbContextModel.Groupes" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ApplicationDbContextModel.Joueurs" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApplicationDbContextModel.Messages" Width="1.5" PointX="10" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApplicationDbContextModel.Personnages" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApplicationDbContextModel.Posts" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
-        <AssociationConnector Association="ApplicationDbContextModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="ApplicationDbContextModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ApplicationDbContextModel.Messages" Width="1.5" PointX="12.375" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplicationDbContextModel.Personnages" Width="1.5" PointX="3.75" PointY="5.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="ApplicationDbContextModel.Posts" Width="1.5" PointX="10" PointY="3.875" IsExpanded="true" />
         <AssociationConnector Association="ApplicationDbContextModel.FK_dbo_AspNetUsers_dbo_AspNetUsersInfoSups_Id" ManuallyRouted="false" />
         <AssociationConnector Association="ApplicationDbContextModel.FK_dbo_AspNetUsersInfoSups_dbo_Joueurs_Joueur_JoueurID" ManuallyRouted="false" />
         <AssociationConnector Association="ApplicationDbContextModel.FK_dbo_Joueurs_dbo_Groupes_GroupeID" ManuallyRouted="false" />

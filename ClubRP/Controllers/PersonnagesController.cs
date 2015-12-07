@@ -19,8 +19,11 @@ namespace ClubRP.Models
         {
             string Usager = User.Identity.GetUserId();
             var query = db.Joueurs.Where(j => j.AspNetUserID == Usager).Select(p=>p.Personnage);
-
-            return View(query.ToList());
+            ViewBag.Personnage = query;
+            if (query != null)
+                return View(query.ToList());
+            else
+                return HttpNotFound();
         }
 
         // GET: Personnages/Details/5
