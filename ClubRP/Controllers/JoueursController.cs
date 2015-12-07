@@ -20,6 +20,7 @@ namespace ClubRP.Controllers
         {
             string AspNetUserID = User.Identity.GetUserId();
             var query = db.Joueurs.Where(j => j.AspNetUserID == AspNetUserID);
+            if (User.IsInRole("Administrateurs")) return View(db.Joueurs.ToList());
             if (query != null)
                 return View(query);
             else

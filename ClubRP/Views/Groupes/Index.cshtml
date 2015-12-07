@@ -12,10 +12,9 @@
     }
     else
     {
-        <p>@Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.DeleteJoueur, "Delete", "Joueurs", routeValues: new { ID = ViewBag.Joueur.JoueurID }, htmlAttributes: null)</p>
+        <p>@Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.DeleteJoueur, "Delete", "Joueurs", routeValues: new { ID = ViewBag.Joueur.JoueurID }, htmlAttributes: null) / @Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.ManageCharacter, "Index", "Personnages", routeValues: new { ID = ViewBag.Joueur.JoueurID }, htmlAttributes: null)</p>
     }
 
-    </p>
     <table class="table">
         <tr>
             <th>
@@ -40,7 +39,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Titre)
+                    @Html.ActionLink(item.Titre, "Details", new { id = item.ID })
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
@@ -56,7 +55,7 @@
                 </td>
                 <td>
                     @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.ID }) |
-                    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Details", new { id = item.ID }) |
+                    
                     @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.ID }) |
                     @if (ViewBag.Joueur != null && ViewBag.Joueur.GroupeID != item.ID)
                     {
@@ -67,3 +66,9 @@
         }
 
     </table>
+@if (ViewBag.Admin == true)
+{
+    <p>
+        @Html.ActionLink(ClubRP.Views.Groupes.GroupeRessources.AdminJoueur, "Index", "Joueurs")
+    </p>
+}

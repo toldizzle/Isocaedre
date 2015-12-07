@@ -142,7 +142,7 @@ namespace ClubRP.Views.Account {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confirmez le mot de passe.
+        ///   Looks up a localized string similar to Confirmer mdp.
         /// </summary>
         public static string PasswordConfirm {
             get {

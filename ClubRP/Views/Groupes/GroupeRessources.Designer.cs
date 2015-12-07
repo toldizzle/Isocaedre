@@ -61,6 +61,15 @@ namespace ClubRP.Views.Groupes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gérer les joueurs.
+        /// </summary>
+        public static string AdminJoueur {
+            get {
+                return ResourceManager.GetString("AdminJoueur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auteur.
         /// </summary>
         public static string Author {
@@ -93,6 +102,15 @@ namespace ClubRP.Views.Groupes {
         public static string CreateNewUser {
             get {
                 return ResourceManager.GetString("CreateNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Créer un personnage.
+        /// </summary>
+        public static string CreatePlayer {
+            get {
+                return ResourceManager.GetString("CreatePlayer", resourceCulture);
             }
         }
         
@@ -165,6 +183,15 @@ namespace ClubRP.Views.Groupes {
         public static string Join {
             get {
                 return ResourceManager.GetString("Join", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gestion de vos personnages.
+        /// </summary>
+        public static string ManageCharacter {
+            get {
+                return ResourceManager.GetString("ManageCharacter", resourceCulture);
             }
         }
         
