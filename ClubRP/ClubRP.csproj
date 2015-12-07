@@ -279,6 +279,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MessageRessources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Personnages\PersoRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersoRessources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Posts\PostRessources.en.Designer.cs">
       <DependentUpon>PostRessources.en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -511,6 +516,10 @@
     <EmbeddedResource Include="Views\Messages\MessageRessources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MessageRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Personnages\PersoRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersoRessources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Posts\PostRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
