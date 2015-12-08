@@ -23,12 +23,14 @@ textarea {
     max-width: 280px;
 }
 /*Pour le forum*/
-table {
+table{
     background-color: #000033;
     color: #F0FFFF;
-    
 }
 
 td {
     border: solid 1px white;
+}
+li#recompense{
+        color: #F0FFFF;
 }

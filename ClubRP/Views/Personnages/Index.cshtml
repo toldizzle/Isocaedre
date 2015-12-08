@@ -30,32 +30,36 @@
 
         <th></th>
     </tr>
-
-    @foreach (var item in Model)
+    @if (ViewBag.Personnage != null)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomPerso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Race)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Classe)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Niveau)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Notes)
-            </td>
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomPerso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Race)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Classe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Niveau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notes)
+                </td>
 
-            <td>
-                    @*@Html.ActionLink("Edit", "Edit", new { id = item.PersonnageID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.PersonnageID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.PersonnageID })*@
-            </td>
-        </tr>
-    }
+                <td>
 
+                        @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Modify, "Edit", new { id = item.PersonnageID }) |
+                        @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Details", new { id = item.PersonnageID }) |
+                        @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Delete, "Delete", new { id = item.PersonnageID })
+                    
+                </td>
+            </tr>
+                        }
+                    }
 </table>
+@Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack, "Index", "Joueurs")

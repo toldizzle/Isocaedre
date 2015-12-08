@@ -185,7 +185,7 @@
                 <dd>
                     @(Model.Reflexe + Model.ReflexeBonus + ModDex)
                 </dd>
-                <p></p>
+                
                 <dt>
                     @Html.DisplayName(ClubRP.Views.Personnages.PersoRessources.Hit)
                 </dt>
@@ -226,7 +226,7 @@
                 <dd>
                     @Html.DisplayFor(model => model.Deplacement)
                 </dd>
-                <p></p>
+                
                 <dt>
                     @Html.DisplayNameFor(model => model.Lutte)
                 </dt>
@@ -941,6 +941,6 @@
         </div>
     </div>
         <p>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.PersonnageID }) |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Detail, "Edit", new { id = Model.PersonnageID }) |
+            @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.BtnBack, "Index")
         </p>

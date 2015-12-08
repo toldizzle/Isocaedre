@@ -111,11 +111,15 @@ namespace ClubRP.Controllers
                 appUser.PasswordHash = pass.HashPassword(appUser.PasswordHash);
                 appUser.SecurityStamp = Guid.NewGuid().ToString();
                 appUser.UserName = appUser.Email;
-                appUser.details.ImageNom = Path.GetFileName(appUser.details.Fichier.FileName);
-                appUser.details.ImageTaille = appUser.details.Fichier.ContentLength;
-                appUser.details.ImageType = appUser.details.Fichier.ContentType;
-                appUser.details.ImageData = new byte[appUser.details.ImageTaille];
-                appUser.details.Fichier.InputStream.Read(appUser.details.ImageData, 0, appUser.details.ImageTaille);
+                if(appUser.details.Fichier != null)
+                {
+                    appUser.details.ImageNom = Path.GetFileName(appUser.details.Fichier.FileName);
+                    appUser.details.ImageTaille = appUser.details.Fichier.ContentLength;
+                    appUser.details.ImageType = appUser.details.Fichier.ContentType;
+                    appUser.details.ImageData = new byte[appUser.details.ImageTaille];
+                    appUser.details.Fichier.InputStream.Read(appUser.details.ImageData, 0, appUser.details.ImageTaille);
+                }
+               
                 //Update le aspuserinfosupp
                 db.userProp.AddOrUpdate(appUser.details);
                 //Role

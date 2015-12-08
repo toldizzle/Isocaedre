@@ -5,10 +5,967 @@
 }
 
 <h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Reward)</h2>
-@*@{string Choix = "barbare";}
-<a href="#" onclick=@(Choix ="barbare")>Barbare</a><a href="#" onclick=@(Choix ="rodeur")>Rôdeur</a>*@
-@*@if (Choix == "rodeur")
-{*@
+<div class="row">
+    <div class="col-md-4">
+        <button class="button" onclick="$('#barbare').toggle();">Barbare</button>
+    </div>
+    <div class="col-md-4">
+        <button class="button" onclick="$('#druide').toggle();">Druide</button>
+    </div>
+    <div class="col-md-4">
+        <button class="button" onclick="$('#ensorceleur').toggle();">Barbare</button>
+    </div>
+    <div class="col-md-4">
+        <button class="button" onclick="$('#guerrier').toggle();">Barbare</button>
+    </div>
+    <div class="col-md-4">
+        <button class="button" onclick="$('#moine').toggle();">Barbare</button>
+    </div>
+    <div class="col-md-4">
+        <button class="button" onclick="$('#rodeur').toggle();">Rôdeur</button>
+    </div>
+    <div class="col-md-4">
+        <button class="button" onclick="$('#roublard').toggle();">Barbare</button>
+    </div>
+
+</div>
+<div id="guerrier" style="display: none">
+
+</div>
+<div id="ensorceleur" style="display: none">
+    <table class="table table-bordered table-hover table-condensed">
+        <tbody>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Ensorceleur 5-7 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>3900</td>
+                <td>Chapeau de l&#39;invoqueur</td>
+                <td> +1CA, +1CA aux convocations, 25% chance d&#39;invoquer un double</td>
+            </tr>
+            <tr>
+                <td>4000</td>
+                <td>Chapeau de projectile</td>
+                <td> +2Cha, Projectile magique inflige 1d6+1</td>
+            </tr>
+            <tr>
+                <td>2300</td>
+                <td>Gant de puissante invocation </td>
+                <td>Donne le don école renforcé(Invocation)</td>
+            </tr>
+            <tr>
+                <td>2800</td>
+                <td>Gant de sphère éternelle</td>
+                <td>sphère de feu apparait sur la cible et dure +3round</td>
+            </tr>
+            <tr>
+                <td>2200</td>
+                <td>Bracelet de Contrôle</td>
+                <td>1 sort niv 2 connu suppl, +1 DD école (enchantement)</td>
+            </tr>
+            <tr>
+                <td>2300</td>
+                <td>Bracelet des arcanes</td>
+                <td>Projectile magique fait 1d?+niv, +2sort feu</td>
+            </tr>
+            <tr>
+                <td>2400</td>
+                <td>Botte de rapidité invocatrice</td>
+                <td>Aprés une convocation le PJ se téléporte (6m)</td>
+            </tr>
+            <tr>
+                <td>2500</td>
+                <td>Botte de chance</td>
+                <td>Permets de relancer les jets de dégéts des créatures 1fois/round</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>Anneau d&#39;invocation</td>
+                <td>Les créatures convoquées durent 2round suppl, +1 Cha</td>
+            </tr>
+            <tr>
+                <td>3300</td>
+                <td>Anneau des arcanes</td>
+                <td> +2sort feu, +2PV, +1 Cha</td>
+            </tr>
+            <tr>
+                <td>3800</td>
+                <td>Collier d&#39;invocation</td>
+                <td>Les créatures convoquées infligent +2feu</td>
+            </tr>
+            <tr>
+                <td>3700</td>
+                <td>Collier de protection</td>
+                <td> +1Ca, Créer un bouclier d&#39;énergie aprés un sort de dégét (10 sur soi méme)</td>
+            </tr>
+            <tr>
+                <td>3800</td>
+                <td>Robe invocatrice</td>
+                <td> Permets de sacrifier 1 convocation pour soigner de 1d10+niv sur un allié é 9m 2fois/jour</td>
+            </tr>
+            <tr>
+                <td>3800</td>
+                <td>Robe arcanique</td>
+                <td>Projectile magique devient une attaque é distance, mais 17-20 x3 crit</td>
+            </tr>
+            <tr>
+                <td>4000</td>
+                <td>Bâton de puissance</td>
+                <td>1d6, x2, Attaque é distance avec bonus cha au dg (30m), +1 Cha</td>
+            </tr>
+            <tr>
+                <td>4000</td>
+                <td>Bâton de l&#39;invocateur</td>
+                <td>1d6+1, x2,Invocation +1 chance critique, +1 Cha</td>
+            </tr>
+            <tr>
+                <td>2900</td>
+                <td>Ceinture de connaissance</td>
+                <td> +2sort niv(max)/jour, +1 sort niv(max) connu</td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Ensorceleur 7-10 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>8000</td>
+                <td>Bâton Tilverton</td>
+                <td>1d6+2,x2,+1Cha,+1Con, +1sort feu, +1sort froid</td>
+            </tr>
+            <tr>
+                <td>8000</td>
+                <td>Bâton Cormyr</td>
+                <td>1d6+2, x2,+1Cha,+1Con,1fois/jour :2 prochains sorts soignent de 5pv</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Robe Tilverton</td>
+                <td> +1Ca,RM 3, +1sort feu, +1 sort froid</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Robe Cormyr</td>
+                <td> +1Ca, RM3, Convocation (3) fée guérisseuse 20pv,19ca, soigne de 2d8+niv, dure 1/2 round normal</td>
+            </tr>
+            <tr>
+                <td>4800</td>
+                <td>Anneau Tilverton</td>
+                <td> +1CA,Dissipation de la magie inflige 2d6 feu sur 1 cible, 1d6+1 feu sur zone ou donne 1d6+niv sur allié</td>
+            </tr>
+            <tr>
+                <td>4200</td>
+                <td>Anneau Cormyr</td>
+                <td> +1 CA, +1Cha, RM2, Invocations ont +1 chance critique</td>
+            </tr>
+            <tr>
+                <td>4900</td>
+                <td>Amulette Tilverton</td>
+                <td> +1Ca, +1Cha, Permet de faire 2 actions (1fois/jour)</td>
+            </tr>
+            <tr>
+                <td>4600</td>
+                <td>Amulette miroir</td>
+                <td> +1Ca, +1Cha, Image miroir restaure 5PV</td>
+            </tr>
+            <tr>
+                <td>4700</td>
+                <td>Amulette Cormyr</td>
+                <td> +1Ca, +1Cha, Invocations ralentient le mouvement aprés une attaque</td>
+            </tr>
+            <tr>
+                <td>4600</td>
+                <td>Botte d&#39;elfe Cormyr</td>
+                <td> +1,5m depl, Téléportation (30m) 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>4900</td>
+                <td>Botte Tilverton</td>
+                <td> +1,5m depl, Convocation d&#39;un archon ténébreux (3) 30pv,20ca,+10/5corps 1d10, Obscursie la zone</td>
+            </tr>
+            <tr>
+                <td>5600</td>
+                <td>Chapeau Tilverton</td>
+                <td> +1Cha, +3 sort niv 4/jour, Repousse une cible de 12m (2d6dg) 2fois/jour</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>Chapeau Cormyr</td>
+                <td> +1Cha, +1Con, Permet d&#39;échanger la localisation d&#39;un allié et un ennemi (30m) 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Cormyr (4)</td>
+                <td>Bâton,Robe,Anneau, Amulette,Botte,Chapeau</td>
+                <td>Les soins reéus et donnés sont augmentés de 50%</td>
+            </tr>
+            <tr>
+                <td>Tilverton (4)</td>
+                <td>Bâton,Robe,Anneau, Amulette,Botte,Chapeau</td>
+                <td>Maximise les effets d&#39;un sort 1fois/jour (toute sa durée)</td>
+            </tr>
+            <tr>
+                <td>Rune de Taïa</td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>éclat de lumiére de Taïa</td>
+                <td>10 000</td>
+                <td>1fois/jour, Inflige 1d6/2niv lumiére (rayon 6m) (21m) et redonne 50% PV</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Ensorceleur 10-13 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>22000</td>
+                <td>Bâton Téthyamar</td>
+                <td>1d8+3, +1Cha, +2Con, +2 sort feu, +2sort acide 1fois/jour: Empoisonne une zone (6m rayon) (3rd) Infligeant 2dg/niv et 50% depl (complexe)</td>
+            </tr>
+            <tr>
+                <td>23000</td>
+                <td>Bâton de nécromancie</td>
+                <td>1d8+3, +1Cha, +1 Con, +3 dg sort nécromancie, Sorts de Nécromancie affaiblisent -1For ennemis</td>
+            </tr>
+            <tr>
+                <td>21000</td>
+                <td>Bâton de lumiére</td>
+                <td>1d8+3, +2 Cha, +2Con, +3 sort feu, +1 sort niv 5 connu</td>
+            </tr>
+            <tr>
+                <td>11000</td>
+                <td>Robe de nécromancie</td>
+                <td> 1CA, +2 sorts nécromancie, les soins sont moins efficace (25%) sur les ennemis affectés par un sort nécromancie, -25% guérison.</td>
+            </tr>
+            <tr>
+                <td>9000</td>
+                <td>Robe d&#39;écaille noir</td>
+                <td> 2ca, RM 6, +1 sort acide, +1 sort feu</td>
+            </tr>
+            <tr>
+                <td>10200</td>
+                <td>Robe embrasée de Taïa</td>
+                <td>2ca, RM 6, Les sorts de feu ont 15% chance de faire le double de dégéts</td>
+            </tr>
+            <tr>
+                <td>23 000</td>
+                <td>Anneau de Nécromane</td>
+                <td>1CA, +1Cha, Aura mort (1,5m rayon) 1fois/semaine</td>
+            </tr>
+            <tr>
+                <td>22000</td>
+                <td>Anneau rouge de Taïa</td>
+                <td> +1Ca, Inflige Aura 4dg feu/round 6m rayon</td>
+            </tr>
+            <tr>
+                <td>22000</td>
+                <td>Anneau de Téthyamar</td>
+                <td> +1Ca, +1Con, Convocation(5) Dragon noir P 40pv, 20ca, (10)1d8+6 griffes, 1fois souffle acide 1d4/niv, 15m vol, Immunité acide</td>
+            </tr>
+            <tr>
+                <td>21000</td>
+                <td>Amulette des marais</td>
+                <td> Boule de feu devient boule d&#39;acide et réduit la CA de 1/niv (max 10) (1rd)</td>
+            </tr>
+            <tr>
+                <td>22000</td>
+                <td>Amulette de Taïa</td>
+                <td>Convocation(5) Avatar de Taïa PV Joueur, Ca Joueur+8, Bréle les ennemis au corps é corps 1d8 feu, (9)1d6+4 griffes, Chance d&#39;invoquer une cométe é sa mort 1d20+feu(3m rayon)</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Rune (Ascension de flamme)</td>
+                <td>1fois/jour Fait jaillir une éruption de lave pendant 3rd sur une cible infligeant 4d8+niv/round (9m rayon)</td>
+            </tr>
+            <tr>
+                <td>10000</td>
+                <td>Gantelet de Taïa</td>
+                <td> +1Con, +2sort feu, +1 chance critique aux convocation</td>
+            </tr>
+            <tr>
+                <td>10000</td>
+                <td>Gantelet d&#39;écaille de Téthyamar</td>
+                <td> +1Con, +2sort acide, Les sorts acides empoisonnent +2d4 dg</td>
+            </tr>
+            <tr>
+                <td>9200</td>
+                <td>Chapeau de feu</td>
+                <td> +1Cha, Immunité au feu</td>
+            </tr>
+            <tr>
+                <td>9200</td>
+                <td>Chapeau de Téthyamar</td>
+                <td> +1Cha, +1Con, Image miroir refléte 25% du dégét reéu (max PV joueur +10)</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Téthyamar (4)</td>
+                <td>Bâton, robe, anneau, amulette, gantelet, chapeau</td>
+                <td>Des écailles poussent sur la peau du joueur: +5Ca, +1Cha, Immunité acide, Permet 1fois/jour Cri terreur (18m rayon) DD Vol 10+niv+cha (1d4 round)</td>
+            </tr>
+            <tr>
+                <td>Taïa (4)</td>
+                <td>Bâton, robe, anneau, amulette, gantelet, chapeau</td>
+                <td>1fois/jour Permet de se transformer en phoenix (x3PV) +8 CA, vol 30m, Charge enflammée 1d20+1d8+cha feu(15m ligne), griffes (14/9) 2d8+cha feu, pendant Cha/round </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Ensorceleur 14-16(Random) </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>102 000</td>
+                <td>Bâton de Zirrhat</td>
+                <td>1d12 +4, +3 froid, +2 Cha, +10 sort froid, +10 PV, 1fois/jour Sort froid critique (2round) x2 dg</td>
+            </tr>
+            <tr>
+                <td>110 000</td>
+                <td>Bâton épique de Contrôle</td>
+                <td>1d12 +4, +3 divin, +2 Cha, Sort illusion +2 DD, Sort Enchantement +2 DD, +10 pv</td>
+            </tr>
+            <tr>
+                <td>110 000</td>
+                <td>Bâton épique de destruction</td>
+                <td>1d12 +4, +3 feu, +1 Cha, +5 sort feu, +5 sort acide, +1 chance touché, +10 pv</td>
+            </tr>
+            <tr>
+                <td>150 000</td>
+                <td>Bâton supérieure de Zirrhat</td>
+                <td>1d12 +4, +3 froid, +3 Cha, +15 sort froid, +20 PV, 1fois/jour Sort froid critique (3round) x2 dg</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Chapeau de Zirrhat</td>
+                <td> +2 Cha, +5 sort froid, 1fois/jour 2 actions</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Chapeau de destruction épique</td>
+                <td> +2 Cha, +3 sorts dg, 10% chance de ne pas utiliser un sort.</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Chapeau de Contrôle épique</td>
+                <td> +2 Cha, +1 DD sorts Contrôle, 10% chance de ne pas utiliser un sort.</td>
+            </tr>
+            <tr>
+                <td>69 000</td>
+                <td>Robe de Zirrhat</td>
+                <td> +1 Cha, +2 Con, Chaque tour(combat) donne 1 immunité é un type d&#39;énergie (acide, feu, électricité,son, froid, divin) 1d6</td>
+            </tr>
+            <tr>
+                <td>60 000</td>
+                <td>Robe de Contrôle épique</td>
+                <td> +2 Cha, +1 Con, Chaque sort de Contrôle réussi inflige niv x3 dg.</td>
+            </tr>
+            <tr>
+                <td>69 000</td>
+                <td>Robe de destruction épique</td>
+                <td> +1 Cha, +3 sort dg, 1fois/jour Pluie de météor épique (3 sort niv 7) Inflige 1d100 + tous bonus sort (15 rayon)(60m portée)</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Gantelet de Zirrhat</td>
+                <td>Armure de mage glaciale permanente : +6 CA, +1 Con, +5 sort froid</td>
+            </tr>
+            <tr>
+                <td>50 000</td>
+                <td>Gantelet de Contrôle épique</td>
+                <td> Augmente les jet de volonté de +3, +1 Cha, +10pv</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Gantelet de destruction épique</td>
+                <td> +3 sort dg, Sorts de (1élément) font +3niv dg, +1 Cha</td>
+            </tr>
+            <tr>
+                <td>50 000</td>
+                <td>Gant de Zirrhat</td>
+                <td> +5 sort froid, +1 Con, 1fois/jour Double bonus aux sorts froid (5round)</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Gant de Contrôle épique</td>
+                <td> +1 Cha, +1 Con, +15 Concentration, Chaque Contrôle réussi soigne de 20pv</td>
+            </tr>
+            <tr>
+                <td>69 000</td>
+                <td>Gant de destruction épique</td>
+                <td> +1 Cha, +3 sort dg, 1fois/jour Désir de destruction (1round) Prochain sort est augmenté de 1d100</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Ceinture de Zirrhat</td>
+                <td> +1Cha, +1 CA, Renvoie tous les sorts de froid vers l&#39;ennemi</td>
+            </tr>
+            <tr>
+                <td>50 000</td>
+                <td>Ceinture de Contrôle épique</td>
+                <td> +1 Cha, +1 DD sort Contrôle, +5 PV</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Ceinture de destruction épique</td>
+                <td> +1 Cha, +2 sort dg, 1fois/jour 2 actions</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Botte de Zirrhat</td>
+                <td> +3m depl, +1 Cha, Sort froid ont 15% chance crit (x2)</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Botte de Contrôle épique</td>
+                <td> -3m depl, +2 DD sort Contrôle, 2fois/jour 2 actions</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Botte de destruction épique</td>
+                <td> +1 Cha, +5 sort feu, +5 sort acide, 1fois/jour Permet de changer de plan pour éviter d&#39;étre affecté par un sort</td>
+            </tr>
+            <tr>
+                <td>90 000</td>
+                <td>Amulette de Zirrhat</td>
+                <td> +2 Cha, +6 sort dg, 35% chance de démultiplier un sort en froid (1/2 dg sur 10 cibles max)</td>
+            </tr>
+            <tr>
+                <td>90 000</td>
+                <td>Amulette de Contrôle épique</td>
+                <td> +2 Cha, +1 Con, Chaque sort de Contrôle réussi redonne ce sort</td>
+            </tr>
+            <tr>
+                <td>100 000</td>
+                <td>Amulette de destruction épique</td>
+                <td> +1 Cha, +1 Con, +5 sort dg, Les sorts é cible unique ont +20% chance crit (x2)</td>
+            </tr>
+            <tr>
+                <td>105 000</td>
+                <td>Anneau de Zirrhat</td>
+                <td> +1 Cha, +2 Dex, +10 sort froid, +5 Concentration, +4 Sort niv max</td>
+            </tr>
+            <tr>
+                <td>105 000</td>
+                <td>Anneau de Contrôle épique</td>
+                <td> +1 Cha, +1 Con, Ralentit une cible (-50% depl) ou 1 action limité/round (Aprés un sort de Contrôle réussi)</td>
+            </tr>
+            <tr>
+                <td>125 000</td>
+                <td>Anneau de destruction épique</td>
+                <td> +2 Cha, -30 PV, +10 sort dg, +15 Concentration</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Zirrhat(5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Contrôle (5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Destruction (5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="moine" style="display: none">
+
+</div>
+<div id="roublard" style="display: none">
+
+</div>
+<div id="druide" style="display: none">
+    <table class="table table-bordered table-hover table-condensed">
+        <tbody>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Druide 5-7 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>4200</td>
+                <td>Bâton de la forêt royale</td>
+                <td>1d6,X2, +2 soins, +1 sort niv 3</td>
+            </tr>
+            <tr>
+                <td>4200</td>
+                <td>Bâton pourpre de Cormyr</td>
+                <td>1d6, x2, +2 sort feu, +1 sort niv 3</td>
+            </tr>
+            <tr>
+                <td>4500</td>
+                <td>Cimeterre de Vaux</td>
+                <td>1d6, 18-20 x2, +2 sorts foudre, +2 sort feu,+1 soins</td>
+            </tr>
+            <tr>
+                <td>4500</td>
+                <td>Cimeterre du sage</td>
+                <td>1d6, 18-20 x2, +2 sag, +2 sorts niv 3</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Dague stockeuse de sorts</td>
+                <td>1d4, 19-20 x3, +1 soins, stockage (3) niv 3</td>
+            </tr>
+            <tr>
+                <td>2000</td>
+                <td>Anneau Émeraude du guérisseur</td>
+                <td> +1soins, +1sag</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>Anneau topaze foudroyante</td>
+                <td>Appel de la foudre toujours sous effet tempéte, mais 2 round cast</td>
+            </tr>
+            <tr>
+                <td>3300</td>
+                <td>Anneau topaze de puissance</td>
+                <td> +3 sort foudre, 1 appel foudre/jour</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>Couronne dryade</td>
+                <td> +2sag, +2 soins</td>
+            </tr>
+            <tr>
+                <td>3200</td>
+                <td>Bandeau contre-sort</td>
+                <td>Résistance magie 5, +1CA</td>
+            </tr>
+            <tr>
+                <td>3200</td>
+                <td>Couronne dryade pourpre</td>
+                <td> +2sag, +2 soins</td>
+            </tr>
+            <tr>
+                <td>3200</td>
+                <td>Amulette dryade pourpre</td>
+                <td> +1Ca, 2fois/jour Maximum soins</td>
+            </tr>
+            <tr>
+                <td>3500</td>
+                <td>Amulette dent dragon pourpre</td>
+                <td> 2fois/jour Maximum sort foudre ou feu</td>
+            </tr>
+            <tr>
+                <td>2300</td>
+                <td>Bouclier du hibou</td>
+                <td> 3CA, +1 sag,+1 soins</td>
+            </tr>
+            <tr>
+                <td>2500</td>
+                <td>Bouclier des arcanes</td>
+                <td>3CA, +3 sort niv2</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>Armure des dryades</td>
+                <td>3CA, 6dex max, 0 malus,11m depl max, +1sag</td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Druide 7-10 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>4800</td>
+                <td>Écu de dryade</td>
+                <td> 3Ca, malus -2, +1con, Téléporte 1 allié é cété de soi(30m)et lui faire un sort de soins disponible 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>4300</td>
+                <td>Armure de cuir Tilverton</td>
+                <td>3ca, max dex 6, malus 0, 9m depl, +1dex, +1con, +2sort feu</td>
+            </tr>
+            <tr>
+                <td>4600</td>
+                <td>Armure de cuir dryade pourpre</td>
+                <td>3ca, max dex 6,malus 0,9m depl, +1sag,+1con,+3soins, +1sort foudre</td>
+            </tr>
+            <tr>
+                <td>8000</td>
+                <td>Anneau dryade bleu</td>
+                <td>1ca, +2soins, +1con, aveugle les ennemis autour(9m) 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>8100</td>
+                <td>Anneau de Tilverton</td>
+                <td> +1sag, +1con, +2sorts foudre, +2 sorts feu</td>
+            </tr>
+            <tr>
+                <td>6000</td>
+                <td>Bandeau dryade bleu</td>
+                <td> +1ca, +1con, +2soins, Sort niv3: Source regénérative: La cible s&#39;infuse d&#39;énergie (20m) et donne 1d8 PV aux alliés pendant 1round/niv(6m rayon)</td>
+            </tr>
+            <tr>
+                <td>6100</td>
+                <td>Bandeau de Tilverton</td>
+                <td> +1Ca,+1sag, +2sort feu, Sort niv3:Colére atmosphérique(20m) Déchaéne la force de la nature infligeant du dégét de zone selon la zone. 3d6 é 2d20</td>
+            </tr>
+            <tr>
+                <td>6300</td>
+                <td>Amulette de Tilverton</td>
+                <td> +1Ca, +1Dex, +2 sort feu, Forme animal plus puissante</td>
+            </tr>
+            <tr>
+                <td>6200</td>
+                <td>Amulette dryade bleu</td>
+                <td> +1ca, +1con, +2soins, Sort niv4: éme séur: 2 cibles partages également les dégéts qu&#39;ils recoivent (réduction 2) (max 10m)1 round / 2niv</td>
+            </tr>
+            <tr>
+                <td>6800</td>
+                <td>Collier de Cormyr pour animal</td>
+                <td> +2Ca, +2For, +2 touché, +1dg morsure et griffes</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Dryade</td>
+                <td>Armure,Anneau,Bandeau, Amulette</td>
+                <td>Les sorts de soins peuvent faire des critiques 19-20x2</td>
+            </tr>
+            <tr>
+                <td>Tilverton</td>
+                <td>Armure,Anneau,Bandeau, Amulette</td>
+                <td>Sort de dégéts ont 2x plus de zone d&#39;effet 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>Rune de Taïa</td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Pluie d&#39;étincelle de Taïa</td>
+                <td>10 000</td>
+                <td>1fois/jour Inflige 5d8 dg lumiére (rayon 9m) (21m) et soigne les alliés de moitié</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Druide 10-13 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Écu d&#39;écaille Téthyamar</td>
+                <td>4Ca, malus 0, +1Con, sphère de feu devient d&#39;acide et inflige 1d6 suppl (set)</td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Écu du soleil</td>
+                <td>4Ca, malus 0, +1Con, +1Sag, +1Soin, Résistance feu 2</td>
+            </tr>
+            <tr>
+                <td>10000</td>
+                <td>Armure d&#39;écaille Téthyamar</td>
+                <td>4Ca, Max dex 6, malus 0, 12m depl,+1Con, +1Sag, +2 sort acide,feu</td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Armure embrasé de Taïa</td>
+                <td>4Ca, Max dex 6, malus 0, 12m depl,+1Con, +1Sag, +4 sort feu, +2 soins</td>
+            </tr>
+            <tr>
+                <td>18000</td>
+                <td>Anneau noir Téthyamar</td>
+                <td> +1Con, +2 sort acide,feu,foudre</td>
+            </tr>
+            <tr>
+                <td>18000</td>
+                <td>Anneau suprême de Taïa</td>
+                <td> +1Con, +2Sag, +2sort feu</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Rune(Dent de Téthyamar)</td>
+                <td> sphère de feu devient sphère d&#39;acide et inflige 1d6 suppl (set)</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Rune(Lumiére de Taïa)</td>
+                <td>1fois/jour, Votre prochain sort de soin devient un soin de groupe intensif 4d8+niv. 7,5m+1,5m/2n: 1créature/niv se trouvant a 9m ou moins de chacun</td>
+            </tr>
+            <tr>
+                <td>25000</td>
+                <td>Bandeau de Taïa</td>
+                <td> 1Ca,  +1Sag, Donne le sort: (niv 5)Source régénératrice accéléré: 1cible (25m) donne 1d8+3 aux alliés pendant  1round/niv (6m rayon) On peut annuler l&#39;enchantement pour soigner la cible du total restant (pas alentour)</td>
+            </tr>
+            <tr>
+                <td>22000</td>
+                <td>Bâton des marais</td>
+                <td>1d8+3, +1sort acide,feu,foudre, 1fois/jour Souffle de Téthyamar: Inflige 1d6/niv acide céne 15m</td>
+            </tr>
+            <tr>
+                <td>25000</td>
+                <td>Cimeterre  des marais</td>
+                <td> 1d8+3, 18-20 x2, +3 sort feu, Marais de Téthyamar: zone 9m x 9m (1 round cast) dure 1round/2niv Ingligeant et réduit -Sag CA des (ennemis) ainsi que 2d20+niv (1fois/jour)</td>
+            </tr>
+            <tr>
+                <td>21000</td>
+                <td>Cimeterre purificateur</td>
+                <td>1dg, 18-20 x2, +4soins, Les sorts de soins é longue durée donnent un bonus de 2 CA</td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Gant purificateur</td>
+                <td> +1 Sag, +1 Con, +3 soins</td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Gant des marais</td>
+                <td> +1 Sag, +3 sort acide, sort acide ont 15% chance crit</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Téthyamar (5)</td>
+                <td>Écu, Armure, Anneau, Bandeau, Rune</td>
+                <td>sphère de feu devient un sort niv 4 et lance une malédiction(1rd) (Frayeur,étourdit,Charme ou empéche les soins) 1d4pour déterminer</td>
+            </tr>
+            <tr>
+                <td>Taïa (5)</td>
+                <td>Écu, Armure, Anneau, Bandeau, Rune</td>
+                <td>Sort niv 5: Arbre de Taïa: Créer un arbre avec 25% de PV du druide soignant chaque tour pour 2d8. (action complexe)</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Druide 14-16(Random) </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>38000</td>
+                <td>Bandeau exalté de Zirrhat</td>
+                <td>2CA, +2Sag, +1 Con, +2 dg sort, Contact glacé (7) Le druide touche au sol et créer un chemin de glace immobilisant les cibles de son choix (50m distance) ainsi que 4d10 dg/round pendant 10 round. DD Vig</td>
+            </tr>
+            <tr>
+                <td>37000</td>
+                <td>Bandeau de guérison suprême</td>
+                <td>2CA, +2 Sag, +1 Dex, +4 soins, Guérison suprême a 20% chance de soigner a 100% PV.</td>
+            </tr>
+            <tr>
+                <td>37000</td>
+                <td>Bandeau de transformation suprême</td>
+                <td> 3CA, +1 Sag, +2 For, +1 Dex, Transformation soigne x2, Permet d&#39;utiliser des compétences d&#39;un type d&#39;animal choisi (concentration), Augmente la force des transformation.</td>
+            </tr>
+            <tr>
+                <td>45000</td>
+                <td>Chemise exalté de Zirrhat</td>
+                <td>6 CA, 8 dex max, 0 malus,21m max depl, +2 sag, + 3 dg sort, Sort de froid 20% chance crit</td>
+            </tr>
+            <tr>
+                <td>45000</td>
+                <td>Chemise du guérisseur suprême</td>
+                <td> 5 CA, 8 dex max, 0 malus,21m max depl, +2 sag, +1 Con,+5 soins, +3 soins lorsque FULL PV</td>
+            </tr>
+            <tr>
+                <td>85000</td>
+                <td>Chemise de changeforme</td>
+                <td>7 CA, 10 dex max,aucun depl max, 0 malus, +1 Sag, +1 For, +1 Dex, Double zone crit des transformation.</td>
+            </tr>
+            <tr>
+                <td>49000</td>
+                <td>Protection de Zirrhat (gantelet)</td>
+                <td> 2 CA, +1 Sag, +1 Con, Immunité froid.</td>
+            </tr>
+            <tr>
+                <td>50000</td>
+                <td>Gantelet de guérison</td>
+                <td>1 CA, +1 Sag, +4 soins, Double bonus de soin de l&#39;équipement</td>
+            </tr>
+            <tr>
+                <td>49000</td>
+                <td>Gantelet de transformation</td>
+                <td>2 Ca, +2 For, Les critiques font saigner la cible de (niv x2) dg supplémentaire et soigne le druide de 20</td>
+            </tr>
+            <tr>
+                <td>49000</td>
+                <td>Griffes de Zirrhat (Gant)</td>
+                <td> +3 sort dg, +1 Sag,  sort froid 15% chance crit.</td>
+            </tr>
+            <tr>
+                <td>52000</td>
+                <td>Gant de rétablissement</td>
+                <td> +4 soins, +1 Sag, +1 Con, Bonus soin = compétence Concentration</td>
+            </tr>
+            <tr>
+                <td>52000</td>
+                <td>Griffes druidique (Gant)</td>
+                <td> +1 Dex, +2 Con, +1 For, Augmente la catégorie de dg des transformations.</td>
+            </tr>
+            <tr>
+                <td>48000</td>
+                <td>Ceinture glaciale de Zirrhat</td>
+                <td> Inflige 5dg/round froid, +10 sort froid, +1 Sag, Sort froid 10% critique</td>
+            </tr>
+            <tr>
+                <td>42000</td>
+                <td>Ceinture de rétablissement</td>
+                <td>Soigne de 5PV/round, +1 Sag, +2Con, +3 soins</td>
+            </tr>
+            <tr>
+                <td>35000</td>
+                <td>Ceinture de modification</td>
+                <td>Forme animale illimité, +1 Dex, +1 For</td>
+            </tr>
+            <tr>
+                <td>55000</td>
+                <td>Botte glaciale Zirrhat</td>
+                <td> +2 Dex, +4,5m depl, Ralentit les ennemis (-50%) et protége des attaques de feu (20dg)</td>
+            </tr>
+            <tr>
+                <td>55000</td>
+                <td>Botte de soutien</td>
+                <td> +1 Sag, +4 soins, Aprés chaque sort de soin consÉcutif augmente bonus de soin de +10 dure 1 round.</td>
+            </tr>
+            <tr>
+                <td>53000</td>
+                <td>Botte de transformation</td>
+                <td> +1 For, +2 Dex, attaque sournoise en animal font (6d8), critique sont x4</td>
+            </tr>
+            <tr>
+                <td>88000</td>
+                <td>Anneau de Zirrhat</td>
+                <td> +2 Sag, +2 Con, +5froid, Change vos sorts en version de froid si possible</td>
+            </tr>
+            <tr>
+                <td>88000</td>
+                <td>Anneau des tempétes</td>
+                <td> +5 dg sorts, +2Sag, +1 Con, Concentration +10,  Tour orageuse inflige 1d100 de dg (40%) aux ennemis affectés</td>
+            </tr>
+            <tr>
+                <td>88000</td>
+                <td>Anneau de nature supérieure</td>
+                <td> +2Con, +1 Sag, +1 Dex, +1 For, Forme animale +1 chance crit</td>
+            </tr>
+            <tr>
+                <td>88000</td>
+                <td>Amulette de Zirrhat</td>
+                <td> +2 Sag, +1 Dex, +5froid, Sort froid 10% chance crit</td>
+            </tr>
+            <tr>
+                <td>80000</td>
+                <td>Amulette de rapidité</td>
+                <td>3fois/jour 2actions, +1Dex, +1Sag, +2CA</td>
+            </tr>
+            <tr>
+                <td>86000</td>
+                <td>Amulette de rétablissement</td>
+                <td>Nouveau sort(7) Présence du guérisseur: Ne fonctionne pas en animal, Sorts de soins gagnent  le modif Sag X2, Dure 2 rounds(50% chance de réinitialiser), +2Sag</td>
+            </tr>
+            <tr>
+                <td>88000</td>
+                <td>Amulette fusion animale</td>
+                <td> +2Con, +2Dex, +1 For, Permet de faire des étreintes(stun) / évantration(saignements) surpuissante.</td>
+            </tr>
+            <tr>
+                <td>125000</td>
+                <td>Bâton de Zirrhat</td>
+                <td> 1d8 +4, +4 froid, +2Con, Une aura de froid ralentit les ennemis (3m rayon) -1action, +5 Concentration</td>
+            </tr>
+            <tr>
+                <td>105000</td>
+                <td>Bâton de rétablissement</td>
+                <td> 1d6 +4, +4 divin, +2 Sag, +10 soins, Les sorts de dg soignent 1 cible de 25% du dégét. +5 Concentration</td>
+            </tr>
+            <tr>
+                <td>150000</td>
+                <td>Bâton de Zirrhat supérieur</td>
+                <td> 1d8 +4, +4 froid, +2Sag, Une aura de froid ralentit les ennemis (4,5m rayon) -1action, +10 Concentration</td>
+            </tr>
+            <tr>
+                <td>110000</td>
+                <td>Bâton de fusion</td>
+                <td> 1d8 +4, +4 feu, +1 Dex, +1 For, +1 Con, La premiére attaque en animal touche toujours. +5 Concentration</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Zirrhat(5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Soutien (5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Animale(5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="rodeur" style="display: none">
     <table class="table table-bordered table-condensed">
         <tbody>
             <tr>
@@ -468,10 +1425,9 @@
             </tr>
         </tbody>
     </table>
-@*}*@
-@*@if (Choix == "barbare")
-{*@
+</div>
 
+<div id="barbare" style="display: none">
     <table class="table table-bordered table-condensed">
         <tbody>
             <tr>
@@ -791,4 +1747,5 @@
             </tr>
         </tbody>
     </table>
-@*}*@
+</div>
+

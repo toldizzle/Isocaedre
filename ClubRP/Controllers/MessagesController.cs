@@ -49,11 +49,10 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
-        public ActionResult Create([Bind(Include = "MessageID,Texte,PostID,utilisateur")] Message message)
+        public ActionResult Create([Bind(Include = "Texte,PostID")] Message message)
         {
             if (ModelState.IsValid)
             {
-                //message.MessageID = db.Messages.Count();
                 message.AspNetUserID = User.Identity.GetUserId();
                 message.Auteur = User.Identity.Name;
                 message.DateMessage = DateTime.Now;

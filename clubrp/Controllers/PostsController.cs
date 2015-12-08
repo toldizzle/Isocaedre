@@ -73,7 +73,7 @@ namespace ClubRP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Modérateurs,Administrateurs")]
-        public ActionResult Create([Bind(Include = "ID,Titre,Description,utilisateur")] Post post)
+        public ActionResult Create([Bind(Include = "ID,Titre,Description")] Post post)
         {
             if (ModelState.IsValid)
             {

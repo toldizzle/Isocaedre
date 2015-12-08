@@ -22,7 +22,7 @@
 
                 <td class="col-lg-3">
                     @Html.DisplayName(ClubRP.Views.Groupes.GroupeRessources.Author) <br />
-                    @if (utilisateur.details.Fichier != null)
+                    @if (utilisateur.details.ImageData != null)
                     {
                         string src = "";
                         src = "data:" + utilisateur.details.ImageType + ";base64," + Convert.ToBase64String(utilisateur.details.ImageData);
@@ -41,7 +41,7 @@
             <tr>
                 @if (User.IsInRole("Modérateurs") || User.IsInRole("Administrateurs"))
                 {
-                    <td>@Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.BtnSave , actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)
+                    <td>@Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.Modify , actionName: "Edit", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)
                         @Html.ActionLink(linkText: ClubRP.Views.Shared.SharedRessources.Delete , actionName: "Delete", controllerName: "Messages", routeValues: new { id = p.MessageID }, htmlAttributes: null)</td>
                 }
             </tr>
