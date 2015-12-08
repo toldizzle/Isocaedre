@@ -177,6 +177,12 @@
   <data name="Register" xml:space="preserve">
     <value>Register</value>
   </data>
+  <data name="Reward" xml:space="preserve">
+    <value>Rewards</value>
+  </data>
+  <data name="Spell" xml:space="preserve">
+    <value>Spells</value>
+  </data>
   <data name="SubmitBtn" xml:space="preserve">
     <value>Submit</value>
   </data>

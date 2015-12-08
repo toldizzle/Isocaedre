@@ -57,5 +57,15 @@ namespace ClubRP.Controllers
             ViewBag.ListeGroupes = new List<Groupe>();
             return View();
         }
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
+        public ActionResult Recompense()
+        {
+            return View();
+        }
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
+        public ActionResult Sorts()
+        {
+            return View();
+        }
     }
 }

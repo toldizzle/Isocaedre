@@ -1,0 +1,794 @@
+﻿
+@{
+    ViewBag.Title = "Recompense";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Reward)</h2>
+@*@{string Choix = "barbare";}
+<a href="#" onclick=@(Choix ="barbare")>Barbare</a><a href="#" onclick=@(Choix ="rodeur")>Rôdeur</a>*@
+@*@if (Choix == "rodeur")
+{*@
+    <table class="table table-bordered table-condensed">
+        <tbody>
+            <tr>
+                <th>Prix</th>
+                <th>Récompense Rôdeur 5-7 </th>
+                <th>Effet </th>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Arc LCM</td>
+                <td>1d8+1, x4, +1 Dex</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Arc LCM acérée</td>
+                <td>1d8+1,x3, 18-20 x3, +1 Dex</td>
+            </tr>
+            <tr>
+                <td>4300</td>
+                <td>Arc LCM de ralentissement</td>
+                <td>1d8+1, x3, ralenti la cible de 1,5m, +1 Dex</td>
+            </tr>
+            <tr>
+                <td>2800</td>
+                <td>Chemise de mailles de l&#39;aigle</td>
+                <td> +5Ca, +5 max dex, -1 malus, 2 fois/jour relance le jet d&#39;attaque</td>
+            </tr>
+            <tr>
+                <td>2900</td>
+                <td>Chemise de mailles de précision</td>
+                <td> +5 CA, +5max dex, -1 malus, +1 Dex</td>
+            </tr>
+            <tr>
+                <td>2800</td>
+                <td>Anneau des bois royaux</td>
+                <td> +1,5m depl, +5 depl silencieux, +1 Dex</td>
+            </tr>
+            <tr>
+                <td>3200</td>
+                <td>Anneau pourpre de Tilverton</td>
+                <td> +2 Dex, +1,5m depl</td>
+            </tr>
+            <tr>
+                <td>3200</td>
+                <td>Amulette de tir puissant</td>
+                <td>1fois/jour max dégét sur 1 attaque</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>Amulette de précision</td>
+                <td> +1Ca, +1Dex</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>Carquois magique</td>
+                <td>Fléche +1dg magique</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Arbalète sans recharge</td>
+                <td>1d8+1, 19-20 x3, +1Dex, Recharge magiquement</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Arbalète acérée</td>
+                <td>1d8+1, 18-20 x3, +1Dex</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <th>Récompense Rôdeur 7-10 </th>
+                <th>Effet </th>
+            </tr>
+            <tr>
+                <td>8000</td>
+                <td>Arbalète Tilverton</td>
+                <td>1d8+2, +1Dex, feu nourri inflige +1 dg</td>
+            </tr>
+            <tr>
+                <td>8000</td>
+                <td>Abaléte Cormyr</td>
+                <td>1d8+2, +1Dex, +1con, x3crit</td>
+            </tr>
+            <tr>
+                <td>4000</td>
+                <td>Chemise maille Tilverton</td>
+                <td> +5Ca,dex max 6, 0 malus, 9m depl, feu nourri inflige +1dg, +1con</td>
+            </tr>
+            <tr>
+                <td>4800</td>
+                <td>Chemise maille Cormyr</td>
+                <td> +6Ca, dex max 6, 0malus, 9m depl,1fois/jour les attaques qui touchent donnent 1d6+1(6m rayon)</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>Anneau Tilverton</td>
+                <td> +1Dex, Feu nourri fait 1d6feu explosif (4,5m rayon) 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>4200</td>
+                <td>Anneau Cormyr</td>
+                <td> +1Dex, +1con, Tir rapide soigne de 10pv les alliés prés de la cible (4,5m rayon) 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Gantelet précis Cormyr</td>
+                <td> +1Dex, relance les jets de touché 2 fois/jour</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>Gantelet Tilverton</td>
+                <td> +1Dex, Les critiques font explosion 1d4 feu (4,5m) rayon</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>Amulette Tilverton</td>
+                <td> +1Dex, permet 1 déplacement aprés avoir tué une cible</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>Amulette Cormyr</td>
+                <td> +1Ca, +1Con, Augmente CA de 2 quand le PJ a 25% PV et moins</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>Collier de l&#39;éclaireur pour compagnon</td>
+                <td> +2Dex, +2dg griffes, +5m depl, donne attaque en finesse ou attaque multiple supérieures</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Cormyr</td>
+                <td>Arbalète,Chemise,Anneau,Gantelet,Amulette</td>
+                <td>Enléve la limite de déplacement, peu importe le type d&#39;armure</td>
+            </tr>
+            <tr>
+                <td>Tilverton</td>
+                <td>Arbalète,Chemise,Anneau,Gantelet,Amulette</td>
+                <td>Chaque critique augmente votre Dex de 1</td>
+            </tr>
+            <tr>
+                <td>Rune de Taïa</td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Fléche enchantée de Taïa</td>
+                <td>10 000</td>
+                <td>1fois/jour Vos fléches transpercent les ennemis et peuvent toucher 2 autres ennemis en arriére pour la moitié de dégét.</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Rôdeur 10-13 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Arbalète de Taïa</td>
+                <td>1d8+3, x3,+1 feu, 1fois/jour Pluie de feu: zone 3m/3m inflige 3d8+dex feu (complexe)</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Abaléte de Téthyamar</td>
+                <td>1d8+3, x3, +2acide, 1fois/jour Fléche acide (2rd) +2acide aux fléches</td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Chemise embrasée de Taïa</td>
+                <td> 6Ca, dex max 7, malus 0, 12m depl, Feu nourri inflige +2dg feu, +1Dex</td>
+            </tr>
+            <tr>
+                <td>14000</td>
+                <td>écaille de Téthyamar</td>
+                <td>6Ca, dex max 7, malus 0, 12m depl, +1Dex, Tir rapide inflige +4 acide</td>
+            </tr>
+            <tr>
+                <td>19000</td>
+                <td>Anneau précis de feu</td>
+                <td> +2Dex, les critiques infligent 1d6 feu</td>
+            </tr>
+            <tr>
+                <td>18000</td>
+                <td>Anneau émeraude</td>
+                <td> +1Dex, +1Con, +5PV</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Anneau noir</td>
+                <td> +1Dex, +1chance critique (Arbalète)</td>
+            </tr>
+            <tr>
+                <td>11000</td>
+                <td>Gantelet de Taïa</td>
+                <td> +1Dex, +1Ca, Résistance feu (3)</td>
+            </tr>
+            <tr>
+                <td>11000</td>
+                <td>Gantelet d&#39;émeraude</td>
+                <td> +2 Dex, +1CA</td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Gantelet noir</td>
+                <td> +1 Dex, 1fois/semaine Fléches corrompues: (15% chance d&#39;enlever 10% pv) (1round)</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Amulette d&#39;ascension Téthyamar</td>
+                <td>1fois/jour Maximum de dégét pendant 1 round (ne cumule é aucun autre bonus)</td>
+            </tr>
+            <tr>
+                <td>18000</td>
+                <td>Amulette de recul</td>
+                <td> +1Ca, Les critiques font reculer la cible de 12m, 1fois/jour Repousse une cible de 12m (bourrasque) (30m)</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Amulette de Taïa</td>
+                <td>1fois/jour étoile de guérison: Chaque attaque é distance soigne de (1d8+niv)/fléche avec bonus de +5touché</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Rune (Griffes de Téthyamar)</td>
+                <td>1fois/jour Enchevétre la cible dans des griffes de dragon infligeant 5dg acide/round empéche d&#39;agir et d&#39;étre attaqué (5round)</td>
+            </tr>
+            <tr>
+                <td>12000</td>
+                <td>Botte d&#39;ascension Téthyamar</td>
+                <td> +3m depl, +1Dex, Enléve le depl maximum sur l&#39;armure</td>
+            </tr>
+            <tr>
+                <td>10000</td>
+                <td>Botte d&#39;ascension de Taïa</td>
+                <td> +3m depl, +1Dex, Résistance feu (3)</td>
+            </tr>
+            <tr>
+                <td>16000</td>
+                <td>Heaume de Taïa</td>
+                <td> 2ca, +1Con, +1Sag, 1fois/jour Fléche explosive (1round) vos attaques infligent 1d6 feu (1,5m rayon) supplémentaire</td>
+            </tr>
+            <tr>
+                <td>16000</td>
+                <td>Heaume de Téthyamar</td>
+                <td>2ca, +1Con, +1Dex, Critique +4dg</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Téthyamar (4)</td>
+                <td>Arbalète,Chemise,Anneau,Gantelet,Amulette,Botte, Heaume</td>
+                <td>Chaque fléche manquant leur cible en combat donne un bonus au dégét de 5 é la prochaine fléche (ne cumul pas)</td>
+            </tr>
+            <tr>
+                <td>Taïa (4)</td>
+                <td>Arbalète,Chemise,Anneau,Gantelet,Amulette,Botte, Heaume</td>
+                <td>Augmente la zone de critique de 1 aux arcs et Arbalètes</td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Rôdeur 14-16(Random) </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>102 000</td>
+                <td>Arc de Zirrhat</td>
+                <td>1d10+4, +4froid, 19-20 x3, +1 Dex, Traverse de glace les fléches inflige 100% dg aux cibles derriéres (2max)</td>
+            </tr>
+            <tr>
+                <td>110 000</td>
+                <td>Arc épique de contrôle</td>
+                <td>1d10+4, +4foudre, 19-20 x3, +1 Dex, Aprés 3 fléches sur la méme cible Immobilise la cible pour 1 round</td>
+            </tr>
+            <tr>
+                <td>110 000</td>
+                <td>Arc épique de destruction</td>
+                <td>1d10+4, +4feu, 19-20 x4, +1 Dex, Aprés 3 fléches sur la méme cible (Prochaine fléche +5 chance crit)</td>
+            </tr>
+            <tr>
+                <td>150 000</td>
+                <td>Arc supérieure de Zirrhat</td>
+                <td>1d10+5, +4froid, 19-20 x3, +2 Dex, Traverse de glace les fléches inflige 100% dg aux cibles derriéres (2max)</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Heaume de Zirrhat</td>
+                <td> 2 CA, +1 Dex, 1fois/jour touché auto toutes attaques</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Heaume de destruction épique</td>
+                <td> +1 Dex, Les critiques sont toujours confirmé</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Heaume de contrôle épique</td>
+                <td> 1 CA, +3m depl, Tir en mouvement (si posséde déjé;fléches par télékinésie)</td>
+            </tr>
+            <tr>
+                <td>69 000</td>
+                <td>Armure d&#39;écaille de Zirrhat</td>
+                <td>7 CA, 9 dex max, 0 pénalité, +1 Dex, Tir rapide glaciale: tir rapide inflige 1d20 suppl froid.</td>
+            </tr>
+            <tr>
+                <td>60 000</td>
+                <td>Armure d&#39;écaille de contrôle épique</td>
+                <td>7 CA, 9 dex max, 0 pénalité, +1 Dex, Tir rapide charme: tir rapide a 20% chance charmer  1 cible (2 round)</td>
+            </tr>
+            <tr>
+                <td>69 000</td>
+                <td>Armure d&#39;écaille de destruction épique</td>
+                <td> 4CA, 8 dex max, 0 pénalité, +1 Dex, Feu nourri destructif: Enléve la moitié du malus de feu nourri</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Gantelet de Zirrhat</td>
+                <td> +1Dex, +1 Con, Esquive glaciale: 1 attaque touche automatique / attaque évitée (10max)</td>
+            </tr>
+            <tr>
+                <td>50 000</td>
+                <td>Gantelet de contrôle épique</td>
+                <td> +1 Dex, 1fois/jour Empéche une zone de se déplacer (6m rayon) + attaques possible.</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Gantelet de destruction épique</td>
+                <td> +2 Dex, -2CA, +1 chance critique aux fléches</td>
+            </tr>
+            <tr>
+                <td>50 000</td>
+                <td>Gant de Zirrhat</td>
+                <td> +1 For, +1 Dex, Les 1 sur le dé d&#39;attaque sont des critiques assurés</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Gant de contrôle épique</td>
+                <td> +1 Dex, Chaque critique rend les cibles confues (+1round)</td>
+            </tr>
+            <tr>
+                <td>69 000</td>
+                <td>Gant de destruction épique</td>
+                <td> +2 Dex, -2CA,  Crit +10dg</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Ceinture de Zirrhat</td>
+                <td> +1 Dex, 2fois/jour Cercle glaciale: Vous ou votre compagnon dégagez un cercle de froid infligeant (dex ou for) x2  - x3 ou x5 (Action rapide) (selon 1d00) 33- 66- 100-</td>
+            </tr>
+            <tr>
+                <td>50 000</td>
+                <td>Ceinture de contrôle épique</td>
+                <td> +1 Dex, Les critiques rend les cibles confues (+1round)</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Ceinture de destruction épique</td>
+                <td> +2 Dex, Crit +10dg</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Botte de Zirrhat</td>
+                <td> +6m depl, Permet de réduire la ca d&#39;une cible de -1 / Sag dure 1round</td>
+            </tr>
+            <tr>
+                <td>59 000</td>
+                <td>Botte de contrôle épique</td>
+                <td> +4,5m depl, Les cibles en perte de contrôle recoivent 1d20supp</td>
+            </tr>
+            <tr>
+                <td>55 000</td>
+                <td>Botte de destruction épique</td>
+                <td> +3m depl, +1 Dex, Feu nourri +4dg, -3 CA</td>
+            </tr>
+            <tr>
+                <td>90 000</td>
+                <td>Amulette de Zirrhat</td>
+                <td> +2 Dex, 1fois/jour Aspect du dragon blanc: Permet de tirer é travers les obstacles et de voir é travers presque tout (5round)</td>
+            </tr>
+            <tr>
+                <td>90 000</td>
+                <td>Amulette de contrôle épique</td>
+                <td> +2 Dex, 1fois/jour (1 action complexe de fin e tour) Tir d&#39;incapacité: Enléve tous les bonus d&#39;armures de la cible (magique ou non ) fait dg max et touché automatique.</td>
+            </tr>
+            <tr>
+                <td>100 000</td>
+                <td>Amulette de destruction épique</td>
+                <td> +3 dex, -4 CA, +1 chance critique aux fléches</td>
+            </tr>
+            <tr>
+                <td>105 000</td>
+                <td>Anneau de Zirrhat</td>
+                <td> +2Dex, +4Ca, Vous pouvez changer votre bonus de volonté ou vigueur par le bonus de réflexe (1fois/jour)</td>
+            </tr>
+            <tr>
+                <td>105 000</td>
+                <td>Anneau de contrôle épique</td>
+                <td> +1 Dex, +1 chance critique, Soins épique (fin du round) soigne de niv x5 sur soi-méme</td>
+            </tr>
+            <tr>
+                <td>125 000</td>
+                <td>Anneau de destruction épique</td>
+                <td> +2 Dex, Crit +5dg, -4 CA, +1 Sag</td>
+            </tr>
+            <tr>
+                <td>60 000</td>
+                <td>Carquois de contrôle épique</td>
+                <td> +1 foudre, +10m portée, (1fois/jour) Assome l&#39;ennemi (1round) puis le rend confu(1round) aprés</td>
+            </tr>
+            <tr>
+                <td>60 000</td>
+                <td>Carquoi de destruction épique</td>
+                <td> +2 feu, +1 chance critique, -2 CA, (1fois/jour) Si vous faétes un critique relancer 2 autres fléches (touche auto)</td>
+            </tr>
+            <tr>
+                <td>60 000</td>
+                <td>Carquois de Zirrhat</td>
+                <td> +1 froid, +1 chance crit, (1fois/jour) Vous geler sur place, mais vos prochaine attaques sont critique (non assuré) 1round (geler 2 round)</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Zirrhat(5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>contrôle (5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Destruction (5)</td>
+                <td>Tout</td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+@*}*@
+@*@if (Choix == "barbare")
+{*@
+
+    <table class="table table-bordered table-condensed">
+        <tbody>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Barbare 5-7 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>3900</td>
+                <td>Arme lourde de rage</td>
+                <td> +1For, 1d10 +1, +1 rage/jour</td>
+            </tr>
+            <tr>
+                <td>4100</td>
+                <td>Arme de guerre</td>
+                <td> +1For, 1d10+1, aprés chaque attaque reéue +1 PV par les sorts de soins (max 20) dure 1h </td>
+            </tr>
+            <tr>
+                <td>2800</td>
+                <td>Bracelet d&#39;enragé</td>
+                <td> +1Dex, Rage ne fatigue plus, Set(2): Rage regen (1)</td>
+            </tr>
+            <tr>
+                <td>2600</td>
+                <td>Bracelet de guerre</td>
+                <td> +1CA, Critique annule malus attaque en puissance (1round)</td>
+            </tr>
+            <tr>
+                <td>2700</td>
+                <td>Gant de rage</td>
+                <td> +1For, +2 For pendant rage</td>
+            </tr>
+            <tr>
+                <td>2900</td>
+                <td>Gant du défenseur</td>
+                <td> +1 Con , +1CA</td>
+            </tr>
+            <tr>
+                <td>2800</td>
+                <td>Ceinture de résistance</td>
+                <td> +1Con, +1CA</td>
+            </tr>
+            <tr>
+                <td>2900</td>
+                <td>Ceinture de rage</td>
+                <td>La rage ne fatigue plus, Set(2): Rage regen (1)</td>
+            </tr>
+            <tr>
+                <td>3900</td>
+                <td>Anneau de guerre</td>
+                <td> +1CA, +5PV</td>
+            </tr>
+            <tr>
+                <td>4200</td>
+                <td>Anneau de rage</td>
+                <td>Aprés avoir été touché en rage permet 1 riposte</td>
+            </tr>
+            <tr>
+                <td>3800</td>
+                <td>Collier de guerre</td>
+                <td> +1CA, +1 DEX, +2 PV</td>
+            </tr>
+            <tr>
+                <td>4200</td>
+                <td>Collier d&#39;Esquive</td>
+                <td> Aprés avoir évité permet 1 riposte</td>
+            </tr>
+            <tr>
+                <td>2900</td>
+                <td>Botte de charge</td>
+                <td> Charge +3dg, Charge +2 chances critiques</td>
+            </tr>
+            <tr>
+                <td>2700</td>
+                <td>Botte de guerre</td>
+                <td> +1,5m depl, +1 DEX</td>
+            </tr>
+            <tr>
+                <td>2900</td>
+                <td>Chemise de mailles émeraude</td>
+                <td> +1 Dex, 5 CA, Dex max 5, 0 malus, 12m max depl</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>Chemise de mailles de rage</td>
+                <td> +1 For, 5 CA, Dex max 4, 0 malus, 12m depl</td>
+            </tr>
+            <tr>
+                <td>3300</td>
+                <td>Casque cuir de charge</td>
+                <td> +1For, 1fois/jour permet de charger une cible méme 1,5m</td>
+            </tr>
+            <tr>
+                <td>2800</td>
+                <td>Casque cuir défenseur</td>
+                <td> +1CA, +1 Con, +1 jet sauv</td>
+            </tr>
+            <tr>
+                <td>4500</td>
+                <td>Cimeterre acéré</td>
+                <td>1d6 +1, 17-20 x2</td>
+            </tr>
+            <tr>
+                <td>4200</td>
+                <td>Cimeterre de feu</td>
+                <td> 1d6+1, +1 feu, 18-20 x2</td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Barbare 7-10 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>8000</td>
+                <td>Cimeterre de rage (2)</td>
+                <td>1d8 +2, +1froid, (2 cimeterres de rage) Les critiques augmentent la durée de la rage de 1 round</td>
+            </tr>
+            <tr>
+                <td>8100</td>
+                <td>Cimeterre Tilverton</td>
+                <td>1d8+2, +1feu, Attaque en rotation 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>8000</td>
+                <td>Cimeterre Cormyr</td>
+                <td>1d8+2, +1foudre,1d4 foudre</td>
+            </tr>
+            <tr>
+                <td>4500</td>
+                <td>Bracelet Tilverton</td>
+                <td> +1For, Rage ne fatigue plus, Rage +1dg</td>
+            </tr>
+            <tr>
+                <td>4800</td>
+                <td>Bracelet Cormyr</td>
+                <td> +1For, +1Dex, +1Con</td>
+            </tr>
+            <tr>
+                <td>4600</td>
+                <td>Gant Tilverton</td>
+                <td> +1 For, +1chance crit (rage)</td>
+            </tr>
+            <tr>
+                <td>4400</td>
+                <td>Gant Cormyr</td>
+                <td> + 1 Ca, +1 Dex, +4PV</td>
+            </tr>
+            <tr>
+                <td>6900</td>
+                <td>Anneau Tilverton</td>
+                <td> +1 For, +1Ca, Bonus attaque en puissance x2 (1fois/jour)</td>
+            </tr>
+            <tr>
+                <td>6900</td>
+                <td>Anneau Cormyr</td>
+                <td> +1 Ca, +1 Con, Immunité é la foudre 2 rounds (action simple)</td>
+            </tr>
+            <tr>
+                <td>6200</td>
+                <td>Amulette Tilverton</td>
+                <td> +1For, +1Ca, Riposte en rage (2)</td>
+            </tr>
+            <tr>
+                <td>6200</td>
+                <td>Amulette Cormyr</td>
+                <td> +1 For, +1Ca, Permet d&#39;étre en rage jusqu&#39;é -99 PV</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>Chemise de mailles Cormyr</td>
+                <td> +1 For, +6Ca, Dex max 5, 0 malus, max 15m depl, Critique font -50% dg</td>
+            </tr>
+            <tr>
+                <td>5100</td>
+                <td>Chemise de mailles Tilverton</td>
+                <td> +1For, 5Ca, Dex max 4, 0 malus, max 15m depl,</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Cormyr (4)</td>
+                <td>Cimeterre,Bracelet,Gant, Anneau,Amulette, Chemise</td>
+                <td>Permet d&#39;utiliser une rage pour sortir d&#39;un effet de contréle</td>
+            </tr>
+            <tr>
+                <td>Tilverton (4)</td>
+                <td>Cimeterre,Bracelet,Gant, Anneau,Amulette, Chemise</td>
+                <td>Maximise les dégéts des attaques 1fois/jour</td>
+            </tr>
+            <tr>
+                <td>Rune de Taïa</td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Brélure de Taïa</td>
+                <td>10 000</td>
+                <td>Permet de faire une charge explosive infligeant la moitié du dg aux ennemis (3m rayon) 1fois/jour</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Récompense Barbare 10-13 </td>
+                <td>Effet </td>
+            </tr>
+            <tr>
+                <td>22000</td>
+                <td>Cimeterre Téthyamar</td>
+                <td>1d8 +3, +1acide, Les critiques déclenchent une rage (sans utilisation)(2 cimeterres), 18-20 x2</td>
+            </tr>
+            <tr>
+                <td>22000</td>
+                <td>Cimeterre Taïa</td>
+                <td>1d8+3, +2feu, 18-20 x2, Charge +4 feu</td>
+            </tr>
+            <tr>
+                <td>26000</td>
+                <td>épée batarde Taïa</td>
+                <td>1d10+3 feu, 19-20 x2, 1d6 feu</td>
+            </tr>
+            <tr>
+                <td>26000</td>
+                <td>épée batarde Téthyamar</td>
+                <td>1d10+3, +1acide, 19-20 x2, Impossible d&#39;Avoir 1 piéce Taïa, Main principal crit x3</td>
+            </tr>
+            <tr>
+                <td>9800</td>
+                <td>Heaume de Téthyamar</td>
+                <td> +1 For, +5 dg crit, Intimidation réussie 20% terreur, 20%confusion, 60% dépourvu (-2ca)</td>
+            </tr>
+            <tr>
+                <td>10000</td>
+                <td>Heaume de Taïa</td>
+                <td> +2 Con, Position défensive de Taïa augmente réf de 4 et volonté 1 +2 ca, -3 touché</td>
+            </tr>
+            <tr>
+                <td>14000</td>
+                <td>Bracelet Téthyamar</td>
+                <td> +2For, Attaque dévastatrice 2 fois/jour Un jet d&#39;attaque pour exécuter tous ses attaques avec leur bonus</td>
+            </tr>
+            <tr>
+                <td>9300</td>
+                <td>Bracelet Taïa</td>
+                <td> +1 For, +2 Con, Soins soigne de 25% plus</td>
+            </tr>
+            <tr>
+                <td>14000</td>
+                <td>Gant Téthyamar</td>
+                <td> +2 For, +1 chance crit, -3 CA</td>
+            </tr>
+            <tr>
+                <td>9200</td>
+                <td>Gant Taïa</td>
+                <td> +1 CA, +1 For, +4 dg crit</td>
+            </tr>
+            <tr>
+                <td>25000</td>
+                <td>Anneau Téthyamar</td>
+                <td> +2 For, Attaque en rotation d&#39;acide: 1fois/jour infligeant 2d20+(for x2) immobilisant tous les cibles (4r) incluant le joueur</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Anneau Taïa</td>
+                <td> +2 Con, +1CA, Charge enflammée:Peu charger é travers 1 cible et infliger le dg é 2 cibles</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Amulette Téthyamar</td>
+                <td> +2 For, +3dg crit, Les critiques soignent de 10</td>
+            </tr>
+            <tr>
+                <td>20000</td>
+                <td>Amulette Taïa</td>
+                <td> +1For, +1Con, +1Ca, Réduction dg (12) é 25% PV</td>
+            </tr>
+            <tr>
+                <td>14000</td>
+                <td>Ceinture de guerre supréme</td>
+                <td> +2 For, -1 CA, -1 Sag, Attaque en puissance réduit de -3 touché é (5)</td>
+            </tr>
+            <tr>
+                <td>11000</td>
+                <td>Ceinture de contréle</td>
+                <td> +1 For, -1 CA, Permet de perdre une rage pour se soigner du méme nombre de dg infligé ce tour</td>
+            </tr>
+            <tr>
+                <td>9500</td>
+                <td>Chemise de mailles Téthyamar</td>
+                <td> +1 For, 6CA, Dex max 4, 0malus, 18m depl, +3m depl</td>
+            </tr>
+            <tr>
+                <td>9500</td>
+                <td>Chemise de mailles Taïa</td>
+                <td> +1 For, 7Ca, Dex max 5, 0 malus, 18m depl, +10 PV</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Effet</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Téthyamar(4)</td>
+                <td>Arme, Heaume, Bracelet, Gant, Anneau,Amulette, Chemise</td>
+                <td>Les critiques réduient la CA de -2 aux cibles pendant 5rd, permettent de retourner le regard aux cibles affectées</td>
+            </tr>
+            <tr>
+                <td>Taïa (4)</td>
+                <td>Arme, Heaume, Bracelet, Gant, Anneau,Amulette, Chemise</td>
+                <td>Charge destructive de Taïa: 1fois/jour Charge é 30m minimum infligeant 3d20 +for et réduit la CA de -2</td>
+            </tr>
+        </tbody>
+    </table>
+@*}*@

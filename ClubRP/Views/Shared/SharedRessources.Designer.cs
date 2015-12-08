@@ -241,6 +241,24 @@ namespace ClubRP.Views.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Récompense.
+        /// </summary>
+        public static string Reward {
+            get {
+                return ResourceManager.GetString("Reward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorts.
+        /// </summary>
+        public static string Spell {
+            get {
+                return ResourceManager.GetString("Spell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Envoyer.
         /// </summary>
         public static string SubmitBtn {

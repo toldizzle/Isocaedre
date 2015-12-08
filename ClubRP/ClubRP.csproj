@@ -453,6 +453,8 @@
     <Content Include="Views\Personnages\Details.cshtml" />
     <Content Include="Views\Personnages\Edit.cshtml" />
     <Content Include="Views\Personnages\Index.cshtml" />
+    <Content Include="Views\Home\Recompense.cshtml" />
+    <Content Include="Views\Home\Sorts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

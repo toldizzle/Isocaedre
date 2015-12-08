@@ -1,0 +1,4401 @@
+﻿
+@{
+    ViewBag.Title = "Sorts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.DisplayName(ClubRP.Views.Shared.SharedRessources.Spell)</h2>
+
+<table class="table table-bordered table-hover table-condensed">
+    <tbody>
+        <tr>
+            <td>Magie druidique de niveau 0</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Assistance divine (Divination)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>1mn</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td> +1 attaque, jet sauvegarde ou compétence (1 jet seulement)</td>
+        </tr>
+        <tr>
+            <td>Création d&#39;eau  (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>8l/n</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Crée de l&#39;eau potable 8 litres</td>
+        </tr>
+        <tr>
+            <td>Détection de la magie (Universel)</td>
+            <td>18m</td>
+            <td>1/4 de cercle</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td> Détecte en 3rounds Présence, intensité, localisation de la magie</td>
+        </tr>
+        <tr>
+            <td>Détection du poison (Divination)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Créature, objet ou cube de 1,5m</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Bloqué par 90cm de bois ou terre, 30cm de  pierre, 2,5cm de métal ou feuille de plomb</td>
+        </tr>
+        <tr>
+            <td>Illumination (évocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td> </td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V</td>
+            <td>éblouie 1mn -1 jet d&#39;attaques, détection et fouille</td>
+        </tr>
+        <tr>
+            <td>Lecture de la magie (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,F</td>
+            <td>Déchiffre les inscriptions magiques, ne déclenche pas le sort généralement</td>
+        </tr>
+        <tr>
+            <td>Lumiére (évocation)</td>
+            <td>Contact</td>
+            <td>1 objet</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V, FD</td>
+            <td>Lumiére équivalente à une torche. 6m rayon. Sur objet ou immobile</td>
+        </tr>
+        <tr>
+            <td>Purification de nourriture et d&#39;eau (Transmutation)</td>
+            <td>3m</td>
+            <td>30dcm3/n</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Purifie la nourriture avariée ou l&#39;eau croupie. N&#39;évite pas le pourrissement</td>
+        </tr>
+        <tr>
+            <td>Réparation (Transmutation)</td>
+            <td>3m</td>
+            <td>1 objet (500g)</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Petite réparation hors béton, baguette, sceptre et dommages superficiels aux objets.</td>
+        </tr>
+        <tr>
+            <td>Repérage (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Trouver le nord</td>
+        </tr>
+        <tr>
+            <td>Résistance (Abjuration)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>1mn</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>JS+1</td>
+        </tr>
+        <tr>
+            <td>Soins superficiels (Guérison)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td> +1pdv</td>
+        </tr>
+        <tr>
+            <td>Stimulant (Transmutation)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>1mn</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>1 point de vie temporaire</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 1</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Animation du bois (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 objet en bois P-</td>
+            <td>1r/n</td>
+            <td>1 round</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,M</td>
+            <td>Permet d&#39;animer un objet en bois et d&#39;attaquer é distance, ne peut étre porté.</td>
+        </tr>
+        <tr>
+            <td>Apaisement des animaux (Enchantement)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Spécial</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>2d4+1/n  animaux normaux</td>
+        </tr>
+        <tr>
+            <td>Baie nourriciére (Transmutation)</td>
+            <td>Contact</td>
+            <td>2d4 baies</td>
+            <td>1j/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td> +1 pv par baie (max 8pv/24h)</td>
+        </tr>
+        <tr>
+            <td>Brume de dissimulation (Invocation)</td>
+            <td>6m</td>
+            <td>6m rayon et haut</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>20% d&#39;échec aux attaques é 1,5m, 50% au-delé</td>
+        </tr>
+        <tr>
+            <td>Camouflage (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td> +10 discrétion, la peau et ses vétements changent avec l&#39;environnement</td>
+        </tr>
+        <tr>
+            <td>Charme animal (Enchantement)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 animal</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Comme charme-personne sur animal, s&#39;il y a une menace l&#39;effet s&#39;annule</td>
+        </tr>
+        <tr>
+            <td>Communication avec les animaux (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Permet de comprendre les animaux et de communiquer</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels I (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td>1round</td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>218 Voir table</td>
+        </tr>
+        <tr>
+            <td>Détection de la faune et de la flore Divination)</td>
+            <td>120m+12/n </td>
+            <td>Céne</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Présence, nombre, état de la chose cherchée dans une zone</td>
+        </tr>
+        <tr>
+            <td>Détection des collets et des fosses (Divination)</td>
+            <td>18m</td>
+            <td>Céne</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Bloqué par 90cm de bois ou terre, 30cm de  pierre, 2,5cm de métal ou feuille de plomb</td>
+        </tr>
+        <tr>
+            <td>Enchevétrement (Transmutation)</td>
+            <td>120+12m/n</td>
+            <td>Rayon de 12m</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R</td>
+            <td>V,G,FD</td>
+            <td>Végétation entortille les créatures dans la zone Réduit 50% déplacement méme aprés jet sauvegarde réussi</td>
+        </tr>
+        <tr>
+            <td>Endurance aux énergies destructives (Abjuration)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>24h</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td> De -10é é +60é, équipement compris n&#39;annule pas le dégét</td>
+        </tr>
+        <tr>
+            <td>Esprit des bois (Invocation création)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>/</td>
+            <td>/</td>
+            <td>V,G,FD</td>
+            <td>Invoque un esprit de la nature vert translucide pour faire missions simple en lien avec la nature</td>
+        </tr>
+        <tr>
+            <td>Flammes (évocation)</td>
+            <td>0m</td>
+            <td>Paume</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G</td>
+            <td>Armes de corps é corps (1d6+1/n max 5) ou de jet (36m)</td>
+        </tr>
+        <tr>
+            <td>Fléau des plantes (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1rd</td>
+            <td>rapide</td>
+            <td>/</td>
+            <td>/</td>
+            <td>V,FD</td>
+            <td>Permet d&#39;effectuer des attaques sournoises contre les plantes</td>
+        </tr>
+        <tr>
+            <td>Gourdin magique (Transmutation)</td>
+            <td>Contact</td>
+            <td>Gourdin</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>2d6dégéts avec béton et +1 dégéts (avec 2 catégories de taille supplémentaires)</td>
+        </tr>
+        <tr>
+            <td>Grand pas (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,M</td>
+            <td> +3m vitesse de déplacement</td>
+        </tr>
+        <tr>
+            <td>Griffes argentées (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Transforme les attaques naturelles en armes d&#39;argent.</td>
+        </tr>
+        <tr>
+            <td>Invisibilité pour les animaux (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 créature/n</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Rend les animaux invisibles jusqu&#39;é ce qu&#39;ils attaquent ou touche une créature</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 1</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Lueur féerique (évocation)</td>
+            <td>120+12m/n</td>
+            <td>Rayon de 1,5m</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>éclaire les cibles et les rend plus visibles, empéche camouflage,invisibilité et flou</td>
+        </tr>
+        <tr>
+            <td>Mauvais augure (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>instant</td>
+            <td>1 round</td>
+            <td>/</td>
+            <td>/</td>
+            <td>V,FD</td>
+            <td>70% +1/n de recevoir une prémonition pour soi. Chemin de sécurité - Péril: défi classique - Grand danger piéges mortel pour la prochaine heure</td>
+        </tr>
+        <tr>
+            <td>Monture du voyageur (Transmutation)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V</td>
+            <td>V,G</td>
+            <td>La monture gagne +3m déplacement, mais ne peut plus attaquer</td>
+        </tr>
+        <tr>
+            <td>Morsure magique (Transmutation)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td> +1 att. et dg. é une arme naturelle</td>
+        </tr>
+        <tr>
+            <td>éil du faucon (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>/</td>
+            <td>/</td>
+            <td>V</td>
+            <td>Les armes é distance du lanceur augmente de 50% poortée et +5 Détection</td>
+        </tr>
+        <tr>
+            <td>Passage sans trace (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature/n</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Sur une surface de son choix</td>
+        </tr>
+        <tr>
+            <td>Pierre magique (Transmutation)</td>
+            <td>Contact</td>
+            <td>3 cailloux</td>
+            <td>30mn</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td> +1 att; portée de 6m é la main; 1d6+1 (2d6+2 contre morts vivants)</td>
+        </tr>
+        <tr>
+            <td>Repos bienfaisant (Invocation guérison)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td>24h</td>
+            <td>10min</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Double vitesse guérison naturelle 82 joueurs</td>
+        </tr>
+        <tr>
+            <td>Saut (Transmutation)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,M</td>
+            <td> +10 en saut (+20 au n5; +30 au n9). Patte arriére de sauterelle é briser</td>
+        </tr>
+        <tr>
+            <td>Soins légers (Soin)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td> 1d8+1/n (max +5)</td>
+        </tr>
+        <tr>
+            <td>Souffle de sable (évocation)</td>
+            <td>3m</td>
+            <td>3m</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R1/2 -RM</td>
+            <td>V,G,FD</td>
+            <td>Inflige 1d6 dg et étourdi les cibles affectées pendant 1rd</td>
+        </tr>
+        <tr>
+            <td>Vigueur mineure (Invocation guérison)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>10rd+1/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Stabilise les mourants et donne 1pv/rd</td>
+        </tr>
+        <tr>
+            <td>Yeux de l&#39;avoral (Transmutation)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>G</td>
+            <td> +8 test de détection yeux peréant d&#39;avoral</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 2</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Animal de cirque (Enchantement)</td>
+            <td>Contact</td>
+            <td>Animaux</td>
+            <td>1h/n</td>
+            <td>10min</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Augmente temporairement le nombre de tours de 1 / 2n</td>
+        </tr>
+        <tr>
+            <td>Animation du feu (transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Flamme</td>
+            <td> </td>
+            <td>1round</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>Anime le feu devenant un faible élémentaire de feu</td>
+        </tr>
+        <tr>
+            <td>Annulation de dépendance (Invocation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Retire toutes les dépendances de la cible</td>
+        </tr>
+        <tr>
+            <td>Bourrasque (évocation)</td>
+            <td>18m</td>
+            <td>Ligne</td>
+            <td>1r</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td> 75km/h vitesse maximum</td>
+        </tr>
+        <tr>
+            <td>Branche é branche (transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Permet de se balancer d&#39;arbre en arbre +10 escalade dans les arbres +3m depl</td>
+        </tr>
+        <tr>
+            <td>Caresse des tourments (Nécromancie)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>Vi -RM</td>
+            <td>V,G</td>
+            <td>Inflige 1d6 +1/n dg ainsi que son bonus d&#39;attaque sournoise</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels II (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Créatures</td>
+            <td>1r/n</td>
+            <td>1round</td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td> 1 créature niveau 2 ou 1d3 niveau 1</td>
+        </tr>
+        <tr>
+            <td>Corps solaire (Transmutation)</td>
+            <td>1,5m</td>
+            <td>Lanceur</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R - RM</td>
+            <td>V,G,FD</td>
+            <td>Dégage des flammes depuis son corps entier illuminant et infligeant 1d4+1 é tout se qui touche</td>
+        </tr>
+        <tr>
+            <td>Création de sentier (Abjuration)</td>
+            <td>12m</td>
+            <td>12m rayon</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G</td>
+            <td>Repousse les plantes annulant les malus de déplacements, une fois terminé les plantes se replacent.</td>
+        </tr>
+        <tr>
+            <td>Décomposition (Nécromancie)</td>
+            <td>15m</td>
+            <td>15m rayon</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>Les ennemis autour du druide recoivent 1dg suppl/rd lorsqu&#39;ils sont blessé</td>
+        </tr>
+        <tr>
+            <td>Distorsion du bois (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Spécial</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td> 1 objet en bois de taille P/n é 6m. Taille M=2P, G=4P, TG=8P etc.</td>
+        </tr>
+        <tr>
+            <td>Endurance de l&#39;ours (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td> +4 en constitution</td>
+        </tr>
+        <tr>
+            <td>équilibre intuitif (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td> +4 équilibre dans toutes les circonstances (bonus si 10 équilibre)</td>
+        </tr>
+        <tr>
+            <td>étreinte naturelle (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V</td>
+            <td>Permet de gagner les sens d&#39;une créature choisie ainsi que les tests de compétences</td>
+        </tr>
+        <tr>
+            <td>Faéonnage du bois (Transmutation)</td>
+            <td>Contact</td>
+            <td>0,3m3+30dm3/n</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Permet de faéonner le bois</td>
+        </tr>
+        <tr>
+            <td>Faveur de la nature (évocation)</td>
+            <td>Contact</td>
+            <td>1 animal</td>
+            <td>1min</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>(+1 touché et dg)/3n (max 5) é l&#39;animal</td>
+        </tr>
+        <tr>
+            <td>Force de taureau (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td> +4 en force</td>
+        </tr>
+        <tr>
+            <td>Forme d&#39;arbre (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>CA+10, dextérité é 0, immunité aux coups critiques</td>
+        </tr>
+        <tr>
+            <td>Gréce féline</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,M</td>
+            <td> +4 en dextérité. Poils de chat</td>
+        </tr>
+        <tr>
+            <td>Homochromie (Illusion)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1h/n</td>
+            <td>1round</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G,M</td>
+            <td>Modifie la couleur de la cible pour se confondre dans l&#39;environnement +10 discrétion</td>
+        </tr>
+        <tr>
+            <td>Hypnose des animaux (Enchantement)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Animaux</td>
+            <td>Conc</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>animaux maximum 2d6 DV</td>
+        </tr>
+        <tr>
+            <td>Immobilisation d&#39;animal (Enchantement)</td>
+            <td>30+3m/n</td>
+            <td>1 animal</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1/r</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Reste figer sur place, ne peut agir, ni parler</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 2</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Intuition auditive (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td> +4 Perception auditive dans toutes les circonstances (bonus si 10 perception auditive)</td>
+        </tr>
+        <tr>
+            <td>Intuition du guérisseur</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1m/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,M</td>
+            <td>Degré maétrise premier secours en bonus aux sorts de soins (jusqu&#39;au maximum) et enléve 1 effet négati</td>
+        </tr>
+        <tr>
+            <td>Lame de feu (évocation)</td>
+            <td>0m</td>
+            <td>Flamme</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>Cimeterre de feu 1d8+1/2n (max +10). Pas de modificateur de force</td>
+        </tr>
+        <tr>
+            <td>Messager animal (Enchantement)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 animal TP</td>
+            <td>1j/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,M</td>
+            <td>Nourriture appréciée par l&#39;animal</td>
+        </tr>
+        <tr>
+            <td>Métal brélant (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Spécial</td>
+            <td>7r</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>équipement d&#39;1 créature/2n ou 12,5kg de métal/n é 9m.</td>
+        </tr>
+        <tr>
+            <td>Métal gelé (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Spécial</td>
+            <td>7r</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>1er rd froid 2eme 1d4 3-5eme 2d4      6eme 1d4</td>
+        </tr>
+        <tr>
+            <td>Nage (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>1 round</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G,M</td>
+            <td>Permet de nager rapidement +8 Natation</td>
+        </tr>
+        <tr>
+            <td>Nappe de brouillard (Invocation)</td>
+            <td>30m+3m/n</td>
+            <td>9m rayon 6m haut</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td> 20% d&#39;échec aux attaques é 1,5m, 50% au-delé</td>
+        </tr>
+        <tr>
+            <td>Nuée grouillante (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 nuée</td>
+            <td>Conc.+2r</td>
+            <td>1 round</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Chauves-souris, rats ou araignées</td>
+        </tr>
+        <tr>
+            <td>Odorat (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G,M</td>
+            <td>Bonus fantastique é l&#39;odorat détecte é 9m</td>
+        </tr>
+        <tr>
+            <td>Pattes d&#39;araignée (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,M</td>
+            <td>Goutte de bitume et araignée vivante, escalade sur les murs</td>
+        </tr>
+        <tr>
+            <td>Peau d&#39;écorce (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>CA+2+1/3n (max +5)</td>
+        </tr>
+        <tr>
+            <td>Piége é feu (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 objet</td>
+            <td>perman</td>
+            <td>10min</td>
+            <td>1</td>
+            <td>R1/2 - RM</td>
+            <td>V,G,M</td>
+            <td>Explosion si l&#39;on ouvre le piége 1d4 (+1/n) rayon 1,5m</td>
+        </tr>
+        <tr>
+            <td>Posture enchantelame (abjuration)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1r/n</td>
+            <td>rapide</td>
+            <td> </td>
+            <td> </td>
+            <td>V,F</td>
+            <td>Défense é deux dagues et attaques +2 touché et dg offre RM de 5 + niv</td>
+        </tr>
+        <tr>
+            <td>Rafale de pluie (évocation)</td>
+            <td>120m+12m/n</td>
+            <td>30m rayon</td>
+            <td>10mn/n</td>
+            <td>1round</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G</td>
+            <td>1 round entier, -4 détection et fouille, éteint les flammes, Sort é l&#39;extérieur, l&#39;eau s&#39;évapore en 10min et ne nourrit pas.</td>
+        </tr>
+        <tr>
+            <td>Ragoét d&#39;Estanna (Invocation)</td>
+            <td>0m</td>
+            <td>Marmite</td>
+            <td>1h</td>
+            <td>1round</td>
+            <td>1</td>
+            <td>V1/2 -RM</td>
+            <td>V,G,F</td>
+            <td>Une portion rend 1d6+1 (action simple) prend 1 round incantation</td>
+        </tr>
+        <tr>
+            <td>Ralentissement du poison (Invocation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Temporairement immunisé au poison</td>
+        </tr>
+        <tr>
+            <td>Ramollissement de la terre et de la pierre (Trans.)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Carré de 3m/n</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Carré de 3m de cété, profond de 30cm é 1,20m selon résistance. Pierre brute et non travaillée</td>
+        </tr>
+        <tr>
+            <td>Rapetissement d&#39;animal (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 animal</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Animal consentant de taille P,M,G,TP</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 2</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td> </td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Résistance aux énergies destructives (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FR</td>
+            <td>Protége d&#39;une énergie choisie: 10 pts par attaque, 20 au n7, 30 au n11</td>
+        </tr>
+        <tr>
+            <td>Restauration partielle (Soin)</td>
+            <td>Contact</td>
+            <td>Spécial</td>
+            <td> </td>
+            <td>3rounds</td>
+            <td>3r</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Restaure les réduction temporaires de caractéristique ainsi que la fatigue</td>
+        </tr>
+        <tr>
+            <td>Ronces (Transmutation)</td>
+            <td>Contact</td>
+            <td>Arme en bois</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,M</td>
+            <td>Fait apparaitre des épines magiques sur armes en bois infligeant +1dg/niv(max 10) et +1 touché pas les arcs</td>
+        </tr>
+        <tr>
+            <td>Sagesse du hibou (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td> +4 en sagesse</td>
+        </tr>
+        <tr>
+            <td>Sphére de feu (évocation)</td>
+            <td>30+3m/n</td>
+            <td>1,5m de rayon</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R - RM</td>
+            <td>V,G,FD</td>
+            <td> Déplacement en roulant ou par bon de 9m/r. 2D6 pts</td>
+        </tr>
+        <tr>
+            <td>Toile de ronces (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>végétation 6m r</td>
+            <td>1m/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R - RM</td>
+            <td>V,G,FD</td>
+            <td>Réduit vitesse de 50% et inflige 2d6 dg si traversée. Difficulté é faire des sorts é l&#39;intérieur</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 3</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Affection (Nécromancie)</td>
+            <td>Contact</td>
+            <td>créature mal</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Affecte une créature maléfique d&#39;une maladie, réduisant 1d4 caractérisque au choix</td>
+        </tr>
+        <tr>
+            <td>Ailes de feu (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1mn/n</td>
+            <td>1 round</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,M,F</td>
+            <td>Transforme les bras en ailes de feu, impossible de faire des sorts gestuels, vol 18m, inflige 2d6 dg contact</td>
+        </tr>
+        <tr>
+            <td>Appel de la foudre (évocation)</td>
+            <td>30m+3m/n</td>
+            <td>Traits de 1,5x9m</td>
+            <td>1mn/n</td>
+            <td>1 round</td>
+            <td>1r</td>
+            <td>R1/2 - RM</td>
+            <td>V,G,FD</td>
+            <td>1 action simple par éclair, 1 éclair par niveau, 3d6 pts (3d10 sous un orage), fonctionne en intérieur et sous terre</td>
+        </tr>
+        <tr>
+            <td>Barbelures (Transmutation)</td>
+            <td>Contact</td>
+            <td>arme bois</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,M</td>
+            <td> +2 toucher et double chance critique sur arme en bois</td>
+        </tr>
+        <tr>
+            <td>Béton d&#39;enchevétrement (Transmutation)</td>
+            <td>Contact</td>
+            <td>béton</td>
+            <td>1r/n</td>
+            <td>rapide</td>
+            <td>1</td>
+            <td>RM</td>
+            <td> </td>
+            <td>Donne +8 test de lutte et créer des lianes aprés avoir touché avec un béton. Inflige 2d6 ou immobilise</td>
+        </tr>
+        <tr>
+            <td>Collet (Transmutation)</td>
+            <td>Contact</td>
+            <td>60cm+60cm/n</td>
+            <td> </td>
+            <td>3rounds</td>
+            <td>3r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Piége magique pouvant infliger 1d6 pts Détection 23, DD 23 For/évasion pour sortir du piége</td>
+        </tr>
+        <tr>
+            <td>Communication avec les plantes (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Réponse limitées d&#39;un type de plante</td>
+        </tr>
+        <tr>
+            <td>Contagion (Nécromancie, Mal)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Inocule une maladie, peu rendre aveugle, -1d4 caractéristique au choix DD plus facile</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels III (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td>1round</td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>1 créature de n3 ou 1d3 de n2 ou 1d4+1 de n1</td>
+        </tr>
+        <tr>
+            <td>Croissance d&#39;épines (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>Carré de 6m/n</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R* - RM</td>
+            <td>V,G,FD</td>
+            <td>1d4 pts tous les 1,50m, réduit de moitié le déplacement</td>
+        </tr>
+        <tr>
+            <td>Croissance végétale (Transmutation)</td>
+            <td>Spéciale</td>
+            <td>Spéciale</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Page 225 sur jungle max depl 1,5m, peut choisir des points non affectés</td>
+        </tr>
+        <tr>
+            <td>Déferlante (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>flots sous créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R - RM</td>
+            <td>V,G,FD</td>
+            <td>Repousse une créature jusqu&#39;é 18m avec l&#39;eau déjé présente</td>
+        </tr>
+        <tr>
+            <td>Domination d&#39;animal (Enchantement)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 animal</td>
+            <td>1r/n</td>
+            <td>1 round</td>
+            <td>1r</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Envoéte un animal télépathiquement (pas de suicide)</td>
+        </tr>
+        <tr>
+            <td>Empoisonnement (Nécromancie)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>Vi - RM</td>
+            <td>V,G,FD</td>
+            <td>1d10 pts de constitution  +1d10 1mn plus tard</td>
+        </tr>
+        <tr>
+            <td>Extinction des feux (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>Cube de 6m/n</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>étouffe les incendies d&#39;origine naturelle, magique DD 1d20 + 1/niv vs DD 11 + sort, Inflige aux élémentaires feu 1d6 /niv</td>
+        </tr>
+        <tr>
+            <td>Faéonnage de la pierre (Transmutation)</td>
+            <td>Contact</td>
+            <td>0,3m3+30dm3/n</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Faéonne la pierre naturelle</td>
+        </tr>
+        <tr>
+            <td>Faveur de la nature (évocation)</td>
+            <td>Contact</td>
+            <td>animal</td>
+            <td>1min</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,ED</td>
+            <td> (+1touché et dégét)/3n é l&#39;animal</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 3</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Fusion dans la pierre (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Peu entrer dans la pierre et faire des sorts sur soi-méme</td>
+        </tr>
+        <tr>
+            <td>Griffes bestiales (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1min/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Donne des griffes argentées é la cible</td>
+        </tr>
+        <tr>
+            <td>Guérison des maladies (Invocation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Soigne toutes les maladies du sujet</td>
+        </tr>
+        <tr>
+            <td>Infestation d&#39;asticots (Nécromancie)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1r/2n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>Vi - RM</td>
+            <td>V,G,M</td>
+            <td> -1d4 con / round 1 jet sauv / round</td>
+        </tr>
+        <tr>
+            <td>Lumiére du jour (évocation)</td>
+            <td>Contact</td>
+            <td>1 objet</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>éclaire 18m rayon contre ténébre</td>
+        </tr>
+        <tr>
+            <td>Morsure magique supréme (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td> +1/4n att. et dom. (max +5) é une arme naturelle</td>
+        </tr>
+        <tr>
+            <td>Mur de vent (évocation)</td>
+            <td>30m+3m/n</td>
+            <td>3m/nx1,5m/n</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>Protége contre projectiles 3m de long/niv 1,5m haut/niv, bloque le gaz</td>
+        </tr>
+        <tr>
+            <td>Neutralisation du poison (Invocation)</td>
+            <td>Contact</td>
+            <td>Créature ou objet</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Créature ou objet de 30dm3/n</td>
+        </tr>
+        <tr>
+            <td>Protection contre les énergies destructives (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Protége d&#39;une forme d&#39;énergie choisie: 12 pts/n (max 120)</td>
+        </tr>
+        <tr>
+            <td>Rabougrissement des plantes (Transmutation)</td>
+            <td>Spéciale</td>
+            <td>Spéciale</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Réduction densité ou productivité</td>
+        </tr>
+        <tr>
+            <td>Résistances aux énergies destructives</td>
+            <td>Contact</td>
+            <td>1 Créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>Vi - RM</td>
+            <td>V,G,FD</td>
+            <td>Confére une protection contre 1 énergie choisie de (10) niv 7 (20) niv 11 (30)</td>
+        </tr>
+        <tr>
+            <td>Respiration aquatique (Transmutation)</td>
+            <td>Contact</td>
+            <td>Créatures</td>
+            <td>2h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Respiration aquatiqueé</td>
+        </tr>
+        <tr>
+            <td>Soins modérés (Soin)</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td> 2d8+1/n (max +10)</td>
+        </tr>
+        <tr>
+            <td>Tempéte de neige (Invocation)</td>
+            <td>120m+12m/n</td>
+            <td>Cylindre 12mx6m</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>296 Visibilité nulle et test d&#39;équilibre pour demie vitesse ou chute</td>
+        </tr>
+        <tr>
+            <td>Vigueur (Invocation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10r+1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Guérison accélérée (2)</td>
+        </tr>
+        <tr>
+            <td>Vigueur mineure de groupe</td>
+            <td>1 créature/2n</td>
+            <td>6m</td>
+            <td>10r+1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Guérison accélérée (1)</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Vol rapide (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1r</td>
+            <td>rapide</td>
+            <td> </td>
+            <td> </td>
+            <td>V</td>
+            <td>Permet de voler pour 1 round (18m)</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 4</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Arc de foudre (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 ligne entre 2</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R1/2</td>
+            <td>V,G,M,FD</td>
+            <td>Arc électrique entre 2 créatures dans la portée du sort 1d6/niv foudre</td>
+        </tr>
+        <tr>
+            <td>Beauté aveuglante (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Abstinence nécessaire: rayon 18m tous les humanoédes doivent faire un jet vigeur sous peine d&#39;étre aveuglé é jamais</td>
+        </tr>
+        <tr>
+            <td>Brume meurtriére (évocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>zone</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R1/2 - RM</td>
+            <td>V,G</td>
+            <td>9m rayon / 6m haut, se déplace de 3m/round Infligeant 2d6 et aveugle é jamais. Ne rend pas aveugle si résisté</td>
+        </tr>
+        <tr>
+            <td>Camouflage de groupe (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>créatures 18m</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Comme camouflage, mais de groupe si distance de 18m+ du lanceur s&#39;annule</td>
+        </tr>
+        <tr>
+            <td>Chaéne de témoins (Divination)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Permet de voir dans les yeux de la cible touché et les autres cibles qu&#39;elle touche</td>
+        </tr>
+        <tr>
+            <td>Colonne de feu (évocation)</td>
+            <td>30m+3m/n</td>
+            <td>Cylindre 12mx3m</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R1/2 - RM</td>
+            <td>V,G,FD</td>
+            <td>1d6/n (max 15d6) Protection contre le feu fonctionne 1/2</td>
+        </tr>
+        <tr>
+            <td>Contréle de l&#39;eau (Transmutation)</td>
+            <td>120m+12m/n</td>
+            <td>3m/nx3m/nx60cm/n</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Abaissement ou élévation des eaux</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels IV (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td>1round</td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>1 créature de n4 ou 1d3 de n3 ou 1d4+1 de niveau moindre</td>
+        </tr>
+        <tr>
+            <td>Coquille antiplante (Abjuration)</td>
+            <td>3m</td>
+            <td>Rayon de 3m</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>Protége contre les attaques de type végétales</td>
+        </tr>
+        <tr>
+            <td>Dissipation de la magie (Abjuration)</td>
+            <td>30m+3m/n</td>
+            <td>Rayon de 6m</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Dissipation ciblée, de zone ou contresort. Pas de jet de protection. 1d20+1/n (max 10) contre 11+niveau du lanceur de l&#39;effet é dissiper</td>
+        </tr>
+        <tr>
+            <td>Empire végétal (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>2DV/n</td>
+            <td>1j/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V</td>
+            <td>Empéche les plantes d&#39;attaquer le personnage et ses alliés et peut donner certaines ordres</td>
+        </tr>
+        <tr>
+            <td>étoiles d&#39;Arvandor (évocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1créature/r</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G</td>
+            <td>1 étoile/niv (max 10) ingligeant 1d8 au mal/étoile. 1étoile = action libre, 3 = action simple</td>
+        </tr>
+        <tr>
+            <td>Flacon de fumée</td>
+            <td>Contact</td>
+            <td>1créature</td>
+            <td>1h/n</td>
+            <td>10 min</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G,F</td>
+            <td>Créer un cheval de fumée seul la personne avec le flacon de fumée peut s&#39;en servir 6m depl/niv (72max)</td>
+        </tr>
+        <tr>
+            <td>Flétrissement végétal (Nécromancie)</td>
+            <td>Contact</td>
+            <td>Spéciale</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>1d6/n pts de dommages (max 15d6) aux plantes</td>
+        </tr>
+        <tr>
+            <td>Langueur (Transmutation)</td>
+            <td>7,5m+1,5/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>Ralentie la cible et malus cumulatif de -(1d6-1)For/2niv</td>
+        </tr>
+        <tr>
+            <td>Liberté de mouvement (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FM,D</td>
+            <td>Permet des mouvements normaux sous l&#39;eau, contre effets magiques et contre la lutte</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 4</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Maelstrom d&#39;énergie destructive</td>
+            <td>6m</td>
+            <td>créatures 6m ray</td>
+            <td>instant</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R1/2 - RM</td>
+            <td>V,G</td>
+            <td>Choix(acide,foudre,feu,froid,son) Inflige 1d8+1/niv, sacrifice 1d8+1/niv et fait 2x plus de dégéts</td>
+        </tr>
+        <tr>
+            <td>Marche dans les airs (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>Angle max de 45é et demi vitesse, sinon vitesse normale</td>
+        </tr>
+        <tr>
+            <td>Pierres acérées (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>Carré de 6m/n</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>R - RM</td>
+            <td>V,G,FD</td>
+            <td>Piége magique indétectable (sauf roublard)1d8 pts par 1,50m et demi vitesse</td>
+        </tr>
+        <tr>
+            <td>Réincarnation (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td> </td>
+            <td>10min</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G,M,FD</td>
+            <td>1000po, Un mort de moins d&#39;une semaine, conserve aptitudes et dons, mais pas caractéristiques</td>
+        </tr>
+        <tr>
+            <td>Répulsif (Abjuration)</td>
+            <td>3m</td>
+            <td>Rayon de 3m</td>
+            <td>10mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>Barriére qui repousse la vermine</td>
+        </tr>
+        <tr>
+            <td>Rouille (Transmutation)</td>
+            <td>Contact</td>
+            <td>Spéciale</td>
+            <td>1r/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>Objet ferreux non magique (jusqu&#39;é 90cm du point de contact) ou créature ferreuse (3d6+1/n, max +15)</td>
+        </tr>
+        <tr>
+            <td>Scrutation (Divination)</td>
+            <td>Spéciale</td>
+            <td>Capteur magique</td>
+            <td>1mn/n</td>
+            <td>1h</td>
+            <td>1h</td>
+            <td>V - RM</td>
+            <td>V,G,FD,F</td>
+            <td>Permet d&#39;espionner une créature avec une certaine connaissance de la cible</td>
+        </tr>
+        <tr>
+            <td>Soins importants</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td> </td>
+            <td>simple</td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td>3d8+1/n (max +35)</td>
+        </tr>
+        <tr>
+            <td>Tempéte de gréle (évocation)</td>
+            <td>120m+12m/n</td>
+            <td>Cylindre 12mx6m</td>
+            <td>10r</td>
+            <td>simple</td>
+            <td> </td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>3d6 contondant et 2d6 de froid, -4 en perception auditive, demi vitesse. 1round</td>
+        </tr>
+        <tr>
+            <td>Vermine géante (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>3 créatures</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>Transforme vermine (mille-pattes, araignées é) en créature géante</td>
+        </tr>
+        <tr>
+            <td>Vitalité accrue (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td>1</td>
+            <td>Vi - RM</td>
+            <td>V,G,FD</td>
+            <td>Immunité é la fatigue, épuisement, affaiblissement et diminution de caractéristique</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 5</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Appel de la tempéte (évocation)</td>
+            <td>120m+12m/n</td>
+            <td>Traits de 1,5x9m</td>
+            <td>1mn/n</td>
+            <td>1 round</td>
+            <td>1r</td>
+            <td>R1/2 - RM</td>
+            <td>V,G</td>
+            <td>1 action simple par éclair, 5d6 pts ou 5d10 pendant un orage. Fonctionne en intérieur et sous terre</td>
+        </tr>
+        <tr>
+            <td>Brume de pureté (Abjuration)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1mn/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G</td>
+            <td>S&#39;entoure d&#39;un nuage de brume purifiante 1,5m rayon/niv repoussant tous les polluant dans l&#39;air (magique aussi) si le niveau du lanceur est suffisament haut, sinon +4 sauv</td>
+        </tr>
+        <tr>
+            <td>Cerf fantéme (Invocation)</td>
+            <td> </td>
+            <td>0m</td>
+            <td>1h/n</td>
+            <td>simple</td>
+            <td> </td>
+            <td> </td>
+            <td>V,G</td>
+            <td>Invoque un cerf tangible de grande taille avec 20 CA, 40 +5pv/nic,(10)1d8+9 sabots x2 si charge, se déplace é 6m/niv(90m max), ignore les obstacles, niv 12 marche dans les airs +2 CA, niv 16 spéciale sanglante spectrale +6CA  </td>
+        </tr>
+        <tr>
+            <td>Cocon de jouvence</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Communion avec la nature (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td> </td>
+            <td> </td>
+            <td>10mn</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>215 1,5km/n en extérieur, 30m/n dans les lieux naturels souterrains</td>
+        </tr>
+        <tr>
+            <td>Contréle des vents (Transmutation)</td>
+            <td>12m/n</td>
+            <td>Cylindre 12mx12m/n</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V</td>
+            <td>V,G</td>
+            <td>217 Affecte direction et force (1 cran/3n)</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels V (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>218 1 créature de n5 ou 1d3 de n4 ou 1d4+1 de niveau moindre</td>
+        </tr>
+        <tr>
+            <td>Croissance animale (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>1 animal/2n</td>
+            <td>1h/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>R - RM</td>
+            <td>V,G</td>
+            <td>225 Double la taille des animaux (force, constitution, etc. modifiés é l&#39;avenant)</td>
+        </tr>
+        <tr>
+            <td>énergie de guérison</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>épines empoisonnées</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>éveil (Transmutation)</td>
+            <td>Contact</td>
+            <td>Animal ou arbre</td>
+            <td> </td>
+            <td> </td>
+            <td>24h</td>
+            <td>V - RM</td>
+            <td>V,G,FD,PX</td>
+            <td>239 Donne conscience</td>
+        </tr>
+        <tr>
+            <td>Explosion de piquants</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Fléau d&#39;insectes (Invocation)</td>
+            <td>120m+12m/n</td>
+            <td>1 nuée/3n</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>242</td>
+        </tr>
+        <tr>
+            <td>Lance de Valarian</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Mante marine</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Métamorphose funeste (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>Perm.</td>
+            <td> </td>
+            <td>1</td>
+            <td>V -Vo - RM</td>
+            <td>V,G</td>
+            <td>259 Transforme en animal de taille P</td>
+        </tr>
+        <tr>
+            <td>Mur d&#39;épines (Invocation)</td>
+            <td>30m+3m/n</td>
+            <td>Cube de 3m/n</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>263 25pts/r-CA (hors bonus dex et esquive, créature de CA &gt; 24 non affectées), déplacement affectés</td>
+        </tr>
+        <tr>
+            <td>Mur de feu (évocation)</td>
+            <td>30m+3m/n</td>
+            <td>Spécial</td>
+            <td>Conc.+1r/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>263 Rideau long de 6m/n ou anneau de 1,5m/2n de rayon, 5m de haut. 2d6+1/n (max +20) pour le traverser, 2d4 é 3m, 1d4 de 3 é 6m</td>
+        </tr>
+        <tr>
+            <td>Peau de pierre (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,M</td>
+            <td>270 Réduction dommages 10/n (adamantium, max 150). Du granit et 250po de poudre de diamant saupoudrée sur le sujet</td>
+        </tr>
+        <tr>
+            <td>Pénitence (Abjuration)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td> </td>
+            <td> </td>
+            <td>1h</td>
+            <td>RM</td>
+            <td>V,G,M,F,FD,PX</td>
+            <td>270 Soulage la conscience. Encens. 500xp</td>
+        </tr>
+        <tr>
+            <td>Pourriture végétale</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Protection contre la mort (Nécromancie)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>276 Immunité aux sorts de mort</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 5</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Sanctification (évocation)</td>
+            <td>Contact</td>
+            <td>Rayon de 12m</td>
+            <td> </td>
+            <td> </td>
+            <td>24h</td>
+            <td>Spécial</td>
+            <td>V,G,M,FD</td>
+            <td>285 Sanctifie lieu ou bétiment. 1000po d&#39;herbes, huiles rares et encens et 1000po/n du sort associé</td>
+        </tr>
+        <tr>
+            <td>Sanctification maléfique (évocation, Mal)</td>
+            <td>Contact</td>
+            <td>Rayon de 12m</td>
+            <td> </td>
+            <td> </td>
+            <td>24h</td>
+            <td>Spécial</td>
+            <td>V,G,M</td>
+            <td>286  1000po d&#39;herbes, huiles rares et encens et 1000po/n du sort associé</td>
+        </tr>
+        <tr>
+            <td>Soins intensifs</td>
+            <td>Contact</td>
+            <td>Créature</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td>289 4d8+1/n (max +20)</td>
+        </tr>
+        <tr>
+            <td>Toile dansante</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Transmutation de la boue en pierre (Trans.)</td>
+            <td>30m+3m/n</td>
+            <td>2 cubes de 3m/n</td>
+            <td>Perm.</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>298</td>
+        </tr>
+        <tr>
+            <td>Transmutation de la pierre en boue (Trans.)</td>
+            <td>30m+3m/n</td>
+            <td>2 cubes de 3m/n</td>
+            <td>Perm.</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>298</td>
+        </tr>
+        <tr>
+            <td>Vents paralysants</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Vigueur supréme</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Voyage par les arbres (Invocation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1h/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>303 1 téléportation par niveau</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 6</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Béton é sort (Transmutation)</td>
+            <td>Contact</td>
+            <td>Béton</td>
+            <td>Utilisation</td>
+            <td> </td>
+            <td>10mn</td>
+            <td>V - RM</td>
+            <td>V,G,F</td>
+            <td>204 Stocker un sort non mémorisé</td>
+        </tr>
+        <tr>
+            <td>Bois de fer (Transmutation)</td>
+            <td>0m</td>
+            <td>2,5Kg/n</td>
+            <td>1j/n</td>
+            <td> </td>
+            <td>Spé.</td>
+            <td> </td>
+            <td>V,G,M</td>
+            <td>205 Temps d&#39;incantation de 1mn/500g</td>
+        </tr>
+        <tr>
+            <td>Chéne animé (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 arbre</td>
+            <td>1j/n</td>
+            <td> </td>
+            <td>10mn</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>211 Transforme un chéne en gardien</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels VI (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>218 1 créature de n6 ou 1d3 de n5 ou 1d4+1 de niveau moindre</td>
+        </tr>
+        <tr>
+            <td>Coquille antivie (Abjuration)</td>
+            <td>3m</td>
+            <td>Rayon de 3m</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>222 Créatures artificielles, élémentaires, extérieurs et morts-vivants non affectées</td>
+        </tr>
+        <tr>
+            <td>Dissipation supréme (Abjuration)</td>
+            <td>30m+3m/n</td>
+            <td>Rayon de 6m</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>VGM</td>
+            <td>233 Dissipation ciblée, de zone ou contresort. Pas de jet de protection. 1d20+1/n (max 20) contre 11+niveau du lanceur de l&#39;effet é dissiper. Cil de basilique, gomme arabique, goéte d&#39;eau de chaux</td>
+        </tr>
+        <tr>
+            <td>éloignement du bois (Transmutation)</td>
+            <td>18m</td>
+            <td>Ligne de 18m</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>236 Aucune concentration nécessaire. Tous les objets en bois non fixés sont repoussés de 12m/r</td>
+        </tr>
+        <tr>
+            <td>Endurance de l&#39;ours de groupe (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>237 +4 en constitution</td>
+        </tr>
+        <tr>
+            <td>Force de taureau de groupe (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>243 +4 en force</td>
+        </tr>
+        <tr>
+            <td>Germes de feu (Invocation)</td>
+            <td>Contact</td>
+            <td>4 glands ou 8 baies</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>R1/2 - RM</td>
+            <td>V,G,M</td>
+            <td>244 Glands explosifs (30m, 1d6/n max 20d6) ou baies de houx explosives (1,5m, 1d8+1/n sur mot de commande sur 1,5m)</td>
+        </tr>
+        <tr>
+            <td>Glissement de terrain (Transmutation)</td>
+            <td>120m+12m/n</td>
+            <td>Spéciales</td>
+            <td> </td>
+            <td> </td>
+            <td>Spé.</td>
+            <td> </td>
+            <td>V,G,M</td>
+            <td>244 Carré de 225m profond de 3m. Requiert 10mn d&#39;incantation par carré de 45m. Lame de fer, un petit sac mélange d&#39;argile terre et sable</td>
+        </tr>
+        <tr>
+            <td>Gréce féline de groupe (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,M</td>
+            <td>246 +4 en dextérité. Poils de chat</td>
+        </tr>
+        <tr>
+            <td>Mur de pierre (Invocation)</td>
+            <td>30m+3m/n</td>
+            <td>Carré de 1,5m/n</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>264 2,5cm/4n d&#39;épaisseur. Adossé é une roche existante</td>
+        </tr>
+        <tr>
+            <td>Orientation (Divination)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>3r</td>
+            <td>V - RM</td>
+            <td>V,G,F</td>
+            <td>268 Indique le chemin é un lieu donné</td>
+        </tr>
+        <tr>
+            <td>Pierres comméres (Divination)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>10mn</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>272 Communication avec les pierres</td>
+        </tr>
+        <tr>
+            <td>Sagesse du hibou de groupe</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>285 +4 en sagesse</td>
+        </tr>
+        <tr>
+            <td>Soins légers de groupe</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td>289 1d8+1/n (max +25)</td>
+        </tr>
+        <tr>
+            <td>Voie végétale (Transmutation)</td>
+            <td>Illimitée</td>
+            <td>Créatures</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>302 Téléportatoin par les plantes avec 1/3n créatures de taille M</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 7</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Animation des plantes (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 plante G/3n</td>
+            <td>1h/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V</td>
+            <td>199</td>
+        </tr>
+        <tr>
+            <td>Béton sylvanien (Transmutation)</td>
+            <td>Contact</td>
+            <td>Béton</td>
+            <td>1h/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,F</td>
+            <td>204 Transforme un béton de chéne, d&#39;if ou de fréne en sylvanien. Nécessite 28j de préparation</td>
+        </tr>
+        <tr>
+            <td>Contréle du climat (Transmutation)</td>
+            <td>3km</td>
+            <td>Rayon de 3km</td>
+            <td>4d12h</td>
+            <td> </td>
+            <td>10mn</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>218</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels VII (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>218 1 créature de n7 ou 1d3 de n6 ou 1d4+1 de niveau moindre</td>
+        </tr>
+        <tr>
+            <td>Guérison supréme (Invocation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>247 soigne 10pts pas niveau (max 150), maladies et affaiblissements temporaires</td>
+        </tr>
+        <tr>
+            <td>Mort rampante (Invocation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 nuée/2n</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>262 Concentration non nécessaire</td>
+        </tr>
+        <tr>
+            <td>Rayon de soleil (évocation)</td>
+            <td>18m</td>
+            <td>Ligne</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>R1/2 - RM</td>
+            <td>V,G,FD</td>
+            <td>280 1/r rayon (max 1r/3n), 4d6 (1d6/n max 20d6 contre les morts-vivants), aveuglement</td>
+        </tr>
+        <tr>
+            <td>Scrutation supréme (Divination)</td>
+            <td>Spéciale</td>
+            <td>Capteur magique</td>
+            <td>1h/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>287 Un bassin naturel</td>
+        </tr>
+        <tr>
+            <td>Soins modérés de groupe</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td>289 2d8+1/n (max +30)</td>
+        </tr>
+        <tr>
+            <td>Tempéte de feu (évocation)</td>
+            <td>30m+3m/n</td>
+            <td>2 cubes de 3m/n</td>
+            <td>1r</td>
+            <td> </td>
+            <td>1r</td>
+            <td>R1/2 - RM</td>
+            <td>V,G</td>
+            <td>296 1d6/n (max 20d6)</td>
+        </tr>
+        <tr>
+            <td>Transmutation du métal en bois (Transmutation)</td>
+            <td>120m+12m/n</td>
+            <td>Rayon de 12m</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>299 DD de 20+niveau du créateur pour les objets magiques</td>
+        </tr>
+        <tr>
+            <td>Vent divin (Transmutation)</td>
+            <td>Contact</td>
+            <td>1 créature/3n</td>
+            <td>1h/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>300 Vaporisation et déplacement é grande vitesse</td>
+        </tr>
+        <tr>
+            <td>Vision lucide (Divination)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,M</td>
+            <td>301 Obscurité, passages secrets, invisibilité, dissimulations magiques, illusions, plan éthéré. 250 po d&#39;onguent de graisse, safran et d&#39;un champignon rare appliqué sur les paupiéres</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 8</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Contréle des plantes (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>2 DV/n</td>
+            <td>1mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V</td>
+            <td>V,G,FD</td>
+            <td>217</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels VIII</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>218 1 créature de n8 ou 1d3 de n7 ou 1d4+1 de niveau moindre</td>
+        </tr>
+        <tr>
+            <td>Cyclone (évocation)</td>
+            <td>120m+12m/n</td>
+            <td>Cyclone 9mx3mx9m</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>R - RM</td>
+            <td>V,G,FD</td>
+            <td>226 3d6 au créature de taille G ou moins, les créatures M ou moins qui ratent un second JS sont soulevées pour 1d8/r</td>
+        </tr>
+        <tr>
+            <td>Doigt de mort (Nécromancie)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G</td>
+            <td>234 3d6+1/n (max 25) si JS réussit</td>
+        </tr>
+        <tr>
+            <td>éloignement du métal et de la pierre (Abjuration)</td>
+            <td>18m</td>
+            <td>Ligne de 18m</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>236 Aucune concentration nécessaire. Tous les objets non fixés de moins de 250kg sont repoussés de 12m/r</td>
+        </tr>
+        <tr>
+            <td>Explosion de lumiére (évocation)</td>
+            <td>120m+12m/n</td>
+            <td>Rayon de 24m</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>R1/2 - RM</td>
+            <td>V,G,FD</td>
+            <td>240 6d6 et aveuglement (sauf réussite JS). 12d6 pour les créatures sensibles, 1d6/n (max 25d6) ou destruction si sensibles pour les morts-vivants et vases, limons, moisissures etc.</td>
+        </tr>
+        <tr>
+            <td>Inversion de la gravité (Transmutation)</td>
+            <td>30m+3m/n</td>
+            <td>Cube de 3m/2n</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>Métamorphose animale (Transmutation)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td>1h/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>RM</td>
+            <td>V,G,FD</td>
+            <td>259</td>
+        </tr>
+        <tr>
+            <td>Mot de rappel (Invocation)</td>
+            <td>Illimitée</td>
+            <td>Spéciale</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V</td>
+            <td>262 Téléporte au sanctuaire le lanceur et une créature de taille M /3n</td>
+        </tr>
+        <tr>
+            <td>Soins importants de groupe</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td>289 2d8+1/n (max +35)</td>
+        </tr>
+        <tr>
+            <td>Tremblement de terre (évocation)</td>
+            <td>120m+12m/n</td>
+            <td>Rayon de 24m</td>
+            <td>1r</td>
+            <td> </td>
+            <td>1</td>
+            <td>Spécial</td>
+            <td>V,G,FD</td>
+            <td>299 Fonctionne sous terre</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Magie druidique de niveau 9</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Nom du sort (sphére)</td>
+            <td>Portée</td>
+            <td>Cible ou zone</td>
+            <td>Durée</td>
+            <td>Temps</td>
+            <td>Jet</td>
+            <td>JS - RM</td>
+            <td>Eléments</td>
+            <td>Notes</td>
+        </tr>
+        <tr>
+            <td>Attirance (Enchantement)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Cube de 3m/n</td>
+            <td>2h/n</td>
+            <td> </td>
+            <td>1h</td>
+            <td>V - RM</td>
+            <td>V,G,M</td>
+            <td>202 1500po de poudre de perle broyée et une goutte de miel liquide</td>
+        </tr>
+        <tr>
+            <td>Aversion (Enchantement)</td>
+            <td>7,5+1,5m/2n</td>
+            <td>Cube de 3m/n</td>
+            <td>2h/n</td>
+            <td> </td>
+            <td>1h</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>203</td>
+        </tr>
+        <tr>
+            <td>Changement de forme (Transmutation)</td>
+            <td>Lanceur</td>
+            <td>Lanceur</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G,F</td>
+            <td>210 Entité intangible possible</td>
+        </tr>
+        <tr>
+            <td>Convocation d&#39;alliés naturels IX</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature</td>
+            <td>1r/n</td>
+            <td> </td>
+            <td>1r</td>
+            <td> </td>
+            <td>V,G,FD</td>
+            <td>218 1 créature de n9 ou 1d3 de n8 ou 1d4+1 de niveau moindre</td>
+        </tr>
+        <tr>
+            <td>Grand tertre (Invocation)</td>
+            <td>30m+3m/n</td>
+            <td>Au moins 3 tertres</td>
+            <td>Spéciale</td>
+            <td> </td>
+            <td>1</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>246 Crée 1d4+2 tertres errants de 11DV pour 7 jours ou 7 mois (selon mission)</td>
+        </tr>
+        <tr>
+            <td>Nuée d&#39;élémentaires (Invocation)</td>
+            <td>30m+3m/n</td>
+            <td>Créatures</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>10mn</td>
+            <td> </td>
+            <td>V,G</td>
+            <td>267 2d4 élémentaires de taille G, 1d4 élémentaires TG (10mn aprés), un élémentaire noble (10mn aprés). Ne peuvent attaquer le lanceur, méme contrélés.</td>
+        </tr>
+        <tr>
+            <td>Prémonition (Divination)</td>
+            <td>Contact</td>
+            <td>Spéciale</td>
+            <td>10mn/n</td>
+            <td> </td>
+            <td>1</td>
+            <td>V - RM</td>
+            <td>V,G,FD</td>
+            <td>274 Avertit en cas de danger, (+2 CA et réflexes si la cible est le lanceur)</td>
+        </tr>
+        <tr>
+            <td>Régénération (Invocation)</td>
+            <td>Contact</td>
+            <td>1 créature</td>
+            <td> </td>
+            <td> </td>
+            <td>3r</td>
+            <td>Vi - RM</td>
+            <td>V,G,FD</td>
+            <td>281 Fait repousser membres et organes, débarrasse de la fatigue et soigne 4d8+1/n (max +35) pts.</td>
+        </tr>
+        <tr>
+            <td>Soins intensifs de groupe</td>
+            <td>7,5+1,5m/2n</td>
+            <td>1 créature/n</td>
+            <td> </td>
+            <td> </td>
+            <td>1</td>
+            <td>V1/2 - RM</td>
+            <td>V,G</td>
+            <td>289 4d8+1/n (max +40)</td>
+        </tr>
+        <tr>
+            <td>Tempéte vengeresse (Invocation)</td>
+            <td>120m+12m/n</td>
+            <td>Rayon de 108m</td>
+            <td>10r</td>
+            <td> </td>
+            <td>1</td>
+            <td>Spécial</td>
+            <td>V,G</td>
+            <td>296 Requiert concentration. Assourdissement, pluie acide 1d6 (2éme r), six éclairs 10d6 (3éme r), pluie de grélons 5d6 (4éme r) et tempéte ensuite</td>
+        </tr>
+    </tbody>
+</table>
