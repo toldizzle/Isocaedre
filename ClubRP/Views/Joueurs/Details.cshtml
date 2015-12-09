@@ -49,7 +49,11 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PersonnageID)
+            @foreach (var item in Model.Personnages)
+            {
+                <p>@item.NomPerso</p>
+            }
+            @*@Html.DisplayFor(model => model.Personnages)*@
         </dd>
 
     </dl>
