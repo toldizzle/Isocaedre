@@ -7,18 +7,18 @@ namespace ClubRP.Migrations.ApplicationDBContext
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class JoueurETPERSOModif : IMigrationMetadata
+    public sealed partial class Reinitialisation2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(JoueurETPERSOModif));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Reinitialisation2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512090122249_JoueurETPERSOModif"; }
+            get { return "201512090247364_Reinitialisation2"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

@@ -190,36 +190,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512041752583_Reinitialisation2.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512041752583_Reinitialisation2.Designer.cs">
-      <DependentUpon>201512041752583_Reinitialisation2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512050112328_upgradePersonnages.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512050112328_upgradePersonnages.Designer.cs">
-      <DependentUpon>201512050112328_upgradePersonnages.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512050140448_upgradePersonnages2.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512050140448_upgradePersonnages2.Designer.cs">
-      <DependentUpon>201512050140448_upgradePersonnages2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512050243316_DbSetPersonnages.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512050243316_DbSetPersonnages.Designer.cs">
-      <DependentUpon>201512050243316_DbSetPersonnages.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512090122249_JoueurETPERSOModif.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512090122249_JoueurETPERSOModif.Designer.cs">
-      <DependentUpon>201512090122249_JoueurETPERSOModif.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512090224411_PersoEtID.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512090224411_PersoEtID.Designer.cs">
-      <DependentUpon>201512090224411_PersoEtID.cs</DependentUpon>
+    <Compile Include="Migrations\ApplicationDBContext\201512090247364_Reinitialisation2.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201512090247364_Reinitialisation2.Designer.cs">
+      <DependentUpon>201512090247364_Reinitialisation2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
-    <Compile Include="Model11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetUsersInfoSup.cs" />
     <Compile Include="Models\Groupe.cs" />
@@ -484,23 +459,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512041752583_Reinitialisation2.resx">
-      <DependentUpon>201512041752583_Reinitialisation2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512050112328_upgradePersonnages.resx">
-      <DependentUpon>201512050112328_upgradePersonnages.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512050140448_upgradePersonnages2.resx">
-      <DependentUpon>201512050140448_upgradePersonnages2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512050243316_DbSetPersonnages.resx">
-      <DependentUpon>201512050243316_DbSetPersonnages.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512090122249_JoueurETPERSOModif.resx">
-      <DependentUpon>201512090122249_JoueurETPERSOModif.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512090224411_PersoEtID.resx">
-      <DependentUpon>201512090224411_PersoEtID.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512090247364_Reinitialisation2.resx">
+      <DependentUpon>201512090247364_Reinitialisation2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Account\AccountRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

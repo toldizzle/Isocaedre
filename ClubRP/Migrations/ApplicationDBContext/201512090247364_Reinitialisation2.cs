@@ -30,24 +30,22 @@ namespace ClubRP.Migrations.ApplicationDBContext
                         Maitre = c.Boolean(nullable: false),
                         Specialisation = c.String(),
                         GroupeID = c.Int(),
-                        Personnage_PersonnageID = c.Int(),
                     })
                 .PrimaryKey(t => t.JoueurID)
-                .ForeignKey("dbo.Personnages", t => t.Personnage_PersonnageID)
                 .ForeignKey("dbo.Groupes", t => t.GroupeID)
-                .Index(t => t.GroupeID)
-                .Index(t => t.Personnage_PersonnageID);
+                .Index(t => t.GroupeID);
             
             CreateTable(
                 "dbo.Personnages",
                 c => new
                     {
                         PersonnageID = c.Int(nullable: false, identity: true),
-                        NomPerso = c.String(nullable: false),
-                        Race = c.String(nullable: false),
-                        Classe = c.String(nullable: false),
-                        Niveau = c.String(nullable: false),
+                        NomPerso = c.String(),
+                        Race = c.String(),
+                        Classe = c.String(),
+                        Niveau = c.String(),
                         Alignement = c.String(),
+                        AspUserID = c.String(),
                         Force = c.Int(nullable: false),
                         Dexterite = c.Int(nullable: false),
                         Constitution = c.Int(nullable: false),
@@ -57,33 +55,43 @@ namespace ClubRP.Migrations.ApplicationDBContext
                         Vigueur = c.Int(nullable: false),
                         Volonte = c.Int(nullable: false),
                         Reflexe = c.Int(nullable: false),
-                        VigueurBonus = c.Int(nullable: false),
-                        VolonteBonus = c.Int(nullable: false),
-                        ReflexeBonus = c.Int(nullable: false),
+                        VigueurBonus = c.Int(),
+                        VolonteBonus = c.Int(),
+                        ReflexeBonus = c.Int(),
                         BaB = c.Int(nullable: false),
-                        BaBBonus = c.Int(nullable: false),
+                        BaBBonus = c.Int(),
                         Initiative = c.Int(nullable: false),
-                        InitiativeBonus = c.Int(nullable: false),
+                        InitiativeBonus = c.Int(),
                         Lutte = c.Int(nullable: false),
-                        LutteBonus = c.Int(nullable: false),
+                        LutteBonus = c.Int(),
                         HP = c.Int(nullable: false),
                         Deplacement = c.Int(nullable: false),
-                        AC = c.Int(nullable: false),
+                        AC = c.Int(),
                         NaturalAC = c.Int(),
                         ACBonus = c.Int(),
                         ResistanceSort = c.Int(),
                         ReductionDegat = c.Int(),
                         NomArme = c.String(),
                         Degats = c.String(),
-                        Hit = c.String(),
+                        Hit = c.Int(),
                         Crit = c.String(),
                         Munition = c.Int(),
                         DetailsArme = c.String(),
+                        NomArme2 = c.String(),
+                        Degats2 = c.String(),
+                        Hit2 = c.Int(),
+                        Crit2 = c.String(),
+                        Munition2 = c.Int(),
+                        DetailsArme2 = c.String(),
                         NomArmure = c.String(),
                         ArmureAC = c.Int(),
                         TypeArmure = c.String(),
                         Malus = c.Int(),
                         DetailsArmure = c.String(),
+                        NomBouclier = c.String(),
+                        BouclierAC = c.Int(),
+                        MalusBouclier = c.Int(),
+                        DetailsBouclier = c.String(),
                         Appraise = c.Int(),
                         Balance = c.Int(),
                         Bluff = c.Int(),
@@ -144,7 +152,9 @@ namespace ClubRP.Migrations.ApplicationDBContext
                         Experience = c.Int(),
                         JoueurID = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.PersonnageID);
+                .PrimaryKey(t => t.PersonnageID)
+                .ForeignKey("dbo.Joueurs", t => t.JoueurID, cascadeDelete: true)
+                .Index(t => t.JoueurID);
             
             CreateTable(
                 "dbo.Messages",
@@ -274,7 +284,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Messages", "PostID", "dbo.Posts");
             DropForeignKey("dbo.Joueurs", "GroupeID", "dbo.Groupes");
-            DropForeignKey("dbo.Joueurs", "Personnage_PersonnageID", "dbo.Personnages");
+            DropForeignKey("dbo.Personnages", "JoueurID", "dbo.Joueurs");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
@@ -284,7 +294,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.Messages", new[] { "PostID" });
-            DropIndex("dbo.Joueurs", new[] { "Personnage_PersonnageID" });
+            DropIndex("dbo.Personnages", new[] { "JoueurID" });
             DropIndex("dbo.Joueurs", new[] { "GroupeID" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");

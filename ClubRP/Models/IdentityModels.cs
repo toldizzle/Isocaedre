@@ -28,6 +28,12 @@ namespace ClubRP.Models
         public DbSet<Post> Posts { get; set; }
         public DbSet<Message> Messages { get; set; }
 
+        public DbSet<Groupe> Groupes { get; set; }
+
+        public DbSet<Joueur> Joueurs { get; set; }
+
+        public DbSet<Personnage> Personnages { get; set; }
+
         public ApplicationDbContext()
             : base("ApplicationDbContext", throwIfV1Schema: false)
         {
@@ -38,10 +44,5 @@ namespace ClubRP.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<ClubRP.Models.Groupe> Groupes { get; set; }
-
-        public System.Data.Entity.DbSet<ClubRP.Models.Joueur> Joueurs { get; set; }
-
-        public System.Data.Entity.DbSet<ClubRP.Models.Personnage> Personnages { get; set; }
     }
 }
