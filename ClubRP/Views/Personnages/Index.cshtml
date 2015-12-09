@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>@(ClubRP.Views.Shared.SharedRessources.Index)</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(ClubRP.Views.Shared.SharedRessources.Create, "Create")
 </p>
 <table class="table">
     <tr>

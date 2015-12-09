@@ -206,9 +206,13 @@
     <Compile Include="Migrations\ApplicationDBContext\201512050243316_DbSetPersonnages.Designer.cs">
       <DependentUpon>201512050243316_DbSetPersonnages.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ApplicationDBContext\201512081442017_JouerPersonnages.cs" />
-    <Compile Include="Migrations\ApplicationDBContext\201512081442017_JouerPersonnages.Designer.cs">
-      <DependentUpon>201512081442017_JouerPersonnages.cs</DependentUpon>
+    <Compile Include="Migrations\ApplicationDBContext\201512090122249_JoueurETPERSOModif.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201512090122249_JoueurETPERSOModif.Designer.cs">
+      <DependentUpon>201512090122249_JoueurETPERSOModif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDBContext\201512090224411_PersoEtID.cs" />
+    <Compile Include="Migrations\ApplicationDBContext\201512090224411_PersoEtID.Designer.cs">
+      <DependentUpon>201512090224411_PersoEtID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationDBContext\Configuration.cs" />
     <Compile Include="Model11.Designer.cs">
@@ -492,8 +496,11 @@
     <EmbeddedResource Include="Migrations\ApplicationDBContext\201512050243316_DbSetPersonnages.resx">
       <DependentUpon>201512050243316_DbSetPersonnages.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512081442017_JouerPersonnages.resx">
-      <DependentUpon>201512081442017_JouerPersonnages.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512090122249_JoueurETPERSOModif.resx">
+      <DependentUpon>201512090122249_JoueurETPERSOModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationDBContext\201512090224411_PersoEtID.resx">
+      <DependentUpon>201512090224411_PersoEtID.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Account\AccountRessources.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

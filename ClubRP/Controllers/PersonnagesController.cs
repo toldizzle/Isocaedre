@@ -18,10 +18,11 @@ namespace ClubRP.Models
         public ActionResult Index()
         {
             string Usager = User.Identity.GetUserId();
-            var query = db.Joueurs.Where(j => j.AspNetUserID == Usager).Select(p=>p.Personnages).ToList();
-            ViewBag.Personnage = query.ToList();
-            if (query[0] != null)
-                return View(query.ToList());
+            var joueur = db.Joueurs.Where(j => j.AspNetUserID == Usager).First();
+            var query = db.Personnages.Where(p => p.AspUserID == Usager);
+            ViewBag.Personnage = query.AsEnumerable();
+            if (query != null)
+                return View(query.AsEnumerable());
             else
                 return RedirectToAction("Create");
         }
@@ -58,6 +59,7 @@ namespace ClubRP.Models
 
             if (ModelState.IsValid)
             {
+                personnage.AspUserID = User.Identity.GetUserId();
                 db.Personnages.Add(personnage);
 
                 string Usager = User.Identity.GetUserId();
@@ -101,6 +103,7 @@ namespace ClubRP.Models
             ViewBag.Personnage = query;
             if (ModelState.IsValid)
             {
+                personnage.AspUserID = User.Identity.GetUserId();
                 db.Entry(personnage).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

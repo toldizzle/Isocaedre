@@ -19,7 +19,7 @@ namespace ClubRP.Controllers
         public ActionResult Index()
         {
             string AspNetUserID = User.Identity.GetUserId();
-            ApplicationUser user = db.Users.Where(d => d.Id == AspNetUserID).First();
+            var user = db.Users.Where(d => d.Id == AspNetUserID).First();
             ViewBag.Joueur = null;
             ViewBag.Admin = false;
 

@@ -30,18 +30,7 @@ namespace ClubRP.Migrations.ApplicationDBContext
             AjouterPersonnages(context);
         }
 
-        private static void AjouterPersonnages(ApplicationDbContext context)
-        {
-            var userInit = (from user in context.Users
-                            where user.UserName == "admin@isocaedre.ca"
-                            select user).First();
-            Personnage[] personnages = { new Personnage() {  AC=1, ACBonus=1, Alignement ="Neutre Bon", Appraise =1 , ArmureAC=2, BaB=3, BaBBonus=1, Balance=1, Bluff=1, BouclierAC=0, Charisme=11, Classe="Spicial", Climb=1, Concentration=2, Constitution=14, Craft1=2, Craft1Nom="Alchimie", Crit="19-20", Crit2="x2", Craft2=1, Craft2Nom="Forgeron", Craft3=2, Craft3Nom="Fermier", Decipher=1 , Degats="1d6", Degats2= "1d8", Deplacement=9, DetailsArme="Rien", DetailsArme2="Rien", DetailsArmure="Rien", DetailsBouclier="Rien", Dexterite=14, Diplomacy=3, DisableDevice=4, Disguise=3, EscapeArtist=1, Experience=3500, Force=16, Forgery=5, GatherInfo=4, Gold=100, HandleAnimal=3, Heal=4, Hide=4, Hit=5, Hit2=4, HP=20, Initiative=2, InitiativeBonus=2, Intelligence=12, Intimidate=3, Jump=2, Knowledge1=2, Knowledge1Name="Savoir 1", Knowledge2=3, Knowledge2Name="Savoir 2", Knowledge3=2, Knowledge3Name="Savoir 3", Knowledge4=3, Knowledge4Name="Savoir 4", Knowledge5=4, Knowledge5Name="Savoir 5", Listen=2, Lutte=2, LutteBonus=2, Malus=0, MalusBouclier=0, MoveSilently=2, Munition=0, Munition2=0, NaturalAC=2, Niveau="2", NomArme="Masse d'arme lourde", NomPerso="Toldizzle", NomArmure="Armure d'écaille", Notes="Aucune", OpenLock=3, Race="Humain", ReductionDegat=0, Reflexe=2, ReflexeBonus=2, ResistanceSort=0, Ride=2, Sagesse=19, Search=0, Spellcraft=9, TypeArmure="Intermédiaire", Vigueur=6, Volonte=6, VigueurBonus=2, VolonteBonus=2, JoueurID = 2 } };
-            userInit.details.Joueur.Personnages.Add(personnages[0]);
-
-            context.Personnages.AddOrUpdate(r => r.NomPerso, personnages);
-
-            context.SaveChanges();
-        }
+        
 
         private static void AjoutPostEtMessage(ApplicationDbContext context)
         {
@@ -262,6 +251,16 @@ namespace ClubRP.Migrations.ApplicationDBContext
 
             context.Joueurs.AddOrUpdate(r => r.Nom, joueurs);
             
+            context.SaveChanges();
+        }
+        private static void AjouterPersonnages(ApplicationDbContext context)
+        {
+            var userInit = (from user in context.Users
+                            where user.UserName == "admin@isocaedre.ca"
+                            select user).First();
+            Personnage[] personnages = { new Personnage() { AspUserID=userInit.Id, AC = 1, ACBonus = 1, Alignement = "Neutre Bon", Appraise = 1, ArmureAC = 2, BaB = 3, BaBBonus = 1, Balance = 1, Bluff = 1, BouclierAC = 0, Charisme = 11, Classe = "Spicial", Climb = 1, Concentration = 2, Constitution = 14, Craft1 = 2, Craft1Nom = "Alchimie", Crit = "19-20", Crit2 = "x2", Craft2 = 1, Craft2Nom = "Forgeron", Craft3 = 2, Craft3Nom = "Fermier", Decipher = 1, Degats = "1d6", Degats2 = "1d8", Deplacement = 9, DetailsArme = "Rien", DetailsArme2 = "Rien", DetailsArmure = "Rien", DetailsBouclier = "Rien", Dexterite = 14, Diplomacy = 3, DisableDevice = 4, Disguise = 3, EscapeArtist = 1, Experience = 3500, Force = 16, Forgery = 5, GatherInfo = 4, Gold = 100, HandleAnimal = 3, Heal = 4, Hide = 4, Hit = 5, Hit2 = 4, HP = 20, Initiative = 2, InitiativeBonus = 2, Intelligence = 12, Intimidate = 3, Jump = 2, Knowledge1 = 2, Knowledge1Name = "Savoir 1", Knowledge2 = 3, Knowledge2Name = "Savoir 2", Knowledge3 = 2, Knowledge3Name = "Savoir 3", Knowledge4 = 3, Knowledge4Name = "Savoir 4", Knowledge5 = 4, Knowledge5Name = "Savoir 5", Listen = 2, Lutte = 2, LutteBonus = 2, Malus = 0, MalusBouclier = 0, MoveSilently = 2, Munition = 0, Munition2 = 0, NaturalAC = 2, Niveau = "2", NomArme = "Masse d'arme lourde", NomPerso = "Toldizzle", NomArmure = "Armure d'écaille", Notes = "Aucune", OpenLock = 3, Race = "Humain", ReductionDegat = 0, Reflexe = 2, ReflexeBonus = 2, ResistanceSort = 0, Ride = 2, Sagesse = 19, Search = 0, Spellcraft = 9, TypeArmure = "Intermédiaire", Vigueur = 6, Volonte = 6, VigueurBonus = 2, VolonteBonus = 2, JoueurID = userInit.details.Joueur.JoueurID } };
+            context.Personnages.AddOrUpdate(r => r.NomPerso, personnages);
+            userInit.details.Joueur.Personnages.Add(personnages[0]);
             context.SaveChanges();
         }
     }

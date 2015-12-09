@@ -169,6 +169,15 @@ namespace ClubRP.Views.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string Index {
+            get {
+                return ResourceManager.GetString("Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Connecter.
         /// </summary>
         public static string LogIn {

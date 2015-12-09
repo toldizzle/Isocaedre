@@ -10,6 +10,7 @@ namespace ClubRP.Models
     {
         // Infos Personnages
         [Required]
+        [Key]
         public int PersonnageID { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "NomPerso")]
         public string NomPerso { get; set; }
@@ -21,7 +22,7 @@ namespace ClubRP.Models
         public string Niveau { get; set; }
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Alignement")]
         public string Alignement { get; set; }
-
+        public string AspUserID { get; set; }
         // Stats
         [Display(ResourceType = typeof(ClubRP.Views.Personnages.PersoRessources), Name = "Force")]
         public int Force { get; set; }

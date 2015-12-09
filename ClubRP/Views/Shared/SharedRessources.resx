@@ -153,6 +153,9 @@
   <data name="Hello" xml:space="preserve">
     <value>Bienvenue </value>
   </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
   <data name="LogIn" xml:space="preserve">
     <value>Connecter</value>
   </data>
