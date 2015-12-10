@@ -16,6 +16,7 @@ namespace ClubRP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Groupes
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Index()
         {
             string AspNetUserID = User.Identity.GetUserId();
@@ -36,6 +37,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Groupes/Details/5
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -51,6 +53,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Groupes/Create
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create()
         {
             //string AspNetUserID = User.Identity.GetUserId();
@@ -64,6 +67,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create([Bind(Include = "ID,Titre,Description,Creation,AspNetUserID,Auteur")] Groupe groupe)
         {
             if (ModelState.IsValid)
@@ -80,6 +84,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Groupes/Edit/5
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -99,6 +104,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Edit([Bind(Include = "ID,Titre,Description,Creation,AspNetUserID,Auteur")] Groupe groupe)
         {
             if (ModelState.IsValid)
@@ -114,6 +120,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Groupes/Delete/5
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -131,6 +138,7 @@ namespace ClubRP.Controllers
         // POST: Groupes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs")]
         public ActionResult DeleteConfirmed(int id)
         {
             Groupe groupe = db.Groupes.Find(id);
@@ -138,6 +146,7 @@ namespace ClubRP.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Rejoindre(int id)
         {
             string AspNetUserID = User.Identity.GetUserId();

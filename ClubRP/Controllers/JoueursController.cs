@@ -16,6 +16,7 @@ namespace ClubRP.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Joueurs
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Index()
         {
             string AspNetUserID = User.Identity.GetUserId();
@@ -28,6 +29,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Joueurs/Details/5
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Details(int? id)
         {
             
@@ -44,6 +46,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Joueurs/Create
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create()
         {
             return View();
@@ -54,6 +57,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create([Bind(Include = "JoueurID,AspNetUserID,Nom,Maitre,Specialisation")] Joueur joueur)
         {
             if (ModelState.IsValid)
@@ -71,6 +75,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Joueurs/Edit/5
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,6 +95,7 @@ namespace ClubRP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Edit([Bind(Include = "JoueurID,AspNetUserID,Nom,Maitre,Specialisation,GroupeID,PersonnageID")] Joueur joueur)
         {
             if (ModelState.IsValid)
@@ -104,6 +110,7 @@ namespace ClubRP.Controllers
         }
 
         // GET: Joueurs/Delete/5
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -121,6 +128,7 @@ namespace ClubRP.Controllers
         // POST: Joueurs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult DeleteConfirmed(int id)
         {
             Joueur joueur = db.Joueurs.Find(id);

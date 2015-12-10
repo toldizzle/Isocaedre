@@ -15,6 +15,7 @@ namespace ClubRP.Models
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Personnages
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Index()
         {
             string Usager = User.Identity.GetUserId();
@@ -28,6 +29,7 @@ namespace ClubRP.Models
         }
 
         // GET: Personnages/Details/5
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,6 +45,7 @@ namespace ClubRP.Models
         }
 
         // GET: Personnages/Create
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create()
         {
 
@@ -54,6 +57,7 @@ namespace ClubRP.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Create([Bind(Include = "NomPerso,Race,Classe,Niveau,Alignement,Force,Dexterite,Constitution,Charisme,Intelligence,Sagesse,Vigueur,Volonte,Reflexe,VigueurBonus,VolonteBonus,ReflexeBonus,BaB,BaBBonus,Initiative,InitiativeBonus,Lutte,LutteBonus,HP,Deplacement,AC,NaturalAC,ACBonus,ResistanceSort,ReductionDegat,NomArme,Degats,Hit,Crit,Munition,DetailsArme,NomArme2,Degats2,Hit2,Crit2,Munition2,DetailsArme2,NomArmure,ArmureAC,TypeArmure,Malus,DetailsArmure,NomBouclier,BouclierAC,MalusBouclier,DetailsBouclier,Appraise,Balance,Bluff,Climb,Concentration,Craft1,Craft1Nom,Craft2,Craft2Nom,Craft3,Craft3Nom,Decipher,Diplomacy,DisableDevice,Disguise,EscapeArtist,Forgery,GatherInfo,HandleAnimal,Heal,Hide,Intimidate,Jump,Knowledge1,Knowledge1Name,Knowledge2,Knowledge2Name,Knowledge3,Knowledge3Name,Knowledge4,Knowledge4Name,Knowledge5,Knowledge5Name,Listen,MoveSilently,OpenLock,Perform1,Perform1Nom,Perform2,Perform2Nom,Profession1,Profession1Nom,Profession2,Profession2Nom,Ride,Search,SenseMotive,SleightOfHand,Spellcraft,Spot,Survival,Swim,Tumble,UMD,UseRope,Notes,Gold,Experience,JoueurID")] Personnage personnage)
         {
 
@@ -74,6 +78,7 @@ namespace ClubRP.Models
         }
 
         // GET: Personnages/Edit/5
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Edit(int? id)
         {
             string Usager = User.Identity.GetUserId();
@@ -96,6 +101,7 @@ namespace ClubRP.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Edit([Bind(Include = "PersonnageID,NomPerso,Race,Classe,Niveau,Alignement,Force,Dexterite,Constitution,Charisme,Intelligence,Sagesse,Vigueur,Volonte,Reflexe,VigueurBonus,VolonteBonus,ReflexeBonus,BaB,BaBBonus,Initiative,InitiativeBonus,Lutte,LutteBonus,HP,Deplacement,AC,NaturalAC,ACBonus,ResistanceSort,ReductionDegat,NomArme,Degats,Hit,Crit,Munition,DetailsArme,NomArmure,ArmureAC,TypeArmure,Malus,DetailsArmure,Appraise,Balance,Bluff,Climb,Concentration,Craft1,Craft1Nom,Craft2,Craft2Nom,Craft3,Craft3Nom,Decipher,Diplomacy,DisableDevice,Disguise,EscapeArtist,Forgery,GatherInfo,HandleAnimal,Heal,Hide,Intimidate,Jump,Knowledge1,Knowledge1Name,Knowledge2,Knowledge2Name,Knowledge3,Knowledge3Name,Knowledge4,Knowledge4Name,Knowledge5,Knowledge5Name,Listen,MoveSilently,OpenLock,Perform1,Perform1Nom,Perform2,Perform2Nom,Profession1,Profession1Nom,Profession2,Profession2Nom,Ride,Search,SenseMotive,SleightOfHand,Spellcraft,Spot,Survival,Swim,Tumble,UMD,UseRope,Notes,Gold,Experience,JoueurID")] Personnage personnage)
         {
             string Usager = User.Identity.GetUserId();
@@ -112,6 +118,7 @@ namespace ClubRP.Models
         }
 
         // GET: Personnages/Delete/5
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult Delete(int? id)
         {
             string Usager = User.Identity.GetUserId();
@@ -132,6 +139,7 @@ namespace ClubRP.Models
         // POST: Personnages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Modérateurs,Administrateurs,Utilisateurs,Maître,Joueurs")]
         public ActionResult DeleteConfirmed(int id)
         {
             Personnage personnage = db.Personnages.Find(id);
